@@ -11,18 +11,23 @@
                   <h4 class="text-uppercase mb-4">@lang('page.social')</h4>
                   <ul class="list-inline mb-0">
                     <li class="list-inline-item">
-                      <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://twitter.com/@Omar_Andres_Bar">
+                      <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://twitter.com/@Omar_Andres_Bar"  target="_blank">
                         <i class="fab fa-fw fa-twitter"></i>
                       </a>
                     </li>
                     <li class="list-inline-item">
-                      <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://co.linkedin.com/in/omar-andr%C3%A9s-barbosa-ort%C3%ADz-a7742a172">
+                      <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://co.linkedin.com/in/omar-andr%C3%A9s-barbosa-ort%C3%ADz-a7742a172"  target="_blank">
                         <i class="fab fa-fw fa-linkedin-in"></i>
                       </a>
                     </li>
                     <li class="list-inline-item">
-                      <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://github.com/barbosa89">
+                      <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://github.com/barbosa89"  target="_blank">
                         <i class="fab fa-fw fa-github"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.facebook.com/omarandres.barbosaortiz" target="_blank">
+                        <i class="fab fa-fw fa-facebook"></i>
                       </a>
                     </li>
                   </ul>

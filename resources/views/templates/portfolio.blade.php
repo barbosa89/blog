@@ -1,7 +1,7 @@
     <!-- Portfolio Grid Section -->
     <section class="portfolio" id="portfolio">
         <div class="container">
-          <h2 class="text-center text-uppercase text-secondary mb-0">Portafolio</h2>
+          <h2 class="text-center text-uppercase text-secondary mb-0">@lang('page.portfolio')</h2>
           <hr class="star-dark mb-5">
           <div class="row">
             <div class="col-md-6 col-lg-4">

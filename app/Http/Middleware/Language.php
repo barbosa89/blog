@@ -22,7 +22,7 @@ class Language
             $lang = 'en';
         }
 
-        \App::setLocale('es');
+        \App::setLocale($lang);
 
         return $next($request);
     }
