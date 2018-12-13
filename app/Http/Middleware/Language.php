@@ -16,9 +16,10 @@ class Language
     public function handle($request, Closure $next)
     {
         $locale = substr($request->server('HTTP_ACCEPT_LANGUAGE'), 0, 2);
+        $lang = 'es';
 
         if ($locale == 'en') {
-            \App::setLocale('en');
+            $lang = 'en';
         }
 
         \App::setLocale('es');
