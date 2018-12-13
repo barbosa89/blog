@@ -13,6 +13,7 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
+        "laraveles/spanish": "^1.1",
         "renatomarinho/laravel-page-speed": "^1.8",
         "writingink/wink": "^0.0.7"
     },

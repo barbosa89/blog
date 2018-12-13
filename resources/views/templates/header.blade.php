@@ -4,6 +4,6 @@
     <img class="img-fluid mb-5 d-block mx-auto" src="images/profile.png" alt="">
     <h1 class="text-uppercase mb-0">Omar Barbosa</h1>
     <hr class="star-light">
-    <h2 class="font-weight-light mb-0">Desarrollador web - Backend && Frontend - DevOps</h2>
+    <h2 class="font-weight-light mb-0">@lang('page.dev') - Backend && Frontend - DevOps</h2>
   </div>
 </header>
