@@ -63,7 +63,7 @@
           "alternateName": "Blog de Omar Barbosa",
           "url": "https://omarbarbosa.com",
           "image": "{{ asset('images/page.png') }}",
-          "description": "{{ trans('page.description') }}",
+          "description": "{{ trans('page.description') }}"
         }
     </script>
 </body>
