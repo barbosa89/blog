@@ -18,8 +18,6 @@
     <meta property="og:description" content="{{ trans('page.description') }}">
     <meta property="og:image" content="{{ asset('images/site.png') }}">
     <meta property="og:type" content="website" />
-    <meta property="og:width" content="600">
-    <meta property="og:height" content="300">
     <meta property="og:url" content="https://omarbarbosa.com/">
     <meta name="twitter:card" content="summary_large_image">
     
