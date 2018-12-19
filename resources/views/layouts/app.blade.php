@@ -16,7 +16,9 @@
 
     <meta property="og:title" content="Blog de Omar Barbosa">
     <meta property="og:description" content="{{ trans('page.description') }}">
-    <meta property="og:image" content="{{ asset('images/page.png') }}">
+    <meta property="og:image" content="{{ asset('images/site.png') }}">
+    <meta property="og:width" content="600">
+    <meta property="og:height" content="300">
     <meta property="og:url" content="https://omarbarbosa.com/">
     <meta name="twitter:card" content="summary_large_image">
     
@@ -62,7 +64,7 @@
           "name": "Omar Barbosa",
           "alternateName": "Blog de Omar Barbosa",
           "url": "https://omarbarbosa.com",
-          "image": "{{ asset('images/page.png') }}",
+          "image": "{{ asset('images/site.png') }}",
           "description": "{{ trans('page.description') }}"
         }
     </script>
