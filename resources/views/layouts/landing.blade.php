@@ -20,11 +20,11 @@
     <link href="{{ asset('css/landing.css') }}" rel="stylesheet">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103614513-1"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-      gtag('config', 'UA-103614513-1');
+        gtag('config', 'UA-103614513-1');
     </script>
 </head>
 <body  id="page-top">

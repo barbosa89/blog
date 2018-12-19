@@ -10,10 +10,6 @@
     <title>{{ config('app.name', 'Omar Barbosa') }}</title>
     <link href="{{ asset('images/icon.png') }}" rel="shortcut icon" type="image/x-icon">
 
-    <meta name="description" content="{{ trans('page.description')}}">
-    <meta name="keywords" content="{{ trans('page.keywords')}}">
-    <meta name="author" content="Omar Barbosa">
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -22,6 +18,14 @@
     <!-- Style -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/landing.css') }}" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103614513-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-103614513-1');
+    </script>
 </head>
 <body  id="page-top">
     <div id="app">
