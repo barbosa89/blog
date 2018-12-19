@@ -15,6 +15,7 @@
         "laravel/tinker": "^1.0",
         "laraveles/spanish": "^1.1",
         "renatomarinho/laravel-page-speed": "^1.8",
+        "spatie/laravel-sitemap": "^5.2",
         "writingink/wink": "^0.0.7"
     },
     "require-dev": {

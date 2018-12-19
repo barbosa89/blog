@@ -10,6 +10,22 @@
     <title>{{ config('app.name', 'Omar Barbosa') }}</title>
     <link href="{{ asset('images/icon.png') }}" rel="shortcut icon" type="image/x-icon">
 
+    <meta name="description" content="{{ trans('page.description') }}">
+    <meta name="keywords" content="{{ trans('page.keywords') }}">
+    <meta name="author" content="Omar Barbosa"> 
+
+    <meta property="og:title" content="Blog de Omar Barbosa">
+    <meta property="og:description" content="{{ trans('page.description') }}">
+    <meta property="og:image" content="{{ asset('images/page.png') }}">
+    <meta property="og:url" content="https://omarbarbosa.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <meta property="og:site_name" content="Omar Barbosa">
+    <meta name="twitter:image:alt" content="Blog Omar Barbosa">
+    
+    <meta property="fb:app_id" content="2203860376602756" />
+    <meta name="twitter:site" content="@Barbosa">
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -39,5 +55,16 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/landing.js') }}" async defer></script>
+    <script type="application/ld+json" async>
+        {
+          "@context": "http://schema.org/",
+          "@type": "WebSite",
+          "name": "Omar Barbosa",
+          "alternateName": "Blog de Omar Barbosa",
+          "url": "https://omarbarbosa.com",
+          "image": "{{ asset('images/page.png') }}",
+          "description": "{{ trans('page.description') }}",
+        }
+    </script>
 </body>
 </html>
