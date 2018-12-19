@@ -20,4 +20,6 @@ return array (
   'code' => 'Mira mi código',
   'projects' => 'Proyectos',
   'me_short' => 'Estudiante Informático, desarrollador web con Python, PHP y Javascript',
+  'description' => 'Blog de Omar Barbosa, desarrollador web, comparto tutoriales y cursos de Python, PHP, Javascript, linux, seguridad y despliegue de aplicaciones',
+  'keywords' => 'omar barbosa, desarrollador web, tutoriales, cursos, php, python, javascript, linux, laravel, vuejs, vue, jquery, css, html, sass, webpack, ubuntu, nodejs, node, njango, swoole, framework, articulos, tecnologia, software, movil, escritorio, aplicaciones, git, github, gitlab',
 );

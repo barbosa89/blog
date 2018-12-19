@@ -20,4 +20,6 @@ return array (
   'code' => 'Look at my code',
   'projects' => 'Projects',
   'me_short' => 'Computer student, web developer with Python, PHP and Javacript',
+  'description' => 'Blog by Omar Barbosa, web developer, I share tutorials and courses on Python, PHP, Javascript, linux, security and application deployment',
+  'keywords' => 'omar barbosa, web developer, tutorials, courses, php, python, javascript, linux, laravel, vuejs, vue, jquery, css, html, sass, webpack, ubuntu, nodejs, node, njango, swoole, framework, articles, technology, software, mobile, desktop, app, git, github, gitlab',
 );
