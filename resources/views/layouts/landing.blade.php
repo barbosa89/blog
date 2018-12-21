@@ -16,7 +16,8 @@
 
     <meta property="og:title" content="Blog de Omar Barbosa">
     <meta property="og:description" content="{{ trans('page.description') }}">
-    <meta property="og:image" content="{{ asset('images/page.png') }}">
+    <meta property="og:image" content="{{ asset('images/site.png') }}">
+    <meta property="og:type" content="website" />
     <meta property="og:url" content="https://omarbarbosa.com/">
     <meta name="twitter:card" content="summary_large_image">
     
@@ -55,5 +56,16 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/landing.js') }}" async defer></script>
+    <script type="application/ld+json" async>
+        {
+          "@context": "http://schema.org/",
+          "@type": "WebSite",
+          "name": "Omar Barbosa",
+          "alternateName": "Blog de Omar Barbosa",
+          "url": "https://omarbarbosa.com",
+          "image": "{{ asset('images/site.png') }}",
+          "description": "{{ trans('page.description') }}"
+        }
+    </script>
 </body>
 </html>

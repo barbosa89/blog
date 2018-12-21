@@ -1,8 +1,8 @@
 <?php
 
 return array (
-  'me' => 'Estudiante Informático, desarrollador web, blogger, inmerso en la tecnología, la ciencia y la creación de nuevas cosas, guitarrista para Jesucristo; por definición, un aprendiz eterno en continua evolución.',
-  'stack' => 'Amo la web, es por eso que escribo líneas en Python, PHP y Javascript, junto con tecnologías como Git, CSS, HTML, NodeJs y por supuesto, Linux.',
+  'me' => 'Hijo de Jesucristo, estudiante informático, desarrollador web, blogger, inmerso en la tecnología, la ciencia y la creación de nuevas cosas; por definición, un aprendiz eterno en continua evolución.',
+  'stack' => 'Amo la web, es por eso que escribo líneas en Python, PHP y Javascript, junto con tecnologías como Git, CSS, HTML, NodeJs y por supuesto, en Linux.',
   'about' => 'Acerca de mi',
   'contact' => 'Contacto',
   'contact_me' => 'Escríbeme',
@@ -22,4 +22,13 @@ return array (
   'me_short' => 'Estudiante Informático, desarrollador web con Python, PHP y Javascript',
   'description' => 'Blog de Omar Barbosa, desarrollador web, comparto tutoriales y cursos de Python, PHP, Javascript, linux, seguridad y despliegue de aplicaciones',
   'keywords' => 'omar barbosa, desarrollador web, tutoriales, cursos, php, python, javascript, linux, laravel, vuejs, vue, jquery, css, html, sass, webpack, ubuntu, nodejs, node, njango, swoole, framework, articulos, tecnologia, software, movil, escritorio, aplicaciones, git, github, gitlab',
+  'project_one' => 'Simplexws es una aplicación escrita en PHP con Laravel, para la administración de bibliotecas, se conecta con las API de Exlibris denominadas Alma y Aleph, permite la consulta de códigos de rotulación de libros e impresión en diferentes formatos, información histórica y estadística.',
+  'project_two' => 'Sistema de reservaciones y landing page para el hotel Posada Sueño Real, escrito en PHP en el backend, Jquery para la interacción del frontend.',
+  'project_three' => 'Cotízate es una tienda para comercio electrónico, con sistema de descuentos, pasarela de pagos, cotizaciones, pedidos, carro de compras y mucho más, creada desde cero con PHP y Laravel, Jquery.',
+  'project_four' => 'Sistema para el control y administración de servicios de transporte, aplicación a medida, con control de rutas, facturación, hojas de vida de vehículos y conductores, generación automática de cuentas de cobro, notificaciones vía correo electrónico y más.',
+  'project_five' => 'Welkome es un sistema de administración para hoteles, el cual integra una completa suit de módulos que comprenden desde facturación hasta control servicios de comedor, estadísticas y datos para toma de decisiones estratégicas.',
+  'project_six' => 'Otros proyectos de aplicaciones web, escritorio y móviles, pueden ser encontradas en mis repositorios de GitHub.',
+  'link' => 'Enlace',
+  'close_project' => 'Cerrar proyecto',
+  'other_projects' => 'Más proyectos',
 );
