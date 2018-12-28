@@ -11,7 +11,7 @@
                       <div class="col-lg-8 mx-auto">
                         <h2 class="text-secondary text-uppercase mb-0">Simplexws</h2>
                         <hr class="star-dark mb-5">
-                        <img class="img-fluid mb-5" src="images/portfolio/cabin.png" alt="">
+                        <img class="img-fluid mb-5" src="{{ asset('images/portfolio/book-1.png') }}" alt="">
                         <p class="mb-5">@lang('page.project_one')</p>
                         <p class="mb-5">@lang('page.link'): <a href="https://simplexws.com" target="_blank">Simplexws</a></p>
                         <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
@@ -34,7 +34,7 @@
                       <div class="col-lg-8 mx-auto">
                         <h2 class="text-secondary text-uppercase mb-0">Posada Sueño Real</h2>
                         <hr class="star-dark mb-5">
-                        <img class="img-fluid mb-5" src="images/portfolio/cake.png" alt="">
+                        <img class="img-fluid mb-5" src="{{ asset('images/portfolio/hotel-1.png') }}" alt="">
                         <p class="mb-5">@lang('page.project_two')</p>
                         <p class="mb-5">@lang('page.link'): <a href="https://posadasuenoreal.com" target="_blank">Posada Sueño Real</a></p>
                         <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
@@ -57,7 +57,7 @@
                       <div class="col-lg-8 mx-auto">
                         <h2 class="text-secondary text-uppercase mb-0">Cotízate</h2>
                         <hr class="star-dark mb-5">
-                        <img class="img-fluid mb-5" src="images/portfolio/circus.png" alt="">
+                        <img class="img-fluid mb-5" src="{{ asset('images/portfolio/store.png') }}" alt="">
                         <p class="mb-5">@lang('page.project_three')</p>
                         <p class="mb-5">@lang('page.link'): <a href="https://cotizate.co" target="_blank">Cotízate</a></p>
                         <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
@@ -80,7 +80,7 @@
                       <div class="col-lg-8 mx-auto">
                         <h2 class="text-secondary text-uppercase mb-0">Trasercol</h2>
                         <hr class="star-dark mb-5">
-                        <img class="img-fluid mb-5" src="images/portfolio/game.png" alt="">
+                        <img class="img-fluid mb-5" src="{{ asset('images/portfolio/truck-1.png') }}" alt="">
                         <p class="mb-5">@lang('page.project_four')</p>
                         <p class="mb-5">@lang('page.link'): <a href="https://trasercol.co" target="_blank">Trasercol</a></p>
                         <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
@@ -103,7 +103,7 @@
                       <div class="col-lg-8 mx-auto">
                         <h2 class="text-secondary text-uppercase mb-0">Welkome</h2>
                         <hr class="star-dark mb-5">
-                        <img class="img-fluid mb-5" src="images/portfolio/safe.png" alt="">
+                        <img class="img-fluid mb-5" src="{{ asset('images/portfolio/hotel-2.png') }}" alt="">
                         <p class="mb-5">@lang('page.project_five')</p>
                         <p class="mb-5">@lang('page.link'): <a href="https://github.com/barbosa89/welkome" target="_blank">Welkome</a></p>
                         <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
@@ -126,7 +126,7 @@
                       <div class="col-lg-8 mx-auto">
                         <h2 class="text-secondary text-uppercase mb-0">@lang('page.other_projects')</h2>
                         <hr class="star-dark mb-5">
-                        <img class="img-fluid mb-5" src="images/portfolio/submarine.png" alt="">
+                        <img class="img-fluid mb-5" src="{{ asset('images/portfolio/github.png') }}" alt="">
                         <p class="mb-5">@lang('page.project_six')</p>
                         <p class="mb-5">@lang('page.link'): <a href="https://github.com/barbosa89" target="_blank">@lang('page.other_projects')</a></p>
                         <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">

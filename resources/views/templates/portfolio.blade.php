@@ -11,7 +11,7 @@
                     <i class="fas fa-search-plus fa-3x"></i>
                   </div>
                 </div>
-                <img class="img-fluid" src="images/portfolio/cabin.png" alt="">
+                <img class="img-fluid" src="{{ asset('images/portfolio/book-1.png') }}" alt="">
               </a>
             </div>
             <div class="col-md-6 col-lg-4">
@@ -21,7 +21,7 @@
                     <i class="fas fa-search-plus fa-3x"></i>
                   </div>
                 </div>
-                <img class="img-fluid" src="images/portfolio/cake.png" alt="">
+                <img class="img-fluid" src="{{ asset('images/portfolio/hotel-1.png') }}" alt="">
               </a>
             </div>
             <div class="col-md-6 col-lg-4">
@@ -31,7 +31,7 @@
                     <i class="fas fa-search-plus fa-3x"></i>
                   </div>
                 </div>
-                <img class="img-fluid" src="images/portfolio/circus.png" alt="">
+                <img class="img-fluid" src="{{ asset('images/portfolio/store.png') }}" alt="">
               </a>
             </div>
             <div class="col-md-6 col-lg-4">
@@ -41,7 +41,7 @@
                     <i class="fas fa-search-plus fa-3x"></i>
                   </div>
                 </div>
-                <img class="img-fluid" src="images/portfolio/game.png" alt="">
+                <img class="img-fluid" src="{{ asset('images/portfolio/truck-1.png') }}" alt="">
               </a>
             </div>
             <div class="col-md-6 col-lg-4">
@@ -51,7 +51,7 @@
                     <i class="fas fa-search-plus fa-3x"></i>
                   </div>
                 </div>
-                <img class="img-fluid" src="images/portfolio/safe.png" alt="">
+                <img class="img-fluid" src="{{ asset('images/portfolio/hotel-2.png') }}" alt="">
               </a>
             </div>
             <div class="col-md-6 col-lg-4">
@@ -61,7 +61,7 @@
                     <i class="fas fa-search-plus fa-3x"></i>
                   </div>
                 </div>
-                <img class="img-fluid" src="images/portfolio/submarine.png" alt="">
+                <img class="img-fluid" src="{{ asset('images/portfolio/github.png') }}" alt="">
               </a>
             </div>
           </div>

@@ -11,9 +11,9 @@
 |
 */
 
-// Route::get('/test', function () {
-//     dd(substr(Request::server('HTTP_ACCEPT_LANGUAGE'), 0, 2));
-// });
+Route::get('/test', function () {
+    return view('templates.blog');
+});
 
 Route::get('/', function () {
     return view('welcome');
