@@ -16,7 +16,7 @@
                         <p class="mb-5">@lang('page.link'): <a href="https://simplexws.com" target="_blank">Simplexws</a></p>
                         <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
                           <i class="fa fa-close"></i>
-                          Close Project</a>
+                          @lang('page.close_project')</a>
                       </div>
                     </div>
                   </div>
