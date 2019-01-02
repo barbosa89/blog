@@ -17,7 +17,7 @@ mix.js('resources/js/app.js', 'public/js')
    ], 'public/css/all.css')
    .styles([
       'public/landing/magnific-popup.css',
-      'public/landing/freelancer.min.css',
+      'public/landing/freelancer.css',
    ], 'public/css/landing.css')
    .scripts([
    ], 'public/js/all.js')

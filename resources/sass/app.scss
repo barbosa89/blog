@@ -14,6 +14,12 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+a {
+  text-decoration: none !important;
+}
+
+
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
@@ -24,4 +30,69 @@
   width: 1.5rem;
   height: 1.5rem;
   vertical-align: text-top;
+}
+
+header.blog-masthead {
+  padding-top: calc(4rem + 72px);
+  padding-bottom: 1rem;
+}
+
+header.blog-masthead a {
+  color: white;
+}
+
+header.blog-masthead h1 {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+header.blog-masthead h2 {
+  font-size: 1.3rem;
+  font-family: 'Lato';
+}
+
+@media (min-width: 992px) {
+  header.blog-masthead {
+    padding-top: calc(4rem + 106px);
+    padding-bottom: 1rem;
+  }
+  header.blog-masthead h1 {
+    font-size: 2.75em;
+    line-height: 4rem;
+  }
+  header.blog-masthead h2 {
+    font-size: 1.5em;
+  }
+}
+
+.blog {
+    color: #2c3e50!important;
+
+    .blog-list {
+      a {
+        color: #2c3e50 !important;
+      }
+
+      .blog-list-title {
+            font-size: 1.5em;
+        }
+    
+        .blog-description {
+            font-size: 1.1em;
+        }
+    }
+
+    .blog-divider {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      border: 0;
+      border-top: 1px solid #ddd;
+    }
+
+    .tags {
+      .tag-list {
+        list-style: none;
+        padding-left: 1em;
+      }
+    }
 }
