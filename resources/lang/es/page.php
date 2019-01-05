@@ -31,4 +31,8 @@ return array (
   'link' => 'Enlace',
   'close_project' => 'Cerrar proyecto',
   'other_projects' => 'Más proyectos',
+  'author' => 'Autor',
+  'share' => 'Compartir',
+  'share_text' => 'Comparte este artículo en las redes sociales',
+  'related' => 'Artículos relacionados',
 );

@@ -12,8 +12,12 @@
 */
 
 Route::get('/test', function () {
-    return view('templates.blog');
+    return view('templates.post');
 });
+
+Route::get('/blog', function () {
+    return view('templates.blog');
+})->name('blog');
 
 Route::get('/', function () {
     return view('welcome');

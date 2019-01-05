@@ -67,5 +67,6 @@
           "description": "{{ trans('page.description') }}"
         }
     </script>
+    @yield('scripts')
 </body>
 </html>

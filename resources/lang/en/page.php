@@ -31,4 +31,8 @@ return array (
   'close_project' => 'Close project',
   'link' => 'Link',
   'other_projects' => 'More projects',
+  'author' => 'Author',
+  'related' => 'Related posts',
+  'share' => 'Share',
+  'share_text' => 'Share this article in the social networks',
 );
