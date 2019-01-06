@@ -35,4 +35,5 @@ return array (
   'share' => 'Compartir',
   'share_text' => 'Comparte este artículo en las redes sociales',
   'related' => 'Artículos relacionados',
+  'subscribe' => 'Suscríbete',
 );

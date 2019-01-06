@@ -12,7 +12,7 @@
                     <a href="#" class="text-gray"><h1 class="text-uppercase">Optimización de consultas con Eloquent en Laravel</h1></a>
                     <p><i class="fas fa-calendar"></i> 28 de diciembre de 2018</p>
                     <a href="#" class="text-gray">
-                        <h2 class="font-weight-light mb-4">
+                        <h2 class="font-weight-light mb-4 text-justify">
                             Blog by Omar Barbosa, web developer, I share tutorials and courses on Python, PHP, Javascript, linux, security and application deployment 
                         </h2>
                     </a>
@@ -66,6 +66,21 @@
                                         <a class="card-link" href="#"><i class="fab fa-linkedin fa-2x"></i></a>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <div class="card">
+                            <h6 class="card-title text-center mt-4"><small>@lang('page.subscribe')</small></h6>
+                            <div class="card-body">
+                                <form class="form-inline" action="#" method="POST">
+                                    @csrf
+                                    <label class="sr-only" for="email">@lang('page.email')</label>
+                                    <div class="input-group mb-2 mr-sm-2" style="width:90%">
+                                        <input type="email" class="form-control" id="email" placeholder="{{ trans('page.email') }}" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary mb-2">@lang('page.send')</button>
+                                </form>
                             </div>
                         </div>
                     </div>

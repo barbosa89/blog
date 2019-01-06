@@ -35,4 +35,5 @@ return array (
   'related' => 'Related posts',
   'share' => 'Share',
   'share_text' => 'Share this article in the social networks',
+  'subscribe' => 'Subscribe',
 );

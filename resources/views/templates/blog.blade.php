@@ -12,7 +12,7 @@
                     <a href="#"><h1 class="text-uppercase">Optimización de consultas con Eloquent en Laravel</h1></a>
                     <p><i class="fas fa-calendar"></i> 28 de diciembre de 2018</p>
                     <a href="#">
-                        <h2 class="font-weight-light mb-4">
+                        <h2 class="font-weight-light mb-4 text-justify">
                             Blog by Omar Barbosa, web developer, I share tutorials and courses on Python, PHP, Javascript, linux, security and application deployment 
                         </h2>
                     </a>
@@ -28,7 +28,7 @@
 
     <div class="container blog">
         <div class="row mt-5">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
                 <div class="row blog-list align-items-center mb-2">
                     <div class="col-lg-2 col-xl-2 d-none d-lg-block d-xl-block">
                         <a href="#"><img class="img-fluid mb-5" src="images/profile.png" alt=""></a>
@@ -74,7 +74,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2 col-xl-2 tags d-none d-lg-block d-xl-block">
+            <div class="col-lg-3 col-xl-3 tags d-none d-lg-block d-xl-block">
                 <div class="card">
                     <div class="card-body">
                       <h5 class="card-title">Tags</h5>
