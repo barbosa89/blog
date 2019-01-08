@@ -36,4 +36,10 @@ return array (
   'share_text' => 'Comparte este artículo en las redes sociales',
   'related' => 'Artículos relacionados',
   'subscribe' => 'Suscríbete',
+  'close' => 'Cerrar',
+  'msg_subscription' => 'Si te suscribes, podrás recibir las notificaciones de los últimos artículos y cursos, así no te perderás de nada',
+  'subscription' => 'Suscripción',
+  'subscription_email' => 'Se ha enviado un mensaje a tu correo electrónico para que confirmes tu suscripción',
+  'subscribed' => 'Suscrito',
+  'subscribed_msg' => 'Ya estás suscrito',
 );

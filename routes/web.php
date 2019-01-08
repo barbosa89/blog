@@ -26,3 +26,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/subscribe', 'SubscriptionController@subscribe')
+    ->name('subscribe');
+
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index')
+    ->middleware('auth');
+
+

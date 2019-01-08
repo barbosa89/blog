@@ -69,23 +69,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 mt-4">
-                        <div class="card">
-                            <h6 class="card-title text-center mt-4"><small>@lang('page.subscribe')</small></h6>
-                            <div class="card-body">
-                                <form class="form-inline" action="#" method="POST">
-                                    @csrf
-                                    <label class="sr-only" for="email">@lang('page.email')</label>
-                                    <div class="input-group mb-2 mr-sm-2" style="width:90%">
-                                        <input type="email" class="form-control" id="email" placeholder="{{ trans('page.email') }}" required>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary mb-2">@lang('page.send')</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                
+
+                @include('templates.subscription')
+
                 <div class="mosthead mb-4">
                     <div class="col-12 mt-4 blog-divider">
                         <h4 class="mb-4"><small>@lang('page.related')</small></h4>
@@ -142,5 +129,9 @@
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>    
-
+    <script async>
+        setTimeout(function(){
+            $('#subscription').modal('show')
+        }, 20000);
+    </script>
 @endsection

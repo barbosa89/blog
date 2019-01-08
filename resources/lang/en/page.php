@@ -36,4 +36,10 @@ return array (
   'share' => 'Share',
   'share_text' => 'Share this article in the social networks',
   'subscribe' => 'Subscribe',
+  'close' => 'Close',
+  'msg_subscription' => 'If you subscribe, you can receive notifications of the latest articles and courses, so you will not miss anything',
+  'subscription' => 'Subscription',
+  'subscription_email' => 'A message has been sent to your email to confirm your subscription',
+  'subscribed' => 'Subscribed',
+  'subscribed_msg' => 'You are already subscribed',
 );

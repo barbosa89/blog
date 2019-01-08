@@ -47,6 +47,7 @@
 <body  id="page-top">
     <div id="app">
         @include('templates.navbar')
+        @include('flash::message')
 
         <main>
             @yield('content')
@@ -66,6 +67,11 @@
           "image": "{{ asset('images/site.png') }}",
           "description": "{{ trans('page.description') }}"
         }
+    </script>
+    <script async>
+        $('#flash-overlay-modal').modal();
+        
+        $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
     </script>
 </body>
 </html>
