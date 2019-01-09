@@ -12,7 +12,7 @@ class Input
 			return null;
 		}
 		
-		return htmlentities($value, ENT_QUOTES);
+		return htmlentities($value, ENT_QUOTES, 'UTF-8');
 	}
 
 	public static function bool($field = null)

@@ -34,35 +34,35 @@ a {
   vertical-align: text-top;
 }
 
-header.blog-masthead {
+.blog-masthead {
   padding-top: calc(4rem + 72px);
   padding-bottom: 1rem;
 }
 
-header.blog-masthead a {
+.blog-masthead a {
   color: white;
 }
 
-header.blog-masthead h1 {
+.blog-masthead h1 {
   font-size: 3rem;
   line-height: 3rem;
 }
 
-header.blog-masthead h2 {
+.blog-masthead h2 {
   font-size: 1.3rem;
   font-family: 'Lato';
 }
 
 @media (min-width: 992px) {
-  header.blog-masthead {
+  .blog-masthead {
     padding-top: calc(4rem + 106px);
     padding-bottom: 1rem;
   }
-  header.blog-masthead h1 {
+  .blog-masthead h1 {
     font-size: 2.75em;
     line-height: 4rem;
   }
-  header.blog-masthead h2 {
+  .blog-masthead h2 {
     font-size: 1.5em;
   }
 }
@@ -106,7 +106,7 @@ header.blog-masthead h2 {
 }
 
 @include media-breakpoint-down(xs) {
-  header.blog-masthead h1 {
+  .blog-masthead h1 {
     font-size: 2rem;
     line-height: 3rem;
   }
