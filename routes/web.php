@@ -26,3 +26,18 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/subscribe', 'SubscriptionController@subscribe')
+    ->name('subscribe');
+
+Route::get('/unsubscribe/{email}', 'SubscriptionController@unsubscribe')
+    ->name('unsubscribe');
+
+Route::post('/message', 'ContactController@message')
+    ->name('message')
+    ->middleware('sanitize');
+
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index')
+    ->middleware('auth');
+
+

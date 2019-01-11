@@ -12,7 +12,7 @@
                     <a href="#" class="text-gray"><h1 class="text-uppercase">Optimización de consultas con Eloquent en Laravel</h1></a>
                     <p><i class="fas fa-calendar"></i> 28 de diciembre de 2018</p>
                     <a href="#" class="text-gray">
-                        <h2 class="font-weight-light mb-4">
+                        <h2 class="font-weight-light mb-4 text-justify">
                             Blog by Omar Barbosa, web developer, I share tutorials and courses on Python, PHP, Javascript, linux, security and application deployment 
                         </h2>
                     </a>
@@ -70,7 +70,9 @@
                         </div>
                     </div>
                 </div>
-                
+
+                @include('templates.subscription')
+
                 <div class="mosthead mb-4">
                     <div class="col-12 mt-4 blog-divider">
                         <h4 class="mb-4"><small>@lang('page.related')</small></h4>
@@ -127,5 +129,9 @@
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>    
-
+    <script async>
+        setTimeout(function(){
+            $('#subscription').modal('show')
+        }, 20000);
+    </script>
 @endsection
