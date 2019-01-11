@@ -61,6 +61,10 @@
                                         <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                                     </div>
                                 </div>
+
+                                @if(app()->environment('production'))
+                                    {!! app('captcha')->render(trans('page.language')); !!}
+                                @endif
         
                                 <div class="form-group row mb-0">
                                     <div class="col-md-6 offset-md-4">

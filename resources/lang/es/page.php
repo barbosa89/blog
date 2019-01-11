@@ -53,4 +53,5 @@ return array (
   'msg_send' => 'Tu mensaje ha sido enviado, gracias por escribirme',
   'great' => 'Genial',
   'sorry' => 'Lo siento',
+  'language' => 'es',
 );

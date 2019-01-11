@@ -27,7 +27,8 @@ class ContactEmail extends FormRequest
             'name' => 'required|string|max:80',
             'email' => 'required|email',
             'phone' => 'nullable|string|max:10',
-            'message' => 'required|string'
+            'message' => 'required|string',
+            'g-recaptcha-response' => 'required|captcha'
         ];
     }
 }

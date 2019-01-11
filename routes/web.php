@@ -12,12 +12,7 @@
 */
 
 Route::get('/test', function () {
-    return view('emails.message')->with([
-        'name' => 'Luis',
-        'email' => 'a@b.com',
-        'phone' => '123',
-        'message' => 'Hi'
-    ]);
+    return view('templates.post');
 });
 
 Route::get('/blog', function () {

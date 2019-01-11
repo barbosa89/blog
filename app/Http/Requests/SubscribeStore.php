@@ -25,6 +25,7 @@ class SubscribeStore extends FormRequest
     {
         return [
             'email' => 'required|email',
+            'g-recaptcha-response' => 'required|captcha'
         ];
     }
 }

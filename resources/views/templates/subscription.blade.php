@@ -23,4 +23,8 @@
         </div>
         </div>
     </div>
+
+    @if(app()->environment('production'))
+        {!! app('captcha')->render(trans('page.language')); !!}
+    @endif
 </form>

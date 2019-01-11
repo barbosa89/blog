@@ -53,4 +53,5 @@ return array (
   'msg_fail' => 'Could not send your message, I\'m sorry, try again',
   'msg_send' => 'Your message has been sent, thanks for writing',
   'sorry' => 'Sorry',
+  'language' => 'en',
 );
