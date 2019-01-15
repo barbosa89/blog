@@ -51,10 +51,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            
-                                @if(app()->environment('production'))
-                                    {!! app('captcha')->render(trans('page.language')); !!}
-                                @endif
+
+                                @captcha(trans('page.language'))
         
                                 <div class="form-group row mb-0">
                                     <div class="col-md-8 offset-md-4">

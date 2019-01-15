@@ -9,9 +9,9 @@
                     <a href="#"><img class="img-fluid mb-5" src="images/profile.png" alt=""></a>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 text-md-center text-lg-left align-items-center">
-                    <a href="#"><h1 class="text-uppercase">Optimización de consultas con Eloquent en Laravel</h1></a>
+                    <a href="#" class="text-white"><h1 class="text-uppercase">Optimización de consultas con Eloquent en Laravel</h1></a>
                     <p><i class="fas fa-calendar"></i> 28 de diciembre de 2018</p>
-                    <a href="#">
+                    <a href="#" class="text-white">
                         <h2 class="font-weight-light mb-4 text-justify">
                             Blog by Omar Barbosa, web developer, I share tutorials and courses on Python, PHP, Javascript, linux, security and application deployment 
                         </h2>

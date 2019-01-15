@@ -1,5 +1,7 @@
 <form class="form-inline" action="{{ route('subscribe') }}" method="POST">
     @csrf
+    @honeypot
+    
     <div class="modal fade" id="subscription" tabindex="-1" role="dialog" aria-labelledby="subscriptionLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -23,8 +25,4 @@
         </div>
         </div>
     </div>
-
-    @if(app()->environment('production'))
-        {!! app('captcha')->render(trans('page.language')); !!}
-    @endif
 </form>

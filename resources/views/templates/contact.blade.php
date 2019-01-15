@@ -9,6 +9,8 @@
                 <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
                 <form name="sentMessage" id="contactForm" method="POST" action="{{ route('message') }}">
                     @csrf
+                    @honeypot
+                    
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
                             <label>@lang('page.name')</label>
@@ -56,11 +58,6 @@
                                 </span>
                             @endif
                         </div>
-                    </div>
-                    <div class="control-group" id="gg-recaptcha">
-                        @if(app()->environment('production'))
-                            {!! app('captcha')->render(trans('page.language')); !!}
-                        @endif
                     </div>
                     <br>
                     <div id="success"></div>
