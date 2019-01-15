@@ -14,7 +14,7 @@
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
                             <label>@lang('page.name')</label>
-                            <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="name" name="name" type="text" placeholder="{{ trans('page.name') }}" required="required" data-validation-required-message="{{ trans('page.required_name') }}" {{ old('name') }}>
+                            <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="name" name="name" type="text" placeholder="{{ trans('page.name') }}" required="required" data-validation-required-message="{{ trans('page.required_name') }}" value="{{ old('name') }}">
                             
                             @if ($errors->has('name'))
                                 <span class="invalid-feedback" role="alert">
