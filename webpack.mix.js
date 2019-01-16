@@ -14,13 +14,9 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css')
    .styles([
-   ], 'public/css/all.css')
-   .styles([
       'public/landing/magnific-popup.css',
       'public/landing/freelancer.css',
    ], 'public/css/landing.css')
-   .scripts([
-   ], 'public/js/all.js')
    .scripts([
       'public/landing/bootstrap.bundle.min.js',
       'public/landing/jquery.easing.min.js',
