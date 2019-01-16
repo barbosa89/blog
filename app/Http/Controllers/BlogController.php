@@ -23,11 +23,11 @@ class BlogController extends Controller
             ->orderBy('publish_date', 'DESC')
             ->paginate(20);
 
-	if($posts->count() == 0) {
-	    flash()-overlay('Without content temporarily', 'Sorry');
-		
-	    return back();
-	}
+        if ($posts->isEmpty()) {
+            flash()-overlay('Without content temporarily', 'Sorry');
+            
+            return back();
+        }
         
         $latest = $posts->shift(); 
 
