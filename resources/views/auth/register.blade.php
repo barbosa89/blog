@@ -11,6 +11,7 @@
                         <div class="card-body">
                             <form method="POST" action="{{ route('register') }}">
                                 @csrf
+                                @honeypot
         
                                 <div class="form-group row">
                                     <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
@@ -53,8 +54,6 @@
                                         @endif
                                     </div>
                                 </div>
-
-                                @captcha(trans('page.language'))
         
                                 <div class="form-group row">
                                     <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>

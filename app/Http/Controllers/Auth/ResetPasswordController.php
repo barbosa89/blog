@@ -35,20 +35,7 @@ class ResetPasswordController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
-    }
 
-    /**
-     * Get the password reset validation rules.
-     *
-     * @return array
-     */
-    protected function rules()
-    {
-        return [
-            'token' => 'required',
-            'email' => 'required|email',
-            'password' => 'required|confirmed|min:6',
-            'g-recaptcha-response' => 'required|captcha'
-        ];
+        $this->middleware('honeypot')->only('reset');
     }
 }

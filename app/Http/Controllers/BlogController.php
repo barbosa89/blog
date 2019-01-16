@@ -24,7 +24,7 @@ class BlogController extends Controller
             ->paginate(20);
 
         if ($posts->isEmpty()) {
-            flash()-overlay('Without content temporarily', 'Sorry');
+            flash()->overlay('Without content temporarily', 'Sorry');
             
             return back();
         }
