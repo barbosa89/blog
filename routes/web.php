@@ -25,6 +25,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/posts/{slug}', 'BlogController@article')->name('posts.article');
+
 Route::post('/subscribe', 'SubscriptionController@subscribe')
     ->name('subscribe')
     ->middleware(['sanitize', 'honeypot']);

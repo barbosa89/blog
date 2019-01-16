@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row text-gray text-center text-lg-left text-xl-left">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
-                    <a href="#" class="text-gray"><img class="img-fluid mb-5" src="images/profile.png" alt=""></a>
+                    <a href="#" class="text-gray"><img class="img-fluid mb-5" src="{{ url('images/profile.png') }}" alt=""></a>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 text-md-center text-lg-left align-items-center">
                     <a href="#" class="text-gray"><h1 class="text-uppercase">Optimización de consultas con Eloquent en Laravel</h1></a>
@@ -44,7 +44,7 @@
         
                 <div class="row mb-4 mt-4"> 
                     <div class="col-4 col-sm-4 col-md-3 col-lg-2 col-xl-2 text-center mb-4">
-                        <img class="img-fluid" src="images/profile.png" alt="">
+                        <img class="img-fluid" src="{{ url('images/profile.png') }}" alt="">
                     </div>
                     <div class="col-8 col-sm-8 col-md-8 col-lg-6 col-xl-6 mb-4">
                         <h5>Omar Barbosa</h5>
@@ -82,7 +82,7 @@
                         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                             <div class="row blog-list mb-2">
                                 <div class="col-3">
-                                    <a href="#"><img class="img-fluid mb-5" src="images/profile.png" alt=""></a>
+                                    <a href="#"><img class="img-fluid mb-5" src="{{ url('images/profile.png') }}" alt=""></a>
                                 </div>
                                 <div class="col-9">
                                     <a href="#"><h3 class="text-uppercase blog-list-title"><small>Optimización de consultas con Eloquent en Laravel</small></h3></a>
@@ -93,7 +93,7 @@
                         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                             <div class="row blog-list mb-2">
                                 <div class="col-3">
-                                    <a href="#"><img class="img-fluid mb-5" src="images/profile.png" alt=""></a>
+                                    <a href="#"><img class="img-fluid mb-5" src="{{ url('images/profile.png') }}" alt=""></a>
                                 </div>
                                 <div class="col-9">
                                     <a href="#"><h3 class="text-uppercase blog-list-title"><small>Optimización de consultas con Eloquent en Laravel</small></h3></a>
