@@ -18,13 +18,12 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $posts = WinkPost::with(['tags', 'author'])
-            ->live()
+        $posts = WinkPost::live()
             ->orderBy('publish_date', 'DESC')
             ->paginate(20);
 
         if ($posts->isEmpty()) {
-            flash()->overlay('Without content temporarily', 'Sorry');
+            flash()->overlay(trans('page.without_content'), trans('page.sorry'));
             
             return back();
         }
@@ -56,9 +55,9 @@ class BlogController extends Controller
     public function article($slug)
     {
         $post = WinkPost::where('slug', Input::clean($slug))
-            ->with('tags')
+            ->with(['tags', 'author'])
             ->first();
-        // dd($post);
-        return view('templates.post');
+
+        return view('templates.post', compact('post'));
     }
 }

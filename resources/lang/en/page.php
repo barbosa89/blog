@@ -54,4 +54,5 @@ return array (
   'msg_send' => 'Your message has been sent, thanks for writing',
   'sorry' => 'Sorry',
   'language' => 'en',
+  'without_content' => 'Without content temporarily',
 );

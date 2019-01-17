@@ -54,4 +54,5 @@ return array (
   'great' => 'Genial',
   'sorry' => 'Lo siento',
   'language' => 'es',
+  'without_content' => 'Sin contenido temporalmente',
 );
