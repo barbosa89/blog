@@ -116,3 +116,11 @@ img {
     line-height: 3rem;
   }
 }
+
+pre.ql-syntax {
+  background: rgba(238, 238, 238, 0.35);
+  border: solid 2px rgba(0, 0, 0, 0.05);
+  color: #000;
+  overflow-x: auto;
+  padding: 0.5em;
+}
