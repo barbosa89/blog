@@ -16,13 +16,13 @@ mix.js('resources/js/app.js', 'public/js')
    .styles([
       'public/landing/magnific-popup.css',
       'public/landing/freelancer.css',
+      'vendor/highlight.js/styles/default.css'
    ], 'public/css/landing.css')
    .scripts([
       'public/landing/bootstrap.bundle.min.js',
       'public/landing/jquery.easing.min.js',
       'public/landing/jquery.magnific-popup.min.js',
-      // 'public/landing/jqBootstrapValidation.js',
-      // 'public/landing/contact_me.js',
       'public/landing/freelancer.min.js',
+      'vendor/highlight.js/lib/highlight.js'
    ], 'public/js/landing.js')
    .browserSync('blog.app');
