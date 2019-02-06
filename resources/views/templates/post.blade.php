@@ -16,19 +16,19 @@
                             {{ $post->excerpt }}    
                         </h2>
                     </a>
-                    <div class="row align-items-end text-primary">
+                    <div class="row align-items-end">
                         <div class="col-4">
-                            <a href="hhttps://twitter.com/home?status={{ route('posts.article', ['slug' => $post->slug]) }}">
+                            <a class="share-link" href="https://twitter.com/home?status={{ route('posts.article', ['slug' => $post->slug]) }}">
                                 <i class="fab fa-twitter fa-2x"></i>
                             </a>
                         </div>
                         <div class="col-4">
-                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ route('posts.article', ['slug' => $post->slug]) }}">
+                            <a class="share-link" href="https://www.facebook.com/sharer/sharer.php?u={{ route('posts.article', ['slug' => $post->slug]) }}">
                                 <i class="fab fa-facebook fa-2x"></i>
                             </a>
                         </div>
                         <div class="col-4">
-                            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ route('posts.article', ['slug' => $post->slug]) }}&title={{ $post->title }}&summary={{ $post->excerpt }}&source=">
+                            <a class="share-link" href="https://www.linkedin.com/shareArticle?mini=true&url={{ route('posts.article', ['slug' => $post->slug]) }}&title={{ $post->title }}&summary={{ $post->excerpt }}&source=">
                                 <i class="fab fa-linkedin fa-2x"></i>
                             </a>
                         </div>
@@ -57,7 +57,7 @@
                     <div class="col-8 col-sm-8 col-md-8 col-lg-6 col-xl-6 mb-4">
                         <h5>{{ $post->author->name }}</h5>
                         <div class="text-muted">
-                            {!! $post->author->bio !!}
+                            @lang('page.me_short')
                         </div>
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
@@ -67,7 +67,7 @@
                                 <p class="card-text">@lang('page.share_text')</p>
                                 <div class="row text-center">
                                     <div class="col-4">
-                                        <a class="card-link" href="hhttps://twitter.com/home?status={{ route('posts.article', ['slug' => $post->slug]) }}">
+                                        <a class="card-link" href="https://twitter.com/home?status={{ route('posts.article', ['slug' => $post->slug]) }}">
                                             <i class="fab fa-twitter fa-2x"></i>
                                         </a>
                                     </div>
@@ -89,7 +89,7 @@
 
                 @include('templates.subscription')
 
-                <div class="mosthead mb-4">
+                {{-- <div class="mosthead mb-4">
                     <div class="col-12 mt-4 blog-divider">
                         <h4 class="mb-4"><small>@lang('page.related')</small></h4>
                     </div>
@@ -118,7 +118,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
         
                 <div class="row mb-4">
                     <div class="col-12">
@@ -144,10 +144,11 @@
         (d.head || d.body).appendChild(s);
         })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>    
+    {{-- <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>     --}}
     <script async>
         setTimeout(function(){
             $('#subscription').modal('show')
         }, 20000);
     </script>
+    {{-- <script async>hljs.initHighlightingOnLoad();</script> --}}
 @endsection

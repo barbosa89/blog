@@ -36,6 +36,12 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/landing.css') }}" rel="stylesheet">
 
+    <script>
+        window.Laravel = {!! json_encode([
+            'csrfToken' => csrf_token(),
+        ]) !!};
+    </script>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103614513-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
