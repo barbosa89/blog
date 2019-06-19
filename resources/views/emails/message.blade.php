@@ -5,10 +5,10 @@
 	<meta name="viewport" content="width=device-width">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="x-apple-disable-message-reformatting">
-    <title>New message | {{ config('app.name') }}</title> 
+    <title>New message | {{ config('app.name') }}</title>
     <style>
         body {
-	        margin: 0 auto !important;
+            margin: 0 auto !important;
             padding: 0 !important;
             height: 100% !important;
             width: 100% !important;
@@ -56,24 +56,24 @@
         }
 
         .a6S {
-	        display: none !important;
-	        opacity: 0.01 !important;
+            display: none !important;
+            opacity: 0.01 !important;
         }
 
         img.g-img + div {
-	        display:none !important;
-	   	}
+            display:none !important;
+        }
 
         .button-link {
             text-decoration: none !important;
         }
 
-        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) { 
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
             .email-container {
                 min-width: 375px !important;
             }
         }
-        
+
         .button-td,
         .button-a {
             transition: all 100ms ease-in;
@@ -123,7 +123,7 @@
 				font-size: 17px !important;
 				line-height: 22px !important;
 			}
-			
+
         }
     </style>
 
@@ -133,7 +133,7 @@
         <table role="presentation" aria-hidden="true" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="margin: auto;" class="email-container">
 			<tr>
 				<td style="padding: 20px 0; text-align: center">
-					
+
 				</td>
 			</tr>
         </table>

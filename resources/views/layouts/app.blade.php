@@ -12,26 +12,27 @@
 
     <meta name="description" content="{{ trans('page.description') }}">
     <meta name="keywords" content="{{ trans('page.keywords') }}">
-    <meta name="author" content="Omar Barbosa"> 
+    <meta name="author" content="Omar Barbosa">
 
     <meta property="og:title" content="Blog de Omar Barbosa">
     <meta property="og:description" content="{{ trans('page.description') }}">
     <meta property="og:image" content="{{ asset('images/site.png') }}">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://omarbarbosa.com/">
-    <meta name="twitter:card" content="summary_large_image">
-    
     <meta property="og:site_name" content="Omar Barbosa">
-    <meta name="twitter:image:alt" content="Blog Omar Barbosa">
-    
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:src" content="{{ asset('images/site.png') }}">
+    <meta name="twitter:site" content="@Omar_Andres_Bar">
+    <meta name="twitter:url" content="https://omarbarbosa.com/">
+
     <meta property="fb:app_id" content="2203860376602756" />
-    <meta name="twitter:site" content="@Barbosa">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    
+
     <!-- Style -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/landing.css') }}" rel="stylesheet">
