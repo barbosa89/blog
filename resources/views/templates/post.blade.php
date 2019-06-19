@@ -6,7 +6,8 @@
         <div class="container">
             <div class="row text-gray text-center text-lg-left text-xl-left">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
-                    <a href="#" class="text-gray"><img class="img-fluid mb-5" src="{{ empty($latest->featured_image) ? asset('images/article.png') : url($latest->featured_image) }}" alt="{{ $post->title }}"></a>
+                    <a href="#" class="text-gray"><img class="img-fluid mb-5" src="{{ empty($post->featured_image) ? asset('images/article.png') : url($post->featured_image) }}" alt="{{ $post->title }}"></a>
+                    }
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 text-md-center text-lg-left align-items-center">
                     <a href="#" class="text-gray"><h1 class="text-uppercase">{{ $post->title }}</h1></a>
