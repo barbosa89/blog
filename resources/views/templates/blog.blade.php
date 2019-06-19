@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row text-center text-lg-left text-xl-left">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
-                    <a href="{{ route('posts.article', ['slug' => $latest->slug]) }}"><img class="img-fluid mb-5" src="{{ url($latest->featured_image) }}" alt="{{ $latest->title }}"></a>
+                    <a href="{{ route('posts.article', ['slug' => $latest->slug]) }}"><img class="img-fluid mb-5" src="{{ empty($latest->featured_image) ? asset('images/article.png') : url($latest->featured_image) }}" alt="{{ $latest->title }}"></a>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 text-md-center text-lg-left align-items-center">
                         <a href="{{ route('posts.article', ['slug' => $latest->slug]) }}" class="text-white"><h1 class="text-uppercase">{{ $latest->title }}</h1></a>
