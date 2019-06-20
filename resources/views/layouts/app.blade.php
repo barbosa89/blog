@@ -18,13 +18,13 @@
     <meta property="og:description" content="{{ trans('page.description') }}">
     <meta property="og:image" content="{{ asset('images/site.png') }}">
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://omarbarbosa.com/">
+    <meta property="og:url" content="https://omarbarbosa.com">
     <meta property="og:site_name" content="Omar Barbosa">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image:src" content="{{ asset('images/site.png') }}">
     <meta name="twitter:site" content="@Omar_Andres_Bar">
-    <meta name="twitter:url" content="https://omarbarbosa.com/">
+    <meta name="twitter:url" content="https://omarbarbosa.com">
 
     <meta property="fb:app_id" content="2203860376602756" />
 
@@ -67,13 +67,13 @@
     <script src="{{ asset('js/landing.js') }}" async defer></script>
     <script type="application/ld+json" async>
         {
-          "@context": "http://schema.org/",
-          "@type": "WebSite",
-          "name": "Omar Barbosa",
-          "alternateName": "Blog de Omar Barbosa",
-          "url": "https://omarbarbosa.com",
-          "image": "{{ asset('images/site.png') }}",
-          "description": "{{ trans('page.description') }}"
+            "@context": "http://schema.org/",
+            "@type": "WebSite",
+            "name": "Omar Barbosa",
+            "alternateName": "Blog de Omar Barbosa",
+            "url": "https://omarbarbosa.com",
+            "image": "{{ asset('images/site.png') }}",
+            "description": "{{ trans('page.description') }}"
         }
     </script>
     <script async>

@@ -51,17 +51,6 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/landing.js') }}" async defer></script>
-    <script type="application/ld+json" async>
-        {
-            "@context": "http://schema.org/",
-            "@type": "WebSite",
-            "name": "Omar Barbosa",
-            "alternateName": "Blog de Omar Barbosa",
-            "url": "https://omarbarbosa.com",
-            "image": "{{ asset('images/site.png') }}",
-            "description": "{{ trans('page.description') }}"
-        }
-    </script>
     <script async>
         $('#flash-overlay-modal').modal();
 
