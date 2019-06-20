@@ -11,7 +11,7 @@ class Input
 		if (empty($value)) {
 			return null;
 		}
-		
+
 		return htmlentities($value, ENT_QUOTES, 'UTF-8');
 	}
 

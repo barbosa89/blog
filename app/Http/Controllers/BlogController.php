@@ -92,4 +92,18 @@ class BlogController extends Controller
 
         return 'es_AR';
     }
+
+    /**
+     * Search a post in the database.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     */
+    public function search(Request $request)
+    {
+        $query = Input::clean($request->get('query'));
+        $posts = WinkPost::whereLike(['title', 'slug', 'excerpt', 'tags.name'], $query)
+            ->with(['tags', 'author'])
+            ->get();
+        dd($posts);
+    }
 }

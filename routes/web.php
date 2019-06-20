@@ -26,6 +26,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/posts/{slug}', 'BlogController@article')->name('posts.article');
+Route::get('/search', 'BlogController@search')->name('posts.search');
 
 Route::post('/subscribe', 'SubscriptionController@subscribe')
     ->name('subscribe')

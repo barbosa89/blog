@@ -42,6 +42,19 @@
                     @endforeach
                 </div>
                 <div class="col-lg-3 col-xl-3 tags d-none d-lg-block d-xl-block">
+                    <div class="card sidebar-search">
+                        <div class="card-body">
+                            <form action="{{ route('posts.search') }}" method="GET">
+                                <div class="control-group">
+                                    <div class="form-group">
+                                        <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="query" name="query" type="text" placeholder="{{ trans('page.search') }}" required="required" value="{{ old('query') }}">
+                                    </div>
+                                    <input type="submit" class="btn btn-primary" value="{{ trans('page.search') }}">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Tags</h5>
