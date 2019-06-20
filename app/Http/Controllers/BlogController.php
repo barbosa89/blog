@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App;
 use Wink\WinkTag;
 use Wink\WinkPost;
 use Wink\WinkAuthor;
+use App\Helpers\Input;
 use App\Helpers\Fields;
 use Illuminate\Http\Request;
-use App\Helpers\Input;
+use DonatelloZa\RakePlus\RakePlus;
 
 class BlogController extends Controller
 {
@@ -24,11 +26,11 @@ class BlogController extends Controller
 
         if ($posts->isEmpty()) {
             flash()->overlay(trans('page.without_content'), trans('page.sorry'));
-            
+
             return back();
         }
-        
-        $latest = $posts->shift(); 
+
+        $latest = $posts->shift();
 
         $tags = $this->getTags();
 
@@ -57,7 +59,37 @@ class BlogController extends Controller
         $post = WinkPost::where('slug', Input::clean($slug))
             ->with(['tags', 'author'])
             ->first();
+        $keywords = $this->getKeyWords($post->excerpt);
 
-        return view('templates.post', compact('post'));
+        return view('templates.post', compact('post', 'keywords'));
+    }
+
+    /**
+     * Extract keywords from the post excerpt.
+     *
+     * @param  string  $text
+     * @return string
+     */
+    public function getKeyWords(string $text = null)
+    {
+        $keywords = RakePlus::create($text, $this->getLocale())->keywords();
+
+        return implode(", ", $keywords);
+    }
+
+    /**
+     * Get locale in RakePlus format.
+     *
+     * @return string
+     */
+    public function getLocale()
+    {
+        $locale = App::getLocale();
+
+        if ($locale == 'en') {
+            return 'en_US';
+        }
+
+        return 'es_AR';
     }
 }

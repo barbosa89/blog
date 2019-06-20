@@ -1,4 +1,26 @@
-@extends('layouts.app')
+@extends('layouts.post')
+
+@section('title', $post->title)
+
+@section('head')
+
+    <meta name="description" content="{{ $post->excerpt }}">
+    <meta name="keywords" content="{{ $keywords }}">
+    <meta name="author" content="Omar Barbosa">
+
+    <meta property="og:title" content="{{ $post->title }}">
+    <meta property="og:description" content="{{ $post->excerpt }}">
+    <meta property="og:image" content="{{ empty($post->featured_image) ? asset('images/article.png') : url($post->featured_image) }}">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ route('posts.article', ['slug' => $post->slug]) }}">
+    <meta property="og:site_name" content="Omar Barbosa">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:src" content="{{ empty($post->featured_image) ? asset('images/article.png') : url($post->featured_image) }}">
+    <meta name="twitter:site" content="@Omar_Andres_Bar">
+    <meta name="twitter:url" content="{{ route('posts.article', ['slug' => $post->slug]) }}">
+
+@endsection
 
 @section('content')
 
@@ -10,7 +32,9 @@
                     <a href="{{ route('posts.article', ['slug' => $post->slug]) }}" class="text-gray"><img class="img-fluid mb-5" src="{{ empty($post->featured_image) ? asset('images/article.png') : url($post->featured_image) }}" alt="{{ $post->title }}"></a>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 text-md-center text-lg-left align-items-center">
-                    <a href="{{ route('posts.article', ['slug' => $post->slug]) }}" class="text-gray"><h1 class="text-uppercase">{{ $post->title }}</h1></a>
+                    <a href="{{ route('posts.article', ['slug' => $post->slug]) }}" class="text-gray">
+                        <h1 class="text-uppercase">{{ $post->title }}</h1>
+                    </a>
                     <p><i class="fas fa-calendar"></i> {{ $post->created_at->toDateString() }}</p>
                     <a href="{{ route('posts.article', ['slug' => $post->slug]) }}" class="text-gray">
                         <h2 class="font-weight-light mb-4 text-justify">
@@ -133,6 +157,7 @@
     @include('templates.footer')
 
     @include('templates.top-button')
+
 @endsection
 
 @section('scripts')
@@ -150,5 +175,16 @@
         setTimeout(function(){
             $('#subscription').modal('show')
         }, 20000);
+    </script>
+    <script type="application/ld+json" async>
+        {
+            "@context": "http://schema.org/",
+            "@type": "WebSite",
+            "name": "{{ $post->title }}",
+            "alternateName": "{{ $post->title }}",
+            "url": "{{ route('posts.article', ['slug' => $post->slug]) }}",
+            "image": "{{ empty($post->featured_image) ? asset('images/article.png') : url($post->featured_image) }}",
+            "description": "{{ $post->excerpt }}"
+        }
     </script>
 @endsection
