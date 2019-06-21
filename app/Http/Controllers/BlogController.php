@@ -21,7 +21,9 @@ class BlogController extends Controller
     public function index()
     {
         $posts = WinkPost::live()
-            ->orderBy('publish_date', 'DESC')
+            ->whereHas('tags', function ($query) {
+                $query->where('name', App::getLocale());
+            })->orderBy('publish_date', 'DESC')
             ->paginate(20);
 
         if ($posts->isEmpty()) {
@@ -59,6 +61,7 @@ class BlogController extends Controller
         $post = WinkPost::where('slug', Input::clean($slug))
             ->with(['tags', 'author'])
             ->first();
+
         $keywords = $this->getKeyWords($post->excerpt);
 
         return view('templates.post', compact('post', 'keywords'));
@@ -101,9 +104,20 @@ class BlogController extends Controller
     public function search(Request $request)
     {
         $query = Input::clean($request->get('query'));
-        $posts = WinkPost::whereLike(['title', 'slug', 'excerpt', 'tags.name'], $query)
+
+        if (empty($query)) {
+            return redirect()->route('blog');
+        }
+
+        $posts = WinkPost::live()
+            ->whereHas('tags', function ($query) {
+                $query->where('name', App::getLocale());
+            })->whereLike(['title', 'slug', 'excerpt', 'tags.name'], $query)
             ->with(['tags', 'author'])
-            ->get();
-        dd($posts);
+            ->paginate(20);
+
+        $tags = $this->getTags();
+
+        return view('templates.search', compact('posts', 'query', 'tags'));
     }
 }

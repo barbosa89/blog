@@ -55,4 +55,8 @@ return array (
   'sorry' => 'Sorry',
   'language' => 'en',
   'without_content' => 'Without content temporarily',
+  'search_results' => 'Search results',
+  'search' => 'Search',
+  'no_results' => 'There is not articles related with your searching',
+  'no_excerpt' => 'The excerpt has not yet been published',
 );

@@ -11,7 +11,7 @@
                         <img class="img-fluid mb-5" src="{{ empty($latest->featured_image) ? asset('images/article.png') : url($latest->featured_image) }}" alt="{{ $latest->title }}">
                     </a>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 text-md-center text-lg-left align-items-center">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 text-left align-items-center">
                     <a href="{{ route('posts.article', ['slug' => $latest->slug]) }}" class="text-gray">
                         <h1 class="text-uppercase">{{ $latest->title }}</h1>
                     </a>
@@ -20,9 +20,23 @@
                     </p>
                     <a href="{{ route('posts.article', ['slug' => $latest->slug]) }}" class="text-gray">
                         <h2 class="font-weight-light mb-4 text-justify">
-                            {{ $latest->excerpt }}
+                            {{ empty($post->excerpt) ? trans('page.no_excerpt') : $post->excerpt }}
                         </h2>
                     </a>
+                </div>
+                <div class="col-12 search text-left d-lg-none">
+                    <div class="card">
+                        <div class="card-body">
+                            <form action="{{ route('posts.search') }}" method="GET">
+                                <div class="control-group">
+                                    <div class="form-group">
+                                        <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="query" name="query" type="text" placeholder="{{ trans('page.search') }}" required="required" value="{{ old('query') }}">
+                                    </div>
+                                    <input type="submit" class="btn btn-primary" value="{{ trans('page.search') }}">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

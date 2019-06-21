@@ -133,3 +133,15 @@ pre.ql-syntax {
 .sidebar-search {
     margin-bottom: 15px;
 }
+
+.search {
+    margin: 0;
+
+    & > .card {
+        border: none;
+
+        & > .card-body {
+            padding: 0;
+        }
+    }
+}

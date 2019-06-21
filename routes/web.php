@@ -12,10 +12,8 @@
 */
 
 Route::get('/test', function () {
-    return view('templates.post');
+    abort(403);
 });
-
-Route::get('/blog', 'BlogController@index')->name('blog');
 
 Route::get('/', function () {
     return view('welcome');
@@ -24,6 +22,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/blog', 'BlogController@index')->name('blog');
 
 Route::get('/posts/{slug}', 'BlogController@article')->name('posts.article');
 Route::get('/search', 'BlogController@search')->name('posts.search');
