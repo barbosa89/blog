@@ -59,4 +59,5 @@ return array (
   'search' => 'Search',
   'no_results' => 'There is not articles related with your searching',
   'no_excerpt' => 'The excerpt has not yet been published',
+  'logout' => 'Logout',
 );

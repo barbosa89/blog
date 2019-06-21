@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App;
+use Auth;
 use Wink\WinkTag;
 use Wink\WinkPost;
 use Wink\WinkAuthor;
@@ -47,7 +48,10 @@ class BlogController extends Controller
      */
     public function getTags()
     {
-        return WinkTag::all();
+        return WinkTag::query()
+            ->where('name', '!=', 'es')
+            ->where('name', '!=', 'en')
+            ->get();
     }
 
     /**

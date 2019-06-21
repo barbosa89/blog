@@ -19,7 +19,7 @@ class SubscriptionController extends Controller
     {
         $email = Input::clean($request->email);
 
-        if (!Newsletter::isSubscribed($email) ) 
+        if (!Newsletter::isSubscribed($email) )
         {
             Newsletter::subscribePending($email);
 
@@ -42,7 +42,7 @@ class SubscriptionController extends Controller
     {
         $email = Input::clean($email);
 
-        if (Newsletter::isSubscribed($email) ) 
+        if (Newsletter::isSubscribed($email) )
         {
             Newsletter::unsubscribe($email);
 

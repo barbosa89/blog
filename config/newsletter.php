@@ -11,7 +11,7 @@ return [
     /*
      * The listName to use when no listName has been specified in a method.
      */
-    'defaultListName' => 'subscribers',
+    'defaultListName' => env('MAILCHIMP_LIST_NAME', 'subscribers'),
 
     /*
      * Here you can define properties of the lists.

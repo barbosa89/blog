@@ -3,7 +3,7 @@
 return array (
   'me' => 'Hijo de Jesucristo, estudiante informático, desarrollador web, blogger, inmerso en la tecnología, la ciencia y la creación de nuevas cosas; por definición, un aprendiz eterno en continua evolución.',
   'stack' => 'Amo la web, es por eso que escribo líneas en Python, PHP y Javascript, junto con tecnologías como Git, CSS, HTML, NodeJs y por supuesto, en Linux.',
-  'about' => 'Acerca de mi',
+  'about' => 'Sobre mi',
   'contact' => 'Contacto',
   'contact_me' => 'Escríbeme',
   'copyright' => 'Derechos de autor',
@@ -59,4 +59,5 @@ return array (
   'search' => 'Buscar',
   'no_results' => 'No hay artículos relacionados con su búsqueda.',
   'no_excerpt' => 'Aún no se ha publicado el estracto',
+  'logout' => 'Salir',
 );

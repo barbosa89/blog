@@ -25,7 +25,7 @@ class ContactEmail extends FormRequest
     {
         return [
             'name' => 'required|string|max:80',
-            'email' => 'required|email',
+            'email' => 'required|email|email_checker',
             'phone' => 'nullable|string|max:10',
             'message' => 'required|string'
         ];
