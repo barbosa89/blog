@@ -20,7 +20,7 @@
                     </p>
                     <a href="{{ route('posts.article', ['slug' => $latest->slug]) }}" class="text-gray">
                         <h2 class="font-weight-light mb-4 text-justify">
-                            {{ empty($post->excerpt) ? trans('page.no_excerpt') : $post->excerpt }}
+                            {{ empty($latest->excerpt) ? trans('page.no_excerpt') : $latest->excerpt }}
                         </h2>
                     </a>
                 </div>
