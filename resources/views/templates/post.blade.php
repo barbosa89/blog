@@ -92,17 +92,17 @@
                                 <p class="card-text">@lang('page.share_text')</p>
                                 <div class="row text-center">
                                     <div class="col-4">
-                                        <a class="card-link" href="https://twitter.com/home?status={{ route('posts.article', ['slug' => $post->slug]) }}">
+                                        <a target="_blank" class="card-link" href="https://twitter.com/home?status={{ route('posts.article', ['slug' => $post->slug]) }}">
                                             <i class="fab fa-twitter fa-2x"></i>
                                         </a>
                                     </div>
                                     <div class="col-4">
-                                        <a class="card-link" href="https://www.facebook.com/sharer/sharer.php?u={{ route('posts.article', ['slug' => $post->slug]) }}">
+                                        <a target="_blank" class="card-link" href="https://www.facebook.com/sharer/sharer.php?u={{ route('posts.article', ['slug' => $post->slug]) }}">
                                             <i class="fab fa-facebook fa-2x"></i>
                                         </a>
                                     </div>
                                     <div class="col-4">
-                                        <a class="card-link" href="https://www.linkedin.com/shareArticle?mini=true&url={{ route('posts.article', ['slug' => $post->slug]) }}&title={{ $post->title }}&summary={{ $post->excerpt }}&source=">
+                                        <a target="_blank" class="card-link" href="https://www.linkedin.com/shareArticle?mini=true&url={{ route('posts.article', ['slug' => $post->slug]) }}&title={{ $post->title }}&summary={{ $post->excerpt }}&source=">
                                             <i class="fab fa-linkedin fa-2x"></i>
                                         </a>
                                     </div>
