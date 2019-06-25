@@ -15,11 +15,11 @@ class Fields
 	{
 		$fields = config('blog.fields.' . $model);
 		$parsed = [];
-		dd(config('blog.fields'));
+
 		foreach ($fields as $field) {
 			$parsed[] = $model . '.' . $field;
 		}
-		
+
 		return $parsed;
 	}
 }

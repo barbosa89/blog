@@ -23,6 +23,10 @@ img {
     height: auto;
 }
 
+a.bg-primary:hover, a.bg-primary:focus, button.bg-primary:hover, button.bg-primary:focus {
+    background-color: #18BC9C !important;
+}
+
 .text-gray {
     color:#2c3e50 !important;
 }

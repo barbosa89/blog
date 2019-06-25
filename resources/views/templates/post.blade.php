@@ -114,36 +114,30 @@
 
                 @include('templates.subscription')
 
-                {{-- <div class="mosthead mb-4">
-                    <div class="col-12 mt-4 blog-divider">
-                        <h4 class="mb-4"><small>@lang('page.related')</small></h4>
-                    </div>
-
-                    <div class="row blog">
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                            <div class="row blog-list mb-2">
-                                <div class="col-3">
-                                    <a href="#"><img class="img-fluid mb-5" src="{{ url('images/profile.png') }}" alt=""></a>
+                @if ($relateds->isNotEmpty())
+                    <div class="mosthead mb-4">
+                        <h3 class="mb-4 font-weight-bold"><small>@lang('page.related')</small></h3>
+                        <div class="row blog">
+                            @foreach ($relateds as $post)
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                    <div class="row blog-list mb-2">
+                                        <div class="col-10">
+                                            <a href="#">
+                                                <h4 class="text-uppercase blog-list-title">
+                                                    <small>{{ $post->title }}</small>
+                                                </h4>
+                                            </a>
+                                            <p>
+                                                <i class="fas fa-calendar"></i>
+                                                <small> {{ $post->created_at->toDateString() }}</small>
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-9">
-                                    <a href="#"><h3 class="text-uppercase blog-list-title"><small>Optimización de consultas con Eloquent en Laravel</small></h3></a>
-                                    <p><i class="fas fa-calendar"></i> <small> 28 de diciembre de 2018</small></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                            <div class="row blog-list mb-2">
-                                <div class="col-3">
-                                    <a href="#"><img class="img-fluid mb-5" src="{{ url('images/profile.png') }}" alt=""></a>
-                                </div>
-                                <div class="col-9">
-                                    <a href="#"><h3 class="text-uppercase blog-list-title"><small>Optimización de consultas con Eloquent en Laravel</small></h3></a>
-                                    <p><i class="fas fa-calendar"></i> <small> 28 de diciembre de 2018</small></p>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
-                </div> --}}
+                @endif
 
                 <div class="row mb-4">
                     <div class="col-12">

@@ -6,15 +6,15 @@
 
 return [
 
-    'paginate' => 20, 
+    'paginate' => 20,
 
     'fields' => [
         'posts' => [
-            'id', 
-            'slug', 
+            'id',
+            'slug',
             'title',
-            'excerpt', 
-            'body', 
+            'excerpt',
+            'body',
             'published',
             'publish_date',
             'featured_image',

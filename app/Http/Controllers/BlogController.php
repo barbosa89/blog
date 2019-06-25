@@ -25,7 +25,7 @@ class BlogController extends Controller
             ->whereHas('tags', function ($query) {
                 $query->where('name', App::getLocale());
             })->orderBy('publish_date', 'DESC')
-            ->paginate(20);
+            ->paginate(20, Fields::get('posts'));
 
         if ($posts->isEmpty()) {
             flash()->overlay(trans('page.without_content'), trans('page.sorry'));
@@ -51,7 +51,7 @@ class BlogController extends Controller
         return WinkTag::query()
             ->where('name', '!=', 'es')
             ->where('name', '!=', 'en')
-            ->get();
+            ->get(Fields::get('tags'));
     }
 
     /**
@@ -63,12 +63,60 @@ class BlogController extends Controller
     public function article($slug)
     {
         $post = WinkPost::where('slug', Input::clean($slug))
-            ->with(['tags', 'author'])
-            ->first();
+            ->with([
+                'tags' => function ($query)
+                {
+                    $query->select(Fields::get('tags'))
+                        ->where('name', '!=', 'es')
+                        ->where('name', '!=', 'en');
+                },
+                'author' => function ($query)
+                {
+                    $query->select(Fields::get('authors'));
+                }
+            ])->first(Fields::get('posts'));
+
+        $relateds = $this->getRelateds($post);
 
         $keywords = $this->getKeyWords($post->excerpt);
 
-        return view('templates.post', compact('post', 'keywords'));
+        return view('templates.post', compact('post', 'keywords', 'relateds'));
+    }
+
+    /**
+     * Return related articles.
+     *
+     * @param  \Wink\WinkPost  $post
+     * @return \Illuminate\Support\Collection  $relateds
+     */
+    public function getRelateds(WinkPost $post)
+    {
+        $relateds = collect();
+        $post->tags->each(function ($tag) use (&$relateds, $post)
+        {
+            $posts = WinkPost::live()
+                ->where('id', '!=', $post->id)
+                ->whereHas('tags', function ($query) use ($tag, $post) {
+                    $query->where('name', $tag->name);
+                })->whereHas('tags', function ($query) {
+                    $query->where('name', App::getLocale());
+                })->inRandomOrder()
+                ->limit(2)
+                ->get(Fields::get('posts'));
+
+            if ($posts->isNotEmpty()) {
+                foreach ($posts as $post) {
+                    $relateds->push($post);
+                }
+            }
+
+        });
+
+        if ($relateds->count() >= 2) {
+            $relateds = $relateds->take(2);
+        }
+
+        return $relateds;
     }
 
     /**
@@ -117,8 +165,18 @@ class BlogController extends Controller
             ->whereHas('tags', function ($query) {
                 $query->where('name', App::getLocale());
             })->whereLike(['title', 'slug', 'excerpt', 'tags.name'], $query)
-            ->with(['tags', 'author'])
-            ->paginate(20);
+            ->with([
+                'tags' => function ($query)
+                {
+                    $query->select(Fields::get('tags'))
+                        ->where('name', '!=', 'es')
+                        ->where('name', '!=', 'en');
+                },
+                'author' => function ($query)
+                {
+                    $query->select(Fields::get('authors'));
+                }
+            ])->paginate(20, Fields::get('posts'));
 
         $tags = $this->getTags();
 
