@@ -22,8 +22,11 @@ class BlogController extends Controller
     public function index()
     {
         $posts = WinkPost::live()
-            ->whereHas('tags', function ($query) {
-                $query->where('name', App::getLocale());
+            ->when(Auth::guest(), function ($query)
+            {
+                $query->whereHas('tags', function ($query) {
+                    $query->where('name', App::getLocale());
+                });
             })->orderBy('publish_date', 'DESC')
             ->paginate(20, Fields::get('posts'));
 
@@ -146,6 +149,34 @@ class BlogController extends Controller
         }
 
         return 'es_AR';
+    }
+
+    /**
+     * Display articles by tags.
+     *
+     * @param  string  $tag
+     * @return \Illuminate\Http\Response
+     */
+    public function tags(string $tag = null)
+    {
+        $tag = Input::clean($tag);
+
+        $posts = WinkPost::live()
+            ->whereHas('tags', function ($query) use ($tag) {
+                $query->where('name', $tag);
+            })->whereHas('tags', function ($query) {
+                $query->where('name', App::getLocale());
+            })->paginate(20, Fields::get('posts'));
+
+        if ($posts->isEmpty()) {
+            flash()->overlay(trans('page.without_content'), trans('page.sorry'));
+
+            return back();
+        }
+
+        $tags = $this->getTags();
+
+        return view('templates.tag-search', compact('posts', 'tags', 'tag'));
     }
 
     /**

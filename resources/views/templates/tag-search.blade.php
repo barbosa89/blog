@@ -7,21 +7,7 @@
         <div class="container">
             <div class="row text-gray text-center text-lg-left text-xl-left">
                 <div class="col-12 text-md-center text-lg-left align-items-center">
-                    <h1 class="text-uppercase">@lang('page.search_results')</h1>
-                </div>
-                <div class="col-12 search text-left">
-                    <div class="card">
-                        <div class="card-body">
-                            <form action="{{ route('posts.search') }}" method="GET">
-                                <div class="control-group">
-                                    <div class="form-group">
-                                        <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="query" name="query" type="text" required="required" value="{{ $query }}">
-                                    </div>
-                                    <input type="submit" class="btn btn-primary" value="{{ trans('page.search') }}">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+                    <h3 class="text-uppercase">@lang('page.tag_search'): <small>{{ $tag }}</small></h3>
                 </div>
             </div>
         </div>

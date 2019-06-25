@@ -60,4 +60,5 @@ return array (
   'no_results' => 'No hay artículos relacionados con su búsqueda.',
   'no_excerpt' => 'Aún no se ha publicado el estracto',
   'logout' => 'Salir',
+  'tag_search' => 'Búsqueda por etiqueta',
 );

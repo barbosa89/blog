@@ -112,6 +112,17 @@
                     </div>
                 </div>
 
+                <div class="row mb-4 mt-4">
+                    <div class="col-12">
+                        <h4>Tags: </h4>
+                        <ul class="post-tags list-inline">
+                            @foreach ($post->tags as $tag)
+                                <li><a href="{{ route('posts.tag', ['tag' => $tag->name]) }}">{{ $tag->name }}</a></li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+
                 @include('templates.subscription')
 
                 @if ($relateds->isNotEmpty())

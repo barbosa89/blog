@@ -25,6 +25,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/blog', 'BlogController@index')->name('blog');
 
+Route::get('/tags/{tag}', 'BlogController@tags')->name('posts.tag');
 Route::get('/posts/{slug}', 'BlogController@article')->name('posts.article');
 Route::get('/search', 'BlogController@search')->name('posts.search');
 
