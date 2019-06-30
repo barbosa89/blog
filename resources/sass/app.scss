@@ -27,6 +27,22 @@ a.bg-primary:hover, a.bg-primary:focus, button.bg-primary:hover, button.bg-prima
     background-color: #18BC9C !important;
 }
 
+.bg-background {
+    background-image: url('/images/main-hd.png');
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about-background {
+    background-image: url('/images/about-hd.png');
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .text-gray {
     color:#2c3e50 !important;
 }
