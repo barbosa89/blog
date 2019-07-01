@@ -9,6 +9,7 @@
 
     <title>{{ config('app.name', 'Omar Barbosa') }}</title>
     <link href="{{ asset('images/icon.png') }}" rel="shortcut icon" type="image/x-icon">
+    <link rel="canonical" href="{{ route('blog') }}">
 
     <meta name="description" content="{{ trans('page.description') }}">
     <meta name="keywords" content="{{ trans('page.keywords') }}">

@@ -9,10 +9,11 @@
 
     <title>{{ config('app.name', 'Omar Barbosa') }}</title>
     <link href="{{ asset('images/icon.png') }}" rel="shortcut icon" type="image/x-icon">
+    <link rel="canonical" href="{{ config('app.url') }}">
 
     <meta name="description" content="{{ trans('page.description') }}">
     <meta name="keywords" content="{{ trans('page.keywords') }}">
-    <meta name="author" content="Omar Barbosa"> 
+    <meta name="author" content="Omar Barbosa">
 
     <meta property="og:title" content="Blog de Omar Barbosa">
     <meta property="og:description" content="{{ trans('page.description') }}">
@@ -20,28 +21,28 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://omarbarbosa.com/">
     <meta name="twitter:card" content="summary_large_image">
-    
+
     <meta property="og:site_name" content="Omar Barbosa">
     <meta name="twitter:image:alt" content="Blog Omar Barbosa">
-    
+
     <meta property="fb:app_id" content="2203860376602756" />
-    <meta name="twitter:site" content="@Barbosa">
+    <meta name="twitter:site" content="@Omar_Andres_Bar">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    
+
     <!-- Style -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/landing.css') }}" rel="stylesheet">
-    
+
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
-    
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103614513-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -66,18 +67,18 @@
     <script src="{{ asset('js/landing.js') }}" async defer></script>
     <script type="application/ld+json" async>
         {
-          "@context": "http://schema.org/",
-          "@type": "WebSite",
-          "name": "Omar Barbosa",
-          "alternateName": "Blog de Omar Barbosa",
-          "url": "https://omarbarbosa.com",
-          "image": "{{ asset('images/site.png') }}",
-          "description": "{{ trans('page.description') }}"
+            "@context": "http://schema.org/",
+            "@type": "WebSite",
+            "name": "Omar Barbosa",
+            "alternateName": "Blog de Omar Barbosa",
+            "url": "https://omarbarbosa.com",
+            "image": "{{ asset('images/site.png') }}",
+            "description": "{{ trans('page.description') }}"
         }
     </script>
     <script async>
         $('#flash-overlay-modal').modal();
-        
+
         $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
     </script>
 </body>

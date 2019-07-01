@@ -23,6 +23,7 @@ mix.js('resources/js/app.js', 'public/js')
       'public/landing/jquery.easing.min.js',
       'public/landing/jquery.magnific-popup.min.js',
       'public/landing/freelancer.min.js',
-      'node_modules/highlight.js/lib/highlight.js'
+      'node_modules/highlight.js/lib/highlight.js',
+      'node_modules/typed.js/lib/typed.js'
    ], 'public/js/landing.js')
    .browserSync('blog.app');
