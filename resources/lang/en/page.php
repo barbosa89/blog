@@ -61,4 +61,5 @@ return array (
   'no_excerpt' => 'The excerpt has not yet been published',
   'logout' => 'Logout',
   'tag_search' => 'Search by tag',
+  'degree' => 'Computer engineer',
 );

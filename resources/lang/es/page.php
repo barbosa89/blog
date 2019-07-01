@@ -61,4 +61,5 @@ return array (
   'no_excerpt' => 'Aún no se ha publicado el estracto',
   'logout' => 'Salir',
   'tag_search' => 'Búsqueda por etiqueta',
+  'degree' => 'Ingeniero informático',
 );
