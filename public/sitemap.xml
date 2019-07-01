@@ -3,35 +3,35 @@
     <url>
     
     <loc>http://localhost/blog</loc>
-        <lastmod>2019-06-24T13:02:34-05:00</lastmod>
+        <lastmod>2019-06-30T01:04:12-05:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1</priority>
     </url>
     <url>
     
     <loc>http://localhost/posts/en-espanol</loc>
-        <lastmod>2019-06-25T13:02:34-05:00</lastmod>
+        <lastmod>2019-07-01T01:04:12-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
     
     <loc>http://localhost/posts/final-test</loc>
-        <lastmod>2019-06-25T13:02:34-05:00</lastmod>
+        <lastmod>2019-07-01T01:04:12-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
     
     <loc>http://localhost/posts/post-english</loc>
-        <lastmod>2019-06-25T13:02:34-05:00</lastmod>
+        <lastmod>2019-07-01T01:04:12-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
     
     <loc>http://localhost/posts/post-espanol</loc>
-        <lastmod>2019-06-25T13:02:34-05:00</lastmod>
+        <lastmod>2019-07-01T01:04:12-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>

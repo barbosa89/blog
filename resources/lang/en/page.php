@@ -62,4 +62,7 @@ return array (
   'logout' => 'Logout',
   'tag_search' => 'Search by tag',
   'degree' => 'Computer engineer',
+  403 => 'Permission denied',
+  404 => 'Page not found',
+  'back' => 'Back',
 );

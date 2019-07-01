@@ -62,4 +62,7 @@ return array (
   'logout' => 'Salir',
   'tag_search' => 'Búsqueda por etiqueta',
   'degree' => 'Ingeniero informático',
+  'back' => 'Volver',
+  404 => 'Página no encontrada',
+  403 => 'Permiso denegado',
 );
