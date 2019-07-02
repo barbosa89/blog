@@ -73,13 +73,7 @@
             "alternateName": "Blog de Omar Barbosa",
             "url": "https://omarbarbosa.com",
             "image": "{{ asset('images/site.png') }}",
-            "description": "{{ trans('page.description') }}",
-            "sameAs" : [
-                "https://www.facebook.com/omarandres.barbosaortiz",
-                "https://www.twitter.com/@Omar_Andres_Bar",
-                "https://www.instagram.com/oabarbo/",
-                "https://www.linkedin.com/in/omar-andr%C3%A9s-barbosa-ort%C3%ADz-a7742a172"
-            ],
+            "description": "{{ trans('page.description') }}"
         }
     </script>
     <script async>
