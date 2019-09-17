@@ -1,7 +1,7 @@
 <?php
 
 return array (
-  'me' => 'Hijo de Jesucristo, estudiante informático, desarrollador web, blogger, inmerso en la tecnología, la ciencia y la creación de nuevas cosas; por definición, un aprendiz eterno en continua evolución.',
+  'me' => 'Hijo de Jesucristo, ingeniero informático, desarrollador web, blogger, inmerso en la tecnología, la ciencia y la creación de nuevas cosas; por definición, un aprendiz eterno en continua evolución.',
   'stack' => 'Amor por la web, es por eso que escribo líneas en Python, PHP y Javascript, junto con tecnologías como Git, CSS, HTML, NodeJs y por supuesto, en Linux.',
   'about' => 'Sobre mi',
   'contact' => 'Contacto',
@@ -19,7 +19,7 @@ return array (
   'social' => 'Redes sociales',
   'code' => 'Mira mi código',
   'projects' => 'Proyectos',
-  'me_short' => 'Estudiante Informático, desarrollador web con Python, PHP y Javascript',
+  'me_short' => 'Ingeniero Informático, desarrollador web con Python, PHP y Javascript',
   'description' => 'Blog de Omar Barbosa, desarrollador web, comparto tutoriales y cursos de Python, PHP, Javascript, linux, seguridad y despliegue de aplicaciones',
   'keywords' => 'omar barbosa, desarrollador web, tutoriales, cursos, php, python, javascript, linux, laravel, vuejs, vue, jquery, css, html, sass, webpack, ubuntu, nodejs, node, njango, swoole, framework, articulos, tecnologia, software, movil, escritorio, aplicaciones, git, github, gitlab',
   'project_one' => 'Simplexws es una aplicación escrita en PHP con Laravel, para la administración de bibliotecas, se conecta con las API de Exlibris denominadas Alma y Aleph, permite la consulta de códigos de rotulación de libros e impresión en diferentes formatos, información histórica y estadística.',

@@ -130,18 +130,18 @@
                     <div class="mosthead mb-4">
                         <h3 class="mb-4 font-weight-bold"><small>@lang('page.related')</small></h3>
                         <div class="row blog">
-                            @foreach ($relateds as $post)
+                            @foreach ($relateds as $related)
                                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                     <div class="row blog-list mb-2">
                                         <div class="col-10">
-                                            <a href="#">
+                                            <a href="{{ route('posts.article', ['slug' => $related->slug]) }}">
                                                 <h4 class="text-uppercase blog-list-title">
-                                                    <small>{{ $post->title }}</small>
+                                                    <small>{{ $related->title }}</small>
                                                 </h4>
                                             </a>
                                             <p>
                                                 <i class="fas fa-calendar"></i>
-                                                <small> {{ $post->created_at->toDateString() }}</small>
+                                                <small> {{ $related->created_at->toDateString() }}</small>
                                             </p>
                                         </div>
                                     </div>
