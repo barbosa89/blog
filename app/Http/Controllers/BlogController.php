@@ -54,6 +54,9 @@ class BlogController extends Controller
         return WinkTag::query()
             ->where('name', '!=', 'es')
             ->where('name', '!=', 'en')
+            ->inRandomOrder()
+            ->distinct('id')
+            ->limit(15)
             ->get(Fields::get('tags'));
     }
 
@@ -71,10 +74,7 @@ class BlogController extends Controller
                 {
                     $query->select(Fields::get('tags'))
                         ->where('name', '!=', 'es')
-                        ->where('name', '!=', 'en')
-                        ->inRandomOrder()
-                        ->distinct('id')
-                        ->limit(15);
+                        ->where('name', '!=', 'en');
                 },
                 'author' => function ($query)
                 {
