@@ -71,7 +71,10 @@ class BlogController extends Controller
                 {
                     $query->select(Fields::get('tags'))
                         ->where('name', '!=', 'es')
-                        ->where('name', '!=', 'en');
+                        ->where('name', '!=', 'en')
+                        ->inRandomOrder()
+                        ->distinct('id')
+                        ->limit(15);
                 },
                 'author' => function ($query)
                 {
