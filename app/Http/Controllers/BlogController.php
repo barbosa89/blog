@@ -105,6 +105,7 @@ class BlogController extends Controller
                     $query->where('name', App::getLocale());
                 })->inRandomOrder()
                 ->limit(2)
+                ->distinct('id')
                 ->get(Fields::get('posts'));
 
             if ($posts->isNotEmpty()) {
