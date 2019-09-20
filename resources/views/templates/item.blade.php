@@ -1,3 +1,4 @@
+<div class="row blog-divider"></div>
 <div class="row blog-list align-items-center mb-2">
     <div class="col-lg-2 col-xl-2 d-none d-lg-block d-xl-block">
         <a href="{{ route('posts.article', ['slug' => $post->slug]) }}">

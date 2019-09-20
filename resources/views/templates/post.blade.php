@@ -28,11 +28,13 @@
     <!-- Header -->
     <header class="blog-masthead text-gray">
         <div class="container">
-            <div class="row text-gray text-center text-lg-left text-xl-left">
+            <div class="row text-gray text-lg-left text-xl-left">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
-                    <a href="{{ route('posts.article', ['slug' => $post->slug]) }}" class="text-gray"><img class="img-fluid mb-5" src="{{ empty($post->featured_image) ? asset('images/article.png') : url($post->featured_image) }}" alt="{{ $post->title }}"></a>
+                    <a href="{{ route('posts.article', ['slug' => $post->slug]) }}" class="text-gray">
+                        <img class="img-fluid mb-5" src="{{ empty($post->featured_image) ? asset('images/article.png') : url($post->featured_image) }}" alt="{{ $post->title }}">
+                    </a>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 text-md-center text-lg-left align-items-center">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 align-items-center">
                     <a href="{{ route('posts.article', ['slug' => $post->slug]) }}" class="text-gray">
                         <h1 class="text-uppercase">{{ $post->title }}</h1>
                     </a>
@@ -42,7 +44,7 @@
                             {{ $post->excerpt }}
                         </h2>
                     </a>
-                    <div class="row align-items-end">
+                    <div class="row align-items-end text-center">
                         <div class="col-4">
                             <a target="_blank" class="share-link" href="https://twitter.com/home?status={{ route('posts.article', ['slug' => $post->slug]) }}">
                                 <i class="fab fa-twitter fa-2x"></i>
@@ -78,7 +80,7 @@
 
                 <div class="row mb-4 mt-4">
                     <div class="col-4 col-sm-4 col-md-3 col-lg-2 col-xl-2 text-center mb-4">
-                        <img class="img-fluid" src="{{ url('images/profile.png') }}" alt="">
+                        <img class="img-fluid rounded-circle" src="{{ url('images/me.jpg') }}" alt="">
                     </div>
                     <div class="col-8 col-sm-8 col-md-8 col-lg-6 col-xl-6 mb-4">
                         <h5>{{ $post->author->name }}</h5>

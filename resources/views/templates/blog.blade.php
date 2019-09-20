@@ -24,7 +24,7 @@
                         </h2>
                     </a>
                 </div>
-                <div class="col-12 search text-left d-lg-none">
+                <div class="col-12 search text-left d-lg-none bg-secondary">
                     <div class="card">
                         <div class="card-body">
                             <form action="{{ route('posts.search') }}" method="GET">
@@ -47,12 +47,7 @@
             <div class="row mt-5">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
                     @foreach($posts as $post)
-                        @if($loop->first)
-                            @include('templates.item')
-                        @else
-                            <div class="row blog-divider"></div>
-                            @include('templates.item')
-                        @endif
+                        @include('templates.item')
                     @endforeach
                 </div>
                 <div class="col-lg-3 col-xl-3 tags d-none d-lg-block d-xl-block">
