@@ -34,7 +34,8 @@ Route::post('/subscribe', 'SubscriptionController@subscribe')
     ->middleware(['sanitize', 'honeypot']);
 
 Route::get('/unsubscribe/{email}', 'SubscriptionController@unsubscribe')
-    ->name('unsubscribe');
+    ->name('unsubscribe')
+    ->middleware(['sanitize', 'honeypot']);
 
 Route::post('/message', 'ContactController@message')
     ->name('message')

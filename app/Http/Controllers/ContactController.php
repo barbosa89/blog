@@ -17,14 +17,20 @@ class ContactController extends Controller
      */
     public function message(ContactEmail $request)
     {
-        Mail::to('contacto@omarbarbosa.com')
+        Mail::to($request->email)
             ->send(new ContactMessage($request));
 
         if (Mail::failures()) {
             flash()->overlay(trans('page.msg_fail'), trans('page.sorry'));
-        } else {
-            flash()->overlay(trans('page.msg_send'), trans('page.great'));
+
+            return back();
         }
+
+        Mail::to('contacto@omarbarbosa.com')
+            ->send(new ContactMessage($request));
+
+        flash()->overlay(trans('page.msg_send'), trans('page.great'));
+
 
         return back();
     }
