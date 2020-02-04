@@ -65,4 +65,5 @@ return array (
   'back' => 'Volver',
   404 => 'Página no encontrada',
   403 => 'Permiso denegado',
+  'offline' => 'Actualmente no estás conectado a ninguna red.',
 );

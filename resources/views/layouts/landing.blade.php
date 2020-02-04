@@ -51,6 +51,8 @@
 
         gtag('config', 'UA-103614513-1');
     </script>
+    <!-- PWA assets -->
+    @laravelPWA
 </head>
 <body  id="page-top">
     <div id="app">

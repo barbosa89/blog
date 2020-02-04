@@ -65,4 +65,5 @@ return array (
   403 => 'Permission denied',
   404 => 'Page not found',
   'back' => 'Back',
+  'offline' => 'You are currently not connected to any networks.',
 );

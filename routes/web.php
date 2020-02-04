@@ -21,6 +21,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/offline', function () {
+    return view('modules/laravelpwa/offline');
+});
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/blog', 'BlogController@index')->name('blog');
