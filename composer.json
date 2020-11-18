@@ -19,6 +19,7 @@
         "laravel/telescope": "^2.0",
         "laravel/tinker": "^1.0",
         "laraveles/spanish": "^1.1",
+        "orangehill/iseed": "^2.6",
         "rap2hpoutre/laravel-log-viewer": "^1.0",
         "silviolleite/laravelpwa": "^1.0",
         "spatie/laravel-backup": "^6.6",
