@@ -12,18 +12,16 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css')
-   .styles([
-      'public/landing/magnific-popup.css',
-      'public/landing/freelancer.css',
-      'node_modules/highlight.js/styles/default.css'
-   ], 'public/css/landing.css')
-   .scripts([
-      'public/landing/bootstrap.bundle.min.js',
-      'public/landing/jquery.easing.min.js',
-      'public/landing/jquery.magnific-popup.min.js',
-      'public/landing/freelancer.min.js',
-      'node_modules/highlight.js/lib/highlight.js',
-      'node_modules/typed.js/lib/typed.js'
-   ], 'public/js/landing.js')
-   .browserSync('blog.app');
+    .sass('resources/sass/app.scss', 'public/css')
+    .styles([
+        'public/landing/magnific-popup.css',
+        'public/landing/freelancer.css',
+    ], 'public/css/landing.css')
+    .scripts([
+        'public/landing/bootstrap.bundle.min.js',
+        'public/landing/jquery.easing.min.js',
+        'public/landing/jquery.magnific-popup.min.js',
+        'public/landing/freelancer.min.js',
+    ], 'public/js/landing.js')
+    .sourceMaps()
+    .browserSync('blog.app');
