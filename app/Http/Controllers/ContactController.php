@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Mail;
-use Illuminate\Http\Request;
 use App\Mail\ContactMessage;
 use App\Http\Requests\ContactEmail;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {

@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Newsletter;
 use App\Helpers\Input;
-use Illuminate\Http\Request;
+use Spatie\Newsletter\NewsletterFacade as Newsletter;
 use App\Http\Requests\SubscribeStore;
 
 class SubscriptionController extends Controller
