@@ -16,6 +16,7 @@ mix.js('resources/js/app.js', 'public/js')
     .styles([
         'public/landing/magnific-popup.css',
         'public/landing/freelancer.css',
+        'node_modules/highlight.js/styles/default.css',
     ], 'public/css/landing.css')
     .scripts([
         'public/landing/bootstrap.bundle.min.js',
