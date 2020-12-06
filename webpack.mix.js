@@ -24,5 +24,4 @@ mix.js('resources/js/app.js', 'public/js')
         'public/landing/jquery.magnific-popup.min.js',
         'public/landing/freelancer.min.js',
     ], 'public/js/landing.js')
-    .sourceMaps()
     .browserSync('blog.app');
