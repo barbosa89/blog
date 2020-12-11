@@ -3,22 +3,46 @@
 return [
     'name' => 'Omar Barbosa',
     'manifest' => [
-        'name' => env('APP_NAME', 'Omar Barbosa'),
-        'short_name' => 'Barbosa',
+        'name' => 'Omar Barbosa',
+        'short_name' => 'Omar Barbosa',
         'start_url' => '/',
         'background_color' => '#00be9c',
         'theme_color' => '#1c3c50',
         'display' => 'standalone',
         'orientation'=> 'any',
         'icons' => [
-            '72x72' => '/images/icons/icon-72x72.png',
-            '96x96' => '/images/icons/icon-96x96.png',
-            '128x128' => '/images/icons/icon-128x128.png',
-            '144x144' => '/images/icons/icon-144x144.png',
-            '152x152' => '/images/icons/icon-152x152.png',
-            '192x192' => '/images/icons/icon-192x192.png',
-            '384x384' => '/images/icons/icon-384x384.png',
-            '512x512' => '/images/icons/icon-512x512.png'
+            '72x72' => [
+                'path' => '/images/icons/icon-72x72.png',
+                'purpose' => 'any',
+            ],
+            '96x96' => [
+                'path' => '/images/icons/icon-96x96.png',
+                'purpose' => 'any',
+            ],
+            '128x128' => [
+                'path' => '/images/icons/icon-128x128.png',
+                'purpose' => 'any',
+            ],
+            '144x144' => [
+                'path' => '/images/icons/icon-144x144.png',
+                'purpose' => 'any',
+            ],
+            '152x152' => [
+                'path' => '/images/icons/icon-152x152.png',
+                'purpose' => 'any',
+            ],
+            '192x192' => [
+                'path' => '/images/icons/icon-192x192.png',
+                'purpose' => 'any',
+            ],
+            '384x384' => [
+                'path' => '/images/icons/icon-384x384.png',
+                'purpose' => 'any',
+            ],
+            '512x512' => [
+                'path' => '/images/icons/icon-512x512.png',
+                'purpose' => 'any'
+            ],
         ],
         'splash' => [
             '640x1136' => '/images/icons/splash-640x1136.png',
@@ -31,6 +55,22 @@ return [
             '1668x2224' => '/images/icons/splash-1668x2224.png',
             '1668x2388' => '/images/icons/splash-1668x2388.png',
             '2048x2732' => '/images/icons/splash-2048x2732.png',
+        ],
+        'shortcuts' => [
+            [
+                'name' => 'Omar Barbosa',
+                'description' => 'Computer engineer',
+                'url' => '/',
+                'icons' => [
+                    "src" => "/images/icons/icon-72x72.png",
+                    "purpose" => "any"
+                ]
+            ],
+            [
+                'name' => 'Blog',
+                'description' => 'Blog by Omar Barbosa, web developer, I share tutorials and courses on Python, PHP, Javascript, linux, security and application deployment',
+                'url' => '/blog'
+            ]
         ],
         'custom' => []
     ]

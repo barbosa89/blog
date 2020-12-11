@@ -1,4 +1,3 @@
-
 window._ = require('lodash');
 
 /**
@@ -12,6 +11,8 @@ try {
     window.$ = window.jQuery = require('jquery');
 
     require('bootstrap');
+    require('highlight.js');
+    require('typed.js');
 } catch (e) {}
 
 /**
@@ -52,5 +53,5 @@ if (token) {
 //     broadcaster: 'pusher',
 //     key: process.env.MIX_PUSHER_APP_KEY,
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-//     encrypted: true
+//     forceTLS: true
 // });

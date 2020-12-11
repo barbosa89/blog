@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App;
-use Auth;
 use Wink\WinkTag;
 use Wink\WinkPost;
-use Wink\WinkAuthor;
 use App\Helpers\Input;
 use App\Helpers\Fields;
 use Illuminate\Http\Request;
 use DonatelloZa\RakePlus\RakePlus;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Auth;
 
 class BlogController extends Controller
 {
