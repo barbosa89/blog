@@ -1,4 +1,4 @@
-<p align="center"><a href="https://omarbarbosa.com" target="_blank"><img src="https://omarbarbosa.com/images/icons/icon-72x72.png"></a></p>
+<p><a href="https://omarbarbosa.com" target="_blank"><img src="https://omarbarbosa.com/images/icons/icon-72x72.png"></a></p>
 
 # Blog de Omar Barbosa
 
