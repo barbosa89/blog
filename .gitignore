@@ -14,3 +14,4 @@ yarn-error.log
 .env
 /.phpintel
 /public/sitemap.xml
+docker-compose.override.yml
