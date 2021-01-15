@@ -79,7 +79,7 @@ class BlogController extends Controller
                 {
                     $query->select(Fields::get('authors'));
                 }
-            ])->first(Fields::get('posts'));
+            ])->firstOrFail(Fields::get('posts'));
 
         $relateds = $this->getRelateds($post);
 
