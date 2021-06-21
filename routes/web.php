@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TagController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
@@ -36,6 +37,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 
+Route::get('/wink/api/tags', [TagController::class, 'index'])->name('wink.tags.index');
 Route::get('/tags/{tag}', [BlogController::class, 'tags'])->name('posts.tag');
 Route::get('/posts/{slug}', [BlogController::class, 'article'])->name('posts.article');
 Route::get('/search', [BlogController::class, 'search'])->name('posts.search');
