@@ -85,6 +85,28 @@ button.bg-primary:focus {
     font-family: 'Lato';
 }
 
+article {
+    & > h2 {
+        margin-top: 30px;
+    }
+
+    & > blockquote {
+        background: #f9f9f9;
+        border-left: 10px solid #ccc;
+        margin: 1.5em 10px;
+        padding: 0.5em 10px;
+    }
+
+    & > blockquote:before {
+        color: #ccc;
+        content: open-quote;
+        font-size: 4em;
+        line-height: 0.1em;
+        margin-right: 0.25em;
+        vertical-align: -0.4em;
+    }
+}
+
 @media (min-width: 992px) {
     .blog-masthead {
         padding-top: calc(4rem + 106px);
