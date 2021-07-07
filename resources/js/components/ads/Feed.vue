@@ -1,6 +1,6 @@
 <template>
-    <div :id="reference" class="row mb-2" style="width: 100%;">
-        <ins class="adsbygoogle"
+    <div :id="reference" class="row mb-2 h-100">
+        <ins class="adsbygoogle col-12 h-100"
             style="display:block"
             data-ad-format="fluid"
             data-ad-layout-key="-fo-2p+5v-nz+n3"
@@ -37,7 +37,7 @@
 
                 let container = document.getElementById(this.reference)
 
-                container.prepend(link)
+                container.appendChild(link)
             },
             createScriptTag() {
                 let link = document.createElement('script')
