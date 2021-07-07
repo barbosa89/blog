@@ -48,12 +48,20 @@
         </div>
     </header>
 
-    @if($posts->count() > 0)
+    @if($posts->isNotEmpty())
         <div class="container blog">
             <div class="row mt-5">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
                     @foreach($posts as $post)
-                        @include('templates.item')
+                        @if (in_array($loop->iteration, [3, 10, 15]))
+                            @production
+                                <feed-ad></feed-ad>
+                            @endproduction
+
+                            @include('templates.item')
+                        @else
+                            @include('templates.item')
+                        @endif
                     @endforeach
                 </div>
                 <div class="col-lg-3 col-xl-3 tags d-none d-lg-block d-xl-block">
