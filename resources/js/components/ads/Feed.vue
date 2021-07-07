@@ -1,5 +1,5 @@
 <template>
-    <div :id="reference" class="row mb-2">
+    <div :id="reference" class="row mb-2" style="width: 100%;">
         <ins class="adsbygoogle"
             style="display:block"
             data-ad-format="fluid"
@@ -18,6 +18,11 @@
                 this.createScriptLink()
                 this.createScriptTag()
             })
+
+            // window.addEventListener('load', () => {
+            //     this.createScriptLink()
+            //     this.createScriptTag()
+            // })
         },
         data() {
             return {
