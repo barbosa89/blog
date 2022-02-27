@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Wink\WinkTag;
-use Wink\WinkPost;
-use App\Helpers\Input;
+use App\Constants\LangTags;
 use App\Helpers\Fields;
-use Illuminate\Http\Request;
+use App\Helpers\Input;
 use DonatelloZa\RakePlus\RakePlus;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
+use Wink\WinkPost;
+use Wink\WinkTag;
 
 class BlogController extends Controller
 {
@@ -21,8 +23,7 @@ class BlogController extends Controller
     public function index()
     {
         $posts = WinkPost::live()
-            ->when(Auth::guest(), function ($query)
-            {
+            ->when(Auth::guest(), function ($query) {
                 $query->whereHas('tags', function ($query) {
                     $query->where('name', App::getLocale());
                 });
@@ -42,17 +43,10 @@ class BlogController extends Controller
         return view('templates.blog', compact('posts', 'latest', 'tags'));
     }
 
-
-    /**
-     * Return the Tags collection.
-     *
-     * @return \Illuminate\Support\Collection
-     */
-    public function getTags()
+    private function getTags(): Collection
     {
         return WinkTag::query()
-            ->where('name', '!=', 'es')
-            ->where('name', '!=', 'en')
+            ->whereNotIn('name', LangTags::excludes())
             ->inRandomOrder()
             ->distinct('id')
             ->limit(15)
@@ -69,16 +63,13 @@ class BlogController extends Controller
     {
         $post = WinkPost::where('slug', Input::clean($slug))
             ->with([
-                'tags' => function ($query)
-                {
+                'tags' => function ($query) {
                     $query->select(Fields::get('tags'))
-                        ->where('name', '!=', 'es')
-                        ->where('name', '!=', 'en');
+                        ->whereNotIn('name', LangTags::excludes());
                 },
-                'author' => function ($query)
-                {
+                'author' => function ($query) {
                     $query->select(Fields::get('authors'));
-                }
+                },
             ])->firstOrFail(Fields::get('posts'));
 
         $relateds = $this->getRelateds($post);
@@ -97,8 +88,7 @@ class BlogController extends Controller
     public function getRelateds(WinkPost $post)
     {
         $relateds = collect();
-        $post->tags->each(function ($tag) use (&$relateds, $post)
-        {
+        $post->tags->each(function ($tag) use (&$relateds, $post) {
             $posts = WinkPost::live()
                 ->where('id', '!=', $post->id)
                 ->whereHas('tags', function ($query) use ($tag, $post) {
@@ -115,7 +105,6 @@ class BlogController extends Controller
                     $relateds->push($post);
                 }
             }
-
         });
 
         if ($relateds->count() >= 2) {
@@ -200,16 +189,13 @@ class BlogController extends Controller
                 $query->where('name', App::getLocale());
             })->whereLike(['title', 'slug', 'excerpt', 'tags.name'], $query)
             ->with([
-                'tags' => function ($query)
-                {
+                'tags' => function ($query) {
                     $query->select(Fields::get('tags'))
-                        ->where('name', '!=', 'es')
-                        ->where('name', '!=', 'en');
+                        ->whereNotIn('name', LangTags::excludes());
                 },
-                'author' => function ($query)
-                {
+                'author' => function ($query) {
                     $query->select(Fields::get('authors'));
-                }
+                },
             ])->paginate(20, Fields::get('posts'));
 
         $tags = $this->getTags();

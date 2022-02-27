@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\Input;
-use Spatie\Newsletter\NewsletterFacade as Newsletter;
 use App\Http\Requests\SubscribeStore;
+use Spatie\Newsletter\NewsletterFacade as Newsletter;
 
 class SubscriptionController extends Controller
 {
@@ -18,8 +18,7 @@ class SubscriptionController extends Controller
     {
         $email = Input::clean($request->email);
 
-        if (!Newsletter::isSubscribed($email) )
-        {
+        if (! Newsletter::isSubscribed($email)) {
             Newsletter::subscribePending($email);
 
             $msg = trans('page.subscription_email') . '. <br><br><strong>' . trans('page.email') . '</strong>: '. $email . '.';
@@ -41,8 +40,7 @@ class SubscriptionController extends Controller
     {
         $email = Input::clean($email);
 
-        if (Newsletter::isSubscribed($email) )
-        {
+        if (Newsletter::isSubscribed($email)) {
             Newsletter::unsubscribe($email);
 
             $msg = trans('page.unsubscribe_msg') . '. <br><br><strong>' . trans('page.email') . '</strong>: '. $email . '.';

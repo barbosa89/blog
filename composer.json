@@ -32,8 +32,10 @@
         "themsaid/wink": "^1.2"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.6",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
+        "friendsofphp/php-cs-fixer": "^3.6",
         "laravel/sail": "^0.0.5",
         "mockery/mockery": "^1.4.2",
         "nunomaduro/collision": "^5.0",
@@ -73,6 +75,7 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
-        ]
+        ],
+        "phpcs": "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php"
     }
 }
