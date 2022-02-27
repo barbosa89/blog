@@ -2,19 +2,18 @@
 
 namespace App\Helpers;
 
-use Illuminate\Http\Request;
 use Vinkla\Hashids\Facades\Hashids;
 
 class Id
 {
-	public static function get($id)
-	{
-		if (empty($id)) {
-			return null;
-		}
+    public static function get($id)
+    {
+        if (empty($id)) {
+            return null;
+        }
 
-		$id = htmlentities($id, ENT_QUOTES);
+        $id = htmlentities($id, ENT_QUOTES);
 
-		return Hashids::decode($id)[0];
-	}
+        return Hashids::decode($id)[0];
+    }
 }

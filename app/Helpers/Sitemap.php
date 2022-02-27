@@ -2,11 +2,10 @@
 
 namespace App\Helpers;
 
-use Wink\WinkPost;
 use Carbon\Carbon;
-use App\Helpers\Fields;
-use Spatie\Sitemap\Tags\Url;
 use Spatie\Sitemap\Sitemap as Map;
+use Spatie\Sitemap\Tags\Url;
+use Wink\WinkPost;
 
 class Sitemap
 {
@@ -15,12 +14,13 @@ class Sitemap
      *
      * @return void
      */
-	public static function generate()
-	{
+    public static function generate()
+    {
         $sitemap = Map::create(config('app.url'));
         $date = \DateTime::createFromFormat('Y-m-d', Carbon::yesterday()->toDateString());
 
-        $sitemap->add(Url::create(url('/blog'))
+        $sitemap->add(
+            Url::create(url('/blog'))
             ->setLastModificationDate($date)
             ->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)
             ->setPriority(1)
