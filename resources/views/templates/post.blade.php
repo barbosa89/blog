@@ -11,13 +11,15 @@
 
     <meta property="og:title" content="{{ $post->title }}">
     <meta property="og:description" content="{{ $post->excerpt }}">
-    <meta property="og:image" content="{{ empty($post->featured_image) ? asset('images/article.png') : url($post->featured_image) }}">
+    <meta property="og:image"
+        content="{{ empty($post->featured_image) ? asset('images/article.png') : url($post->featured_image) }}">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ route('posts.article', ['slug' => $post->slug]) }}">
     <meta property="og:site_name" content="Omar Barbosa">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image:src" content="{{ empty($post->featured_image) ? asset('images/article.png') : url($post->featured_image) }}">
+    <meta name="twitter:image:src"
+        content="{{ empty($post->featured_image) ? asset('images/article.png') : url($post->featured_image) }}">
     <meta name="twitter:site" content="@Omar_Andres_Bar">
     <meta name="twitter:url" content="{{ route('posts.article', ['slug' => $post->slug]) }}">
 
@@ -28,42 +30,16 @@
     <!-- Header -->
     <header class="blog-masthead text-gray">
         <div class="container">
-            <div class="row text-gray text-lg-left text-xl-left">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
-                    <a href="{{ route('posts.article', ['slug' => $post->slug]) }}" class="text-gray">
-                        <img class="img-fluid mb-5" src="{{ empty($post->featured_image) ? asset('images/article.png') : url($post->featured_image) }}" alt="{{ $post->title }}">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 align-items-center">
-                    <a href="{{ route('posts.article', ['slug' => $post->slug]) }}" class="text-gray">
-                        <h1 class="text-uppercase">{{ $post->title }}</h1>
-                    </a>
-                    <p><i class="fas fa-calendar"></i> {{ $post->created_at->toDateString() }}</p>
-                    <a href="{{ route('posts.article', ['slug' => $post->slug]) }}" class="text-gray">
-                        <h2 class="font-weight-light mb-4 text-justify">
-                            {{ $post->excerpt }}
-                        </h2>
-                    </a>
-                    <div class="row align-items-end text-center">
-                        <div class="col-4">
-                            <a target="_blank" class="share-link" href="https://twitter.com/home?status={{ route('posts.article', ['slug' => $post->slug]) }}">
-                                <i class="fab fa-twitter fa-2x"></i>
-                            </a>
-                        </div>
-                        <div class="col-4">
-                            <a target="_blank" class="share-link" href="https://www.facebook.com/sharer/sharer.php?u={{ route('posts.article', ['slug' => $post->slug]) }}">
-                                <i class="fab fa-facebook fa-2x"></i>
-                            </a>
-                        </div>
-                        <div class="col-4">
-                            <a target="_blank" class="share-link" href="https://www.linkedin.com/shareArticle?mini=true&url={{ route('posts.article', ['slug' => $post->slug]) }}&title={{ $post->title }}&summary={{ $post->excerpt }}&source=">
-                                <i class="fab fa-linkedin fa-2x"></i>
-                            </a>
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="col-md-12">
+                    @include('templates.card', [
+                        'link' => route('posts.article', ['slug' => $post->slug]),
+                        'main' => true
+                    ])
+
+                    <hr>
                 </div>
             </div>
-            <div class="row blog-divider"></div>
         </div>
     </header>
 
@@ -95,18 +71,21 @@
                                 <p class="card-text">@lang('page.share_text')</p>
                                 <div class="row text-center">
                                     <div class="col-4">
-                                        <a target="_blank" class="card-link" href="https://twitter.com/home?status={{ route('posts.article', ['slug' => $post->slug]) }}">
-                                            <i class="fab fa-twitter fa-2x"></i>
+                                        <a target="_blank" class="card-link"
+                                            href="https://twitter.com/home?status={{ route('posts.article', ['slug' => $post->slug]) }}">
+                                            <em class="fab fa-twitter fa-2x"></em>
                                         </a>
                                     </div>
                                     <div class="col-4">
-                                        <a target="_blank" class="card-link" href="https://www.facebook.com/sharer/sharer.php?u={{ route('posts.article', ['slug' => $post->slug]) }}">
-                                            <i class="fab fa-facebook fa-2x"></i>
+                                        <a target="_blank" class="card-link"
+                                            href="https://www.facebook.com/sharer/sharer.php?u={{ route('posts.article', ['slug' => $post->slug]) }}">
+                                            <em class="fab fa-facebook fa-2x"></em>
                                         </a>
                                     </div>
                                     <div class="col-4">
-                                        <a target="_blank" class="card-link" href="https://www.linkedin.com/shareArticle?mini=true&url={{ route('posts.article', ['slug' => $post->slug]) }}&title={{ $post->title }}&summary={{ $post->excerpt }}&source=">
-                                            <i class="fab fa-linkedin fa-2x"></i>
+                                        <a target="_blank" class="card-link"
+                                            href="https://www.linkedin.com/shareArticle?mini=true&url={{ route('posts.article', ['slug' => $post->slug]) }}&title={{ $post->title }}&summary={{ $post->excerpt }}&source=">
+                                            <em class="fab fa-linkedin fa-2x"></em>
                                         </a>
                                     </div>
                                 </div>
@@ -120,7 +99,9 @@
                         <h4>Tags: </h4>
                         <ul class="post-tags list-inline">
                             @foreach ($post->tags as $tag)
-                                <li class="tag-item"><a href="{{ route('posts.tag', ['tag' => $tag->name]) }}">{{ $tag->name }}</a></li>
+                                <li class="tag-item"><a
+                                        href="{{ route('posts.tag', ['tag' => $tag->name]) }}">{{ $tag->name }}</a>
+                                </li>
                             @endforeach
                         </ul>
                     </div>
@@ -142,7 +123,7 @@
                                                 </h4>
                                             </a>
                                             <p>
-                                                <i class="fas fa-calendar"></i>
+                                                <em class="fas fa-calendar"></em>
                                                 <small> {{ $related->created_at->toDateString() }}</small>
                                             </p>
                                         </div>
@@ -172,15 +153,17 @@
 
     <script async>
         (function() {
-            var d = document, s = d.createElement('script');
+            var d = document,
+                s = d.createElement('script');
             s.src = 'https://omarbarbosa.disqus.com/embed.js';
             s.setAttribute('data-timestamp', +new Date());
             (d.head || d.body).appendChild(s);
         })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
     <script async>
-        setTimeout(function(){
+        setTimeout(function() {
             $('#subscription').modal('show')
         }, 20000);
     </script>

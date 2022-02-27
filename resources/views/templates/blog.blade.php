@@ -25,26 +25,11 @@
                     </div>
                 </div>
             </div>
-            <div class="row text-gray text-center text-lg-left text-xl-left">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
-                    <a href="{{ route('posts.article', ['slug' => $latest->slug]) }}" class="text-gray">
-                        <img class="img-fluid mb-5" src="{{ empty($latest->featured_image) ? asset('images/article.png') : url($latest->featured_image) }}" alt="{{ $latest->title }}">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 text-left align-items-center">
-                    <a href="{{ route('posts.article', ['slug' => $latest->slug]) }}" class="text-gray">
-                        <h1 class="text-uppercase">{{ $latest->title }}</h1>
-                    </a>
-                    <p>
-                        <i class="fas fa-calendar"></i> {{ $latest->created_at->toDateString() }}
-                    </p>
-                    <a href="{{ route('posts.article', ['slug' => $latest->slug]) }}" class="text-gray">
-                        <h2 class="font-weight-light mb-4 text-justify">
-                            {{ empty($latest->excerpt) ? trans('page.no_excerpt') : $latest->excerpt }}
-                        </h2>
-                    </a>
-                </div>
-            </div>
+
+            @include('templates.card', [
+                'link' => route('posts.article', ['slug' => $latest->slug]),
+                'post' => $latest
+            ])
         </div>
     </header>
 
@@ -57,11 +42,15 @@
                             @production
                                 <feed-ad></feed-ad>
                             @endproduction
-
-                            @include('templates.item')
-                        @else
-                            @include('templates.item')
                         @endif
+
+                        <div class="row blog-divider"></div>
+
+                        @include('templates.card', [
+                            'link' => route('posts.article', ['slug' => $post->slug]),
+                            'post' => $post,
+                            'main' => false
+                        ])
                     @endforeach
                 </div>
                 <div class="col-lg-3 col-xl-3 tags d-none d-lg-block d-xl-block">

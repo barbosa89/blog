@@ -10,7 +10,7 @@
             <h2 class="text-uppercase blog-list-title">{{ $post->title }}</h2>
         </a>
         <p class="text-muted">
-            <i class="fas fa-calendar"></i> {{ $post->created_at->toDateString() }}
+            <em class="fas fa-calendar"></em> {{ $post->created_at->toDateString() }}
         </p>
         <a href="{{ route('posts.article', ['slug' => $post->slug]) }}">
             <h3 class="font-weight-light mb-4 blog-description">

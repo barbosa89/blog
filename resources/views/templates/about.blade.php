@@ -13,7 +13,7 @@
         </div>
         <div class="text-center mt-4">
             <a class="btn btn-xl btn-outline-light" href="https://github.com/barbosa89" target="_blank">
-                <i class="fab fa-fw fa-github"></i>
+                <em class="fab fa-fw fa-github"></em>
                 @lang('page.projects')
             </a>
         </div>
