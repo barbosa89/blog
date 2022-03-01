@@ -16,3 +16,4 @@ yarn-error.log
 /public/sitemap.xml
 docker-compose.override.yml
 .php-cs-fixer.cache
+.env.testing
