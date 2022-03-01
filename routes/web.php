@@ -19,9 +19,11 @@ use App\Http\Controllers\SubscriptionController;
 |
 */
 
-Route::get('/test', function () {
-    abort(403);
-});
+if (app()->isLocal()) {
+    Route::get('/test', function () {
+        abort(403);
+    });
+}
 
 Route::get('/', function () {
     return view('welcome');
