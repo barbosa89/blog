@@ -17,3 +17,5 @@ yarn-error.log
 docker-compose.override.yml
 .php-cs-fixer.cache
 .env.testing
+tests/coverage
+.phpunit.result.cache

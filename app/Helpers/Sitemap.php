@@ -5,6 +5,7 @@ namespace App\Helpers;
 use Carbon\Carbon;
 use Wink\WinkPost;
 use Spatie\Sitemap\Tags\Url;
+use Illuminate\Support\Collection;
 use Spatie\Sitemap\Sitemap as Map;
 
 class Sitemap
@@ -26,30 +27,28 @@ class Sitemap
             ->setPriority(1)
         );
 
-        $postsRoutes = self::getPostsRoutes();
+        $posts = self::getPosts();
 
-        foreach ($postsRoutes as $route) {
-            $sitemap->add(Url::create($route));
+        foreach ($posts as $post) {
+            $sitemap->add(
+                Url::create($post->route)
+                ->setLastModificationDate($post->updated_at)
+                ->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)
+            );
         }
 
         $sitemap->writeToFile(public_path('sitemap.xml'));
     }
 
-    /**
-     * Return a route collection from posts.
-     *
-     * @return array
-     */
-    public static function getPostsRoutes()
+    public static function getPosts(): Collection
     {
-        $routes = [];
-        $posts = WinkPost::live()
-            ->get(Fields::get('posts'));
-
-        foreach ($posts as $post) {
-            $routes[] = route('posts.article', ['slug' => $post->slug]);
-        }
-
-        return $routes;
+        return WinkPost::live()
+            ->get(['slug', 'updated_at'])
+            ->transform(function (WinkPost $post) {
+                return (object) [
+                    'route' => route('posts.article', ['slug' => $post->slug]),
+                    'updated_at' => $post->updated_at,
+                ];
+            });
     }
 }
