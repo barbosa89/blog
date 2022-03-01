@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Wink\WinkPost;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Post extends WinkPost
 {

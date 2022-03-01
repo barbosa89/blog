@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Wink\WinkTag;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Tag extends WinkTag
 {

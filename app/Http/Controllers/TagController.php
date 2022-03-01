@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
-use Wink\Http\Resources\TagsResource;
 use Wink\WinkTag;
+use Wink\Http\Resources\TagsResource;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class TagController extends Controller
 {

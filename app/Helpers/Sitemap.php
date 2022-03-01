@@ -3,9 +3,9 @@
 namespace App\Helpers;
 
 use Carbon\Carbon;
-use Spatie\Sitemap\Sitemap as Map;
-use Spatie\Sitemap\Tags\Url;
 use Wink\WinkPost;
+use Spatie\Sitemap\Tags\Url;
+use Spatie\Sitemap\Sitemap as Map;
 
 class Sitemap
 {
