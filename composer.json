@@ -76,6 +76,7 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ],
+        "test": "vendor/bin/phpunit --verbose --testdox --coverage-html ./tests/coverage",
         "phpcs": "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php"
     }
 }
