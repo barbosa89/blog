@@ -9,7 +9,6 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
-        "barryvdh/laravel-translation-manager": "^0.5.9",
         "donatello-za/rake-php-plus": "^1.0",
         "drewm/mailchimp-api": "^2.5",
         "fideloper/proxy": "^4.4",
