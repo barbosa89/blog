@@ -166,8 +166,6 @@ return [
          * Package Service Providers...
          */
 
-        Barryvdh\TranslationManager\ManagerServiceProvider::class,
-
         /*
          * Application Service Providers...
          */
