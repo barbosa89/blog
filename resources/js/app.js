@@ -4,9 +4,9 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
-
-window.Vue = require('vue');
+import './bootstrap'
+import Vue from 'vue'
+import Feed from './components/ads/Feed.vue'
 
 /**
  * The following block of code may be used to automatically register your
@@ -16,7 +16,7 @@ window.Vue = require('vue');
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-Vue.component('feed-ad', require('./components/ads/Feed.vue').default);
+Vue.component('feed-ad', Feed)
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key)))
@@ -29,4 +29,4 @@ Vue.component('feed-ad', require('./components/ads/Feed.vue').default);
 
 const app = new Vue({
     el: '#app'
-});
+})

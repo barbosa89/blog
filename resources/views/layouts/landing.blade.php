@@ -33,15 +33,12 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
-    <!-- Style -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/landing.css') }}" rel="stylesheet">
-
-    <script>
-        window.Laravel = {!! json_encode([
-            'csrfToken' => csrf_token(),
-        ]) !!};
-    </script>
+    @vite([
+        'resources/sass/app.scss',
+        'resources/css/freelancer.css',
+        'resources/js/app.js',
+        'resources/js/freelancer.js',
+    ], 'build')
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103614513-1"></script>
     <script>
@@ -64,9 +61,6 @@
         </main>
     </div>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/landing.js') }}" async defer></script>
     <script type="application/ld+json" async>
         {
             "@context": "http://schema.org/",
@@ -78,10 +72,24 @@
             "description": "{{ trans('page.description') }}"
         }
     </script>
-    <script async>
-        $('#flash-overlay-modal').modal();
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var modal = document.getElementById('flash-overlay-modal');
+            if (modal) {
+                modal.style.display = 'block';
+            }
 
-        $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
+            var alerts = document.querySelectorAll('div.alert:not(.alert-important)');
+            alerts.forEach(function(alert) {
+                setTimeout(function() {
+                    alert.style.transition = 'opacity 0.35s';
+                    alert.style.opacity = '0';
+                    setTimeout(function() {
+                        alert.style.display = 'none';
+                    }, 350);
+                }, 3000);
+            });
+        });
     </script>
 </body>
 </html>

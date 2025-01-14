@@ -164,7 +164,7 @@
             Disqus.</a></noscript>
     <script async>
         setTimeout(function() {
-            $('#subscription').modal('show')
+            document.getElementById('subscription').classList.add('show');
         }, 20000);
     </script>
     <script type="application/ld+json" async>
