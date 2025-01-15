@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -30,16 +30,16 @@
     <meta property="fb:app_id" content="2203860376602756" />
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="dns-prefetch" href="//fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
+    <!-- Scripts -->
     @vite([
         'resources/sass/app.scss',
         'resources/css/freelancer.css',
         'resources/js/app.js',
         'resources/js/freelancer.js',
-    ], 'build')
+    ])
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103614513-1"></script>
     <script>
@@ -50,7 +50,7 @@
         gtag('config', 'UA-103614513-1');
     </script>
 </head>
-<body  id="page-top">
+<body>
     <div id="app">
         @include('templates.navbar')
         @include('flash::message')
@@ -59,7 +59,6 @@
             @yield('content')
         </main>
     </div>
-
     <!-- Scripts -->
     <script type="application/ld+json" async>
         {

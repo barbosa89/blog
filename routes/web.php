@@ -14,8 +14,8 @@ use App\Http\Controllers\SubscriptionController;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
 |
 */
 
@@ -26,8 +26,6 @@ Route::get('/test', function () {
 Route::get('/', function () {
     return view('welcome');
 });
-
-Auth::routes();
 
 Route::get('/offline', function () {
     return view('modules/laravelpwa/offline');
@@ -54,7 +52,8 @@ Route::post('/message', [ContactController::class, 'message'])
     ->name('message')
     ->middleware(['sanitize', 'honeypot']);
 
-Route::get('logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index'])
-    ->middleware('auth');
 
 
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

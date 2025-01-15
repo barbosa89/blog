@@ -10,7 +10,7 @@ class CreateTranslationsTable extends Migration {
 	 *
 	 * @return void
 	 */
-	public function up()
+	public function up(): void
 	{
         Schema::create('ltm_translations', function(Blueprint $table)
         {
