@@ -10,7 +10,8 @@ export default defineConfig({
                 'resources/sass/app.scss',
                 'resources/css/freelancer.css',
                 'resources/js/app.js',
-                'resources/js/freelancer.js'
+                'resources/js/freelancer.js',
+                'resources/js/highlight.js',
             ],
             refresh: true,
         }),

@@ -48,6 +48,8 @@
         </main>
     </div>
 
+    @vite(['resources/js/highlight.js'], 'build')
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var modal = document.getElementById('flash-overlay-modal');

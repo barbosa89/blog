@@ -1,7 +1,6 @@
 import lodash from 'lodash'
 import axios from 'axios'
 import * as bootstrap from 'bootstrap'
-import 'highlight.js'
 import 'typed.js'
 
 window._ = lodash
