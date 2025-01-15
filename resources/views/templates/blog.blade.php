@@ -5,8 +5,8 @@
     <!-- Header -->
     <header class="blog-masthead text-gray">
         <div class="container">
-            <div class="row text-gray text-center text-lg-left text-xl-left">
-                <div class="col-12 search text-left d-lg-none">
+            <div class="row text-gray text-center text-lg-start text-xl-start">
+                <div class="col-12 search text-start d-lg-none">
                     <div class="card">
                         <div class="card-body">
                             <form action="{{ route('posts.search') }}" method="GET">

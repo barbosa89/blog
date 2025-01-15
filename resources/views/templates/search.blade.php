@@ -5,11 +5,11 @@
     <!-- Header -->
     <header class="blog-masthead text-gray">
         <div class="container">
-            <div class="row text-gray text-center text-lg-left text-xl-left">
-                <div class="col-12 text-md-center text-lg-left align-items-center">
+            <div class="row text-gray text-center text-lg-start text-xl-start">
+                <div class="col-12 text-md-center text-lg-start align-items-center">
                     <h1 class="text-uppercase">@lang('page.search_results')</h1>
                 </div>
-                <div class="col-12 search text-left">
+                <div class="col-12 search text-start">
                     <div class="card">
                         <div class="card-body">
                             <form action="{{ route('posts.search') }}" method="GET">
