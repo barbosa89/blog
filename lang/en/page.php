@@ -4,7 +4,7 @@ return [
     'portfolio' => 'Portfolio',
     'about' => 'About',
     'contact' => 'Contact',
-    'dev' => 'Web developer',
+    'dev' => 'Full Stack Developer',
     'me' => 'Son of Jesus Christ, computer engineer, web developer, blogger, immersed in technology, science and the creation of new things; by definition, an eternal apprentice in continuous evolution.',
     'contact_me' => 'Contact me',
     'name' => 'Name',

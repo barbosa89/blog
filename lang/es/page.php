@@ -8,7 +8,7 @@ return [
     'contact_me' => 'Escríbeme',
     'copyright' => 'Derechos de autor',
     'design' => 'Diseñado por',
-    'dev' => 'Desarrollador web',
+    'dev' => 'Desarrollador Full Stack',
     'email' => 'Correo electrónico',
     'location' => 'Ubicación',
     'message' => 'Mensaje',
