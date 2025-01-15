@@ -1,15 +1,18 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+
+$fa-font-path: "@fortawesome/fontawesome-free/webfonts";
+
 // Font awesome
-@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
-@import '~@fortawesome/fontawesome-free/scss/regular.scss';
-@import '~@fortawesome/fontawesome-free/scss/solid.scss';
-@import '~@fortawesome/fontawesome-free/scss/brands.scss';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/regular.scss';
+@import '@fortawesome/fontawesome-free/scss/solid.scss';
+@import '@fortawesome/fontawesome-free/scss/brands.scss';
 // Variables
 @import 'variables';
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
-@import '~highlight.js/scss/default.scss';
+@import 'bootstrap/scss/bootstrap';
+@import 'highlight.js/scss/default.scss';
 a {
     text-decoration: none !important;
 }
@@ -42,7 +45,7 @@ button.bg-primary:focus {
 }
 
 .bg-background {
-    background-image: url('/images/main-hd.png');
+    background-image: url('/public/images/main-hd.png');
     background-position-x: center;
     background-position-y: center;
     background-repeat: no-repeat;
@@ -50,7 +53,7 @@ button.bg-primary:focus {
 }
 
 .about-background {
-    background-image: url('/images/about-hd.png');
+    background-image: url('/public/images/about-hd.png');
     background-position-x: center;
     background-position-y: center;
     background-repeat: no-repeat;
@@ -89,10 +92,13 @@ button.bg-primary:focus {
 
 .blog-masthead h2 {
     font-size: 1.3rem;
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
 }
 
 article {
+    &>h2,h3 {
+        text-align: left;
+    }
     &>h2 {
         margin-top: 30px;
     }

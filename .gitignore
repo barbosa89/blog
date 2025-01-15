@@ -1,6 +1,7 @@
 /node_modules
 /public/hot
 /public/storage
+/public/phenix
 /storage/*.key
 /vendor
 /.idea
@@ -16,3 +17,4 @@ yarn-error.log
 /public/sitemap.xml
 docker-compose.override.yml
 .php-cs-fixer.cache
+.DS_Store
