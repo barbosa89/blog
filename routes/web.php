@@ -19,10 +19,6 @@ use App\Http\Controllers\SubscriptionController;
 |
 */
 
-Route::get('/test', function () {
-    abort(403);
-});
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -52,8 +48,4 @@ Route::post('/message', [ContactController::class, 'message'])
     ->name('message')
     ->middleware(['sanitize', 'honeypot']);
 
-
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes(['register' => false]);
