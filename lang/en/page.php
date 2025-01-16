@@ -69,4 +69,5 @@ return [
     'date' => [
         'published' => 'Published at',
     ],
+    'welcome' => 'Welcome',
 ];

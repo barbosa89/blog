@@ -7,11 +7,11 @@ import BlogHeader from './components/BlogHeader.vue'
 const app = createApp({})
 
 app.use(i18nVue, {
-    resolve: lang => {
-        const langs = import.meta.glob('../../lang/*.json', { eager: true });
+    resolve: async lang => {
+        const langs = import.meta.glob('../../lang/*.json');
 
-        return langs[`../../lang/${lang}.json`].default;
-    },
+        return await langs[`../../lang/${lang}.json`]();
+    }
 })
 
 app.component('blog-header', BlogHeader)

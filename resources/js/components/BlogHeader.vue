@@ -5,19 +5,23 @@
 
 <script setup>
 import Typed from 'typed.js'
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { wTrans } from 'laravel-vue-i18n'
 
 const typing = ref(null)
+const degree = computed(() => wTrans('page.degree').value)
+const dev = computed(() => wTrans('page.dev').value)
 
 onMounted(() => {
-    new Typed(typing.value, {
-        strings: [wTrans('page.degree').value, wTrans('page.dev').value, 'Blogger'],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true,
-        showCursor: false,
-    })
+    setTimeout(() => {
+        new Typed(typing.value, {
+            strings: [degree.value, dev.value, 'Blogger'],
+            typeSpeed: 100,
+            backSpeed: 60,
+            loop: true,
+            showCursor: false,
+        })
+    }, 1000)
 })
 </script>
 

@@ -1,4 +1,22 @@
 {
+  "lang/es.json": {
+    "file": "assets/es-CNQ7FdOn.js",
+    "name": "es",
+    "src": "lang/es.json",
+    "isDynamicEntry": true
+  },
+  "lang/php_en.json": {
+    "file": "assets/php_en-BLgW0IHL.js",
+    "name": "php_en",
+    "src": "lang/php_en.json",
+    "isDynamicEntry": true
+  },
+  "lang/php_es.json": {
+    "file": "assets/php_es-BEBAjvzm.js",
+    "name": "php_es",
+    "src": "lang/php_es.json",
+    "isDynamicEntry": true
+  },
   "node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.eot": {
     "file": "assets/fa-brands-400-DnkPfk3o.eot",
     "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.eot"
@@ -73,12 +91,17 @@
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-B9f5EOzH.js",
+    "file": "assets/app-DIiMpacA.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
+    "dynamicImports": [
+      "lang/es.json",
+      "lang/php_en.json",
+      "lang/php_es.json"
+    ],
     "css": [
-      "assets/app-C1VoTX6s.css"
+      "assets/app-3UjtTKqr.css"
     ]
   },
   "resources/js/freelancer.js": {
@@ -94,7 +117,7 @@
     "isEntry": true
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-CzJJo_2i.css",
+    "file": "assets/app-DKvJ61Oy.css",
     "src": "resources/sass/app.scss",
     "isEntry": true
   }

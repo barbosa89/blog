@@ -48,4 +48,4 @@ Route::post('/message', [ContactController::class, 'message'])
     ->name('message')
     ->middleware(['sanitize', 'honeypot']);
 
-Auth::routes(['register' => false]);
+Auth::routes(['verify' => true]);

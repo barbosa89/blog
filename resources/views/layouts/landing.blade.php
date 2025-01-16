@@ -40,16 +40,18 @@
         'resources/js/freelancer.js',
     ], 'build')
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103614513-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    @production
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103614513-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-        gtag('config', 'UA-103614513-1');
-    </script>
+            gtag('config', 'UA-103614513-1');
+        </script>
+    @endproduction
     <!-- PWA assets -->
-    @laravelPWA
+    {{-- @laravelPWA --}}
 </head>
 <body  id="page-top">
     <div id="app">

@@ -21,17 +21,15 @@
                     <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('blog') }}">Blog</a>
                 </li>
 
-                @if (auth()->check())
-                    <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            @lang('page.logout')
-                        </a>
+                @auth
+                    <li class="nav-item mx-0 mx-lg-1 cursor-pointer">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded border text-sm-center" href="{{ route('home') }}">Home</a>
                     </li>
-
-                    <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                        {{ csrf_field() }}
-                    </form>
-                @endif
+                @else
+                    <li class="nav-item mx-0 mx-lg-1 cursor-pointer">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded border text-sm-center" href="{{ route('login') }}">Login</a>
+                    </li>
+                @endauth
             </ul>
         </div>
     </div>

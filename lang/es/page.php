@@ -68,5 +68,6 @@ return [
     'offline' => 'Actualmente no estás conectado a ninguna red.',
     'date' => [
         'published' => 'Fecha de publicación',
-    ]
+    ],
+    'welcome' => 'Bienvenido',
 ];
