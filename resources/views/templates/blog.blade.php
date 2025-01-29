@@ -40,7 +40,7 @@
                     @foreach($posts as $post)
                         @if (in_array($loop->iteration, [3, 10, 15]))
                             @production
-                                <feed-ad></feed-ad>
+                                <ads-feed></ads-feed>
                             @endproduction
                         @endif
 

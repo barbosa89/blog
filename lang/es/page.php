@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'me' => 'Hijo de Jesucristo, ingeniero informático, desarrollador web, blogger, inmerso en la tecnología, la ciencia y la creación de nuevas cosas; por definición, un aprendiz eterno en continua evolución.',
+    'me' => 'Ingeniero informático, desarrollador web, blogger, inmerso en la tecnología, la ciencia y la creación de nuevas cosas; por definición, un aprendiz eterno en continua evolución.',
     'stack' => 'Amor por la web, es por eso que escribo líneas en Python, PHP y Javascript, junto con tecnologías como Git, CSS, HTML, NodeJs y por supuesto, en Linux.',
     'about' => 'Sobre mi',
     'contact' => 'Contacto',
