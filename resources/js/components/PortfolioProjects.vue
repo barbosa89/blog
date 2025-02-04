@@ -1,18 +1,27 @@
 <template>
     <div class="row px-2">
         <div class="col-12 col-md-8 position-relative overflow-hidden rounded-0 rounded-md featured-col shadow">
-            <img class="img-fluid position-absolute top-0 start-0 w-100 h-100 img-zoom rounded" :src="featured.image" :alt="featured.title" style="object-fit: cover; transition: transform 0.3s ease;">
+            <img
+                class="img-fluid position-absolute top-0 start-0 w-100 h-100 img-zoom rounded"
+                :src="featured.image"
+                :alt="featured.title"
+                style="object-fit: cover; transition: transform 0.3s ease;">
         </div>
         <div class="col-12 col-md-4 featured-col mt-3 mt-md-0 px-0 px-md-2">
             <div class="card border-0 shadow h-100 p-3">
                 <div class="card-body d-flex flex-column justify-content-between">
                     <div>
                         <h5 class="card-title fs-2">{{ featured.title }}</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">{{ featured.subtitle }}</h6>
-                        <p class="card-text">{{ featured.description }}</p>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">{{ $t('page.portfolio_projects.phenix.subtitle') }}</h6>
+                        <p class="card-text">{{ $t('page.portfolio_projects.phenix.description') }}</p>
+                        <p class="card-text">{{ $t('page.portfolio_projects.phenix.use_cases') }}</p>
                     </div>
                     <div>
-                        <a :href="featured.link" target="_blank" rel="noopener noreferrer" class="card-link btn btn-secondary mt-auto">{{ featured.action }}</a>
+                        <a
+                            :href="featured.link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="card-link btn btn-secondary mt-auto">{{ $t('page.portfolio_projects.phenix.button_action') }}</a>
                     </div>
                 </div>
             </div>
@@ -25,8 +34,8 @@
                 <div class="card-img-overlay d-flex flex-column justify-content-end overlay-gradient pointer-events-none"></div>
                 <div class="text-dark position-absolute bottom-0 start-0 p-3 preview-project-title">
                     <h5 class="card-title text-white">{{ project.title }}</h5>
-                    <h6 class="card-subtitle mb-2 text-white">{{ project.subtitle }}</h6>
-                    <a :href="project.link" target="_blank" rel="noopener noreferrer" class="card-link btn btn-light mt-auto">Card link</a>
+                    <p class="card-text text-white">{{ project.description }}</p>
+                    <a :href="project.link" target="_blank" rel="noopener noreferrer" class="card-link btn btn-primary mt-auto">{{ project.action }}</a>
                 </div>
             </div>
         </div>
@@ -34,71 +43,67 @@
 </template>
 
 <script setup>
+import { wTrans } from 'laravel-vue-i18n';
 import { ref } from 'vue'
 
-const featured = ref(    {
+const featured = ref({
     id: 'phenix',
     title: 'PhenixPHP',
     subtitle: 'A simple PHP framework',
-    description: 'Phenix is a web framework built on pure PHP, based on the Amphp ecosystem, which provides non-blocking operations, asynchronism, and parallel code execution natively. It runs in the PHP SAPI CLI and on its own server; it is simply powerful.',
     image: '/images/portfolio/phenix.webp',
     link: 'https://phenix.omarbarbosa.com',
     action: 'Code with Phenix',
 })
+
 const nonFeatured = ref([
     {
         id: 'helen',
         title: 'Hellen Suite',
-        subtitle: 'A hotel management system',
-        description: 'Hellen Suite is a hotel management system that provides a complete solution for managing hotel operations. It is a web-based system that allows hoteliers to manage their hotel from anywhere in the world.',
+        description: wTrans('page.portfolio_projects.hellen_suite.description'),
         image: '/images/portfolio/hellen-suite.jpg',
         link: 'https://hellensuite.com',
-        featured: false,
+        action: wTrans('page.portfolio_projects.hellen_suite.button_action'),
     },
     {
         id: 'invoice',
         title: 'Invoice templates',
-        subtitle: 'Print beautiful invoices',
-        description: 'This an invoice template with support for Bootstrap 3, 4 y 5 and Tailwind CSS.',
+        description: wTrans('page.portfolio_projects.invoice_template.description'),
         image: '/images/portfolio/invoice-template.png',
         link: 'https://github.com/barbosa89/invoice-template',
-        featured: false,
+        action: wTrans('page.portfolio_projects.invoice_template.button_action'),
     },
     {
         id: 'posada-sueno-real',
         title: 'Posada Sueño Real',
-        subtitle: 'A hotel management system',
-        description: 'Reservation system and landing page for the Posada Sueño Real hotel, written in PHP on the backend, Jquery for frontend interaction.',
+        description: wTrans('page.portfolio_projects.posada.description'),
         image: '/images/portfolio/posada.webp',
         link: 'https://posadasuenoreal.com',
-        featured: false,
+        action: wTrans('page.portfolio_projects.posada.button_action'),
     },
     {
         id: 'apces',
         title: 'APCES E.S.P.',
         subtitle: 'Corporative website',
-        description: 'Vue Table is a Vue component that allows you to create tables with pagination, sorting, and filtering. It is a simple and easy-to-use component that can be used in any Vue project.',
+        description: wTrans('page.portfolio_projects.apces.description'),
         image: '/images/portfolio/apces.jpg',
         link: 'https://apces.com.co',
-        featured: false,
+        action: wTrans('page.portfolio_projects.apces.button_action'),
     },
     {
         id: 'teo',
         title: 'Tribunal Odontológico de Santander',
-        subtitle: 'Corporative website',
-        description: 'Vue Table is a Vue component that allows you to create tables with pagination, sorting, and filtering. It is a simple and easy-to-use component that can be used in any Vue project.',
+        description: wTrans('page.portfolio_projects.teo.description'),
         image: '/images/portfolio/teo.jpg',
         link: 'https://teosantander.com/',
-        featured: false,
+        action: wTrans('page.portfolio_projects.apces.button_action'),
     },
     {
         id: 'tlsi',
         title: 'Transportes logísticos y servicios de ingeniería',
-        subtitle: 'Corporative website',
-        description: 'Vue Table is a Vue component that allows you to create tables with pagination, sorting, and filtering. It is a simple and easy-to-use component that can be used in any Vue project.',
+        description: wTrans('page.portfolio_projects.tlsi.description'),
         image: '/images/portfolio/tlsi.jpg',
         link: 'https://tlsi.com.co/',
-        featured: false,
+        action: wTrans('page.portfolio_projects.tlsi.button_action'),
     },
 ])
 </script>
@@ -129,8 +134,8 @@ const nonFeatured = ref([
 
     .overlay-gradient {
         background: #2C3E50;
-        background: linear-gradient(90deg, #2C3E50 0%, transparent 60%);
-        background: -moz-linear-gradient(90deg, #2C3E50 0%, transparent 60%);
-        background: -webkit-linear-gradient(90deg, #2C3E50 0%, transparent 60%);
+        background: linear-gradient(transparent, #000000);
+        background: -moz-linear-gradient(transparent, #000000);
+        background: -webkit-linear-gradient(transparent, #000000);
     }
 </style>
