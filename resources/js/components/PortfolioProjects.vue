@@ -1,7 +1,7 @@
 <template>
     <div class="row">
         <div class="card mb-3 border-0">
-            <div class="row g-0 shadow">
+            <div class="row g-0 shadow rounded">
                 <div class="col-12 col-md-8 position-relative overflow-hidden rounded-start featured-col">
                     <img :src="featured.image" class="img-fluid position-absolute top-0 start-0 w-100 h-100 img-zoom" :alt="featured.title" style="object-fit: cover; transition: transform 0.3s ease;">
                 </div>
