@@ -1,27 +1,23 @@
 <template>
-    <div class="row px-2">
-        <div class="col-12 col-md-8 position-relative overflow-hidden rounded-0 rounded-md featured-col shadow">
-            <img
-                class="img-fluid position-absolute top-0 start-0 w-100 h-100 img-zoom rounded"
-                :src="featured.image"
-                :alt="featured.title"
-                style="object-fit: cover; transition: transform 0.3s ease;">
-        </div>
-        <div class="col-12 col-md-4 featured-col mt-3 mt-md-0 px-0 px-md-2">
-            <div class="card border-0 shadow h-100 p-3">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <div>
-                        <h5 class="card-title fs-2">{{ featured.title }}</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">{{ $t('page.portfolio_projects.phenix.subtitle') }}</h6>
-                        <p class="card-text">{{ $t('page.portfolio_projects.phenix.description') }}</p>
-                        <p class="card-text">{{ $t('page.portfolio_projects.phenix.use_cases') }}</p>
-                    </div>
-                    <div>
-                        <a
-                            :href="featured.link"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="card-link btn btn-secondary mt-auto">{{ $t('page.portfolio_projects.phenix.button_action') }}</a>
+    <div class="row">
+        <div class="card mb-3 border-0">
+            <div class="row g-0 shadow">
+                <div class="col-12 col-md-8 position-relative overflow-hidden rounded-start featured-col">
+                    <img :src="featured.image" class="img-fluid position-absolute top-0 start-0 w-100 h-100 img-zoom" :alt="featured.title" style="object-fit: cover; transition: transform 0.3s ease;">
+                </div>
+                <div class="col-12 col-md-4 h-100 border ps-2 rounded-end">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title fs-2">{{ featured.title }}</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary mb-3">{{ $t('page.portfolio_projects.phenix.subtitle') }}</h6>
+                            <p class="card-text">{{ $t('page.portfolio_projects.phenix.description') }}</p>
+                            <p class="card-text">{{ $t('page.portfolio_projects.phenix.use_cases') }}</p>
+                        </div>
+                        <div class="mt-4">
+                            <a :href="featured.link" target="_blank" rel="noopener noreferrer"
+                                class="card-link btn btn-secondary mt-auto">{{
+                                    $t('page.portfolio_projects.phenix.button_action') }}</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -29,13 +25,18 @@
     </div>
     <div class="row mt-3">
         <div v-for="project in nonFeatured" class="col-12 col-md-4 vertical-card mt-3">
-            <div class="card bg-white text-white border-0 shadow h-100 position-relative overflow-hidden rounded cursor-pointer">
-                <img class="card-img position-absolute top-0 start-0 w-100 h-100 img-zoom" :src="project.image" alt="Project 1" style="object-fit: cover; transition: transform 0.3s ease;">
-                <div class="card-img-overlay d-flex flex-column justify-content-end overlay-gradient pointer-events-none"></div>
+            <div
+                class="card bg-white text-white border-0 shadow h-100 position-relative overflow-hidden rounded cursor-pointer">
+                <img class="card-img position-absolute top-0 start-0 w-100 h-100 img-zoom" :src="project.image"
+                    alt="Project 1" style="object-fit: cover; transition: transform 0.3s ease;">
+                <div
+                    class="card-img-overlay d-flex flex-column justify-content-end overlay-gradient pointer-events-none">
+                </div>
                 <div class="text-dark position-absolute bottom-0 start-0 p-3 preview-project-title">
                     <h5 class="card-title text-white">{{ project.title }}</h5>
                     <p class="card-text text-white">{{ project.description }}</p>
-                    <a :href="project.link" target="_blank" rel="noopener noreferrer" class="card-link btn btn-primary mt-auto">{{ project.action }}</a>
+                    <a :href="project.link" target="_blank" rel="noopener noreferrer"
+                        class="card-link btn btn-primary mt-auto">{{ project.action }}</a>
                 </div>
             </div>
         </div>
@@ -109,33 +110,34 @@ const nonFeatured = ref([
 </script>
 
 <style scoped>
-    .featured-col {
-        min-height: 500px;
-    }
+.featured-col {
+    min-height: 500px;
+}
 
-    .vertical-card {
-        min-height: 400px;
-    }
+.vertical-card {
+    min-height: 400px;
+}
 
-    .preview-project-title {
-        bottom: 0;
-    }
+.preview-project-title {
+    bottom: 0;
+}
 
-    .card-text {
-        font-size: 1.2rem;
-    }
-    .img-zoom:hover {
-        transform: scale(1.1);
-    }
+.card-text {
+    font-size: 1.2rem;
+}
 
-    .pointer-events-none {
-        pointer-events: none;
-    }
+.img-zoom:hover {
+    transform: scale(1.1);
+}
 
-    .overlay-gradient {
-        background: #2C3E50;
-        background: linear-gradient(transparent, #000000);
-        background: -moz-linear-gradient(transparent, #000000);
-        background: -webkit-linear-gradient(transparent, #000000);
-    }
+.pointer-events-none {
+    pointer-events: none;
+}
+
+.overlay-gradient {
+    background: #2C3E50;
+    background: linear-gradient(transparent, #000000);
+    background: -moz-linear-gradient(transparent, #000000);
+    background: -webkit-linear-gradient(transparent, #000000);
+}
 </style>
