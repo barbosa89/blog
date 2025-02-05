@@ -31,7 +31,7 @@
                     <h5 class="card-title text-white">{{ project.title }}</h5>
                     <p class="card-text text-white">{{ project.description }}</p>
                     <a :href="project.link" target="_blank" rel="noopener noreferrer"
-                        class="card-link btn btn-primary mt-auto">{{ project.action }}</a>
+                        class="card-link btn btn-light mt-auto">{{ project.action }}</a>
                 </div>
             </div>
         </div>
@@ -56,7 +56,7 @@ const nonFeatured = ref([
         id: 'helen',
         title: 'Hellen Suite',
         description: wTrans('page.portfolio_projects.hellen_suite.description'),
-        image: '/images/portfolio/hellen-suite.jpg',
+        image: '/images/portfolio/hellen-suite.webp',
         link: 'https://hellensuite.com',
         action: wTrans('page.portfolio_projects.hellen_suite.button_action'),
     },
@@ -81,7 +81,7 @@ const nonFeatured = ref([
         title: 'APCES E.S.P.',
         subtitle: 'Corporative website',
         description: wTrans('page.portfolio_projects.apces.description'),
-        image: '/images/portfolio/apces.jpg',
+        image: '/images/portfolio/apces.webp',
         link: 'https://apces.com.co',
         action: wTrans('page.portfolio_projects.apces.button_action'),
     },
@@ -89,7 +89,7 @@ const nonFeatured = ref([
         id: 'teo',
         title: 'Tribunal Odontológico de Santander',
         description: wTrans('page.portfolio_projects.teo.description'),
-        image: '/images/portfolio/teo.jpg',
+        image: '/images/portfolio/teo.webp',
         link: 'https://teosantander.com/',
         action: wTrans('page.portfolio_projects.apces.button_action'),
     },
@@ -97,7 +97,7 @@ const nonFeatured = ref([
         id: 'tlsi',
         title: 'Transportes logísticos y servicios de ingeniería',
         description: wTrans('page.portfolio_projects.tlsi.description'),
-        image: '/images/portfolio/tlsi.jpg',
+        image: '/images/portfolio/tlsi.webp',
         link: 'https://tlsi.com.co/',
         action: wTrans('page.portfolio_projects.tlsi.button_action'),
     },

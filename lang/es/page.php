@@ -1,11 +1,13 @@
 <?php
 
 return [
-    'me' => 'Ingeniero informático, desarrollador web, blogger, inmerso en la tecnología, la ciencia y la creación de nuevas cosas; por definición, un aprendiz eterno en continua evolución.',
-    'stack' => 'Amor por la web, es por eso que escribo líneas en Python, PHP y Javascript, junto con tecnologías como Git, CSS, HTML, NodeJs y por supuesto, en Linux.',
     'about' => 'Sobre mi',
     'contact' => 'Contacto',
     'contact_me' => 'Escríbeme',
+    'about_me' => [
+        'who' => 'Soy un desarrollador web apasionado con experiencia especializada en PHP, JavaScript y Python. Mi experiencia abarca el desarrollo de backend y frontend, aprovechando potentes frameworks como Laravel y Vue.js para crear aplicaciones escalables y de alto rendimiento.',
+        'more' => 'Soy el creador de PhenixPHP y colaborador de software de código abierto. Además, tengo una amplia experiencia trabajando con bases de datos como MySQL, SQLite y PostgreSQL, optimizando consultas y manejando conjuntos de datos a gran escala de manera eficiente.',
+    ],
     'copyright' => 'Derechos de autor',
     'design' => 'Diseñado por',
     'dev' => 'Desarrollador Full Stack',

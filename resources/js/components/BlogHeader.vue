@@ -1,6 +1,6 @@
 <template>
-    <img src="/images/me-1.jpg" alt="Omar Barbosa" class="rounded-circle border-2 border-light mb-2 profile-image img-fluid">
-    <h1 class="text-uppercase mb-1 mt-2" data-text="Omar Barbosa">Omar Barbosa</h1>
+    <img src="/images/me.webp" alt="Omar Barbosa" class="rounded-circle border-2 border-light mb-2 profile-image img-fluid">
+    <h1 class="text-uppercase mb-0 mt-2" data-text="Omar Barbosa">Omar Barbosa</h1>
     <span ref="typing" class="font-weight-light mb-0"></span>
 </template>
 
