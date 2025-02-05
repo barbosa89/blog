@@ -64,7 +64,7 @@ const nonFeatured = ref([
         id: 'invoice',
         title: 'Invoice templates',
         description: wTrans('page.portfolio_projects.invoice_template.description'),
-        image: '/images/portfolio/invoice-template.png',
+        image: '/images/portfolio/invoice-template.webp',
         link: 'https://github.com/barbosa89/invoice-template',
         action: wTrans('page.portfolio_projects.invoice_template.button_action'),
     },
