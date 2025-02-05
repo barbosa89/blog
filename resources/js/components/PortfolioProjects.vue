@@ -3,7 +3,7 @@
         <div class="card mb-3 border-0">
             <div class="row g-0 shadow rounded">
                 <div class="col-12 col-lg-8 position-relative overflow-hidden rounded-top featured-img">
-                    <img :src="featured.image" class="img-fluid position-absolute top-0 start-0 w-100 h-100 img-zoom" :alt="featured.title" style="object-fit: cover; transition: transform 0.3s ease;">
+                    <img :src="featured.image" class="img-fluid position-absolute top-0 start-0 w-100 h-100 img-zoom" :alt="featured.title">
                 </div>
                 <div class="col-12 col-lg-4 border ps-2 rounded-bottom featured-content">
                     <div class="card-body">
@@ -23,8 +23,7 @@
         <div v-for="project in nonFeatured" class="col-12 col-md-4 vertical-card mt-3">
             <div
                 class="card bg-white text-white border-0 shadow h-100 position-relative overflow-hidden rounded cursor-pointer">
-                <img class="card-img position-absolute top-0 start-0 w-100 h-100 img-zoom" :src="project.image"
-                    alt="Project 1" style="object-fit: cover; transition: transform 0.3s ease;">
+                <img class="card-img position-absolute top-0 start-0 w-100 h-100 img-zoom" :src="project.image" :alt="project.title">
                 <div
                     class="card-img-overlay d-flex flex-column justify-content-end overlay-gradient pointer-events-none">
                 </div>
@@ -120,6 +119,10 @@ const nonFeatured = ref([
 
 .card-text {
     font-size: 1.2rem;
+}
+
+.img-zoom {
+    object-fit: cover; transition: transform 0.3s ease;
 }
 
 .img-zoom:hover {
