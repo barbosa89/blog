@@ -2,22 +2,18 @@
     <div class="row">
         <div class="card mb-3 border-0">
             <div class="row g-0 shadow rounded">
-                <div class="col-12 col-md-8 position-relative overflow-hidden rounded-start featured-col">
+                <div class="col-12 col-lg-8 position-relative overflow-hidden rounded-top featured-img">
                     <img :src="featured.image" class="img-fluid position-absolute top-0 start-0 w-100 h-100 img-zoom" :alt="featured.title" style="object-fit: cover; transition: transform 0.3s ease;">
                 </div>
-                <div class="col-12 col-md-4 h-100 border ps-2 rounded-end">
-                    <div class="card-body d-flex flex-column justify-content-between">
-                        <div>
-                            <h5 class="card-title fs-2">{{ featured.title }}</h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary mb-3">{{ $t('page.portfolio_projects.phenix.subtitle') }}</h6>
-                            <p class="card-text">{{ $t('page.portfolio_projects.phenix.description') }}</p>
-                            <p class="card-text">{{ $t('page.portfolio_projects.phenix.use_cases') }}</p>
-                        </div>
-                        <div class="mt-4">
-                            <a :href="featured.link" target="_blank" rel="noopener noreferrer"
-                                class="card-link btn btn-secondary mt-auto">{{
-                                    $t('page.portfolio_projects.phenix.button_action') }}</a>
-                        </div>
+                <div class="col-12 col-lg-4 border ps-2 rounded-bottom featured-content">
+                    <div class="card-body">
+                        <h5 class="card-title fs-2">{{ featured.title }}</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary mb-3">{{ $t('page.portfolio_projects.phenix.subtitle') }}</h6>
+                        <p class="card-text">{{ $t('page.portfolio_projects.phenix.description') }}</p>
+                        <p class="card-text">{{ $t('page.portfolio_projects.phenix.use_cases') }}</p>
+                        <a :href="featured.link" target="_blank" rel="noopener noreferrer"
+                            class="card-link btn btn-secondary mt-auto">{{
+                                $t('page.portfolio_projects.phenix.button_action') }}</a>
                     </div>
                 </div>
             </div>
@@ -109,8 +105,8 @@ const nonFeatured = ref([
 ])
 </script>
 
-<style scoped>
-.featured-col {
+<style lang="scss" scoped>
+.featured-img {
     min-height: 500px;
 }
 
@@ -139,5 +135,22 @@ const nonFeatured = ref([
     background: linear-gradient(transparent, #000000);
     background: -moz-linear-gradient(transparent, #000000);
     background: -webkit-linear-gradient(transparent, #000000);
+}
+
+@media (min-width: 991.98px) {
+    .featured-img {
+        min-height: 500px;
+        border-bottom-right-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+        border-bottom-left-radius: var(--bs-border-radius) !important;
+        border-top-left-radius: var(--bs-border-radius) !important;
+    }
+
+    .featured-content {
+        border-bottom-right-radius: var(--bs-border-radius) !important;
+        border-top-right-radius: var(--bs-border-radius) !important;
+        border-bottom-left-radius: 0 !important;
+        border-top-left-radius: 0 !important;
+    }
 }
 </style>
