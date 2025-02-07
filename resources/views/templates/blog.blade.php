@@ -54,7 +54,7 @@
                     @endforeach
                 </div>
                 <div class="col-lg-3 col-xl-3 tags d-none d-lg-block d-xl-block">
-                    <div class="card sidebar-search">
+                    <div class="card sidebar-search shadow">
                         <div class="card-body">
                             <form action="{{ route('posts.search') }}" method="GET">
                                 <div class="control-group">
@@ -67,19 +67,13 @@
                         </div>
                     </div>
 
-                    @include('templates.tags')
+                    @include('templates.tags', ['border' => true])
                 </div>
             </div>
         </div>
     @else
         @include('templates.empty')
     @endif
-
-    <div class="container mt-4 mb-4">
-        <div class="row">
-            {{ $posts->links() }}
-        </div>
-    </div>
 
     <div class="container mt-4 mb-4"></div>
 
