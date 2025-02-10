@@ -98,4 +98,8 @@ return [
         'published' => 'Fecha de publicación',
     ],
     'welcome' => 'Bienvenido',
+    'latest_article' => 'Artículo más reciente',
+    'locale' => 'Idioma',
+    'spanish' => 'Español',
+    'english' => 'Inglés',
 ];

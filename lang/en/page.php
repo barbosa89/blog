@@ -98,4 +98,8 @@ return [
         'published' => 'Published at',
     ],
     'welcome' => 'Welcome',
+    'latest_article' => 'Latest article',
+    'locale' => 'Locale',
+    'spanish' => 'Spanish',
+    'english' => 'English',
 ];
