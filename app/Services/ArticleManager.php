@@ -93,15 +93,18 @@ class ArticleManager implements Arrayable
         return null;
     }
 
-    public function read(): self
+    public function topTags(): Collection
     {
-        if (!File::exists($this->path)) {
-            File::put($this->path, '{}');
-        }
+        return Cache::rememberForever('top_tags', function (): Collection {
+            $tags = File::get(database_path('tags.json'));
 
-        $this->content = File::json($this->path, JSON_THROW_ON_ERROR);
-
-        return $this;
+            return collect(json_decode($tags, true))
+                ->sortBy(function (array $articles, string $tagName): int {
+                    return count($articles);
+                })
+                ->take(15)
+                ->keys();
+        });
     }
 
     public function toArray(): array

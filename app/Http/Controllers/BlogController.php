@@ -11,26 +11,26 @@ use Illuminate\Support\Facades\App;
 
 class BlogController extends Controller
 {
+    public function __construct(
+        protected ArticleManager $articleManager
+    ) {}
+
     public function index(): View
     {
-        $service = new ArticleManager();
-
-        $posts = $service->list();
+        $posts = $this->articleManager->list();
 
         $latest = $posts->shift();
 
         return view('templates.blog', [
             'posts' => $posts,
             'latest' => $latest,
-            'tags' => collect(),
+            'tags' => $this->articleManager->topTags(),
         ]);
     }
 
     public function article(string $slug): View
     {
-        $service = new ArticleManager();
-
-        $post = $service->find($slug);
+        $post = $this->articleManager->find($slug);
 
         abort_if(!$post, Response::HTTP_NO_CONTENT);
 
