@@ -14,6 +14,7 @@ $fa-font-path: "@fortawesome/fontawesome-free/webfonts";
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
 
 // Highlight
 @import 'highlight.js/scss/default.scss';
@@ -188,19 +189,6 @@ pre.ql-syntax {
 .sidebar-search {
     margin-bottom: 15px;
 }
-
-.search {
-    margin: 0;
-    padding: 15px;
-    &>.card {
-        border: none;
-        background-color: transparent !important;
-        &>.card-body {
-            padding: 0;
-        }
-    }
-}
-
 
 /* Our mixin positions a copy of our text
 directly on our existing text, while

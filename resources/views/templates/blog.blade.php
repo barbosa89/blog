@@ -5,24 +5,23 @@
     <!-- Header -->
     <header class="blog-masthead text-gray">
         <div class="container">
-            <div class="row text-gray text-center text-lg-start text-xl-start">
-                <div class="col-12 search text-start d-lg-none">
-                    <div class="card">
-                        <div class="card-body">
-                            <form action="{{ route('posts.search') }}" method="GET">
-                                <div class="control-group">
-                                    <div class="form-group">
-                                        <div class="input-group">
-                                            <input class="form-control form-control-fix{{ $errors->has('name') ? ' is-invalid' : '' }}" id="query" name="query" type="text" placeholder="Laravel..." required="required" value="{{ old('query') }}">
-                                            <div class="input-group-append">
-                                                <input type="submit" class="btn btn-primary" value="{{ trans('page.search') }}">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
+            <div class="row text-gray">
+                <div class="col-12 col-lg-3 ms-auto offset-lg-6 search text-start">
+                    <form action="{{ route('posts.search') }}" method="GET">
+                        <div class="control-group">
+                            <div class="input-group">
+                                <input
+                                    class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"
+                                    id="query"
+                                    name="query"
+                                    type="search"
+                                    placeholder="{{ trans('page.search') }}"
+                                    required="required"
+                                    value="{{ old('query') }}">
+                                <button type="submit" class="btn btn-primary"><i class="bi bi-search"></i></button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
 
@@ -35,7 +34,7 @@
 
     @if($posts->isNotEmpty())
         <div class="container blog">
-            <div class="row mt-5">
+            <div class="row mt-3">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
                     @foreach($posts as $post)
                         @if (in_array($loop->iteration, [3, 10, 15]))
@@ -53,20 +52,8 @@
                         ])
                     @endforeach
                 </div>
-                <div class="col-lg-3 col-xl-3 tags d-none d-lg-block d-xl-block">
-                    <div class="card sidebar-search shadow">
-                        <div class="card-body">
-                            <form action="{{ route('posts.search') }}" method="GET">
-                                <div class="control-group">
-                                    <div class="form-group">
-                                        <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="query" name="query" type="text" placeholder="{{ trans('page.search') }}" required="required" value="{{ old('query') }}">
-                                    </div>
-                                    <input type="submit" class="btn btn-primary" value="{{ trans('page.search') }}">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
 
+                <div class="col-lg-3 col-xl-3 tags d-none d-lg-block d-xl-block">
                     @include('templates.tags', ['border' => true])
                 </div>
             </div>
