@@ -6,7 +6,7 @@
 
     <link rel="canonical" href="{{ route('posts.article', ['slug' => $post->slug]) }}">
     <meta name="description" content="{{ $post->excerpt }}">
-    <meta name="keywords" content="{{ $keywords }}">
+    <meta name="keywords" content="{{ $post->keywords }}">
     <meta name="author" content="Omar Barbosa">
 
     <meta property="og:title" content="{{ $post->title }}">

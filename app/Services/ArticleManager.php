@@ -5,13 +5,15 @@ declare(strict_types=1);
 namespace App\Services;
 
 use stdClass;
+use function is_array;
+use DonatelloZa\RakePlus\RakePlus;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\File;
+
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Contracts\Support\Arrayable;
 use GrahamCampbell\Markdown\Facades\Markdown;
-
-use function is_array;
 
 class ArticleManager implements Arrayable
 {
@@ -28,6 +30,7 @@ class ArticleManager implements Arrayable
     public function publish(): void
     {
         Cache::forget(self::DIRECTORY);
+        Cache::forget('top_tags');
 
         $articles = File::allFiles(self::path());
 
@@ -41,6 +44,7 @@ class ArticleManager implements Arrayable
 
             $frontMatter['file'] = $article->getFilename();
             $frontMatter['slug'] = str_replace(".{$article->getExtension()}", '', $article->getFilename());
+            $frontMatter['keywords'] = $this->getKeyWords($frontMatter['excerpt']);
             $frontMatter['author'] = [
                 'name' => 'Omar Barbosa',
             ];
@@ -110,5 +114,20 @@ class ArticleManager implements Arrayable
     public function toArray(): array
     {
         return $this->content;
+    }
+
+    private function getKeyWords(string $text): string
+    {
+        $keywords = RakePlus::create($text, $this->getLocale())->keywords();
+
+        return implode(", ", $keywords);
+    }
+
+
+    private function getLocale(): string
+    {
+        return App::getLocale() === 'en'
+            ? 'en_US'
+            : 'es_AR';
     }
 }
