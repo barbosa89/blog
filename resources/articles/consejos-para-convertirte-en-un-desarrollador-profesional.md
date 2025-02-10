@@ -5,18 +5,6 @@ publishedAt: '2024-09-12'
 updatedAt: null
 locale: 'en'
 image: 'images/articles/advices.jpg'
-keywords:
-- descubre
-- consejos
-- esenciales
-- desarrolladores
-- software
-- ayudarán
-- crecer
-- profesionalmente
-- allá
-- escribir
-- código
 tags:
 - consejos
 - python
