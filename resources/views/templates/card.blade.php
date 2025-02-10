@@ -1,4 +1,4 @@
-<div class="card mb-3 border-light">
+<div class="card mb-3 border-0">
     <div class="row no-gutters">
         <div class="col-md-4">
             <a href="{{ $link }}">

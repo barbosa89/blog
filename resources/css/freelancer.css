@@ -380,9 +380,9 @@ a:focus, a:hover, a:active {
   color: white;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background-color: #128f76;
-  border-color: #128f76;
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.show {
+  background-color: #18BC9C !important;
+  border-color: #18BC9C !important;
 }
 
 .btn-secondary {

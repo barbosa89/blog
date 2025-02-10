@@ -16,10 +16,10 @@
                             <button type="submit" class="btn btn-light border-1 border-dark-subtle"><i class="bi bi-search"></i></button>
                             <button
                                 class="btn btn-primary dropdown-toggle"
-                                type="button" data-bs-toggle="dropdown" aria-expanded="false">Locale</button>
+                                type="button" data-bs-toggle="dropdown" aria-expanded="false">{{ trans('page.locale') }}</button>
                             <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item text-dark" href="#">Spanish</a></li>
-                                <li><a class="dropdown-item text-dark" href="#">English</a></li>
+                                <li><a class="dropdown-item text-dark" href="#">{{ trans('page.spanish') }}</a></li>
+                                <li><a class="dropdown-item text-dark" href="#">{{ trans('page.english') }}</a></li>
                             </ul>
                         </div>
                     </div>
@@ -27,10 +27,16 @@
             </div>
         </div>
 
+        <div class="row g-0">
+            <div class="col">
+                <span class="badge bg-danger fs-md rounded-0 rounded-top">{{ trans('page.latest_article') }}</span>
+            </div>
+        </div>
+
         @include('templates.card', [
-    'link' => route('posts.article', ['slug' => $latest->slug]),
-    'post' => $latest
-])
+            'link' => route('posts.article', ['slug' => $latest->slug]),
+            'post' => $latest
+        ])
     </div>
 </header>
 
