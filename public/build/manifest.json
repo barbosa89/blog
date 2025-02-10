@@ -77,6 +77,14 @@
     "file": "assets/fa-solid-900-BUswJgRo.woff2",
     "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2"
   },
+  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
+    "file": "assets/bootstrap-icons-BOrJxbIo.woff",
+    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
+  },
+  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": {
+    "file": "assets/bootstrap-icons-BtvjY1KL.woff2",
+    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
+  },
   "public/images/about-hd.png": {
     "file": "assets/about-hd-DV5p9vW8.png",
     "src": "public/images/about-hd.png"
@@ -105,7 +113,7 @@
     ]
   },
   "resources/js/freelancer.js": {
-    "file": "assets/freelancer-BtgEl71k.js",
+    "file": "assets/freelancer-Cq_DJGVv.js",
     "name": "freelancer",
     "src": "resources/js/freelancer.js",
     "isEntry": true
@@ -117,7 +125,7 @@
     "isEntry": true
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-D-56zZAz.css",
+    "file": "assets/app-GyM_PAwi.css",
     "src": "resources/sass/app.scss",
     "isEntry": true
   }
