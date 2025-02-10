@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Contracts\Support\Arrayable;
 use GrahamCampbell\Markdown\Facades\Markdown;
 
+use function is_array;
+
 class ArticleManager implements Arrayable
 {
     public const DIRECTORY = 'articles';
@@ -30,6 +32,7 @@ class ArticleManager implements Arrayable
         $articles = File::allFiles(self::path());
 
         $publicArticles = collect();
+        $tagMapping = collect();
 
         foreach ($articles as $article) {
             $markdown = Markdown::convert(File::get($article->getPathname()));
@@ -43,11 +46,23 @@ class ArticleManager implements Arrayable
             ];
 
             $publicArticles->push($frontMatter);
+
+            if (isset($frontMatter['tags']) && is_array($frontMatter['tags'])) {
+                foreach ($frontMatter['tags'] as $tag) {
+                    if (!$tagMapping->has($tag)) {
+                        $tagMapping[$tag] = collect();
+                    }
+
+                    $tagMapping[$tag]->push($frontMatter['slug']);
+                }
+            }
         }
 
         $publicArticles->sortByDesc('publishedAt');
 
         File::put(database_path('articles.json'), $publicArticles->toJson());
+
+        File::put(database_path('tags.json'), $tagMapping->toJson());
     }
 
     public function list(): Collection
