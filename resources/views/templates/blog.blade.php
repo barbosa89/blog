@@ -6,7 +6,7 @@
     <header class="blog-masthead text-gray">
         <div class="container">
             <div class="row text-gray">
-                <div class="col-12 col-lg-3 ms-auto offset-lg-6 search text-start">
+                <div class="col-12 col-lg-4 ms-auto offset-lg-8 search text-start">
                     <form action="{{ route('posts.search') }}" method="GET">
                         <div class="control-group">
                             <div class="input-group">
