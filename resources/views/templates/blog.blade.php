@@ -10,12 +10,12 @@
                 <form action="{{ route('posts.search') }}" method="GET">
                     <div class="control-group">
                         <div class="input-group">
-                            <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="query"
+                            <input class="form-control border-dark-subtle" id="query"
                                 name="query" type="search" placeholder="{{ trans('page.search') }}" required="required"
                                 value="{{ old('query') }}">
-                            <button type="submit" class="btn btn-secondary border-0"><i class="bi bi-search"></i></button>
+                            <button type="submit" class="btn btn-light border-1 border-dark-subtle"><i class="bi bi-search"></i></button>
                             <button
-                                class="btn btn-secondary dropdown-toggle"
+                                class="btn btn-primary dropdown-toggle"
                                 type="button" data-bs-toggle="dropdown" aria-expanded="false">Locale</button>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <li><a class="dropdown-item text-dark" href="#">Spanish</a></li>
