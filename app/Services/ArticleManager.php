@@ -5,22 +5,29 @@ declare(strict_types=1);
 namespace App\Services;
 
 use stdClass;
-use function is_array;
 use DonatelloZa\RakePlus\RakePlus;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\File;
-
 use Illuminate\Support\Facades\Cache;
-use Illuminate\Contracts\Support\Arrayable;
 use GrahamCampbell\Markdown\Facades\Markdown;
 
-class ArticleManager implements Arrayable
+use function is_array;
+
+class ArticleManager
 {
     public const DIRECTORY = 'articles';
 
-    protected string $path;
-    protected array $content;
+    protected string $cachePath;
+
+
+    public function __construct() {
+        $this->cachePath = storage_path('framework/cache/articles');
+
+        if (!File::isDirectory($this->cachePath)) {
+            File::makeDirectory($this->cachePath, 0755, true);
+        }
+    }
 
     public static function path(string|null $path = null): string
     {
@@ -29,8 +36,7 @@ class ArticleManager implements Arrayable
 
     public function publish(): void
     {
-        Cache::forget(self::DIRECTORY);
-        Cache::forget('top_tags');
+        $this->clearCache();
 
         $articles = File::allFiles(self::path());
 
@@ -85,11 +91,7 @@ class ArticleManager implements Arrayable
         $post = $lists->firstWhere('slug', $slug);
 
         if ($post) {
-            $path = self::path($post->file);
-
-            $markdown = Markdown::convert(File::get($path));
-
-            $post->content = $markdown->getContent();
+            $post->content = $this->cachedContent($post);
 
             return $post;
         }
@@ -111,9 +113,14 @@ class ArticleManager implements Arrayable
         });
     }
 
-    public function toArray(): array
+    public function clearCache(): void
     {
-        return $this->content;
+        Cache::forget(self::DIRECTORY);
+        Cache::forget('top_tags');
+
+        foreach (File::files($this->cachePath) as $file) {
+            File::delete($file);
+        }
     }
 
     private function getKeyWords(string $text): string
@@ -123,11 +130,31 @@ class ArticleManager implements Arrayable
         return implode(", ", $keywords);
     }
 
-
     private function getLocale(): string
     {
         return App::getLocale() === 'en'
             ? 'en_US'
             : 'es_AR';
+    }
+
+    private function cachedContent(stdClass $post): string
+    {
+        $documentPath = storage_path("framework/cache/articles/{$post->slug}.html");
+        $markdownPath = self::path($post->file);
+
+        if (!File::isDirectory($this->cachePath)) {
+            File::makeDirectory($this->cachePath, 0755, true);
+        }
+
+        if (File::exists($documentPath) && filemtime($documentPath) > filemtime($markdownPath)) {
+            return File::get($documentPath);
+        }
+
+        $markdown = Markdown::convert(File::get($markdownPath));
+        $content = $markdown->getContent();
+
+        File::put($documentPath, $content);
+
+        return $content;
     }
 }
