@@ -3,8 +3,8 @@ title: 'Consejos para convertirte en un desarrollador profesional'
 excerpt: 'Descubre consejos esenciales para desarrolladores de software que te ayudarán a crecer profesionalmente, más allá de solo escribir código.'
 publishedAt: '2024-09-12'
 updatedAt: null
-locale: 'en'
-image: 'images/articles/advices.jpg'
+locale: 'es'
+image: 'images/articles/advices.webp'
 tags:
 - consejos
 - python
