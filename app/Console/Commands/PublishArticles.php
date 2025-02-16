@@ -1,9 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Console\Commands;
 
-use Illuminate\Console\Command;
 use App\Services\ArticleManager;
+use Illuminate\Console\Command;
 
 class PublishArticles extends Command
 {
@@ -15,7 +17,7 @@ class PublishArticles extends Command
     /**
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Publish all articles';
 
     public function handle(ArticleManager $articleManager): int
     {

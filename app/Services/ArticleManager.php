@@ -4,15 +4,16 @@ declare(strict_types=1);
 
 namespace App\Services;
 
-use stdClass;
 use DonatelloZa\RakePlus\RakePlus;
+use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Cache;
-use GrahamCampbell\Markdown\Facades\Markdown;
+use Illuminate\Support\Facades\File;
 
 use function is_array;
+
+use stdClass;
 
 class ArticleManager
 {
@@ -21,7 +22,8 @@ class ArticleManager
     protected string $cachePath;
 
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->cachePath = storage_path('framework/cache/articles');
 
         if (!File::isDirectory($this->cachePath)) {
@@ -105,9 +107,7 @@ class ArticleManager
             $tags = File::get(database_path('tags.json'));
 
             return collect(json_decode($tags, true))
-                ->sortBy(function (array $articles, string $tagName): int {
-                    return count($articles);
-                })
+                ->sortBy(fn(array $articles, string $tagName): int => count($articles))
                 ->take(15)
                 ->keys();
         });
@@ -132,7 +132,7 @@ class ArticleManager
 
     private function getLocale(): string
     {
-        return App::getLocale() === 'en'
+        return 'en' === App::getLocale()
             ? 'en_US'
             : 'es_AR';
     }

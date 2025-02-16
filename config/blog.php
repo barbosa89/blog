@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  *  Blog app configuration
  */
@@ -30,14 +32,14 @@ return [
             'name',
             'created_at',
             'updated_at',
-            'meta'
+            'meta',
         ],
         'authors' => [
             'id',
             'name',
             'bio',
             'avatar',
-            'meta'
+            'meta',
         ],
     ],
 ];

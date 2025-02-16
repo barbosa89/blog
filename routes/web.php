@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SubscriptionController;
+use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TagController;
-use App\Http\Controllers\BlogController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ContactController;
-use App\Http\Controllers\SubscriptionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,13 +21,9 @@ use App\Http\Controllers\SubscriptionController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', fn() => view('welcome'));
 
-Route::get('/offline', function () {
-    return view('modules/laravelpwa/offline');
-});
+Route::get('/offline', fn() => view('modules/laravelpwa/offline'));
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 

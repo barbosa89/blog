@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
 use App\Services\ArticleManager;
@@ -9,7 +11,7 @@ use Illuminate\Http\Response;
 class BlogController extends Controller
 {
     public function __construct(
-        protected ArticleManager $articleManager
+        protected ArticleManager $articleManager,
     ) {}
 
     public function index(): View

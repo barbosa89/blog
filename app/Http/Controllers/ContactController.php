@@ -1,9 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
-use App\Mail\ContactMessage;
 use App\Http\Requests\ContactEmail;
+use App\Mail\ContactMessage;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Mail;
 

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
@@ -10,8 +12,8 @@ class TagController extends Controller
 {
     public function index(): AnonymousResourceCollection
     {
-        $entries = WinkTag::when(request()->has('search'), function ($q) {
-            $q->where('name', 'LIKE', '%'.request('search').'%');
+        $entries = WinkTag::when(request()->has('search'), function ($q): void {
+            $q->where('name', 'LIKE', '%' . request('search') . '%');
         })
             ->orderBy('created_at', 'DESC')
             ->withCount('posts')

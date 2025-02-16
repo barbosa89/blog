@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     'name' => 'Omar Barbosa',
     'manifest' => [
@@ -9,7 +11,7 @@ return [
         'background_color' => '#00be9c',
         'theme_color' => '#1c3c50',
         'display' => 'standalone',
-        'orientation'=> 'any',
+        'orientation' => 'any',
         'icons' => [
             '72x72' => [
                 'path' => '/images/icons/icon-72x72.png',
@@ -41,7 +43,7 @@ return [
             ],
             '512x512' => [
                 'path' => '/images/icons/icon-512x512.png',
-                'purpose' => 'any'
+                'purpose' => 'any',
             ],
         ],
         'splash' => [
@@ -63,15 +65,15 @@ return [
                 'url' => '/',
                 'icons' => [
                     "src" => "/images/icons/icon-72x72.png",
-                    "purpose" => "any"
-                ]
+                    "purpose" => "any",
+                ],
             ],
             [
                 'name' => 'Blog',
                 'description' => 'Blog by Omar Barbosa, web developer, I share tutorials and courses on Python, PHP, Javascript, linux, security and application deployment',
-                'url' => '/blog'
-            ]
+                'url' => '/blog',
+            ],
         ],
-        'custom' => []
-    ]
+        'custom' => [],
+    ],
 ];

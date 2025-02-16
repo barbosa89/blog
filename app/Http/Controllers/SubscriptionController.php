@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
 use App\Helpers\Input;
@@ -11,7 +13,7 @@ class SubscriptionController extends Controller
     /**
      * Store a newly created subscriber in MailChimp API.
      *
-     * @param  \App\Http\Requests\SubscribeStore  $request
+     * @param  SubscribeStore  $request
      * @return \Illuminate\Http\Response
      */
     public function subscribe(SubscribeStore $request)
@@ -21,7 +23,7 @@ class SubscriptionController extends Controller
         if (! Newsletter::isSubscribed($email)) {
             Newsletter::subscribePending($email);
 
-            $msg = trans('page.subscription_email') . '. <br><br><strong>' . trans('page.email') . '</strong>: '. $email . '.';
+            $msg = trans('page.subscription_email') . '. <br><br><strong>' . trans('page.email') . '</strong>: ' . $email . '.';
             flash()->overlay($msg, trans('page.subscription'));
         } else {
             flash()->overlay(trans('page.subscribed_msg'), trans('page.subscribed'));
@@ -43,7 +45,7 @@ class SubscriptionController extends Controller
         if (Newsletter::isSubscribed($email)) {
             Newsletter::unsubscribe($email);
 
-            $msg = trans('page.unsubscribe_msg') . '. <br><br><strong>' . trans('page.email') . '</strong>: '. $email . '.';
+            $msg = trans('page.unsubscribe_msg') . '. <br><br><strong>' . trans('page.email') . '</strong>: ' . $email . '.';
             flash()->overlay($msg, trans('page.unsubscribe'));
         } else {
             flash()->overlay(trans('page.no_subscribed_msg'), trans('page.no_subscribed'));
