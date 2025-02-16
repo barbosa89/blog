@@ -1,0 +1,10 @@
+---
+title: '{{ title }}'
+excerpt:
+publishedAt:
+updatedAt: null
+locale: '{{ locale }}'
+image:
+tags:
+-
+---
