@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Providers;
 
 use Illuminate\Auth\Events\Registered;
@@ -22,11 +24,14 @@ class EventServiceProvider extends ServiceProvider
 
     /**
      * Register any events for your application.
-     *
-     * @return void
      */
-    public function boot()
+    public function boot(): void {}
+
+    /**
+     * Determine if events and listeners should be automatically discovered.
+     */
+    public function shouldDiscoverEvents(): bool
     {
-        //
+        return false;
     }
 }

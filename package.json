@@ -1,33 +1,25 @@
 {
     "private": true,
+    "type": "module",
     "scripts": {
-        "dev": "npm run development",
-        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch": "npm run development -- --watch",
-        "watch-poll": "npm run watch -- --watch-poll",
-        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --disable-host-check --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js"
+        "dev": "vite",
+        "build": "vite build"
     },
     "devDependencies": {
         "@fortawesome/fontawesome-free": "^5.15.2",
-        "axios": "^0.21.1",
-        "bootstrap": "^4.6.0",
-        "browser-sync": "^2.26.14",
-        "browser-sync-webpack-plugin": "^2.3.0",
-        "cross-env": "^7.0",
+        "@popperjs/core": "^2.11.6",
+        "@vitejs/plugin-vue": "^4.5.0",
+        "axios": "^1.6.4",
+        "bootstrap": "^5.2.3",
+        "bootstrap-icons": "^1.11.3",
         "highlight.js": "^10.5.0",
-        "jquery": "^3.6.0",
-        "jquery.easing": "^1.4.1",
-        "laravel-mix": "^5.0.9",
+        "laravel-vite-plugin": "^1.0.0",
+        "laravel-vue-i18n": "^2.7.8",
         "lodash": "^4.17.21",
-        "magnific-popup": "^1.1.0",
-        "popper.js": "^1.16.1",
-        "resolve-url-loader": "^3.1.0",
-        "sass": "^1.32.8",
-        "sass-loader": "^8.0.0",
+        "sass": "^1.56.1",
         "typed.js": "^2.0.11",
-        "vue": "^2.6.12",
-        "vue-template-compiler": "^2.6.12"
+        "typography": "^0.16.24",
+        "vite": "^5.0.0",
+        "vue": "^3.2.37"
     }
 }

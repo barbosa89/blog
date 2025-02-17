@@ -1,32 +1,24 @@
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
+import './bootstrap'
+import { createApp } from 'vue'
+import { i18nVue } from 'laravel-vue-i18n'
 
-require('./bootstrap');
+import AdsFeed from './components/ads/Feed.vue'
+import BlogHeader from './components/BlogHeader.vue'
+import PortfolioProjects from './components/PortfolioProjects.vue'
+import ProgrammersIcon from './components/icons/Programmers.vue'
+const app = createApp({})
 
-window.Vue = require('vue');
+app.use(i18nVue, {
+    resolve: async lang => {
+        const langs = import.meta.glob('../../lang/*.json');
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
+        return await langs[`../../lang/${lang}.json`]();
+    }
+})
 
-Vue.component('feed-ad', require('./components/ads/Feed.vue').default);
+app.component('ads-feed', AdsFeed)
+app.component('blog-header', BlogHeader)
+app.component('portfolio-projects', PortfolioProjects)
+app.component('programmers-icon', ProgrammersIcon)
 
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key)))
-
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-const app = new Vue({
-    el: '#app'
-});
+app.mount('#app')

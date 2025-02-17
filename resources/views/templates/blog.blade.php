@@ -2,27 +2,39 @@
 
 @section('content')
 
-    <!-- Header -->
-    <header class="blog-masthead text-gray">
-        <div class="container">
-            <div class="row text-gray text-center text-lg-left text-xl-left">
-                <div class="col-12 search text-left d-lg-none">
-                    <div class="card">
-                        <div class="card-body">
-                            <form action="{{ route('posts.search') }}" method="GET">
-                                <div class="control-group">
-                                    <div class="form-group">
-                                        <div class="input-group">
-                                            <input class="form-control form-control-fix{{ $errors->has('name') ? ' is-invalid' : '' }}" id="query" name="query" type="text" placeholder="Laravel..." required="required" value="{{ old('query') }}">
-                                            <div class="input-group-append">
-                                                <input type="submit" class="btn btn-primary" value="{{ trans('page.search') }}">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
+<!-- Header -->
+<header class="blog-masthead text-gray">
+    <div class="container">
+        <div class="row text-gray mt-3 mt-lg-2">
+            <div class="col-12 col-lg-4 ms-auto offset-lg-8 search text-start">
+                <form action="{{ route('posts.search') }}" method="GET">
+                    <div class="control-group">
+                        <div class="input-group">
+                            <input class="form-control border-dark-subtle" id="query"
+                                name="query" type="search" placeholder="{{ trans('page.search') }}" required="required"
+                                value="{{ old('query') }}">
+                            <button type="submit" class="btn btn-light border-1 border-dark-subtle"><i class="bi bi-search"></i></button>
+                            <button
+                                class="btn btn-primary dropdown-toggle"
+                                type="button" data-bs-toggle="dropdown" aria-expanded="false">{{ trans('page.locale') }}</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                    <a class="dropdown-item text-dark" href="{{ route('locale', 'es') }}">{{ trans('page.spanish') }}</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-dark" href="{{ route('locale', 'en') }}">{{ trans('page.english') }}</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
+                </form>
+            </div>
+        </div>
+
+        @if ($latest)
+            <div class="row g-0">
+                <div class="col">
+                    <span class="badge bg-danger fs-md rounded-0 rounded-top">{{ trans('page.latest_article') }}</span>
                 </div>
             </div>
 
@@ -30,60 +42,43 @@
                 'link' => route('posts.article', ['slug' => $latest->slug]),
                 'post' => $latest
             ])
-        </div>
-    </header>
+        @endif
+    </div>
+</header>
 
-    @if($posts->isNotEmpty())
-        <div class="container blog">
-            <div class="row mt-5">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
-                    @foreach($posts as $post)
+@if($posts->isNotEmpty())
+    <div class="container blog">
+        <div class="row mt-3">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
+                @foreach($posts as $post)
                         @if (in_array($loop->iteration, [3, 10, 15]))
                             @production
-                                <feed-ad></feed-ad>
+                                <ads-feed></ads-feed>
                             @endproduction
                         @endif
 
                         <div class="row blog-divider"></div>
 
                         @include('templates.card', [
-                            'link' => route('posts.article', ['slug' => $post->slug]),
-                            'post' => $post,
-                            'main' => false
-                        ])
-                    @endforeach
-                </div>
-                <div class="col-lg-3 col-xl-3 tags d-none d-lg-block d-xl-block">
-                    <div class="card sidebar-search">
-                        <div class="card-body">
-                            <form action="{{ route('posts.search') }}" method="GET">
-                                <div class="control-group">
-                                    <div class="form-group">
-                                        <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" id="query" name="query" type="text" placeholder="{{ trans('page.search') }}" required="required" value="{{ old('query') }}">
-                                    </div>
-                                    <input type="submit" class="btn btn-primary" value="{{ trans('page.search') }}">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+                        'link' => route('posts.article', ['slug' => $post->slug]),
+                        'post' => $post,
+                        'main' => false
+                    ])
+                @endforeach
+            </div>
 
-                    @include('templates.tags')
-                </div>
+            <div class="col-lg-3 col-xl-3 tags d-none d-lg-block d-xl-block">
+                @include('templates.tags', ['border' => true])
             </div>
         </div>
-    @else
-        @include('templates.empty')
-    @endif
-
-    <div class="container mt-4 mb-4">
-        <div class="row">
-            {{ $posts->links() }}
-        </div>
     </div>
+@else
+    @include('templates.empty')
+@endif
 
-    <div class="container mt-4 mb-4"></div>
+<div class="container mt-4 mb-4"></div>
 
-    @include('templates.footer')
+@include('templates.footer')
 
-    @include('templates.top-button')
+@include('templates.top-button')
 @endsection

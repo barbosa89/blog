@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -9,79 +9,97 @@
 
     <title>Blog | {{ config('app.name', 'Omar Barbosa') }}</title>
     <link href="{{ asset('images/icon.png') }}" rel="shortcut icon" type="image/x-icon">
-    <link rel="canonical" href="{{ route('blog') }}">
-
-    <meta name="description" content="{{ trans('page.description') }}">
-    <meta name="keywords" content="{{ trans('page.keywords') }}">
-    <meta name="author" content="Omar Barbosa">
-
-    <meta property="og:title" content="Blog de Omar Barbosa">
-    <meta property="og:description" content="{{ trans('page.description') }}">
-    <meta property="og:image" content="{{ asset('images/site.png') }}">
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://omarbarbosa.com">
-    <meta property="og:site_name" content="Omar Barbosa">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image:src" content="{{ asset('images/site.png') }}">
-    <meta name="twitter:site" content="@Omar_Andres_Bar">
-    <meta name="twitter:url" content="https://omarbarbosa.com">
-
-    <meta property="fb:app_id" content="2203860376602756" />
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
-    <!-- Style -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/landing.css') }}" rel="stylesheet">
-
-    <script>
-        window.Laravel = {!! json_encode([
-            'csrfToken' => csrf_token(),
-        ]) !!};
-    </script>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103614513-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-103614513-1');
-    </script>
+    <!-- Scripts -->
+    @vite([
+        'resources/sass/app.scss',
+        'resources/css/freelancer.css',
+        'resources/js/app.js',
+    ])
 </head>
-<body  id="page-top">
+<body>
     <div id="app">
-        @include('templates.navbar')
-        @include('flash::message')
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    {{ config('app.name', 'Laravel') }}
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav me-auto">
+
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                            @endif
+
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
         <main>
             @yield('content')
         </main>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var modal = document.getElementById('flash-overlay-modal');
+            if (modal) {
+                modal.style.display = 'block';
+            }
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/landing.js') }}" async defer></script>
-    <script type="application/ld+json" async>
-        {
-            "@context": "http://schema.org/",
-            "@type": "WebSite",
-            "name": "Omar Barbosa",
-            "alternateName": "Blog de Omar Barbosa",
-            "url": "https://omarbarbosa.com",
-            "image": "{{ asset('images/site.png') }}",
-            "description": "{{ trans('page.description') }}"
-        }
+            var alerts = document.querySelectorAll('div.alert:not(.alert-important)');
+            alerts.forEach(function(alert) {
+                setTimeout(function() {
+                    alert.style.transition = 'opacity 0.35s';
+                    alert.style.opacity = '0';
+                    setTimeout(function() {
+                        alert.style.display = 'none';
+                    }, 350);
+                }, 3000);
+            });
+        });
     </script>
-    <script async>
-        $('#flash-overlay-modal').modal();
-
-        $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
-    </script>
-    @yield('scripts')
 </body>
 </html>

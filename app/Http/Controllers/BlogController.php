@@ -1,205 +1,43 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
-use App\Constants\LangTags;
-use App\Helpers\Fields;
-use App\Helpers\Input;
-use DonatelloZa\RakePlus\RakePlus;
-use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Http\Request;
+use App\Services\ArticleManager;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Auth;
-use Wink\WinkPost;
-use Wink\WinkTag;
 
 class BlogController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function __construct(
+        protected ArticleManager $articleManager,
+    ) {}
+
+    public function index(): View
     {
-        $posts = WinkPost::live()
-            ->when(Auth::guest(), function ($query) {
-                $query->whereHas('tags', function ($query) {
-                    $query->where('name', App::getLocale());
-                });
-            })->orderBy('publish_date', 'DESC')
-            ->paginate(20, Fields::get('posts'));
-
-        if ($posts->isEmpty()) {
-            flash()->overlay(trans('page.without_content'), trans('page.sorry'));
-
-            return back();
-        }
+        $posts = $this->articleManager->list()
+            ->filter(fn($article) => $article->locale === App::getLocale());
 
         $latest = $posts->shift();
 
-        $tags = $this->getTags();
-
-        return view('templates.blog', compact('posts', 'latest', 'tags'));
+        return view('templates.blog', [
+            'posts' => $posts,
+            'latest' => $latest,
+            'tags' => $this->articleManager->topTags(),
+        ]);
     }
 
-    private function getTags(): Collection
+    public function article(string $slug): View
     {
-        return WinkTag::query()
-            ->whereNotIn('name', LangTags::excludes())
-            ->inRandomOrder()
-            ->distinct('id')
-            ->limit(15)
-            ->get(Fields::get('tags'));
-    }
+        $post = $this->articleManager->find($slug);
 
-    /**
-     * Display a article with relateds.
-     *
-     * @param  \App\Http\Requests\ContactEmail  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function article($slug)
-    {
-        $post = WinkPost::where('slug', Input::clean($slug))
-            ->with([
-                'tags' => function ($query) {
-                    $query->select(Fields::get('tags'))
-                        ->whereNotIn('name', LangTags::excludes());
-                },
-                'author' => function ($query) {
-                    $query->select(Fields::get('authors'));
-                },
-            ])->firstOrFail(Fields::get('posts'));
+        abort_if(!$post, Response::HTTP_NO_CONTENT);
 
-        $relateds = $this->getRelateds($post);
-
-        $keywords = $this->getKeyWords($post->excerpt);
-
-        return view('templates.post', compact('post', 'keywords', 'relateds'));
-    }
-
-    /**
-     * Return related articles.
-     *
-     * @param  \Wink\WinkPost  $post
-     * @return \Illuminate\Support\Collection  $relateds
-     */
-    public function getRelateds(WinkPost $post)
-    {
-        $relateds = collect();
-        $post->tags->each(function ($tag) use (&$relateds, $post) {
-            $posts = WinkPost::live()
-                ->where('id', '!=', $post->id)
-                ->whereHas('tags', function ($query) use ($tag, $post) {
-                    $query->where('name', $tag->name);
-                })->whereHas('tags', function ($query) {
-                    $query->where('name', App::getLocale());
-                })->inRandomOrder()
-                ->limit(2)
-                ->distinct('id')
-                ->get(Fields::get('posts'));
-
-            if ($posts->isNotEmpty()) {
-                foreach ($posts as $post) {
-                    $relateds->push($post);
-                }
-            }
-        });
-
-        if ($relateds->count() >= 2) {
-            $relateds = $relateds->take(2);
-        }
-
-        return $relateds;
-    }
-
-    /**
-     * Extract keywords from the post excerpt.
-     *
-     * @param  string  $text
-     * @return string
-     */
-    public function getKeyWords(string $text = null)
-    {
-        $keywords = RakePlus::create($text, $this->getLocale())->keywords();
-
-        return implode(", ", $keywords);
-    }
-
-    /**
-     * Get locale in RakePlus format.
-     *
-     * @return string
-     */
-    public function getLocale()
-    {
-        $locale = App::getLocale();
-
-        if ($locale == 'en') {
-            return 'en_US';
-        }
-
-        return 'es_AR';
-    }
-
-    /**
-     * Display articles by tags.
-     *
-     * @param  string  $tag
-     * @return \Illuminate\Http\Response
-     */
-    public function tags(string $tag = null)
-    {
-        $tag = Input::clean($tag);
-
-        $posts = WinkPost::live()
-            ->whereHas('tags', function ($query) use ($tag) {
-                $query->where('name', $tag);
-            })->whereHas('tags', function ($query) {
-                $query->where('name', App::getLocale());
-            })->paginate(20, Fields::get('posts'));
-
-        if ($posts->isEmpty()) {
-            flash()->overlay(trans('page.without_content'), trans('page.sorry'));
-
-            return back();
-        }
-
-        $tags = $this->getTags();
-
-        return view('templates.tag-search', compact('posts', 'tags', 'tag'));
-    }
-
-    /**
-     * Search a post in the database.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     */
-    public function search(Request $request)
-    {
-        $query = Input::clean($request->get('query'));
-
-        if (empty($query)) {
-            return redirect()->route('blog');
-        }
-
-        $posts = WinkPost::live()
-            ->whereHas('tags', function ($query) {
-                $query->where('name', App::getLocale());
-            })->whereLike(['title', 'slug', 'excerpt', 'tags.name'], $query)
-            ->with([
-                'tags' => function ($query) {
-                    $query->select(Fields::get('tags'))
-                        ->whereNotIn('name', LangTags::excludes());
-                },
-                'author' => function ($query) {
-                    $query->select(Fields::get('authors'));
-                },
-            ])->paginate(20, Fields::get('posts'));
-
-        $tags = $this->getTags();
-
-        return view('templates.search', compact('posts', 'query', 'tags'));
+        return view('templates.post', [
+            'post' => $post,
+            'relateds' => collect(),
+        ]);
     }
 }

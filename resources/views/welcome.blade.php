@@ -12,6 +12,4 @@
     @include('templates.footer')
 
     @include('templates.top-button')
-
-    @include('templates.portfolio-modals')
 @endsection
