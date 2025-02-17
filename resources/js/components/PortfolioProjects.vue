@@ -95,7 +95,7 @@ const nonFeatured = ref([
     },
     {
         id: 'tlsi',
-        title: 'Transportes logísticos y servicios de ingeniería',
+        title: 'TLSI',
         description: wTrans('page.portfolio_projects.tlsi.description'),
         image: '/images/portfolio/tlsi.webp',
         link: 'https://tlsi.com.co/',

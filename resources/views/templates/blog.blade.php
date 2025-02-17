@@ -18,8 +18,12 @@
                                 class="btn btn-primary dropdown-toggle"
                                 type="button" data-bs-toggle="dropdown" aria-expanded="false">{{ trans('page.locale') }}</button>
                             <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item text-dark" href="#">{{ trans('page.spanish') }}</a></li>
-                                <li><a class="dropdown-item text-dark" href="#">{{ trans('page.english') }}</a></li>
+                                <li>
+                                    <a class="dropdown-item text-dark" href="{{ route('locale', 'es') }}">{{ trans('page.spanish') }}</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-dark" href="{{ route('locale', 'en') }}">{{ trans('page.english') }}</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -27,16 +31,18 @@
             </div>
         </div>
 
-        <div class="row g-0">
-            <div class="col">
-                <span class="badge bg-danger fs-md rounded-0 rounded-top">{{ trans('page.latest_article') }}</span>
+        @if ($latest)
+            <div class="row g-0">
+                <div class="col">
+                    <span class="badge bg-danger fs-md rounded-0 rounded-top">{{ trans('page.latest_article') }}</span>
+                </div>
             </div>
-        </div>
 
-        @include('templates.card', [
-            'link' => route('posts.article', ['slug' => $latest->slug]),
-            'post' => $latest
-        ])
+            @include('templates.card', [
+                'link' => route('posts.article', ['slug' => $latest->slug]),
+                'post' => $latest
+            ])
+        @endif
     </div>
 </header>
 

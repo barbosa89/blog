@@ -47,15 +47,15 @@ return [
         ],
         'apces' => [
             'description' => 'Sitio web corporativo con sistema de peticiones, quejas y reclamos.',
-            'button_action' => 'View site',
+            'button_action' => 'Ver el sitio',
         ],
         'teo' => [
             'description' => 'Sitio web corporativo de entidad estatal con sistema de peticiones, quejas y reclamos.',
-            'button_action' => 'View site',
+            'button_action' => 'Ver el sitio',
         ],
         'tlsi' => [
-            'description' => 'Sitio web de empresa de transporte y logística, y servicios de ingeniería medioambiental y civil.',
-            'button_action' => 'View site',
+            'description' => 'Sitio web de empresa de transporte y logística, ingeniería medioambiental y civil.',
+            'button_action' => 'Ver el sitio',
         ],
     ],
     'link' => 'Enlace',

@@ -6,6 +6,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SubscriptionController;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -31,6 +32,15 @@ Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/tags/{tag}', [BlogController::class, 'tags'])->name('posts.tag');
 Route::get('/posts/{slug}', [BlogController::class, 'article'])->name('posts.article');
 Route::get('/search', [BlogController::class, 'search'])->name('posts.search');
+Route::get('locale/{locale}', function (string $locale): RedirectResponse {
+    app()->setLocale($locale);
+
+    session()->put('locale', $locale);
+
+    return redirect()->back();
+})
+    ->name('locale')
+    ->whereIn('locale', ['es', 'en']);
 
 Route::post('/subscribe', [SubscriptionController::class, 'subscribe'])
     ->name('subscribe')

@@ -5,7 +5,7 @@ import { i18nVue } from 'laravel-vue-i18n'
 import AdsFeed from './components/ads/Feed.vue'
 import BlogHeader from './components/BlogHeader.vue'
 import PortfolioProjects from './components/PortfolioProjects.vue'
-
+import ProgrammersIcon from './components/icons/Programmers.vue'
 const app = createApp({})
 
 app.use(i18nVue, {
@@ -19,5 +19,6 @@ app.use(i18nVue, {
 app.component('ads-feed', AdsFeed)
 app.component('blog-header', BlogHeader)
 app.component('portfolio-projects', PortfolioProjects)
+app.component('programmers-icon', ProgrammersIcon)
 
 app.mount('#app')

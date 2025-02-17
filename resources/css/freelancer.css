@@ -397,6 +397,12 @@ a:focus, a:hover, a:active {
   color: white;
 }
 
+.dropdown-item.active, .dropdown-item:active {
+  color: white !important;
+  text-decoration: none;
+  background-color: #18BC9C;
+}
+
 /* Magnific Popup CSS */
 .mfp-bg {
   top: 0;

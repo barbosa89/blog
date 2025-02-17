@@ -6,13 +6,13 @@
     "isDynamicEntry": true
   },
   "lang/php_en.json": {
-    "file": "assets/php_en-BxUIuQlC.js",
+    "file": "assets/php_en-BvW9wz2y.js",
     "name": "php_en",
     "src": "lang/php_en.json",
     "isDynamicEntry": true
   },
   "lang/php_es.json": {
-    "file": "assets/php_es-DrFvZrpl.js",
+    "file": "assets/php_es-DVQuN5FT.js",
     "name": "php_es",
     "src": "lang/php_es.json",
     "isDynamicEntry": true
@@ -94,12 +94,12 @@
     "src": "public/images/main-hd.png"
   },
   "resources/css/freelancer.css": {
-    "file": "assets/freelancer-BHZQSFmS.css",
+    "file": "assets/freelancer-Dooc-YF4.css",
     "src": "resources/css/freelancer.css",
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-CA5fBED2.js",
+    "file": "assets/app-DWBVe8M3.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -109,7 +109,7 @@
       "lang/php_es.json"
     ],
     "css": [
-      "assets/app-C67iESOi.css"
+      "assets/app-C-0FSHhW.css"
     ]
   },
   "resources/js/freelancer.js": {
@@ -125,7 +125,7 @@
     "isEntry": true
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-GyM_PAwi.css",
+    "file": "assets/app-B5bdr6m5.css",
     "src": "resources/sass/app.scss",
     "isEntry": true
   }

@@ -7,6 +7,7 @@ namespace App\Http\Controllers;
 use App\Services\ArticleManager;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\App;
 
 class BlogController extends Controller
 {
@@ -16,7 +17,8 @@ class BlogController extends Controller
 
     public function index(): View
     {
-        $posts = $this->articleManager->list();
+        $posts = $this->articleManager->list()
+            ->filter(fn($article) => $article->locale === App::getLocale());
 
         $latest = $posts->shift();
 

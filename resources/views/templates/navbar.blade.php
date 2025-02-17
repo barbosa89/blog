@@ -21,7 +21,7 @@
                     <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ route('blog') }}">Blog</a>
                 </li>
 
-                @auth
+                {{-- @auth
                     <li class="nav-item mx-0 mx-lg-1 cursor-pointer">
                         <a class="nav-link py-3 px-0 px-lg-3 rounded border text-sm-center" href="{{ route('home') }}">Home</a>
                     </li>
@@ -29,7 +29,7 @@
                     <li class="nav-item mx-0 mx-lg-1 cursor-pointer">
                         <a class="nav-link py-3 px-0 px-lg-3 rounded border text-sm-center" href="{{ route('login') }}">Login</a>
                     </li>
-                @endauth
+                @endauth --}}
             </ul>
         </div>
     </div>
