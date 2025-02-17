@@ -52,7 +52,7 @@ class ArticleManager
 
             $frontMatter['file'] = $article->getFilename();
             $frontMatter['slug'] = str_replace(".{$article->getExtension()}", '', $article->getFilename());
-            $frontMatter['keywords'] = $this->getKeyWords($frontMatter['excerpt']);
+            $frontMatter['keywords'] = $this->getKeyWords($frontMatter['excerpt'] ?? '');
             $frontMatter['author'] = [
                 'name' => 'Omar Barbosa',
             ];
