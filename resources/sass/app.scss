@@ -8,11 +8,17 @@ $fa-font-path: "@fortawesome/fontawesome-free/webfonts";
 @import '@fortawesome/fontawesome-free/scss/regular.scss';
 @import '@fortawesome/fontawesome-free/scss/solid.scss';
 @import '@fortawesome/fontawesome-free/scss/brands.scss';
+
 // Variables
 @import 'variables';
+
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+// Highlight
 @import 'highlight.js/scss/default.scss';
+
 a {
     text-decoration: none !important;
 }
@@ -92,13 +98,10 @@ button.bg-primary:focus {
 
 .blog-masthead h2 {
     font-size: 1.3rem;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato';
 }
 
 article {
-    &>h2,h3 {
-        text-align: left;
-    }
     &>h2 {
         margin-top: 30px;
     }
@@ -159,47 +162,8 @@ article {
     border-top: 1px solid #ddd;
 }
 
-.post-tags {
-    list-style: none !important;
-    &>.tag-item {
-        float: left;
-        margin-bottom: 15px;
-        &>a {
-            color: #fff;
-            background-color: #2c3e50;
-            padding: 5px;
-            margin: 20px 10px;
-            border-radius: 3px;
-        }
-    }
-}
-
-.icon {
-    width: 256px;
-    height: 256px;
-    background-color: rgba(24, 188, 156, 0.2);
-    border-radius: 50%;
-    border: 3px solid #18BC9C;
-    & p {
-        font-size: 13.7em;
-        margin: 0;
-        font-style: italic;
-        line-height: 0.85;
-    }
-}
-
 .form-control-fix {
     height: calc(1.5em + 0.75rem + 5px) !important;
-}
-
-@include media-breakpoint-down(sm) {
-    .icon {
-        width: 192px;
-        height: 192px;
-        & p {
-            font-size: 10.2em;
-        }
-    }
 }
 
 @include media-breakpoint-down(xs) {
@@ -225,19 +189,6 @@ pre.ql-syntax {
 .sidebar-search {
     margin-bottom: 15px;
 }
-
-.search {
-    margin: 0;
-    padding: 15px;
-    &>.card {
-        border: none;
-        background-color: transparent !important;
-        &>.card-body {
-            padding: 0;
-        }
-    }
-}
-
 
 /* Our mixin positions a copy of our text
 directly on our existing text, while
@@ -297,4 +248,16 @@ text set in the data-text attribute. */
             transform: skew((random(10) - 5) + deg);
         }
     }
+}
+
+.lead {
+    font-size: 1.5rem;
+}
+
+.img-shadow {
+    filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.25));
+}
+
+.fs-md {
+    font-size: 1.1rem;
 }

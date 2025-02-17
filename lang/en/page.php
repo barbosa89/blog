@@ -1,11 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     'portfolio' => 'Portfolio',
     'about' => 'About',
     'contact' => 'Contact',
-    'dev' => 'Web developer',
-    'me' => 'Son of Jesus Christ, computer engineer, web developer, blogger, immersed in technology, science and the creation of new things; by definition, an eternal apprentice in continuous evolution.',
+    'dev' => 'Full Stack Developer',
+    'about_me' => [
+        'who' => 'I am a passionate web developer with specialized experience in PHP, JavaScript, and Python. My experience spans backend and frontend development, leveraging powerful frameworks like Laravel and Vue.js to build scalable, high-performance applications.',
+        'more' => 'I am the creator of PhenixPHP and a contributor to open source software. Additionally, I have extensive experience working with databases like MySQL, SQLite, and PostgreSQL, optimizing queries and handling large-scale datasets efficiently.',
+    ],
     'contact_me' => 'Contact me',
     'name' => 'Name',
     'email' => 'Email',
@@ -16,18 +21,43 @@ return [
     'social' => 'Social networks',
     'design' => 'Design by',
     'copyright' => 'Copyright',
-    'stack' => 'I love the web, that\'s why I write lines in Python, PHP and Javascript, along with technologies like Git, CSS, HTML, NodeJs and Linux.',
     'code' => 'Look at my code',
     'projects' => 'Projects',
-    'me_short' => 'Computer engineer, web developer with Python, PHP and Javacript',
+    'me_short' => 'Computer engineer, web developer with PHP, Javacript and Python',
     'description' => 'Blog by Omar Barbosa, web developer, I share tutorials and courses on Python, PHP, Javascript, linux, security and application deployment',
     'keywords' => 'omar barbosa, web developer, tutorials, courses, php, python, javascript, linux, laravel, vuejs, vue, jquery, css, html, sass, webpack, ubuntu, nodejs, node, njango, swoole, framework, articles, technology, software, mobile, desktop, app, git, github, gitlab',
-    'project_one' => 'Invoice is a simple and beautiful invoice template, made with HTML and CSS, and supports Bootstrap 3 and 4 frameworks.',
-    'project_two' => 'Reservation system and landing page for the Posada Sueño Real hotel, written in PHP on the backend, Jquery for frontend interaction.',
-    'project_three' => 'Vue-table es un componente de tabla de datos que le permite al desarrollador un alto grado de personalización, está especialmente diseñado para trabajar con Laravel con funciones como paginación, búsqueda, ordenación y diseño receptivo.',
-    'project_four' => 'Corporate website for a transport and industrial machinery company, environmental engineering and civil engineering services, and logistics services.',
-    'project_five' => 'Hellen Suite is a management system for hotels, which integrates a complete suite of modules that range from billing to control dining services, statistics and data for strategic decision making.',
-    'project_six' => 'Other web, desktop and mobile applications projects can be found in my GitHub repositories.',
+    'portfolio_projects' => [
+        'phenix' => [
+            'subtitle' => 'The fastest and lightest web framework',
+            'description' => 'Phenix is a web framework built on pure PHP, based on the Amphp ecosystem, which provides non-blocking operations, asynchronism and parallel code execution natively. It runs a powerful web server in the SAPI CLI.',
+            'use_cases' => 'With Phenix you can create RESTful API services, game servers, IoT, chat systems, headless CMS, microservices and real-time applications.',
+            'button_action' => 'Code with Phenix',
+        ],
+        'hellen_suite' => [
+            'description' => 'A complete management system for hotels, invoicing, reservations and metrics.',
+            'button_action' => 'Start free',
+        ],
+        'invoice_template' => [
+            'description' => 'Beautiful invoice template with support for Bootstrap 3, 4 and 5 and Tailwind CSS.',
+            'button_action' => 'Go to repository',
+        ],
+        'posada' => [
+            'description' => 'Website with reservation system for the Posada Sueño Real hotel.',
+            'button_action' => 'View site',
+        ],
+        'apces' => [
+            'description' => 'Corporate website with a system for requests, complaints and claims.',
+            'button_action' => 'View site',
+        ],
+        'teo' => [
+            'description' => 'Corporate website of a state entity with a system for requests, complaints and claims.',
+            'button_action' => 'View site',
+        ],
+        'tlsi' => [
+            'description' => 'Website for transport and logistics, and environmental and civil engineering services.',
+            'button_action' => 'View site',
+        ],
+    ],
     'close_project' => 'Close project',
     'link' => 'Link',
     'other_projects' => 'More projects',
@@ -69,4 +99,9 @@ return [
     'date' => [
         'published' => 'Published at',
     ],
+    'welcome' => 'Welcome',
+    'latest_article' => 'Latest article',
+    'locale' => 'Locale',
+    'spanish' => 'Spanish',
+    'english' => 'English',
 ];

@@ -368,19 +368,39 @@ a:focus, a:hover, a:active {
   border-color: #18BC9C;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background-color: #128f76;
-  border-color: #128f76;
+
+.btn-outline-primary {
+  color: #18BC9C;
+  border-color: #18BC9C;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
+  background-color: #18BC9C;
+  border-color: #18BC9C;
+  color: white;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.show {
+  background-color: #18BC9C !important;
+  border-color: #18BC9C !important;
 }
 
 .btn-secondary {
   background-color: #2C3E50;
   border-color: #2C3E50;
+  color: white;
 }
 
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
   background-color: #1a252f;
   border-color: #1a252f;
+  color: white;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: white !important;
+  text-decoration: none;
+  background-color: #18BC9C;
 }
 
 /* Magnific Popup CSS */
@@ -403,7 +423,9 @@ a:focus, a:hover, a:active {
   z-index: 1043;
   position: fixed;
   outline: none !important;
-  -webkit-backface-visibility: hidden; }
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
 
 .mfp-container {
   text-align: center;

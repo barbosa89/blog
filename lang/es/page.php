@@ -1,14 +1,18 @@
 <?php
 
+declare(strict_types=1);
+
 return [
-    'me' => 'Hijo de Jesucristo, ingeniero informático, desarrollador web, blogger, inmerso en la tecnología, la ciencia y la creación de nuevas cosas; por definición, un aprendiz eterno en continua evolución.',
-    'stack' => 'Amor por la web, es por eso que escribo líneas en Python, PHP y Javascript, junto con tecnologías como Git, CSS, HTML, NodeJs y por supuesto, en Linux.',
     'about' => 'Sobre mi',
     'contact' => 'Contacto',
     'contact_me' => 'Escríbeme',
+    'about_me' => [
+        'who' => 'Soy un desarrollador web apasionado con experiencia especializada en PHP, JavaScript y Python. Mi experiencia abarca el desarrollo de backend y frontend, aprovechando potentes frameworks como Laravel y Vue.js para crear aplicaciones escalables y de alto rendimiento.',
+        'more' => 'Soy el creador de PhenixPHP y colaborador de software de código abierto. Además, tengo una amplia experiencia trabajando con bases de datos como MySQL, SQLite y PostgreSQL, optimizando consultas y manejando conjuntos de datos a gran escala de manera eficiente.',
+    ],
     'copyright' => 'Derechos de autor',
     'design' => 'Diseñado por',
-    'dev' => 'Desarrollador web',
+    'dev' => 'Desarrollador Full Stack',
     'email' => 'Correo electrónico',
     'location' => 'Ubicación',
     'message' => 'Mensaje',
@@ -19,15 +23,41 @@ return [
     'social' => 'Redes sociales',
     'code' => 'Mira mi código',
     'projects' => 'Proyectos',
-    'me_short' => 'Ingeniero Informático, desarrollador web con Python, PHP y Javascript',
+    'me_short' => 'Ingeniero Informático, desarrollador web con PHP, Javascript y Python',
     'description' => 'Blog de Omar Barbosa, desarrollador web, comparto tutoriales y cursos de Python, PHP, Javascript, linux, seguridad y despliegue de aplicaciones',
     'keywords' => 'omar barbosa, desarrollador web, tutoriales, cursos, php, python, javascript, linux, laravel, vuejs, vue, jquery, css, html, sass, webpack, ubuntu, nodejs, node, njango, swoole, framework, articulos, tecnologia, software, movil, escritorio, aplicaciones, git, github, gitlab',
-    'project_one' => 'Invoice template es un simple y hermosa plantilla para crear facturas, hecho con HTML y CSS, y soporte para los frameworks Bootstrap 3 y 4.',
-    'project_two' => 'Sistema de reservaciones y landing page para el hotel Posada Sueño Real, escrito en PHP en el backend, Jquery para la interacción del frontend.',
-    'project_three' => 'Vue-table is a customizable data table component, it is specially designed to work with Laravel with features like paging, searching, sorting and responsive design.',
-    'project_four' => 'Web corporativa de empresa de transportes y maquinaria industrial, servicios de ingeniería ambiental e ingeniería civil, y servicios de logística.',
-    'project_five' => 'Hellen Suite es un sistema de administración para hoteles, el cual integra una completa suit de módulos que comprenden desde facturación hasta control servicios de comedor, estadísticas y datos para toma de decisiones estratégicas.',
-    'project_six' => 'Otros proyectos de aplicaciones web, escritorio y móviles, pueden ser encontradas en mis repositorios de GitHub.',
+    'portfolio_projects' => [
+        'phenix' => [
+            'subtitle' => 'El framework web más rápido y ligero',
+            'description' => 'Phenix es un framework web construido en PHP puro, basado en el ecosistema Amphp, que proporciona operaciones sin bloqueo, asincronismo y ejecución de código paralelo de forma nativa. Ejecuta un potente servidor web en SAPI CLI.',
+            'use_cases' => 'Con Phenix puedes crear servicios API RESTful, servidores de juegos, IoT, sistemas de chat, CMS headless, microservicios y aplicaciones en tiempo real.',
+            'button_action' => 'Prueba Phenix',
+        ],
+        'hellen_suite' => [
+            'description' => 'Un completo sistema de gestión para hoteles, facturación, reservas y métricas.',
+            'button_action' => 'Empezar gratis',
+        ],
+        'invoice_template' => [
+            'description' => 'Hermosa plantilla de factura con soporte para Bootstrap 3, 4 y 5 y Tailwind CSS.',
+            'button_action' => 'Ver repositorio',
+        ],
+        'posada' => [
+            'description' => 'Sitio web con sistema de reservación para el hotel Posada Sueño Real.',
+            'button_action' => 'Ver el sitio',
+        ],
+        'apces' => [
+            'description' => 'Sitio web corporativo con sistema de peticiones, quejas y reclamos.',
+            'button_action' => 'Ver el sitio',
+        ],
+        'teo' => [
+            'description' => 'Sitio web corporativo de entidad estatal con sistema de peticiones, quejas y reclamos.',
+            'button_action' => 'Ver el sitio',
+        ],
+        'tlsi' => [
+            'description' => 'Sitio web de empresa de transporte y logística, ingeniería medioambiental y civil.',
+            'button_action' => 'Ver el sitio',
+        ],
+    ],
     'link' => 'Enlace',
     'close_project' => 'Cerrar proyecto',
     'other_projects' => 'Más proyectos',
@@ -68,5 +98,10 @@ return [
     'offline' => 'Actualmente no estás conectado a ninguna red.',
     'date' => [
         'published' => 'Fecha de publicación',
-    ]
+    ],
+    'welcome' => 'Bienvenido',
+    'latest_article' => 'Artículo más reciente',
+    'locale' => 'Idioma',
+    'spanish' => 'Español',
+    'english' => 'Inglés',
 ];

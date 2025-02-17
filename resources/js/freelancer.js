@@ -4,9 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/master/LICENSE)
  */
 
-(function() {
-    "use strict";
-
+document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a.js-scroll-trigger[href*="#"]:not([href="#"])').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -82,4 +80,4 @@
             group.classList.remove("floating-label-form-group-with-focus");
         });
     });
-})();
+});

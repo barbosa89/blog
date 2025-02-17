@@ -4,9 +4,7 @@
             <div class="row">
                 <div class="col-md-4 mb-5 mb-lg-0">
                     <h4 class="text-uppercase mb-4">@lang('page.location')</h4>
-                    <p class="lead mb-0">Bucaramanga - Santader
-                        <br>Colombia
-                    </p>
+                    <p class="lead mb-0">Santander - Colombia</p>
                 </div>
                 <div class="col-md-4 mb-5 mb-lg-0">
                     <h4 class="text-uppercase mb-4">@lang('page.social')</h4>

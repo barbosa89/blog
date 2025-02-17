@@ -1,45 +1,64 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Console\Commands;
 
-use App\Helpers\Sitemap;
+use App\Services\ArticleManager;
+use Carbon\Carbon;
+use DateTime;
 use Illuminate\Console\Command;
+use Spatie\Sitemap\Sitemap as Map;
+use Spatie\Sitemap\Tags\Url;
 
 class GenerateSitemap extends Command
 {
     /**
-     * The name and signature of the console command.
-     *
      * @var string
      */
-    protected $signature = 'sitemap:generate';
+    protected $signature = 'app:generate-sitemap';
 
     /**
-     * The console command description.
-     *
      * @var string
      */
     protected $description = 'Build a fresh sitemap';
 
-    /**
-     * Create a new command instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        parent::__construct();
-    }
+    // public static function getPostsRoutes(): array
+    // {
+    //     $routes = [];
+    //     $posts = Post::live()->get();
 
-    /**
-     * Execute the console command.
-     *
-     * @return mixed
-     */
-    public function handle()
+    //     foreach ($posts as $post) {
+    //         $routes[] = route('posts.article', ['slug' => $post->slug]);
+    //     }
+
+    //     return $routes;
+    // }
+
+
+    public function handle(ArticleManager $articleManager): int
     {
-        Sitemap::generate();
+        $sitemap = Map::create(config('app.url'));
+        $date = DateTime::createFromFormat('Y-m-d', Carbon::yesterday()->toDateString());
+
+        $sitemap->add(
+            Url::create(url('/blog'))
+                ->setLastModificationDate($date)
+                ->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)
+                ->setPriority(1),
+        );
+
+        $postsRoutes = $articleManager->list()
+            ->map(fn($article): string => route('posts.article', ['slug' => $article->slug]));
+
+        foreach ($postsRoutes as $route) {
+            $sitemap->add(Url::create($route));
+        }
+
+        $sitemap->writeToFile(public_path('sitemap.xml'));
 
         $this->info('Sitemap was generated');
+
+        return self::SUCCESS;
     }
 }

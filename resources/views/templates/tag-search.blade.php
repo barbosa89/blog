@@ -5,8 +5,8 @@
     <!-- Header -->
     <header class="blog-masthead text-gray">
         <div class="container">
-            <div class="row text-gray text-center text-lg-left text-xl-left">
-                <div class="col-12 text-md-center text-lg-left align-items-center">
+            <div class="row text-gray text-center text-lg-start text-xl-start">
+                <div class="col-12 text-md-center text-lg-start align-items-center">
                     <h3 class="text-uppercase">@lang('page.tag_search'): <small>{{ $tag }}</small></h3>
                 </div>
             </div>
