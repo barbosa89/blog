@@ -4,21 +4,15 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\Helpers\Input;
 use App\Http\Requests\SubscribeStore;
-use Spatie\Newsletter\NewsletterFacade as Newsletter;
+use Illuminate\Http\RedirectResponse;
+use Spatie\Newsletter\Facades\Newsletter;
 
 class SubscriptionController extends Controller
 {
-    /**
-     * Store a newly created subscriber in MailChimp API.
-     *
-     * @param  SubscribeStore  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function subscribe(SubscribeStore $request)
+    public function subscribe(SubscribeStore $request): RedirectResponse
     {
-        $email = Input::clean($request->email);
+        $email = $request->email;
 
         if (! Newsletter::isSubscribed($email)) {
             Newsletter::subscribePending($email);
@@ -32,20 +26,13 @@ class SubscriptionController extends Controller
         return back();
     }
 
-    /**
-     * Unsubscribe a subscriptor in MailChimp API.
-     *
-     * @param  string  $mail
-     * @return \Illuminate\Http\Response
-     */
-    public function unsubscribe($email)
+    public function unsubscribe(string $email): RedirectResponse
     {
-        $email = Input::clean($email);
-
         if (Newsletter::isSubscribed($email)) {
             Newsletter::unsubscribe($email);
 
-            $msg = trans('page.unsubscribe_msg') . '. <br><br><strong>' . trans('page.email') . '</strong>: ' . $email . '.';
+            $msg = trans('page.unsubscribe_msg') . '. <br><br><strong>' . trans('page.email') . '</strong>: ' . e($email) . '.';
+
             flash()->overlay($msg, trans('page.unsubscribe'));
         } else {
             flash()->overlay(trans('page.no_subscribed_msg'), trans('page.no_subscribed'));

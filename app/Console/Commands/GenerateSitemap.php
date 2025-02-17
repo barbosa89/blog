@@ -1,45 +1,62 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Console\Commands;
 
-use App\Helpers\Sitemap;
+use Carbon\Carbon;
+use DateTime;
 use Illuminate\Console\Command;
+use Spatie\Sitemap\Sitemap as Map;
+use Spatie\Sitemap\Tags\Url;
 
 class GenerateSitemap extends Command
 {
     /**
-     * The name and signature of the console command.
-     *
      * @var string
      */
     protected $signature = 'sitemap:generate';
 
     /**
-     * The console command description.
-     *
      * @var string
      */
     protected $description = 'Build a fresh sitemap';
 
-    /**
-     * Create a new command instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public static function getPostsRoutes(): array
     {
-        parent::__construct();
+        $routes = [];
+        $posts = Post::live()->get();
+
+        foreach ($posts as $post) {
+            $routes[] = route('posts.article', ['slug' => $post->slug]);
+        }
+
+        return $routes;
     }
 
-    /**
-     * Execute the console command.
-     *
-     * @return mixed
-     */
-    public function handle()
+
+    public function handle(): int
     {
-        Sitemap::generate();
+        $sitemap = Map::create(config('app.url'));
+        $date = DateTime::createFromFormat('Y-m-d', Carbon::yesterday()->toDateString());
+
+        $sitemap->add(
+            Url::create(url('/blog'))
+                ->setLastModificationDate($date)
+                ->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)
+                ->setPriority(1),
+        );
+
+        $postsRoutes = self::getPostsRoutes();
+
+        foreach ($postsRoutes as $route) {
+            $sitemap->add(Url::create($route));
+        }
+
+        $sitemap->writeToFile(public_path('sitemap.xml'));
 
         $this->info('Sitemap was generated');
+
+        return self::SUCCESS;
     }
 }
