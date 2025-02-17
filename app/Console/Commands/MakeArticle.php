@@ -21,7 +21,7 @@ class MakeArticle extends Command
      */
     protected $description = 'Make a new article';
 
-    public function handle(): int
+    public function handle(ArticleManager $articleManager): int
     {
         $this->info(trans('articles.actions.creating'));
 
@@ -29,7 +29,7 @@ class MakeArticle extends Command
 
         $slug = Str::slug($title);
 
-        $filename = ArticleManager::path("{$slug}.md");
+        $filename = $articleManager->path("{$slug}.md");
 
         if (File::exists($filename)) {
             $this->error(trans('articles.actions.existing'));

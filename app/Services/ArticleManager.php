@@ -31,7 +31,7 @@ class ArticleManager
         }
     }
 
-    public static function path(string|null $path = null): string
+    public function path(string|null $path = null): string
     {
         return resource_path(self::DIRECTORY . DIRECTORY_SEPARATOR . $path);
     }
@@ -40,7 +40,7 @@ class ArticleManager
     {
         $this->clearCache();
 
-        $articles = File::allFiles(self::path());
+        $articles = File::allFiles($this->path());
 
         $publicArticles = collect();
         $tagMapping = collect();
@@ -140,7 +140,7 @@ class ArticleManager
     private function cachedContent(stdClass $post): string
     {
         $documentPath = storage_path("framework/cache/articles/{$post->slug}.html");
-        $markdownPath = self::path($post->file);
+        $markdownPath = $this->path($post->file);
 
         if (!File::isDirectory($this->cachePath)) {
             File::makeDirectory($this->cachePath, 0755, true);

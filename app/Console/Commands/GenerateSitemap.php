@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Console\Commands;
 
+use App\Services\ArticleManager;
 use Carbon\Carbon;
 use DateTime;
 use Illuminate\Console\Command;
@@ -15,27 +16,27 @@ class GenerateSitemap extends Command
     /**
      * @var string
      */
-    protected $signature = 'sitemap:generate';
+    protected $signature = 'app:generate-sitemap';
 
     /**
      * @var string
      */
     protected $description = 'Build a fresh sitemap';
 
-    public static function getPostsRoutes(): array
-    {
-        $routes = [];
-        $posts = Post::live()->get();
+    // public static function getPostsRoutes(): array
+    // {
+    //     $routes = [];
+    //     $posts = Post::live()->get();
 
-        foreach ($posts as $post) {
-            $routes[] = route('posts.article', ['slug' => $post->slug]);
-        }
+    //     foreach ($posts as $post) {
+    //         $routes[] = route('posts.article', ['slug' => $post->slug]);
+    //     }
 
-        return $routes;
-    }
+    //     return $routes;
+    // }
 
 
-    public function handle(): int
+    public function handle(ArticleManager $articleManager): int
     {
         $sitemap = Map::create(config('app.url'));
         $date = DateTime::createFromFormat('Y-m-d', Carbon::yesterday()->toDateString());
@@ -47,7 +48,8 @@ class GenerateSitemap extends Command
                 ->setPriority(1),
         );
 
-        $postsRoutes = self::getPostsRoutes();
+        $postsRoutes = $articleManager->list()
+            ->map(fn($article): string => route('posts.article', ['slug' => $article->slug]));
 
         foreach ($postsRoutes as $route) {
             $sitemap->add(Url::create($route));
