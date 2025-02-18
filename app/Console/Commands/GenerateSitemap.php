@@ -23,19 +23,6 @@ class GenerateSitemap extends Command
      */
     protected $description = 'Build a fresh sitemap';
 
-    // public static function getPostsRoutes(): array
-    // {
-    //     $routes = [];
-    //     $posts = Post::live()->get();
-
-    //     foreach ($posts as $post) {
-    //         $routes[] = route('posts.article', ['slug' => $post->slug]);
-    //     }
-
-    //     return $routes;
-    // }
-
-
     public function handle(ArticleManager $articleManager): int
     {
         $sitemap = Map::create(config('app.url'));
