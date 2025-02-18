@@ -7,13 +7,18 @@
     <div class="container">
         <div class="row text-gray mt-3 mt-lg-2">
             <div class="col-12 col-lg-4 ms-auto offset-lg-8 search text-start">
-                <form action="{{ route('posts.search') }}" method="GET">
+                <form action="{{ route('blog') }}" method="GET">
                     <div class="control-group">
                         <div class="input-group">
                             <input class="form-control border-dark-subtle" id="query"
                                 name="query" type="search" placeholder="{{ trans('page.search') }}" required="required"
-                                value="{{ old('query') }}">
+                                value="{{ request()->query('query') }}">
                             <button type="submit" class="btn btn-light border-1 border-dark-subtle"><i class="bi bi-search"></i></button>
+                            @if (request()->has('query'))
+                                <a href="{{ route('blog') }}" class="btn btn-light border-1 border-dark-subtle text-dark">
+                                    <i class="bi bi-x-circle"></i>
+                                </a>
+                            @endif
                             <button
                                 class="btn btn-primary dropdown-toggle"
                                 type="button" data-bs-toggle="dropdown" aria-expanded="false">{{ trans('page.locale') }}</button>

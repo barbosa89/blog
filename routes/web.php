@@ -20,7 +20,6 @@ Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 
 Route::get('/tags/{tag}', [BlogController::class, 'tags'])->name('posts.tag');
 Route::get('/posts/{slug}', [BlogController::class, 'article'])->name('posts.article');
-Route::get('/search', [BlogController::class, 'search'])->name('posts.search');
 Route::get('locale/{locale}', function (string $locale): RedirectResponse {
     app()->setLocale($locale);
 
