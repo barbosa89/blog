@@ -36,7 +36,7 @@ class GenerateSitemap extends Command
         );
 
         $postsRoutes = $articleManager->list()
-            ->map(fn($article): string => route('posts.article', ['slug' => $article->slug]));
+            ->map(fn($article): string => route('posts.show', ['slug' => $article->slug]));
 
         foreach ($postsRoutes as $route) {
             $sitemap->add(Url::create($route));

@@ -4,7 +4,7 @@
 
 @section('head')
 
-    <link rel="canonical" href="{{ route('posts.article', ['slug' => $post->slug]) }}">
+    <link rel="canonical" href="{{ route('posts.show', ['slug' => $post->slug]) }}">
     <meta name="description" content="{{ $post->excerpt }}">
     <meta name="keywords" content="{{ $post->keywords }}">
     <meta name="author" content="{{ config('blog.author') }}">
@@ -14,14 +14,14 @@
     <meta property="og:image"
         content="{{ empty($post->featured_image) ? asset('images/article.png') : url($post->featured_image) }}">
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ route('posts.article', ['slug' => $post->slug]) }}">
+    <meta property="og:url" content="{{ route('posts.show', ['slug' => $post->slug]) }}">
     <meta property="og:site_name" content="{{ config('blog.author') }}">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image:src"
         content="{{ empty($post->featured_image) ? asset('images/article.png') : url($post->featured_image) }}">
     <meta name="twitter:site" content="{{ config('blog.links.twitter.nickname') }}">
-    <meta name="twitter:url" content="{{ route('posts.article', ['slug' => $post->slug]) }}">
+    <meta name="twitter:url" content="{{ route('posts.show', ['slug' => $post->slug]) }}">
 
 @endsection
 
@@ -33,7 +33,7 @@
             <div class="row">
                 <div class="col-md-12">
                     @include('templates.card', [
-                        'link' => route('posts.article', ['slug' => $post->slug]),
+                        'link' => route('posts.show', ['slug' => $post->slug]),
                         'main' => true
                     ])
 
@@ -72,19 +72,19 @@
                                 <div class="row text-center">
                                     <div class="col-4">
                                         <a target="_blank" class="card-link"
-                                            href="https://twitter.com/home?status={{ route('posts.article', ['slug' => $post->slug]) }}">
+                                            href="https://twitter.com/home?status={{ route('posts.show', ['slug' => $post->slug]) }}">
                                             <em class="fab fa-twitter fa-2x"></em>
                                         </a>
                                     </div>
                                     <div class="col-4">
                                         <a target="_blank" class="card-link"
-                                            href="https://www.facebook.com/sharer/sharer.php?u={{ route('posts.article', ['slug' => $post->slug]) }}">
+                                            href="https://www.facebook.com/sharer/sharer.php?u={{ route('posts.show', ['slug' => $post->slug]) }}">
                                             <em class="fab fa-facebook fa-2x"></em>
                                         </a>
                                     </div>
                                     <div class="col-4">
                                         <a target="_blank" class="card-link"
-                                            href="https://www.linkedin.com/shareArticle?mini=true&url={{ route('posts.article', ['slug' => $post->slug]) }}&title={{ $post->title }}&summary={{ $post->excerpt }}&source=">
+                                            href="https://www.linkedin.com/shareArticle?mini=true&url={{ route('posts.show', ['slug' => $post->slug]) }}&title={{ $post->title }}&summary={{ $post->excerpt }}&source=">
                                             <em class="fab fa-linkedin fa-2x"></em>
                                         </a>
                                     </div>
@@ -110,7 +110,7 @@
                                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                     <div class="row blog-list mb-2">
                                         <div class="col-10">
-                                            <a href="{{ route('posts.article', ['slug' => $related->slug]) }}">
+                                            <a href="{{ route('posts.show', ['slug' => $related->slug]) }}">
                                                 <h4 class="text-uppercase blog-list-title">
                                                     <small>{{ $related->title }}</small>
                                                 </h4>
@@ -167,7 +167,7 @@
             "@type": "WebSite",
             "name": "{{ $post->title }}",
             "alternateName": "{{ $post->title }}",
-            "url": "{{ route('posts.article', ['slug' => $post->slug]) }}",
+            "url": "{{ route('posts.show', ['slug' => $post->slug]) }}",
             "image": "{{ empty($post->featured_image) ? asset('images/article.png') : url($post->featured_image) }}",
             "description": "{{ $post->excerpt }}"
         }

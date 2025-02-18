@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Str;
 use stdClass;
 
-class BlogController extends Controller
+class PostController extends Controller
 {
     public function __construct(
         protected ArticleManager $articleManager,
@@ -42,7 +42,7 @@ class BlogController extends Controller
         ]);
     }
 
-    public function article(string $slug): View
+    public function show(string $slug): View
     {
         $post = $this->articleManager->find($slug);
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SubscriptionController;
@@ -16,10 +16,11 @@ Route::get('/offline', fn() => view('modules/laravelpwa/offline'));
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+Route::get('/posts/{slug}', [PostController::class, 'show'])->name('posts.show');
+Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
 
-Route::get('/tags/{tag}', [BlogController::class, 'tags'])->name('posts.tag');
-Route::get('/posts/{slug}', [BlogController::class, 'article'])->name('posts.article');
+Route::get('/tags/{tag}', [PostController::class, 'tags'])->name('posts.tag');
+
 Route::get('locale/{locale}', function (string $locale): RedirectResponse {
     app()->setLocale($locale);
 
