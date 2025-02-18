@@ -11,25 +11,25 @@
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item">
                             <a class="btn btn-outline-light btn-social text-center rounded-circle"
-                                href="https://twitter.com/@Omar_Andres_Bar" target="_blank">
+                                href="{{ config('blog.links.twitter.url') }}" target="_blank">
                                 <em class="fab fa-fw fa-twitter"></em>
                             </a>
                         </li>
                         <li class="list-inline-item">
                             <a class="btn btn-outline-light btn-social text-center rounded-circle"
-                                href="https://www.linkedin.com/in/omar-andres-barbosa-ortiz" target="_blank">
+                                href="{{ config('blog.links.linkedin') }}" target="_blank">
                                 <em class="fab fa-fw fa-linkedin-in"></em>
                             </a>
                         </li>
                         <li class="list-inline-item">
                             <a class="btn btn-outline-light btn-social text-center rounded-circle"
-                                href="https://github.com/barbosa89" target="_blank">
+                                href="{{ config('blog.links.github') }}" target="_blank">
                                 <em class="fab fa-fw fa-github"></em>
                             </a>
                         </li>
                         <li class="list-inline-item">
                             <a class="btn btn-outline-light btn-social text-center rounded-circle"
-                                href="https://www.facebook.com/omarandres.barbosaortiz" target="_blank">
+                                href="{{ config('blog.links.facebook') }}" target="_blank">
                                 <em class="fab fa-fw fa-facebook"></em>
                             </a>
                         </li>
@@ -46,7 +46,7 @@
 
     <div class="copyright py-4 text-center text-white">
         <div class="container">
-            <small>@lang('page.copyright') &copy; Omar Barbosa {{ date('Y') }} - @lang('page.design') <a
+            <small>@lang('page.copyright') &copy; {{ config('blog.author') }} {{ date('Y') }} - @lang('page.design') <a
                     href="http://startbootstrap.com">Start Bootstrap</a></small>
         </div>
     </div>

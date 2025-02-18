@@ -7,7 +7,7 @@
     <link rel="canonical" href="{{ route('posts.article', ['slug' => $post->slug]) }}">
     <meta name="description" content="{{ $post->excerpt }}">
     <meta name="keywords" content="{{ $post->keywords }}">
-    <meta name="author" content="Omar Barbosa">
+    <meta name="author" content="{{ config('blog.author') }}">
 
     <meta property="og:title" content="{{ $post->title }}">
     <meta property="og:description" content="{{ $post->excerpt }}">
@@ -15,12 +15,12 @@
         content="{{ empty($post->featured_image) ? asset('images/article.png') : url($post->featured_image) }}">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ route('posts.article', ['slug' => $post->slug]) }}">
-    <meta property="og:site_name" content="Omar Barbosa">
+    <meta property="og:site_name" content="{{ config('blog.author') }}">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image:src"
         content="{{ empty($post->featured_image) ? asset('images/article.png') : url($post->featured_image) }}">
-    <meta name="twitter:site" content="@Omar_Andres_Bar">
+    <meta name="twitter:site" content="{{ config('blog.links.twitter.nickname') }}">
     <meta name="twitter:url" content="{{ route('posts.article', ['slug' => $post->slug]) }}">
 
 @endsection
@@ -148,7 +148,7 @@
             (function() {
                 var d = document,
                     s = d.createElement('script');
-                s.src = 'https://omarbarbosa.disqus.com/embed.js';
+                s.src = "{{ config('blog.disqus.url') }}";
                 s.setAttribute('data-timestamp', +new Date());
                 (d.head || d.body).appendChild(s);
             })();

@@ -54,7 +54,7 @@ class ArticleManager
             $frontMatter['slug'] = str_replace(".{$article->getExtension()}", '', $article->getFilename());
             $frontMatter['keywords'] = $this->getKeyWords($frontMatter['excerpt'] ?? '');
             $frontMatter['author'] = [
-                'name' => 'Omar Barbosa',
+                'name' => config('blog.author'),
             ];
 
             $publicArticles->push($frontMatter);

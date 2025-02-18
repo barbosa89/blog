@@ -1,7 +1,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}#page-top">Omar Barbosa</a>
+        <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}#page-top">{{ config('blog.author') }}</a>
         <button class="navbar-toggler navbar-toggler-end text-uppercase bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <em class="fas fa-bars"></em>

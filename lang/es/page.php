@@ -24,8 +24,8 @@ return [
     'code' => 'Mira mi código',
     'projects' => 'Proyectos',
     'me_short' => 'Ingeniero Informático, desarrollador web con PHP, Javascript y Python',
-    'description' => 'Blog de Omar Barbosa, desarrollador web, comparto tutoriales y cursos de Python, PHP, Javascript, linux, seguridad y despliegue de aplicaciones',
-    'keywords' => 'omar barbosa, desarrollador web, tutoriales, cursos, php, python, javascript, linux, laravel, vuejs, vue, jquery, css, html, sass, webpack, ubuntu, nodejs, node, njango, swoole, framework, articulos, tecnologia, software, movil, escritorio, aplicaciones, git, github, gitlab',
+    'description' => 'Blog de :author, desarrollador web, comparto tutoriales y cursos de Python, PHP, Javascript, linux, seguridad y despliegue de aplicaciones',
+    'keywords' => ':author, desarrollador web, tutoriales, cursos, php, python, javascript, linux, laravel, vuejs, vue, jquery, css, html, sass, webpack, ubuntu, nodejs, node, njango, swoole, framework, articulos, tecnologia, software, movil, escritorio, aplicaciones, git, github, gitlab',
     'portfolio_projects' => [
         'phenix' => [
             'subtitle' => 'El framework web más rápido y ligero',
