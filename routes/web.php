@@ -10,17 +10,6 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
 Route::get('/', fn() => view('welcome'));
 
 Route::get('/offline', fn() => view('modules/laravelpwa/offline'));
@@ -54,4 +43,4 @@ Route::post('/message', [ContactController::class, 'message'])
     ->name('message')
     ->middleware(['sanitize', 'honeypot']);
 
-Auth::routes(['verify' => true]);
+// Auth::routes(['verify' => true]);
