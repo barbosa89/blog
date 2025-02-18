@@ -11,5 +11,6 @@ return [
             'title' => 'What is the title of the article?',
             'locale' => 'What is the locale of the article?',
         ],
+        'published' => 'Articles published successfully!',
     ],
 ];

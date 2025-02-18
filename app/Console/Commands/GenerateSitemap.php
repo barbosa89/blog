@@ -44,7 +44,7 @@ class GenerateSitemap extends Command
 
         $sitemap->writeToFile(public_path('sitemap.xml'));
 
-        $this->info('Sitemap was generated');
+        $this->info(trans('page.sitemap.messages.generated'));
 
         return self::SUCCESS;
     }

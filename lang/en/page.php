@@ -104,4 +104,9 @@ return [
     'locale' => 'Locale',
     'spanish' => 'Spanish',
     'english' => 'English',
+    'sitemap' => [
+        'messages' => [
+            'generated' => 'Sitemap was generated',
+        ],
+    ],
 ];
