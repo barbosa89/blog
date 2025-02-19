@@ -7,8 +7,6 @@ locale: 'es'
 image: 'images/articles/php-new-features.webp'
 tags:
 - php
-- moderno
-- caracteristicas
 - 7x
 - 8x
 ---

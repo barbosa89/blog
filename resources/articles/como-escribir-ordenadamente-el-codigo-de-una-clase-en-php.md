@@ -7,9 +7,7 @@ locale: 'es'
 image: 'images/articles/php-class-organization.webp'
 tags:
 - php
-- organization
-- codigo
-- clase
+- clases
 - constantes
 - propiedades
 - metodos
