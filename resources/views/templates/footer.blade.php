@@ -40,7 +40,6 @@
 
     <div class="copyright py-4 text-center text-white">
         <div class="container">
-            <small>@lang('page.copyright') &copy; {{ config('blog.author') }} {{ date('Y') }} - @lang('page.design') <a
-                    href="http://startbootstrap.com">Start Bootstrap</a></small>
+            <small>@lang('page.copyright') &copy; {{ config('blog.author') }} {{ date('Y') }}</small>
         </div>
     </div>
