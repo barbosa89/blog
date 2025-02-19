@@ -6,7 +6,6 @@
         "dev": "vite"
     },
     "devDependencies": {
-        "@fortawesome/fontawesome-free": "^5.15.2",
         "@popperjs/core": "^2.11.6",
         "@vitejs/plugin-vue": "^4.5.0",
         "axios": "^1.7.4",

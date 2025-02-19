@@ -73,19 +73,19 @@
                                     <div class="col-4">
                                         <a target="_blank" class="card-link"
                                             href="https://twitter.com/intent/tweet?url={{ route('posts.show', ['slug' => $post->slug]) }}">
-                                            <em class="fab fa-twitter fa-2x"></em>
+                                            <em class="bi bi-twitter-x fs-lg"></em>
                                         </a>
                                     </div>
                                     <div class="col-4">
                                         <a target="_blank" class="card-link"
                                             href="https://www.facebook.com/sharer/sharer.php?u={{ route('posts.show', ['slug' => $post->slug]) }}">
-                                            <em class="fab fa-facebook fa-2x"></em>
+                                            <em class="bi bi-facebook fs-lg"></em>
                                         </a>
                                     </div>
                                     <div class="col-4">
                                         <a target="_blank" class="card-link"
                                             href="https://www.linkedin.com/shareArticle?mini=true&url={{ route('posts.show', ['slug' => $post->slug]) }}&title={{ $post->title }}&summary={{ $post->excerpt }}&source=">
-                                            <em class="fab fa-linkedin fa-2x"></em>
+                                            <em class="bi bi-linkedin fs-lg"></em>
                                         </a>
                                     </div>
                                 </div>
@@ -116,7 +116,7 @@
                                                 </h4>
                                             </a>
                                             <p>
-                                                <em class="fas fa-calendar"></em>
+                                                <em class="bi bi-calendar"></em>
                                                 <small> {{ $related->created_at->toDateString() }}</small>
                                             </p>
                                         </div>

@@ -12,19 +12,19 @@
                         <li class="list-inline-item">
                             <a class="btn btn-outline-light btn-social text-center rounded-circle pt-2"
                                 href="{{ config('blog.links.twitter.url') }}" target="_blank">
-                                <em class="fab fa-fw fa-twitter"></em>
+                                <em class="bi bi-twitter-x"></em>
                             </a>
                         </li>
                         <li class="list-inline-item">
                             <a class="btn btn-outline-light btn-social text-center rounded-circle pt-2"
                                 href="{{ config('blog.links.linkedin') }}" target="_blank">
-                                <em class="fab fa-fw fa-linkedin-in"></em>
+                                <em class="bi bi-linkedin"></em>
                             </a>
                         </li>
                         <li class="list-inline-item">
                             <a class="btn btn-outline-light btn-social text-center rounded-circle pt-2"
                                 href="{{ config('blog.links.github') }}" target="_blank">
-                                <em class="fab fa-fw fa-github"></em>
+                                <em class="bi bi-github"></em>
                             </a>
                         </li>
                     </ul>

@@ -1,14 +1,6 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-$fa-font-path: "@fortawesome/fontawesome-free/webfonts";
-
-// Font awesome
-@import '@fortawesome/fontawesome-free/scss/fontawesome';
-@import '@fortawesome/fontawesome-free/scss/regular.scss';
-@import '@fortawesome/fontawesome-free/scss/solid.scss';
-@import '@fortawesome/fontawesome-free/scss/brands.scss';
-
 // Variables
 @import 'variables';
 
@@ -260,4 +252,8 @@ text set in the data-text attribute. */
 
 .fs-md {
     font-size: 1.1rem;
+}
+
+.fs-lg {
+    font-size: 1.5rem;
 }
