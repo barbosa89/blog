@@ -8,29 +8,23 @@
                 </div>
                 <div class="col-md-4 mb-5 mb-lg-0">
                     <h4 class="text-uppercase mb-4">@lang('page.social')</h4>
-                    <ul class="list-inline mb-0">
+                    <ul class="list-inline mb-0 ms-0">
                         <li class="list-inline-item">
-                            <a class="btn btn-outline-light btn-social text-center rounded-circle"
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle pt-2"
                                 href="{{ config('blog.links.twitter.url') }}" target="_blank">
                                 <em class="fab fa-fw fa-twitter"></em>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="btn btn-outline-light btn-social text-center rounded-circle"
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle pt-2"
                                 href="{{ config('blog.links.linkedin') }}" target="_blank">
                                 <em class="fab fa-fw fa-linkedin-in"></em>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="btn btn-outline-light btn-social text-center rounded-circle"
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle pt-2"
                                 href="{{ config('blog.links.github') }}" target="_blank">
                                 <em class="fab fa-fw fa-github"></em>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="btn btn-outline-light btn-social text-center rounded-circle"
-                                href="{{ config('blog.links.facebook') }}" target="_blank">
-                                <em class="fab fa-fw fa-facebook"></em>
                             </a>
                         </li>
                     </ul>
