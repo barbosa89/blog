@@ -8,7 +8,7 @@
         <div>
             @foreach($tags as $tag)
                 <span class="badge text-white text-bg-dark p-2 fs-md m-1">
-                    <a class="text-white" href="{{ route('posts.tag', ['tag' => $tag]) }}">{{ $tag }}</a>
+                    <a class="text-white" href="{{ route('tags.show', ['tag' => $tag]) }}">{{ $tag }}</a>
                 </span>
             @endforeach
         </div>

@@ -109,4 +109,5 @@ return [
             'generated' => 'Mapa del sitio web generado',
         ],
     ],
+    'tag' => 'Etiqueta',
 ];

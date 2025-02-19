@@ -36,7 +36,7 @@
             </div>
         </div>
 
-        @if ($latest)
+        @isset ($latest)
             <div class="row g-0">
                 <div class="col">
                     <span class="badge bg-danger fs-md rounded-0 rounded-top">{{ trans('page.latest_article') }}</span>
@@ -47,7 +47,16 @@
                 'link' => route('posts.show', ['slug' => $latest->slug]),
                 'post' => $latest
             ])
-        @endif
+        @endisset
+
+        @isset($tag)
+            <div class="row g-0">
+                <div class="col">
+                    <span>{{ trans('page.tag') }}</span>
+                    <h1>{{ $tag }}</h1>
+                </div>
+            </div>
+        @endisset
     </div>
 </header>
 

@@ -113,6 +113,24 @@ class ArticleManager
         });
     }
 
+    public function tag(string $tag): Collection|null
+    {
+        $tags = File::get(database_path('tags.json'));
+
+        /** @var Collection<string, array<string>> */
+        $tags = collect(json_decode($tags, true));
+
+        $slugs = $tags->get($tag);
+
+        if (!$slugs) {
+            return null;
+        }
+
+        $articles = $this->list()->filter(fn(stdClass $article): bool => in_array($article->slug, $slugs));
+
+        return $articles->values();
+    }
+
     public function clearCache(): void
     {
         Cache::forget(self::DIRECTORY);

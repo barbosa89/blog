@@ -109,4 +109,5 @@ return [
             'generated' => 'Sitemap was generated',
         ],
     ],
+    'tag' => 'Tag',
 ];
