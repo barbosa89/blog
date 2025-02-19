@@ -26,8 +26,6 @@
 @endsection
 
 @section('content')
-
-    <!-- Header -->
     <header class="blog-masthead text-gray">
         <div class="container">
             <div class="row">

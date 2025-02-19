@@ -1,22 +1,29 @@
 <div class="card mb-3 border-0">
     <div class="row no-gutters">
         <div class="col-md-4">
-            <a href="{{ $link }}">
+            @if (request()->routeIs('posts.show'))
                 <img class="w-100 h-100 img-shadow"
-                style="object-fit:cover;"
-                src="{{ empty($post->image) ? asset('images/article.png') : url($post->image) }}"
-                alt="{{ $post->title }}">
-            </a>
+                    style="object-fit:cover;"
+                    src="{{ empty($post->image) ? asset('images/article.png') : url($post->image) }}"
+                    alt="{{ $post->title }}">
+            @else
+                <a href="{{ $link }}">
+                    <img class="w-100 h-100 img-shadow"
+                        style="object-fit:cover;"
+                        src="{{ empty($post->image) ? asset('images/article.png') : url($post->image) }}"
+                        alt="{{ $post->title }}">
+                </a>
+            @endif
         </div>
         <div class="col-md-8">
             <div class="card-body p-0 p-lg-4 pt-lg-0 ps-lg-0">
-                <a href="{{ $link }}" class="text-gray">
-                    @if ($main ?? true)
-                        <h1 class="card-title mt-0">{{ $post->title }}</h1>
-                    @else
-                        <h3 class="card-title mt-0">{{ $post->title }}</h3>
-                    @endif
-                </a>
+                @if (request()->routeIs('posts.show'))
+                    @include('templates.title')
+                @else
+                    <a href="{{ $link }}" class="text-gray">
+                        @include('templates.title')
+                    </a>
+                @endif
                 <p class="card-text fs-md">
                     {{ Str::finish($post->excerpt, '.') }} <br>
                     <small class="text-muted">@lang('page.date.published'): {{ $post->publishedAt }}</small>
