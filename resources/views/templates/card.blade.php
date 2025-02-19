@@ -17,7 +17,7 @@
                         <h3 class="card-title mt-0">{{ $post->title }}</h3>
                     @endif
                 </a>
-                <p class="card-text">
+                <p class="card-text fs-md">
                     {{ Str::finish($post->excerpt, '.') }} <br>
                     <small class="text-muted">@lang('page.date.published'): {{ $post->publishedAt }}</small>
                 </p>
@@ -26,7 +26,7 @@
                     <div class="row align-items-end text-center">
                         <div class="col-4">
                             <a target="_blank" class="share-link"
-                                href="https://twitter.com/home?status={{ $link }}">
+                                href="https://twitter.com/intent/tweet?url={{ $link }}">
                                 <em class="fab fa-twitter fa-2x"></em>
                             </a>
                         </div>
