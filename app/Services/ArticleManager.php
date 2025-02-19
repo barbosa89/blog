@@ -107,7 +107,7 @@ class ArticleManager
             $tags = File::get(database_path('tags.json'));
 
             return collect(json_decode($tags, true))
-                ->sortBy(fn(array $articles, string $tagName): int => count($articles))
+                ->sortByDesc(fn(array $articles, string $tagName): int => count($articles))
                 ->take(15)
                 ->keys();
         });
