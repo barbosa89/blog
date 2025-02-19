@@ -72,7 +72,7 @@
                                 <div class="row text-center">
                                     <div class="col-4">
                                         <a target="_blank" class="card-link"
-                                            href="https://twitter.com/home?status={{ route('posts.show', ['slug' => $post->slug]) }}">
+                                            href="https://twitter.com/intent/tweet?url={{ route('posts.show', ['slug' => $post->slug]) }}">
                                             <em class="fab fa-twitter fa-2x"></em>
                                         </a>
                                     </div>
