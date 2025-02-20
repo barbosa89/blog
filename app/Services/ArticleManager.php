@@ -101,6 +101,20 @@ class ArticleManager
         return null;
     }
 
+    public function related(stdClass $post): Collection
+    {
+        $lists = $this->list();
+
+        return $lists->where('slug', '!=', $post->slug)
+            ->filter(function (stdClass $p) use ($post): bool {
+                $tags = collect($p->tags)->filter(fn(string $tag): bool => in_array($tag, $post->tags));
+
+                return $p->slug !== $post->slug
+                    && $tags->isNotEmpty();
+            })
+            ->take(2);
+    }
+
     public function topTags(): Collection
     {
         return Cache::rememberForever('top_tags', function (): Collection {

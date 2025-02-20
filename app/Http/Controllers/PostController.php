@@ -49,9 +49,12 @@ class PostController extends Controller
 
         abort_if(!$post, Response::HTTP_NO_CONTENT);
 
+        $related = $this->articleManager->related($post)
+            ->filter(fn(stdClass $article): bool => $article->locale === App::getLocale());
+
         return view('templates.post', [
             'post' => $post,
-            'relateds' => collect(),
+            'related' => $related,
         ]);
     }
 }

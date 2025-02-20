@@ -100,25 +100,26 @@
 
                 @include('templates.subscription')
 
-                @if ($relateds->isNotEmpty())
-                    <div class="mosthead mb-4">
-                        <h3 class="mb-4 font-weight-bold"><small>@lang('page.related')</small></h3>
+                @if ($related->isNotEmpty())
+                    <div class="mb-4">
+                        <p class="mb-4 font-weight-bold">
+                            {{ trans('page.related') }}
+                        </p>
                         <div class="row blog">
-                            @foreach ($relateds as $related)
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                    <div class="row blog-list mb-2">
-                                        <div class="col-10">
-                                            <a href="{{ route('posts.show', ['slug' => $related->slug]) }}">
-                                                <h4 class="text-uppercase blog-list-title">
-                                                    <small>{{ $related->title }}</small>
-                                                </h4>
-                                            </a>
-                                            <p>
-                                                <em class="bi bi-calendar"></em>
-                                                <small> {{ $related->created_at->toDateString() }}</small>
-                                            </p>
-                                        </div>
-                                    </div>
+                            @foreach ($related as $relatedPost)
+                                <div @class([
+                                    'col-12 col-sm-12 col-md-6 blog-list mb-4',
+                                    'text-md-end' => !$loop->first
+                                ])>
+                                <a href="{{ route('posts.show', ['slug' => $relatedPost->slug]) }}">
+                                    <h4 class="text-uppercase blog-list-title">
+                                        <small>{{ $relatedPost->title }}</small>
+                                    </h4>
+                                </a>
+                                <p>
+                                    <em class="bi bi-calendar"></em>
+                                    <small> {{ $relatedPost->publishedAt }}</small>
+                                </p>
                                 </div>
                             @endforeach
                         </div>
