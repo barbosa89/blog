@@ -31,7 +31,8 @@ class PostController extends Controller
                     return Str::of($title)->lower()->contains($query)
                         || Str::of($excerpt)->lower()->contains($query);
                 })->values();
-            });
+            })
+            ->sortByDesc('publishedAt');
 
         $latest = request()->has('query') ? null : $posts->shift();
 
