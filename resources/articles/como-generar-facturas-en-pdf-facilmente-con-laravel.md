@@ -35,9 +35,11 @@ Laravel Invoices nos ofrece las características que más necesitamos, sobresale
 
 Si te parece interesante, probemos este valioso paquete. Para instalarlo, podemos revisar la documentación del README del [repositorio](https://github.com/LaravelDaily/laravel-invoices) de GitHub:
 
+```bash
 composer require laraveldaily/laravel-invoices
 
 php artisan invoices:install
+```
 
 No voy a profundizar en la instalación, ya que las instrucciones son muy sencillas. Como **recomendación**, copia la plantilla por defecto para que puedas hacer personalizaciones.
 
