@@ -60,7 +60,7 @@ class ArticleManager
             $publicArticles->push($frontMatter);
 
             if (isset($frontMatter['tags']) && is_array($frontMatter['tags'])) {
-                foreach ($frontMatter['tags'] as $tag) {
+                foreach (array_filter($frontMatter['tags']) as $tag) {
                     if (!$tagMapping->has($tag)) {
                         $tagMapping[$tag] = collect();
                     }
