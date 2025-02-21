@@ -112,7 +112,7 @@ class ArticleManager
                 return $p->slug !== $post->slug
                     && $tags->isNotEmpty();
             })
-            ->random(2);
+            ->take(2);
     }
 
     public function topTags(): Collection
