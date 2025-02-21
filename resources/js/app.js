@@ -1,11 +1,13 @@
 import './bootstrap'
 import { createApp } from 'vue'
 import { i18nVue } from 'laravel-vue-i18n'
+import '@justinribeiro/lite-youtube'
 
 import AdsFeed from './components/ads/Feed.vue'
 import BlogHeader from './components/BlogHeader.vue'
 import PortfolioProjects from './components/PortfolioProjects.vue'
 import ProgrammersIcon from './components/icons/Programmers.vue'
+
 const app = createApp({})
 
 app.use(i18nVue, {
