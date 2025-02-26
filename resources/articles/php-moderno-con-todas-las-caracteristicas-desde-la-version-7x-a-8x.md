@@ -7,8 +7,6 @@ locale: 'es'
 image: 'images/articles/php-new-features.webp'
 tags:
 - php
-- 7x
-- 8x
 ---
 PHP es el lenguaje más usado para desarrollo de páginas, aplicaciones y servicios web, aunque también puedes usarlo para aplicaciones de escritorio, IoT, inteligencia artificial y más, durante un largo tiempo este lenguaje fue muy popular, pero entre los años 2009 y 2012, pasó de ser muy popular a ser muy criticado; en el año 2011, Taylor Otwell lanzó la primera versión del framework Laravel, evento que representó un nuevo nacimiento para PHP, resucitó de las cenizas como el Fénix, la impresionante comunidad que surgió alrededor de Laravel y Symfony, le devolvió mucha fortaleza al lenguaje, actualmente PHP es un lenguaje moderno, muy potente y versátil, con curva de aprendizaje que permite rápida evolución, aspecto que también se proyecta en Laravel.
 
