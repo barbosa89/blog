@@ -140,7 +140,9 @@ class ArticleManager
             return null;
         }
 
-        $articles = $this->list()->filter(fn(stdClass $article): bool => in_array($article->slug, $slugs));
+        $articles = $this->list()
+            ->filter(fn($article) => $article->locale === App::getLocale())
+            ->filter(fn(stdClass $article): bool => in_array($article->slug, $slugs));
 
         return $articles->values();
     }
