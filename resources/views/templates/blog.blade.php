@@ -60,7 +60,7 @@
     </div>
 </header>
 
-@if($posts->isNotEmpty())
+@if($posts->isNotEmpty() || $latest)
     <div class="container blog">
         <div class="row mt-3">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
@@ -81,9 +81,11 @@
                 @endforeach
             </div>
 
-            <div class="col-lg-3 col-xl-3 tags d-none d-lg-block d-xl-block">
-                @include('templates.tags', ['border' => true])
-            </div>
+            @if($posts->isNotEmpty())
+                <div class="col-lg-3 col-xl-3 tags d-none d-lg-block d-xl-block">
+                    @include('templates.tags', ['border' => true])
+                </div>
+            @endif
         </div>
     </div>
 @else
