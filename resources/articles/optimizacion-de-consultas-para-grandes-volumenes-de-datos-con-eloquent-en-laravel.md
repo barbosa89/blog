@@ -10,7 +10,6 @@ tags:
 - laravel
 - orm
 - eloquent
-- optimizacion
 ---
 
 En aplicaciones de alto tráfico el rendimiento es un aspecto fundamental, se requiere aplicar las mejores prácticas a nivel de base de datos, del lado del servidor (backend) y del lado del cliente (frontend), las imágenes deben estar optimizadas, los archivos de CSS y JavaScript deben estar minificados, las consultas a la base de datos deben ser las mínimas requeridas para consumir la menor cantidad de recursos y ejecutarse en el menor tiempo posible; el rendimiento es un aspecto esencial en el SEO y en la experiencia de usuario.
