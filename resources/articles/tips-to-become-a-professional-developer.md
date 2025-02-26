@@ -9,8 +9,6 @@ tags:
 - tips
 - python
 - php
-- profesional
-- desarrollador
 - javascript
 ---
 

@@ -10,7 +10,6 @@ tags:
 - php
 - amphp
 - phenix
-- non-blocking
 - async
 ---
 Desde la versión 5 de PHP, el lenguaje ha evolucionado para ofrecer nuevas funcionalidades que han permitido a los desarrolladores escribir código más robusto, una de esas capacidades son las *Fibras*, que permiten ejecutar código de forma concurrente, es decir, sin bloquear el hilo principal. Este nuevo súper poder abre posibilidades muy interesantes, y este es precisamente el caso de Phenix, un framework PHP de última generación que combina la potencia de [Amphp](https://amphp.org/), el cual aprovecha todo el poder de las fibras, con la elegante sintaxis de Laravel y todas las características requeridas en el desarrollo web moderno, lo que lo convierte en una opción sólida para construir aplicaciones y servicios web de alto rendimiento.

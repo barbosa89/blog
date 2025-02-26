@@ -7,10 +7,7 @@ locale: 'es'
 image: 'images/articles/php-class-organization.webp'
 tags:
 - php
-- clases
-- constantes
-- propiedades
-- metodos
+- class
 ---
 Organizar el código de manera clara y coherente es fundamental para mantener la legibilidad y la mantenibilidad de un proyecto. En PHP, existen ciertas convenciones y buenas prácticas para ordenar las constantes, propiedades y métodos dentro de una clase. Este artículo te guiará a través de estas prácticas, proporcionando ejemplos de código para ilustrar cómo organizar una clase de manera efectiva.
 
