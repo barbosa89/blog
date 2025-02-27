@@ -15,8 +15,7 @@ tags:
 
 In the ever-evolving world of PHP development, it's not uncommon to witness the rise and fall of various frameworks. However, as technology advances, we often see older concepts being reborn in newer, more powerful forms. This is precisely the case with Phenix, a cutting-edge PHP framework that combines the power of [Amphp](https://amphp.org/) with a host of new features, making it a robust choice for modern web applications and services.
 
-Resurrecting PHP with Phenix
-----------------------------
+## Resurrecting PHP with Phenix
 
 The name Phenix is a clever fusion of "PHP" and "Phoenix," signifying that PHP is not a dying language but, instead, a resilient one that continually reinvents itself. It encapsulates this spirit of revival, and it offers a host of features that underscore the rebirth and revitalization of PHP as a dominant force in the web development world.
 
