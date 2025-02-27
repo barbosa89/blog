@@ -271,13 +271,13 @@ function greetings(){
     yield "Goodbye, binary people";
 }
 
-$grettings = greetings();
+$greetings = greetings();
 
-echo $grettings->current() . PHP_EOL;
+echo $greetings->current() . PHP_EOL;
 
-$grettings->next();
+$greetings->next();
 
-echo $grettings->current() . PHP_EOL;
+echo $greetings->current() . PHP_EOL;
 ```
 
 La salida sería:

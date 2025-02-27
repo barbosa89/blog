@@ -144,7 +144,7 @@ Permite que una propiedad, método o función, pueda recibir o devolver un valor
 ```php
 <?php
 
-function gretting (?string $name): ?string {
+function greeting (?string $name): ?string {
     if (!$name) {
         return null;
     }
@@ -158,7 +158,7 @@ Este código se puede reescribir usando unión de tipos:
 ```php
 <?php
 
-function gretting (string|null $name): string|null {
+function greeting (string|null $name): string|null {
     if (!$name) {
         return null;
     }
