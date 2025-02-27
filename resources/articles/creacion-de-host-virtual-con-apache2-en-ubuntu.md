@@ -110,7 +110,7 @@ Agregamos las siguientes líneas y guardamos:
 
 ```
 120.0.0.1    app.localhost
-120.0.0.1    [www.app.localhost](http://www.app.localhost)
+120.0.0.1    www.app.localhost
 ```
 
 Por último, se debe reiniciar el servidor otra vez.
