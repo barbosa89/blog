@@ -28,13 +28,13 @@ La primera vez que intenté hacer funcionar las tareas programas en un hosting c
 Inicialmente intenté de la siguiente forma:
 
 ```bash
-\* \* \* \* \* /usr/bin/php /home/my_user/my_app/artisan schedule:run >\> /dev/null 2>&1
+* * * * * /usr/bin/php /home/my_user/my_app/artisan schedule:run >> /dev/null 2>&1
 ```
 
 Pero algunos hosting restringen caracteres (>, &) y no aceptan esta configuración. El paso siguiente fue intentar con:
 
 ```bash
-\* \* \* \* * /usr/bin/php /home/my_user/my_app/artisan schedule:run
+* * * * * /usr/bin/php /home/my_user/my_app/artisan schedule:run
 ```
 
 Lo que ocurrió es que no sucedía nada, para el experimento programé un comando que escribía en el log un texto, debía aparecer cada minuto pero no.
@@ -46,13 +46,13 @@ Buscando en la red encontré que la directiva **register_argc_argv** le permite 
 El truco consiste en activar dicha directiva al vuelo, para que **artisan** pueda tener acceso a los parámetros:
 
 ```bash
-\* \* \* \* * /usr/bin/php -d register_argc_argv=On /home/my_user/my_app/artisan schedule:run
+* * * * * /usr/bin/php -d register_argc_argv=On /home/my_user/my_app/artisan schedule:run
 ```
 
 También podrías probar con la configuración completa por si es permitido:
 
 ```bash
-\* \* \* \* \* /usr/bin/php -d register_argc_argv=On /home/my_user/my_app/artisan schedule:run >\> /dev/null 2>&1
+* * * * * /usr/bin/php -d register_argc_argv=On /home/my_user/my_app/artisan schedule:run >> /dev/null 2>&1
 ```
 
 De esta forma, tendremos todo solucionado y funcionando.
