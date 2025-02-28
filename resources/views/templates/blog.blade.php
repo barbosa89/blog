@@ -65,15 +65,15 @@
         <div class="row mt-3">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
                 @foreach($posts as $post)
-                        @if (in_array($loop->iteration, [3, 10, 15]))
-                            @production
-                                <ads-feed></ads-feed>
-                            @endproduction
-                        @endif
+                    @if (in_array($loop->iteration, [3, 10, 15]))
+                        @production
+                            <ads-feed></ads-feed>
+                        @endproduction
+                    @endif
 
-                        <div class="row blog-divider"></div>
+                    <div class="row blog-divider"></div>
 
-                        @include('templates.card', [
+                    @include('templates.card', [
                         'link' => route('posts.show', ['slug' => $post->slug]),
                         'post' => $post,
                         'main' => false
