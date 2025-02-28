@@ -1,5 +1,5 @@
 <div @class([
-        'card',
+        'card sticky-top tag-card',
         'shadow border' => $border,
         'border-0' => !$border,
     ])>
