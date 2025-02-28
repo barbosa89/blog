@@ -25,7 +25,7 @@
                     </a>
                 @endif
                 <p class="card-text fs-md">
-                    {{ Str::finish($post->excerpt, '.') }} <br>
+                    {{ Str::of($post->excerpt)->trim()->finish('.') }} <br>
                     <small class="text-muted">@lang('page.date.published'): {{ $post->publishedAt }}</small>
                 </p>
 
