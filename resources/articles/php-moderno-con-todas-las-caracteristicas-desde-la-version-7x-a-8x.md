@@ -121,6 +121,8 @@ class Printer
 
 Ahora tenemos la posibilidad de agregar restricciones y combinar con los tipos nativos de PHP.
 
+<article-ad></article-ad>
+
 ## Manejo de nulos
 
 Un problema común en todos los lenguajes es el manejo de nulos, PHP tiene uno de los mejores mecanismos para tal fin.
