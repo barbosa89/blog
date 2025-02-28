@@ -54,13 +54,13 @@ class ArticleManager
             $frontMatter['slug'] = str_replace(".{$article->getExtension()}", '', $article->getFilename());
             $frontMatter['keywords'] = $this->getKeyWords($frontMatter['excerpt'] ?? '');
             $frontMatter['author'] = [
-                'name' => 'Omar Barbosa',
+                'name' => config('blog.author'),
             ];
 
             $publicArticles->push($frontMatter);
 
             if (isset($frontMatter['tags']) && is_array($frontMatter['tags'])) {
-                foreach ($frontMatter['tags'] as $tag) {
+                foreach (array_filter($frontMatter['tags']) as $tag) {
                     if (!$tagMapping->has($tag)) {
                         $tagMapping[$tag] = collect();
                     }
@@ -101,16 +101,50 @@ class ArticleManager
         return null;
     }
 
+    public function related(stdClass $post): Collection
+    {
+        $lists = $this->list();
+
+        return $lists->where('slug', '!=', $post->slug)
+            ->filter(function (stdClass $p) use ($post): bool {
+                $tags = collect($p->tags)->filter(fn(string $tag): bool => in_array($tag, $post->tags));
+
+                return $p->slug !== $post->slug
+                    && $tags->isNotEmpty();
+            })
+            ->take(2);
+    }
+
     public function topTags(): Collection
     {
         return Cache::rememberForever('top_tags', function (): Collection {
             $tags = File::get(database_path('tags.json'));
 
             return collect(json_decode($tags, true))
-                ->sortBy(fn(array $articles, string $tagName): int => count($articles))
+                ->sortByDesc(fn(array $articles, string $tagName): int => count($articles))
                 ->take(15)
                 ->keys();
         });
+    }
+
+    public function tag(string $tag): Collection|null
+    {
+        $tags = File::get(database_path('tags.json'));
+
+        /** @var Collection<string, array<string>> */
+        $tags = collect(json_decode($tags, true));
+
+        $slugs = $tags->get($tag);
+
+        if (!$slugs) {
+            return null;
+        }
+
+        $articles = $this->list()
+            ->filter(fn($article) => $article->locale === App::getLocale())
+            ->filter(fn(stdClass $article): bool => in_array($article->slug, $slugs));
+
+        return $articles->values();
     }
 
     public function clearCache(): void

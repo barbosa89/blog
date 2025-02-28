@@ -8,29 +8,23 @@
                 </div>
                 <div class="col-md-4 mb-5 mb-lg-0">
                     <h4 class="text-uppercase mb-4">@lang('page.social')</h4>
-                    <ul class="list-inline mb-0">
+                    <ul class="list-inline mb-0 ms-0">
                         <li class="list-inline-item">
-                            <a class="btn btn-outline-light btn-social text-center rounded-circle"
-                                href="https://twitter.com/@Omar_Andres_Bar" target="_blank">
-                                <em class="fab fa-fw fa-twitter"></em>
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle pt-2"
+                                href="{{ config('blog.links.twitter.url') }}" target="_blank">
+                                <em class="bi bi-twitter-x"></em>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="btn btn-outline-light btn-social text-center rounded-circle"
-                                href="https://www.linkedin.com/in/omar-andres-barbosa-ortiz" target="_blank">
-                                <em class="fab fa-fw fa-linkedin-in"></em>
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle pt-2"
+                                href="{{ config('blog.links.linkedin') }}" target="_blank">
+                                <em class="bi bi-linkedin"></em>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="btn btn-outline-light btn-social text-center rounded-circle"
-                                href="https://github.com/barbosa89" target="_blank">
-                                <em class="fab fa-fw fa-github"></em>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="btn btn-outline-light btn-social text-center rounded-circle"
-                                href="https://www.facebook.com/omarandres.barbosaortiz" target="_blank">
-                                <em class="fab fa-fw fa-facebook"></em>
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle pt-2"
+                                href="{{ config('blog.links.github') }}" target="_blank">
+                                <em class="bi bi-github"></em>
                             </a>
                         </li>
                     </ul>
@@ -46,7 +40,6 @@
 
     <div class="copyright py-4 text-center text-white">
         <div class="container">
-            <small>@lang('page.copyright') &copy; Omar Barbosa {{ date('Y') }} - @lang('page.design') <a
-                    href="http://startbootstrap.com">Start Bootstrap</a></small>
+            <small>@lang('page.copyright') &copy; {{ config('blog.author') }} {{ date('Y') }}</small>
         </div>
     </div>

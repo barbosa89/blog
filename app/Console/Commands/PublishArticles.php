@@ -23,7 +23,7 @@ class PublishArticles extends Command
     {
         $articleManager->publish();
 
-        $this->info('All articles were published successfully.');
+        $this->info(trans('articles.actions.published'));
 
         return self::SUCCESS;
     }

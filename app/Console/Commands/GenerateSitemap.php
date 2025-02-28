@@ -36,7 +36,7 @@ class GenerateSitemap extends Command
         );
 
         $postsRoutes = $articleManager->list()
-            ->map(fn($article): string => route('posts.article', ['slug' => $article->slug]));
+            ->map(fn($article): string => route('posts.show', ['slug' => $article->slug]));
 
         foreach ($postsRoutes as $route) {
             $sitemap->add(Url::create($route));
@@ -44,7 +44,7 @@ class GenerateSitemap extends Command
 
         $sitemap->writeToFile(public_path('sitemap.xml'));
 
-        $this->info('Sitemap was generated');
+        $this->info(trans('page.sitemap.messages.generated'));
 
         return self::SUCCESS;
     }

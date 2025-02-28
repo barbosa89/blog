@@ -7,26 +7,26 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Omar Barbosa - @lang('page.degree')</title>
+    <title>{{ config('blog.author') }} - @lang('page.degree')</title>
     <link href="{{ asset('images/icon.png') }}" rel="shortcut icon" type="image/x-icon">
     <link rel="canonical" href="{{ config('app.url') }}">
 
-    <meta name="description" content="{{ trans('page.description') }}">
-    <meta name="keywords" content="{{ trans('page.keywords') }}">
-    <meta name="author" content="Omar Barbosa">
+    <meta name="description" content="{{ trans('page.description', ['author' => config('blog.author')]) }}">
+    <meta name="keywords" content="{{ trans('page.keywords', ['author' => strtolower(config('blog.author'))]) }}">
+    <meta name="author" content="{{ config('blog.author') }}">
 
-    <meta property="og:title" content="Blog de Omar Barbosa">
-    <meta property="og:description" content="{{ trans('page.description') }}">
+    <meta property="og:title" content="Blog de {{ config('blog.author') }}">
+    <meta property="og:description" content="{{ trans('page.description', ['author' => config('blog.author')]) }}">
     <meta property="og:image" content="{{ asset('images/site.png') }}">
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://omarbarbosa.com/">
+    <meta property="og:url" content="{{ config('app.url') }}">
     <meta name="twitter:card" content="summary_large_image">
 
-    <meta property="og:site_name" content="Omar Barbosa">
-    <meta name="twitter:image:alt" content="Blog Omar Barbosa">
+    <meta property="og:site_name" content="{{ config('blog.author') }}">
+    <meta name="twitter:image:alt" content="Blog {{ config('blog.author') }}">
 
     <meta property="fb:app_id" content="2203860376602756" />
-    <meta name="twitter:site" content="@Omar_Andres_Bar">
+    <meta name="twitter:site" content="{{ config('blog.links.twitter.nickname') }}">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -67,11 +67,11 @@
         {
             "@context": "http://schema.org/",
             "@type": "WebSite",
-            "name": "Omar Barbosa",
-            "alternateName": "Blog de Omar Barbosa",
-            "url": "https://omarbarbosa.com",
+            "name": "{{ config('blog.author') }}",
+            "alternateName": "Blog de {{ config('blog.author') }}",
+            "url": "{{ config('app.url') }}",
             "image": "{{ asset('images/site.png') }}",
-            "description": "{{ trans('page.description') }}"
+            "description": "{{ trans('page.description', ['author' => config('blog.author')]) }}"
         }
     </script>
     <script>

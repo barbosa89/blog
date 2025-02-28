@@ -6,14 +6,8 @@ updatedAt: null
 locale: 'es'
 image: 'images/articles/advices.webp'
 tags:
-- consejos
 - python
 - php
-- experto
-- profesional
-- linux
-- desarrollador
-- framework
 - javascript
 ---
 
