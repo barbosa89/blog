@@ -138,9 +138,12 @@
 @section('scripts')
     <script async>
         setTimeout(function() {
-            document.getElementById('subscription').classList.add('show');
+            const subscription = new bootstrap.Modal('#subscription')
+
+            subscription.show()
         }, 20000);
     </script>
+
     <script type="application/ld+json" async>
         {
             "@context": "http://schema.org/",
