@@ -20,7 +20,7 @@ class TagController extends Controller
 
         abort_if(!$posts, Response::HTTP_NOT_FOUND);
 
-        return view('templates.blog', [
+        return view('posts.index', [
             'posts' => $posts->sortByDesc('publishedAt'),
             'tag' => $tag,
             'tags' => $this->articleManager->topTags(),

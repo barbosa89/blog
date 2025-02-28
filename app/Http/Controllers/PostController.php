@@ -36,7 +36,7 @@ class PostController extends Controller
 
         $latest = request()->has('query') ? null : $posts->shift();
 
-        return view('templates.blog', [
+        return view('posts.index', [
             'posts' => $posts,
             'latest' => $latest,
             'tags' => $this->articleManager->topTags(),
@@ -52,7 +52,7 @@ class PostController extends Controller
         $related = $this->articleManager->related($post)
             ->filter(fn(stdClass $article): bool => $article->locale === App::getLocale());
 
-        return view('templates.post', [
+        return view('posts.show', [
             'post' => $post,
             'related' => $related,
         ]);

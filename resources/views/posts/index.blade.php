@@ -65,11 +65,11 @@
         <div class="row mt-3">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
                 @foreach($posts as $post)
-                    @if (in_array($loop->iteration, [3, 10, 15]))
-                        @production
-                            <ads-feed></ads-feed>
-                        @endproduction
-                    @endif
+                    @production
+                        @if ($loop->iteration % 5 === 0)
+                            <feed-ad></feed-ad>
+                        @endif
+                    @endproduction
 
                     <div class="row blog-divider"></div>
 
