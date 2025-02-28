@@ -14,7 +14,4 @@ return [
         ],
         'facebook' => 'https://www.facebook.com/omarandres.barbosaortiz',
     ],
-    'disqus' => [
-        'url' => 'https://omarbarbosa.disqus.com/embed.js',
-    ],
 ];

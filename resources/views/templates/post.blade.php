@@ -125,12 +125,6 @@
                         </div>
                     </div>
                 @endif
-
-                <div class="row mb-4">
-                    <div class="col-12">
-                        <div id="disqus_thread"></div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -142,19 +136,6 @@
 @endsection
 
 @section('scripts')
-    @production
-        <script async>
-            (function() {
-                var d = document,
-                    s = d.createElement('script');
-                s.src = "{{ config('blog.disqus.url') }}";
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-        </script>
-    @endproduction
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
-            Disqus.</a></noscript>
     <script async>
         setTimeout(function() {
             document.getElementById('subscription').classList.add('show');
