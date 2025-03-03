@@ -22,7 +22,7 @@ class ContactController extends Controller
             return back();
         }
 
-        Mail::to('contacto@omarbarbosa.com')
+        Mail::to(config('blog.mail'))
             ->send(new ContactMessage($request));
 
         flash()->overlay(trans('page.msg_send'), trans('page.great'));

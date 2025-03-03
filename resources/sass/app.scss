@@ -1,14 +1,6 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-$fa-font-path: "@fortawesome/fontawesome-free/webfonts";
-
-// Font awesome
-@import '@fortawesome/fontawesome-free/scss/fontawesome';
-@import '@fortawesome/fontawesome-free/scss/regular.scss';
-@import '@fortawesome/fontawesome-free/scss/solid.scss';
-@import '@fortawesome/fontawesome-free/scss/brands.scss';
-
 // Variables
 @import 'variables';
 
@@ -17,7 +9,7 @@ $fa-font-path: "@fortawesome/fontawesome-free/webfonts";
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 
 // Highlight
-@import 'highlight.js/scss/default.scss';
+@import 'highlight.js/scss/atom-one-dark.scss';
 
 a {
     text-decoration: none !important;
@@ -173,13 +165,9 @@ article {
     }
 }
 
-pre.ql-syntax {
-    background: rgba(238, 238, 238, 0.35);
-    border: solid 2px rgba(0, 0, 0, 0.05);
-    color: #000;
-    overflow-x: auto;
-    padding: 0.5em;
-    font-size: 100% !important;
+pre.hljs {
+    padding: 1rem;
+    border-radius: 5px;
 }
 
 .share-link {
@@ -260,4 +248,12 @@ text set in the data-text attribute. */
 
 .fs-md {
     font-size: 1.1rem;
+}
+
+.fs-lg {
+    font-size: 1.5rem;
+}
+
+.tag-card {
+    top: 150px;
 }

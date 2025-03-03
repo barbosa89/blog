@@ -182,7 +182,7 @@
             <tr>
                 <td style="padding: 40px 10px;width: 100%;font-size: 12px; font-family: sans-serif; line-height:18px; text-align: center; color: #888888;" class="x-gmail-data-detectors">
                     <br>
-                    {{ config('app.name') }}<br><a style="color:#888888" href="https://www.omarbarbosa.com">www.omarbarbosa.com</a>
+                    {{ config('app.name') }}<br><a style="color:#888888" href="{{ config('app.url') }}">{{ config('app.url') }}</a>
                     <br><br>
                 {{-- <unsubscribe><a style="color:#888888; text-decoration:underline;" href="{{ url('account/delete') }}" title="{{ trans('common.deleteAccount') }}">@lang('common.deleteAccount')</a></unsubscribe> --}}
                 </td>

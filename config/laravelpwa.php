@@ -1,12 +1,12 @@
 <?php
 
-declare(strict_types= 1);
+declare(strict_types=1);
 
 return [
-    'name' => 'Omar Barbosa',
+    'name' => config('blog.author'),
     'manifest' => [
-        'name' => 'Omar Barbosa',
-        'short_name' => 'Omar Barbosa',
+        'name' => config('blog.author'),
+        'short_name' => config('blog.author'),
         'start_url' => '/',
         'background_color' => '#00be9c',
         'theme_color' => '#1c3c50',
@@ -60,7 +60,7 @@ return [
         ],
         'shortcuts' => [
             [
-                'name' => 'Omar Barbosa',
+                'name' => config('blog.author'),
                 'description' => 'Computer engineer',
                 'url' => '/',
                 'icons' => [
@@ -70,7 +70,7 @@ return [
             ],
             [
                 'name' => 'Blog',
-                'description' => 'Blog by Omar Barbosa, web developer, I share tutorials and courses on Python, PHP, Javascript, linux, security and application deployment',
+                'description' => config('blog.author') . '\'s blog, web developer, I share tutorials and courses on Python, PHP, Javascript, linux, security and application deployment',
                 'url' => '/blog',
             ],
         ],

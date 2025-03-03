@@ -104,10 +104,11 @@ return [
     | This option specifies how to handle untrusted HTML input.
     |
     | Default: 'strip'
+    | Available: strip, allow, escape
     |
     */
 
-    'html_input' => 'strip',
+    'html_input' => 'allow',
 
     /*
     |--------------------------------------------------------------------------

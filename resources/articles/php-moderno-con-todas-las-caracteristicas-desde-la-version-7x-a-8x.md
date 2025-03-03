@@ -7,10 +7,6 @@ locale: 'es'
 image: 'images/articles/php-new-features.webp'
 tags:
 - php
-- moderno
-- caracteristicas
-- 7x
-- 8x
 ---
 PHP es el lenguaje más usado para desarrollo de páginas, aplicaciones y servicios web, aunque también puedes usarlo para aplicaciones de escritorio, IoT, inteligencia artificial y más, durante un largo tiempo este lenguaje fue muy popular, pero entre los años 2009 y 2012, pasó de ser muy popular a ser muy criticado; en el año 2011, Taylor Otwell lanzó la primera versión del framework Laravel, evento que representó un nuevo nacimiento para PHP, resucitó de las cenizas como el Fénix, la impresionante comunidad que surgió alrededor de Laravel y Symfony, le devolvió mucha fortaleza al lenguaje, actualmente PHP es un lenguaje moderno, muy potente y versátil, con curva de aprendizaje que permite rápida evolución, aspecto que también se proyecta en Laravel.
 
@@ -125,6 +121,8 @@ class Printer
 
 Ahora tenemos la posibilidad de agregar restricciones y combinar con los tipos nativos de PHP.
 
+<article-ad></article-ad>
+
 ## Manejo de nulos
 
 Un problema común en todos los lenguajes es el manejo de nulos, PHP tiene uno de los mejores mecanismos para tal fin.
@@ -148,7 +146,7 @@ Permite que una propiedad, método o función, pueda recibir o devolver un valor
 ```php
 <?php
 
-function gretting (?string $name): ?string {
+function greeting (?string $name): ?string {
     if (!$name) {
         return null;
     }
@@ -162,7 +160,7 @@ Este código se puede reescribir usando unión de tipos:
 ```php
 <?php
 
-function gretting (string|null $name): string|null {
+function greeting (string|null $name): string|null {
     if (!$name) {
         return null;
     }

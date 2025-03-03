@@ -24,8 +24,8 @@ return [
     'code' => 'Look at my code',
     'projects' => 'Projects',
     'me_short' => 'Computer engineer, web developer with PHP, Javacript and Python',
-    'description' => 'Blog by Omar Barbosa, web developer, I share tutorials and courses on Python, PHP, Javascript, linux, security and application deployment',
-    'keywords' => 'omar barbosa, web developer, tutorials, courses, php, python, javascript, linux, laravel, vuejs, vue, jquery, css, html, sass, webpack, ubuntu, nodejs, node, njango, swoole, framework, articles, technology, software, mobile, desktop, app, git, github, gitlab',
+    'description' => 'Blog by :author, web developer, I share tutorials and courses on Python, PHP, Javascript, linux, security and application deployment',
+    'keywords' => ':author, web developer, tutorials, courses, php, python, javascript, linux, laravel, vuejs, vue, jquery, css, html, sass, webpack, ubuntu, nodejs, node, njango, swoole, framework, articles, technology, software, mobile, desktop, app, git, github, gitlab',
     'portfolio_projects' => [
         'phenix' => [
             'subtitle' => 'The fastest and lightest web framework',
@@ -104,4 +104,10 @@ return [
     'locale' => 'Locale',
     'spanish' => 'Spanish',
     'english' => 'English',
+    'sitemap' => [
+        'messages' => [
+            'generated' => 'Sitemap was generated',
+        ],
+    ],
+    'tag' => 'Tag',
 ];

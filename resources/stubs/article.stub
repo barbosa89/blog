@@ -4,7 +4,7 @@ excerpt:
 publishedAt:
 updatedAt: null
 locale: '{{ locale }}'
-image:
+image: 'images/articles/'
 tags:
 -
 ---
