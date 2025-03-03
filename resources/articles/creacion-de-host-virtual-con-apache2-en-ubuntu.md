@@ -73,6 +73,8 @@ code app.conf
 nano app.conf﻿﻿
 ```
 
+<article-ad></article-ad>
+
 Al finalizar la edición, el contenido debería ser muy similar a esto:
 
 ```

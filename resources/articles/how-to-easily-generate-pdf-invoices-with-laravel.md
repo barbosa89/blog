@@ -19,6 +19,8 @@ These options are very powerful when you manage your server, for example, VPS or
 
 Given the above scenario, we have a viable option, this is [Laravel DOMPDF](https://github.com/barryvdh/laravel-dompdf), and an implementation that facilitates a lot of work, called [Laravel Invoices](https://github.com/LaravelDaily/laravel-invoices), a package on which I will base this article.
 
+<article-ad></article-ad>
+
 ## Features
 
 Laravel Invoices offers us the features we need the most, the following stand out:

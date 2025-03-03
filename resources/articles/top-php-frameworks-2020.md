@@ -23,6 +23,8 @@ Given this review, today I share the list of the best frameworks in PHP, taking 
 
 3. [CakePHP](https://cakephp.org/) is another classic in frameworks, it was inspired by Ruby on Rails, it was released in 2005, so you can imagine it has a long way.
 
+<article-ad></article-ad>
+
 4. [Phalcon](https://phalcon.io/en-us) is a very different framework from the others, Phalcon is literally a PHP extension written in the C language, as you will know it is possible to extend PHP functionalities through extensions or using FFI in PHP 7.4. The creators of Phalcon created a language called Zephir to facilitate the creation of extensions, so Phalcon was born. Because it is compiled and loaded into memory, this framework is very fast, compared to synchronous frameworks. Obviously, access to the terminal with root user permissions is required on the server where you will deploy Phalcon, due to the nature of its technology.
 
 5. [Zend](https://framework.zend.com/) is the official PHP framework, it is developed by the company responsible for the development of the PHP kernel called Zend Technologies.

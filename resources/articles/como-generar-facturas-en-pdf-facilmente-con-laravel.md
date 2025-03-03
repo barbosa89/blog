@@ -53,6 +53,8 @@ resources/views/vendor/invoices/templates/invoice.blade.php
 
 Otra cosa importante, es que revises en la documentación los [métodos disponibles](https://github.com/LaravelDaily/laravel-invoices#available-methods), te dará una completa información sobre la API de la clase **Invoice** del paquete.
 
+<article-ad></article-ad>
+
 ## Escenario
 
 Normalmente se tienen dos modelos básicos, facturas (Invoice) y productos (Product), con una tabla intermedia o pivot con los nombres de los modelos en orden alfabético **invoice_product**, por lo tanto, es una relación de muchos a muchos. Otros modelos como el cliente (Customer), se agregan para complementar el ejemplo.

@@ -64,6 +64,8 @@ code app.conf
 nano app.conf
 ```
 
+<article-ad></article-ad>
+
 At the end of editing, the content should look very similar to this:
 
 ```

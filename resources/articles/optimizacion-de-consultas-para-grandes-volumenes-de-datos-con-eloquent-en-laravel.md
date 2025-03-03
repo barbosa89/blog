@@ -132,6 +132,8 @@ do {
 } while ($count === $perPage);
 ```
 
+<article-ad></article-ad>
+
 En este ejemplo, se consulta cada página manualmente hasta que la última página devuelva menos registros de los esperados por página; así es posible usar generadores para cada conjunto de registros consultados. Si se desea usar modelos de Eloquent, entonces se debe quitar el método **toBase()**.
 
 **Laravel 8** introdujo una sintaxis muy amigable para el uso de generadores:
@@ -205,6 +207,8 @@ $posts = DB::table('posts')->pluck(['title', 'id']);
 ```
 
 El método **pluck()** devuelve una colección de clave y valor, bajo una consulta única, en donde la clave es la segunda posición de la matríz y el valor es la primera posición.
+
+<article-ad></article-ad>
 
 ## Subconsultas y relaciones
 

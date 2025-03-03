@@ -16,6 +16,8 @@ Ya que he tenido dificultades en proyectos reales para agregar alguna caracterí
 
 <lite-youtube videoid="F65L8w1gtJA" params="autoplay=0"></lite-youtube>
 
+<article-ad></article-ad>
+
 ## Paquetes
 
 1.  [https://github.com/cviebrock/eloquent-sluggable](https://github.com/cviebrock/eloquent-sluggable)

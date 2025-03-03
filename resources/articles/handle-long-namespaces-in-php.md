@@ -67,6 +67,8 @@ use Long\Very\Long\Application\Common\Namespaces{
 
 The issue for this case is that if there were more combinations, the class aliases would be chaos and in the end it is not very elegant in terms of aesthetics. Let's look at a more efficient solution.
 
+<article-ad></article-ad>
+
 ## Assign an alias to part of the namespace
 
 PHP allows us to assign an alias to a part of the namespace and use that part to import as many classes as we want:

@@ -39,6 +39,8 @@ Pero algunos hosting restringen caracteres (>, &) y no aceptan esta configuraci�
 
 Lo que ocurrió es que no sucedía nada, para el experimento programé un comando que escribía en el log un texto, debía aparecer cada minuto pero no.
 
+<article-ad></article-ad>
+
 Buscando en la red encontré que la directiva **register_argc_argv** le permite a PHP CLI recibir y leer parámetros. la documentación oficial dice:
 
 > Establecer esta directiva a `TRUE` significa que los scripts ejecutados mediante la SAPICLI siempre tienen acceso a _argc_ (número de argumentos que se le pasan a la aplicación) y _argv_ (array con los argumentos en sí).

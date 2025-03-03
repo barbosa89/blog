@@ -32,6 +32,8 @@ Algunos programadores de lenguajes compilados, por lo general, se quejan de PHP,
 
 En la imagen hay varios tipos de martillos, aunque son muchos más, con todos puedes realizar actividades muy similares pero cada uno tiene su especialidad. Se puede clavar un clavo con un martillo de bola aunque no esté diseñado para tal fin, dicho fin determina cual es el adecuado y es la razón de que hayan diferentes tipos. En los lenguajes de programación ocurre lo mismo, aunque la descripción de utilidad en las páginas oficiales de cada lenguaje dice que son de propósito general, hay fortalezas y debilidades enmarcadas en el objetivo para lo cual se quieran emplear, las cuales determinan cuál debes elegir y aprender, porque será para toda una vida. En pocas palabras, no hay ningún lenguaje que satisfaga todos los requerimientos en el extenso mundo del software, en ese orden, primero se debe analizar la especialidad del lenguaje y luego elegimos en pos del objetivo trazado.
 
+<article-ad></article-ad>
+
 ## Utilidad de los lenguajes más populares
 
 * **El lenguaje C**: Es mayormente usado en la construcción de sistemas operativos, controladores y cosas que requieran algo cercano al lenguaje maquina o de bajo nivel.
