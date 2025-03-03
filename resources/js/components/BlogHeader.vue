@@ -1,5 +1,5 @@
 <template>
-    <img src="/images/me.webp" :alt="author" class="rounded-circle border-2 border-light mb-2 profile-image img-fluid img-shadow">
+    <img src="/images/me.webp" loading="lazy" :alt="author" class="rounded-circle border-2 border-light mb-2 profile-image img-fluid img-shadow">
     <h1 class="text-uppercase mb-0 mt-2" :data-text="author">{{ author }}</h1>
     <span ref="typing" class="font-weight-light mb-0"></span>
 </template>
