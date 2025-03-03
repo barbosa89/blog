@@ -1,6 +1,6 @@
 <template>
     <div class="row blog-divider"></div>
-    <div class="row mb-3">
+    <div class="row my-3">
         <ins class="adsbygoogle"
             style="display:block; text-align:center;"
             data-ad-layout="in-article"
@@ -9,4 +9,5 @@
             data-ad-slot="8446001777">
         </ins>
     </div>
+    <div class="row blog-divider"></div>
 </template>
