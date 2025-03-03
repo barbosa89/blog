@@ -24,6 +24,9 @@ En el desarrollo de aplicaciones web hay una serie de requerimientos que son fac
 * [laracasts/flash](https://github.com/laracasts/flash): Notificaciones sencillas en los proyectos de Laravel.
 * [laraveles/spanish](https://github.com/Laraveles/spanish): Traducción al español de los mensajes básicos de Laravel en validación y demás.
 * [maatwebsite/excel](https://laravel-excel.com/): Manipula con potencia hojas de calculo, este paquete es muy completo y de los favoritos de la comunidad PHP.
+
+<article-ad></article-ad>
+
 * [orangehill/iseed](https://github.com/orangehill/iseed): Generador inverso de seeder, los cuales son creados con la información de la base de datos. Muy útil para hacer backups sencillos.
 * [rap2hpoutre/laravel-log-viewer](https://github.com/rap2hpoutre/laravel-log-viewer): Visualizar los logs de Laravel en la consola es terrible, para eso se creó este visualizador, podemos analizar errores con mayor facilidad.
 * [spatie/laravel-backup](https://github.com/spatie/laravel-backup): Este paquete crea un backup completo de tu aplicación, incluye la base de datos, el código y los archivos.

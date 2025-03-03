@@ -86,6 +86,8 @@ return [
 ];
 ```
 
+<article-ad></article-ad>
+
 ### Image replacement
 
 In the previous configuration file there are two arrays that relate the images (icons, splash) required by any progressive web application for normal operation; you must replace them with your icons and customize the splash. These images were published in the public folder, in the path **public/images/icons**.

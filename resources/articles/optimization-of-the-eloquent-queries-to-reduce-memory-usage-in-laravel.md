@@ -247,6 +247,8 @@ The data that was used are:
 * 2000 tags
 * 1000 images
 
+<article-ad></article-ad>
+
 ## Query all users with posts
 
 **Wrong**

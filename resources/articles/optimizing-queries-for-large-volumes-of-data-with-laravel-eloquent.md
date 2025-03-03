@@ -69,6 +69,8 @@ $posts = DB::table('posts')
 
 Ordering by the primary key in order for the query to be very efficient, in case another column is used, the recommendation is to add that column as an index.
 
+<article-ad></article-ad>
+
 ### Query table by recordsets using primary key
 
 ```php
@@ -262,6 +264,8 @@ $posts->each(function (Post $post): void {
     echo $post->author_name . PHP_EOL;
 });
 ```
+
+<article-ad></article-ad>
 
 ### SQL views for complex queries
 

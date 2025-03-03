@@ -23,6 +23,8 @@ Dada esta reseña, hoy les comparto el listado de los mejores marcos de trabajo 
 
 3. [CakePHP](https://cakephp.org/): Es otro clásico en frameworks, fue inspirado en Ruby on Rails, salió al mercado en 2005, por lo cual imaginarás tiene bastante recorrido.
 
+<article-ad></article-ad>
+
 4. [Phalcon](https://phalcon.io/): Este es un framework muy diferente a los demás, es literalmente una extensión de PHP escrita en el lenguage C, como sabrás es posible extender las funcionalidades de PHP mediante extensiones o usando FFI en PHP 7.4. Los responsables de Phalcon crearon un lenguaje llamado Zephir para facilitar la creación de extensiones y así crearon a Phalcon, al estar compilado en memoria este framework es muy rápido, comparado con los frameworks síncronos. Evidentemente se requiere acceso a la terminal con permisos de usuario Root en el servidor en el que desplegarás Phalcon, debido a la naturaleza de su tecnología.
 
 5. [Zend](https://framwork.zend.com/): Es el framework oficial de PHP, está desarrollado por la empresa responsable del desarrollo del núcleo de PHP llamada Zend Technologies.

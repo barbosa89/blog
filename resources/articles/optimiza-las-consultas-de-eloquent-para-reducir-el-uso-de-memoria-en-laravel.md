@@ -54,6 +54,8 @@ Las razones son básicamente rendimiento y seguridad:
 
 Si su aplicación está hecha con este comodín para las consultas, creo que tenemos problemas, Houston.
 
+<article-ad></article-ad>
+
 ## Ejemplos
 
 A continuación, las consultas muy típicas ejecutadas en aplicaciones web que utilizan Laravel:
@@ -230,6 +232,8 @@ $invoice = Invoice::where('id', $id)
     ])
     ->first(['id', 'subvalue', 'taxes', 'value', 'customer_id']);
 ```
+
+<article-ad></article-ad>
 
 ## Pruebas ejecutadas
 

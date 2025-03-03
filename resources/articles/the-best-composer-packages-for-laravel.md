@@ -23,6 +23,9 @@ When we developed web applications, there are many requirements which are common
 * [guzzlehttp/guzzle](http://docs.guzzlephp.org/): The popular PHP HTTP client, you can do requests to API services.
 * [laracasts/flash](https://github.com/laracasts/flash): Simple notifications in Laravel projects.
 * [maatwebsite/excel](https://laravel-excel.com/): You can read and write spreadsheets with this package.
+
+<article-ad></article-ad>
+
 * [orangehill/iseed](https://github.com/orangehill/iseed): Seeder inverse generator, the seeders are created using the database rows.
 * [rap2hpoutre/laravel-log-viewer](https://github.com/rap2hpoutre/laravel-log-viewer): With this viewer, you can analyze the logs easily to understand errors in the application.
 * [spatie/laravel-backup](https://github.com/spatie/laravel-backup): You can create a complete application backup, includes the database, the code, and files.

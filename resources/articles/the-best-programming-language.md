@@ -32,6 +32,8 @@ Some developers of compiled languages ​​don't like languages like Python, Ja
 
 In the picture, there are some hammers kinds, even though are many, with each hammer, you can do similar activities but each one has a specialty. You can nail a sprig with a ball hammer even if it is not designed for that purpose. The purpose determines which is the right hammer and is the main reason why there are many kinds. In the programming languages happens the same, even though the language description is as a general-purpose language, there are applications can be built very easily with some languages, with others is very hard.  Just as you can use several tools together, in the same way we must use the programming languages. There is not a unique language for the big software world, is a better option to use them together like layers of an onion, layer over layer.
 
+<article-ad></article-ad>
+
 ## Popular languages utility
 
 Learn a little about the most popular and demanded languages ​​today, so you can make a choice:
