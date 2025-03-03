@@ -66,6 +66,8 @@ use Long\Very\Long\Application\Common\Namespaces\{
 
 El inconveniente es que si hubiese más combinaciones los alias de las clases serían un caos y es que al final no es muy elegante a nivel de estética. Veamos una solución más eficiente.
 
+<article-ad></article-ad>
+
 ## Asignar un alias a parte del espacio de nombres
 
 PHP nos permite asignar un alias a una parte del espacio de nombres y usar esa parte para importar la cantidad de clases que deseemos:

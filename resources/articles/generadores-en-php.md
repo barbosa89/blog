@@ -98,6 +98,8 @@ index 2 value 3
 
 Así que un Generador es básicamente un Iterador pero con súper poderes, pues provee de mecanismos adicionales que veremos a continuación.
 
+<article-ad></article-ad>
+
 ## Caraterísticas
 
 **Los generadores suspenden la ejecución del código**: En una función común se usa la palabra reservada **return** para devolver un valor o **echo** para mostrar una cadena de texto, mientras que un generador, el cual se crea a partir de una función generadora, utiliza la palabra reservada **yield**. Con el uso de **return**, el control del programa es devuelto al ámbito que lo invocó; **echo** por su parte sólo muestra la cadena de texto, mientras que **yield** suspende el flujo de ejecución al interior de la función generadora, pues esta ha devuelto un objeto generador que internamente actúa como un iterador, y espera a que se invoquen los métodos correspondientes o que se recorra usando el constructor **foreach**. Veamos ejemplos:
@@ -213,6 +215,8 @@ object(Generator)#1 (0) {
 ```
 
 Aunque sólo veamos el saludo, el número 1 y la despedida, el generador devuelto tiene ahora el control del flujo de ejecución interno de la función, por lo que puede suspender y manejar el acceso a los datos usando el iterador; finalmente se muestra el mensaje de despedida. Si solicitamos el siguiente elemento del generador, entonces veremos el número 2:
+
+<article-ad></article-ad>
 
 ```php
 <?php
@@ -367,6 +371,8 @@ foreach (generateNumbers() as $number) {
 ```
 
 El uso extendido de la palabra reservada **yield** se encuentra en el siguiente [enlace](https://www.php.net/manual/es/language.generators.syntax.php).
+
+<article-ad></article-ad>
 
 ## Beneficios de los generadores
 

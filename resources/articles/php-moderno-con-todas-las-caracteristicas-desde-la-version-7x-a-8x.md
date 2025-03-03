@@ -314,6 +314,8 @@ foreach ($users as [$name, $email]) {
 }
 ```
 
+<article-ad></article-ad>
+
 ### Desempaquetado
 
 PHP cuenta con las funciones **array_merge()** y **array_merge_recursive()** para fusión de matrices, pero ahora es mucho más sencillo y elegante:
@@ -507,6 +509,8 @@ $status = Status::from('A');
 // Se asignará un valor nulo si NO es un valor válido
 $status = Status::tryFrom('X') ?? Status::APPROVED;
 ```
+
+<article-ad></article-ad>
 
 ## Clases y propiedades de sólo lectura
 

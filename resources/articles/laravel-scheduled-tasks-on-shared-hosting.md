@@ -37,6 +37,8 @@ But some hosting restrict characters (>, &) and does not accept this setting. Th
 
 What happened is that nothing happened, for the test I programmed a command that wrote a text in the log, it should appear every minute but not.
 
+<article-ad></article-ad>
+
 Searching the internet I found that the register_argc_argv directive allows PHP CLI to receive and read parameters. the official documentation says:
 
 > Setting this to `TRUE` means that scripts executed via the CLI SAPI always have access to _argc_ (number of arguments passed to the application) and _argv_ (array of the actual arguments).

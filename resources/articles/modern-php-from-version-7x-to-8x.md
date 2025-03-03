@@ -68,6 +68,8 @@ class CreateUserAction
 }
 ```
 
+<article-ad></article-ad>
+
 ## Type intersection
 
 It consists of the ability in which an argument must satisfy multiple constraints, for example, multiple contracts:
@@ -167,6 +169,8 @@ function greeting (string|null $name): string|null {
     return "Hola, {$name}";
 }
 ```
+
+<article-ad></article-ad>
 
 ### Null coalescing assignment operator
 
@@ -330,6 +334,8 @@ $desktop = ['java', 'c#'];
 
 $languages = [...$web, ...$desktop];
 ```
+
+<article-ad></article-ad>
 
 ## Class constants
 

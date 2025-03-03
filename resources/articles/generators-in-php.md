@@ -106,6 +106,8 @@ index 2 value 3
 
 So a Generator is basically an Iterator but with super powers, as it provides additional mechanisms that we will see below.
 
+<article-ad></article-ad>
+
 ## Features
 
 **Generators suspend code execution**: In a common function, the **return** keyword is used to return a value or **echo** to display a text string, while a generator, which is created from a generator function, uses the word reserved **yield**. With the use of **return**, the program control is returned to the scope that invoked it; **echo** only shows the text string, while **yield** suspends the flow of execution inside the generator function, since it has returned a generator object that internally acts as an iterator, and waits for the corresponding methods to be invoked or that is traversed using the **foreach** constructor. Let's see examples:
@@ -221,6 +223,8 @@ object(Generator)#1 (0) {
 ```
 
 Even though we only see the greeting, the number 1, and the goodbye, the returned generator now has control of the internal flow of execution of the function, so it can suspend and handle access to the data using the iterator; finally the goodbye message is displayed. If we request the following element from the generator, then we will see number 2:
+
+<article-ad></article-ad>
 
 ```php
 <?php
@@ -485,6 +489,8 @@ Task 1 iteration 8
 Task 1 iteration 9
 Task 1 iteration 10
 ```
+
+<article-ad></article-ad>
 
 ## Generator use case study
 

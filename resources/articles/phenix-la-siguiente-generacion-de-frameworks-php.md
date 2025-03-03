@@ -83,6 +83,8 @@ Phenix no es un framework de un solo propósito; está diseñado para destacar e
 6.  **Microservicios**.
 7.  **Servicios Web en tiempo real**.
 
+<article-ad></article-ad>
+
 ## Características de Amphp
 
 Características de Amphp que le dan superpoderes al framework:

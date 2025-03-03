@@ -46,6 +46,8 @@ Posterior a la instalación, es necesario publicar los assets y el archivo de co
 php artisan vendor:publish --provider="LaravelPWA\\Providers\\LaravelPWAServiceProvider"
 ```
 
+<article-ad></article-ad>
+
 En la carpeta **config** encontraremos el archivo **laravelpwa.php** y haremos la modificaciones necesarias como el nombre, corto y largo, que la aplicación tendrá, también los colores que apliquen de acuerdo a la paleta de colores del diseño. En mi caso, el archivo quedó así:
 
 ```php
