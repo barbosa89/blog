@@ -17,7 +17,7 @@
 
     <meta property="og:title" content="Blog de {{ config('blog.author') }}">
     <meta property="og:description" content="{{ trans('page.description', ['author' => config('blog.author')]) }}">
-    <meta property="og:image" content="{{ asset('images/site.png') }}">
+    <meta property="og:image" content="{{ asset('images/site.webp') }}">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ config('app.url') }}">
     <meta name="twitter:card" content="summary_large_image">
@@ -30,8 +30,10 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&display=swap" rel="stylesheet" type="text/css">
 
     @vite([
         'resources/sass/app.scss',
@@ -70,7 +72,7 @@
             "name": "{{ config('blog.author') }}",
             "alternateName": "Blog de {{ config('blog.author') }}",
             "url": "{{ config('app.url') }}",
-            "image": "{{ asset('images/site.png') }}",
+            "image": "{{ asset('images/site.webp') }}",
             "description": "{{ trans('page.description', ['author' => config('blog.author')]) }}"
         }
     </script>
