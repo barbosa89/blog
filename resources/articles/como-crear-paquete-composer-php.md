@@ -1,6 +1,6 @@
 ---
 title: 'Cómo crear tu primer paquete de Composer PHP'
-excerpt: 'Aprende a crear y publicar tu primer paquete de Composer PHP'
+excerpt: 'Aprende a crear y publicar tu primer paquete de Composer PHP con todo incluido PHPUnit, PHP CS Fixer, Github Actions y más'
 publishedAt: '2025-06-16'
 updatedAt: null
 locale: 'es'
