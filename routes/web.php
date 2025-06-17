@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\TagController;
+use App\Http\Middleware\InputSanitize;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -34,14 +35,14 @@ Route::get('locale/{locale}', function (string $locale): RedirectResponse {
 
 Route::post('/subscribe', [SubscriptionController::class, 'subscribe'])
     ->name('subscribe')
-    ->middleware(['sanitize', 'honeypot']);
+    ->middleware([InputSanitize::class, 'honeypot']);
 
 Route::get('/unsubscribe/{email}', [SubscriptionController::class, 'unsubscribe'])
     ->name('unsubscribe')
-    ->middleware(['sanitize', 'honeypot']);
+    ->middleware([InputSanitize::class, 'honeypot']);
 
 Route::post('/message', [ContactController::class, 'message'])
     ->name('message')
-    ->middleware(['sanitize', 'honeypot']);
+    ->middleware([InputSanitize::class, 'honeypot']);
 
 // Auth::routes(['verify' => true]);
