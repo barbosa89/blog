@@ -60,7 +60,7 @@
     </div>
 </header>
 
-@if($posts->isNotEmpty() || $latest)
+@if($posts->isNotEmpty() || isset($latest))
     <div class="container blog">
         <div class="row mt-3">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
