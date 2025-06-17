@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use App\Http\Middleware\SetLocale;
 use App\Http\Middleware\InputSanitize;
+use App\Http\Middleware\SetLocale;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;

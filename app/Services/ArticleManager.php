@@ -10,10 +10,9 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\File;
+use stdClass;
 
 use function is_array;
-
-use stdClass;
 
 class ArticleManager
 {
