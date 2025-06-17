@@ -12,7 +12,7 @@ tags:
 
 Composer es el administrador de paquetes de PHP. Su función principal es facilitar la instalación y actualización de librerías que un proyecto necesita, manteniendo el control de versiones y dependencias en un solo archivo: `composer.json`. En lugar de descargar manualmente librerías desde distintas fuentes, Composer automatiza ese proceso, sólo basta con indicar el nombre del paquete y su versión para que la herramienta haga el resto.
 
-<lite-youtube videoid="PT9z9bYk6eA" params="autoplay=0"></lite-youtube>
+<lite-youtube videoid="PT9z9bYk6eA" disablenoscript></lite-youtube>
 
 Composer introdujo el concepto de dependencia, básicamente librería o paquete, que simplemente es una carpeta de código PHP estructurada de acuerdo a ciertos estándares (como PSR-4 para `autoloading`) y acompañada de un archivo `composer.json`. Este archivo describe el paquete: su nombre, versión, dependencias, autores, licencias, entre otros datos relevantes.
 

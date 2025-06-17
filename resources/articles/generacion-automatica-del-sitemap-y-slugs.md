@@ -14,7 +14,7 @@ tags:
 
 Ya que he tenido dificultades en proyectos reales para agregar alguna característica, he decidido compartir la forma que he encontrado para solucionarlas. Hoy les quiero compartir dos paquetes, el uno para generar el sitemap de un sitio, y el otro para generar slugs, los cuales pueden ser aplicados a artículos, productos y otras URI que necesariamente deban ser amigables; ambos paquetes con el fin de mejorar el posicionamiento en motores de búsqueda (SEO).
 
-<lite-youtube videoid="F65L8w1gtJA" params="autoplay=0"></lite-youtube>
+<lite-youtube videoid="F65L8w1gtJA" disablenoscript></lite-youtube>
 
 <article-ad></article-ad>
 

@@ -14,7 +14,7 @@ Las aplicaciones web progresivas (progressive web app / PWA) son aplicaciones we
 
 El objetivo de este artículo es que podamos convertir una aplicación web con Laravel, común y corriente, en una aplicación web progresiva. Si quieres saber mucho más de las PWA, este enlace te será de mucha ayuda: [Documentación oficial](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp?hl=es).
 
-<lite-youtube videoid="4af3btW1foc" params="autoplay=0"></lite-youtube>
+<lite-youtube videoid="4af3btW1foc" disablenoscript></lite-youtube>
 
 ## Requisitos
 
