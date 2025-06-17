@@ -18,11 +18,11 @@
     "isDynamicEntry": true
   },
   "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
-    "file": "assets/bootstrap-icons-BOrJxbIo.woff",
+    "file": "assets/bootstrap-icons-BeopsB42.woff",
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
   },
   "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": {
-    "file": "assets/bootstrap-icons-BtvjY1KL.woff2",
+    "file": "assets/bootstrap-icons-mSm7cUeB.woff2",
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "public/images/about-hd.png": {
@@ -39,7 +39,7 @@
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-Ud4V3gzp.js",
+    "file": "assets/app-BeSN_ZVe.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -49,7 +49,7 @@
       "lang/php_es.json"
     ],
     "css": [
-      "assets/app-DpCyQnFO.css"
+      "assets/app-Dl0EByt1.css"
     ]
   },
   "resources/js/freelancer.js": {
@@ -65,7 +65,7 @@
     "isEntry": true
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-BdvYH5qY.css",
+    "file": "assets/app-e3WMYQvK.css",
     "src": "resources/sass/app.scss",
     "isEntry": true
   }
