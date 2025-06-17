@@ -9,6 +9,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Symfony\Component\HttpFoundation\Response;
 
+use function in_array;
+use function mb_substr;
+
 class SetLocale
 {
     public function handle(Request $request, Closure $next): Response
@@ -17,6 +20,10 @@ class SetLocale
         $acceptLanguage = blank(trim($acceptLanguage)) ? config('app.locale') : $acceptLanguage;
 
         $locale = mb_substr($acceptLanguage, 0, 2);
+
+        if (!in_array($locale, ['en', 'es'])) {
+            $locale = config('app.locale');
+        }
 
         if (session()->has('locale')) {
             $locale = session()->get('locale');
