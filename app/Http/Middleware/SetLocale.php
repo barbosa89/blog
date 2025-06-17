@@ -13,7 +13,10 @@ class SetLocale
 {
     public function handle(Request $request, Closure $next): Response
     {
-        $locale = mb_substr($request->server('HTTP_ACCEPT_LANGUAGE', config('app.locale')), 0, 2);
+        $acceptLanguage = $request->server('HTTP_ACCEPT_LANGUAGE', config('app.locale'));
+        $acceptLanguage = blank(trim($acceptLanguage)) ? config('app.locale') : $acceptLanguage;
+
+        $locale = mb_substr($acceptLanguage, 0, 2);
 
         if (session()->has('locale')) {
             $locale = session()->get('locale');
