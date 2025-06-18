@@ -47,7 +47,9 @@
 <body  id="page-top">
     <div id="app">
         @include('templates.navbar')
-        @include('flash::message')
+        <div class="container">
+            @include('flash::message')
+        </div>
 
         <main>
             @yield('content')
@@ -63,20 +65,26 @@
             var modal = document.getElementById('flash-overlay-modal')
 
             if (modal) {
-                modal.style.display = 'block'
+                const overlayModal = new bootstrap.Modal(modal)
+
+                overlayModal.show()
             }
 
             var alerts = document.querySelectorAll('div.alert:not(.alert-important)')
 
             alerts.forEach(function(alert) {
+                alert.style.top = '150px'
+                alert.style.display = 'block'
+                alert.style.opacity = '1'
+                alert.style.transition = 'opacity 0.35s'
+
                 setTimeout(function() {
-                    alert.style.transition = 'opacity 0.35s'
                     alert.style.opacity = '0'
 
                     setTimeout(function() {
                         alert.style.display = 'none'
                     }, 350)
-                }, 3000)
+                }, 5000)
             })
         })
     </script>

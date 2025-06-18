@@ -78,21 +78,13 @@
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var modal = document.getElementById('flash-overlay-modal');
-            if (modal) {
-                modal.style.display = 'block';
-            }
+            var modal = document.getElementById('flash-overlay-modal')
 
-            var alerts = document.querySelectorAll('div.alert:not(.alert-important)');
-            alerts.forEach(function(alert) {
-                setTimeout(function() {
-                    alert.style.transition = 'opacity 0.35s';
-                    alert.style.opacity = '0';
-                    setTimeout(function() {
-                        alert.style.display = 'none';
-                    }, 350);
-                }, 3000);
-            });
+            if (modal) {
+                const overlayModal = new bootstrap.Modal(modal)
+
+                overlayModal.show()
+            }
         });
     </script>
 </body>

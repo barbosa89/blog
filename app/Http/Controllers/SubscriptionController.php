@@ -17,10 +17,9 @@ class SubscriptionController extends Controller
         if (! Newsletter::isSubscribed($email)) {
             Newsletter::subscribePending($email);
 
-            $msg = trans('page.subscription_email') . '. <br><br><strong>' . trans('page.email') . '</strong>: ' . $email . '.';
-            flash()->overlay($msg, trans('page.subscription'));
+            flash(trans('page.subscription_email') . '. <br><br><strong>' . trans('page.email') . '</strong>: ' . $email . '.')->success();
         } else {
-            flash()->overlay(trans('page.subscribed_msg'), trans('page.subscribed'));
+            flash(trans('page.subscribed_msg'))->success();
         }
 
         return back();
@@ -31,11 +30,9 @@ class SubscriptionController extends Controller
         if (Newsletter::isSubscribed($email)) {
             Newsletter::unsubscribe($email);
 
-            $msg = trans('page.unsubscribe_msg') . '. <br><br><strong>' . trans('page.email') . '</strong>: ' . e($email) . '.';
-
-            flash()->overlay($msg, trans('page.unsubscribe'));
+            flash(trans('page.unsubscribe_msg') . '. <br><br><strong>' . trans('page.email') . '</strong>: ' . e($email) . '.')->success();
         } else {
-            flash()->overlay(trans('page.no_subscribed_msg'), trans('page.no_subscribed'));
+            flash(trans('page.no_subscribed_msg'))->error();
         }
 
         return redirect('/');

@@ -8,26 +8,26 @@ use App\Http\Requests\ContactEmail;
 use App\Mail\ContactMessage;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Mail;
+use Throwable;
 
 class ContactController extends Controller
 {
     public function message(ContactEmail $request): RedirectResponse
     {
-        Mail::to($request->email)
-            ->send(new ContactMessage($request));
+        try {
+            Mail::to($request->email)
+                ->send(new ContactMessage($request));
 
-        if (Mail::failures()) {
+            Mail::to(config('blog.mail'))
+                ->send(new ContactMessage($request));
+
+            flash()->overlay(trans('page.msg_send'), trans('page.great'));
+        } catch (Throwable $th) {
+            report($th);
+
             flash()->overlay(trans('page.msg_fail'), trans('page.sorry'));
-
+        } finally {
             return back();
         }
-
-        Mail::to(config('blog.mail'))
-            ->send(new ContactMessage($request));
-
-        flash()->overlay(trans('page.msg_send'), trans('page.great'));
-
-
-        return back();
     }
 }
