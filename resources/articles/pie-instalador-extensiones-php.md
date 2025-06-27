@@ -84,23 +84,20 @@ mv pie.phar /usr/local/bin/pie
 
 ## Comandos básicos de Pie
 
-- **pie install**: Para instalar extensiones.
-- **pie uninstall**: Para eliminar extensiones previamente instaladas con `Pie`.
+- **pie install vendor/extension**: Instala la extensión indicada, también es posible ejecutarlo sin argumento como `pie install`.
+- **pie uninstall vendor/extension**: Para eliminar extensiones previamente instaladas con `Pie`.
 - **pie info vendor/extension**: Muestra la información relevante de una extensión, como la versión más reciente, el recurso desde donde será descargada y las opciones de configuración.
 - **pie show**: Muestra el listado de extensiones de PHP instaladas con `Pie`.
 
-A continuación te muestro la sencilla forma de instalar extensiones:
+A continuación te muestro la forma de instalar extensiones en la versión de PHP que esté en uso:
 
 ```shell
 pie install xdebug/xdebug
+
 pie install swoole/swoole
 ```
 
-El listado de extensiones de PHP instaladas y activas lo puedes ver con:
-
-```shell
-php -m
-```
+El listado de extensiones de PHP instaladas y activas lo puedes ver con `php -m`.
 
 ## Pie con Composer
 
