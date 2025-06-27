@@ -101,13 +101,13 @@ El listado de extensiones de PHP instaladas y activas lo puedes ver con `php -m`
 
 ## Pie con Composer
 
-Cuando ejecutas `pie install` en un proyecto de `Composer`, `Pie` verificará los archivos `composer.json` y `composer.lock` para analizar los requerimientos del proyecto en `require`, e instalará las extensiones que no estén disponibles en el sistema operativo. `Composer` puede instalarse con el siguiente comando:
+Cuando ejecutas `pie install` en un proyecto de `Composer`, `Pie` verificará los archivos `composer.json` y `composer.lock` para analizar los requerimientos del proyecto en `require`, e instalará las extensiones que no estén disponibles en el sistema operativo. Vas a necesitar `Composer` para realizar la siguiente práctica, si no lo tienes instalado, lo puedes hacer con el siguiente comando:
 
 ```shell
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 ```
 
-Usaré [Phenix](https://phenix.omarbarbosa.com/), un framework que estoy construyendo y que está basado en [Amphp](https://amphp.org/), para probar la interoperabilidad de `Pie` con `Composer`:
+Usaré [Phenix](https://phenix.omarbarbosa.com/), un framework asíncrono y concurrente basado en [Amphp](https://amphp.org/), para probar la interoperabilidad de `Pie` con `Composer`:
 
 ```shell
 composer create-project phenixphp/phenix
