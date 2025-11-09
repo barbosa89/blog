@@ -30,6 +30,7 @@ class ContactEmail extends FormRequest
             'email' => 'required|email:rfc,dns,spoof,filter,strict',
             'phone' => 'nullable|string|max:10',
             'message' => 'required|string',
+            'g-recaptcha-response' => 'required|recaptchav3:register,0.5',
         ];
     }
 }

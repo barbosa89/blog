@@ -11,6 +11,8 @@
                     @csrf
                     @honeypot
 
+                    {!! RecaptchaV3::field('contact') !!}
+
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
                             <label>@lang('page.name')</label>

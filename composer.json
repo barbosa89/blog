@@ -10,6 +10,7 @@
         "donatello-za/rake-php-plus": "^1.0",
         "drewm/mailchimp-api": "^2.5",
         "graham-campbell/markdown": "^15.2",
+        "josiasmontag/laravel-recaptchav3": "^1.0",
         "laracasts/flash": "^3.2",
         "laravel/framework": "^11.31",
         "laravel/tinker": "^2.9",

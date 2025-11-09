@@ -52,6 +52,9 @@
             gtag('config', 'UA-103614513-1');
         </script>
     @endproduction
+
+    {!! RecaptchaV3::initJs() !!}
+
     <!-- PWA assets -->
     {{-- @laravelPWA --}}
 </head>
