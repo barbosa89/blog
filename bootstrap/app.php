@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\Http\Middleware\AddSecureHeaders;
 use App\Http\Middleware\InputSanitize;
 use App\Http\Middleware\SetLocale;
 use Illuminate\Foundation\Application;
@@ -16,6 +17,7 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->appendToGroup('web', SetLocale::class)
-            ->append(InputSanitize::class);
+            ->append(InputSanitize::class)
+            ->append(AddSecureHeaders::class);
     })
     ->withExceptions(function (Exceptions $exceptions): void {})->create();
