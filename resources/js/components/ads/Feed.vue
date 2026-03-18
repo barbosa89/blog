@@ -1,7 +1,9 @@
 <template>
     <div class="row blog-divider"></div>
     <div class="row mb-3">
-        <ins class="adsbygoogle"
+        <ins
+            ref="ad"
+            class="adsbygoogle"
             style="display:block"
             data-ad-format="fluid"
             data-ad-layout-key="-fo-2p+5v-nz+n3"
@@ -10,3 +12,13 @@
         </ins>
     </div>
 </template>
+
+<script>
+import { initAdsbygoogle } from '@/lib/initAdsbygoogle'
+
+export default {
+    mounted() {
+        initAdsbygoogle(this.$refs.ad)
+    },
+}
+</script>

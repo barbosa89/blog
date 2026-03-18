@@ -59,8 +59,6 @@
     @vite(['resources/js/highlight.js'], 'build')
 
     <script>
-        (adsbygoogle = window.adsbygoogle || []).push({})
-
         document.addEventListener('DOMContentLoaded', function() {
             var modal = document.getElementById('flash-overlay-modal')
 
