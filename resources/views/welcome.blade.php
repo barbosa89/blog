@@ -1,15 +1,13 @@
-@extends('layouts.landing')
+@extends('layouts.app')
 
 @section('content')
-    @include('templates.header')
+    @include('partials.header')
 
-    @include('templates.portfolio')
+    @include('partials.portfolio')
 
-    @include('templates.about')
+    @include('partials.about')
 
-    @include('templates.contact')
+    @include('partials.footer')
 
-    @include('templates.footer')
-
-    @include('templates.top-button')
+    @include('partials.top-button')
 @endsection

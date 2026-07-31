@@ -69,7 +69,6 @@ class AddSecureHeaders
             "img-src 'self' data: https: http: blob:; " .
             'frame-src ' . implode(' ', $frameSources) . '; ' .
             'connect-src ' . implode(' ', $connectSources) . '; ' .
-            "worker-src 'self' blob:; " .
-            "manifest-src 'self';";
+            "worker-src 'self' blob:;";
     }
 }

@@ -18,10 +18,10 @@
         <div class="col-md-8">
             <div class="card-body p-0 p-lg-4 pt-lg-0 ps-lg-0">
                 @if (request()->routeIs('posts.show'))
-                    @include('templates.title')
+                    @include('partials.title')
                 @else
                     <a href="{{ $link }}" class="text-gray">
-                        @include('templates.title')
+                        @include('partials.title')
                     </a>
                 @endif
                 <p class="card-text fs-md">

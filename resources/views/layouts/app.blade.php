@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -7,101 +7,74 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Blog | {{ config('blog.author') }}</title>
+    <title>{{ config('blog.author') }} - @lang('page.degree')</title>
     <link href="{{ asset('images/icon.png') }}" rel="shortcut icon" type="image/x-icon">
+    <link rel="canonical" href="{{ config('app.url') }}">
+
+    <meta name="description" content="{{ trans('page.description', ['author' => config('blog.author')]) }}">
+    <meta name="keywords" content="{{ trans('page.keywords', ['author' => strtolower(config('blog.author'))]) }}">
+    <meta name="author" content="{{ config('blog.author') }}">
+
+    <meta property="og:title" content="Blog de {{ config('blog.author') }}">
+    <meta property="og:description" content="{{ trans('page.description', ['author' => config('blog.author')]) }}">
+    <meta property="og:image" content="{{ asset('images/site.webp') }}">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ config('app.url') }}">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta property="og:site_name" content="{{ config('blog.author') }}">
+    <meta name="twitter:image:alt" content="Blog {{ config('blog.author') }}">
+
+    <meta property="fb:app_id" content="2203860376602756" />
+    <meta name="twitter:site" content="{{ config('blog.links.twitter.nickname') }}">
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.bunny.net">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&display=swap" rel="stylesheet" type="text/css">
 
-    <!-- Scripts -->
     @vite([
         'resources/sass/app.scss',
         'resources/css/freelancer.css',
         'resources/js/app.js',
-    ])
+        'resources/js/freelancer.js',
+    ], 'build')
+
+    @production
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103614513-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-103614513-1');
+        </script>
+    @endproduction
+
+    {!! RecaptchaV3::initJs() !!}
+
 </head>
-<body>
+<body  id="page-top">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        @include('partials.navbar')
 
         <main>
             @yield('content')
         </main>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var modal = document.getElementById('flash-overlay-modal');
-            if (modal) {
-                modal.style.display = 'block';
-            }
 
-            var alerts = document.querySelectorAll('div.alert:not(.alert-important)');
-            alerts.forEach(function(alert) {
-                setTimeout(function() {
-                    alert.style.transition = 'opacity 0.35s';
-                    alert.style.opacity = '0';
-                    setTimeout(function() {
-                        alert.style.display = 'none';
-                    }, 350);
-                }, 3000);
-            });
-        });
+    <script type="application/ld+json" async>
+        {
+            "@@context": "http://schema.org/",
+            "@type": "WebSite",
+            "name": "{{ config('blog.author') }}",
+            "alternateName": "Blog de {{ config('blog.author') }}",
+            "url": "{{ config('app.url') }}",
+            "image": "{{ asset('images/site.webp') }}",
+            "description": "{{ trans('page.description', ['author' => config('blog.author')]) }}"
+        }
     </script>
 </body>
 </html>

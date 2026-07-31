@@ -46,10 +46,7 @@
 </head>
 <body  id="page-top">
     <div id="app">
-        @include('templates.navbar')
-        <div class="container">
-            @include('flash::message')
-        </div>
+        @include('partials.navbar')
 
         <main>
             @yield('content')
@@ -57,35 +54,6 @@
     </div>
 
     @vite(['resources/js/highlight.js'], 'build')
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var modal = document.getElementById('flash-overlay-modal')
-
-            if (modal) {
-                const overlayModal = new bootstrap.Modal(modal)
-
-                overlayModal.show()
-            }
-
-            var alerts = document.querySelectorAll('div.alert:not(.alert-important)')
-
-            alerts.forEach(function(alert) {
-                alert.style.top = '150px'
-                alert.style.display = 'block'
-                alert.style.opacity = '1'
-                alert.style.transition = 'opacity 0.35s'
-
-                setTimeout(function() {
-                    alert.style.opacity = '0'
-
-                    setTimeout(function() {
-                        alert.style.display = 'none'
-                    }, 350)
-                }, 5000)
-            })
-        })
-    </script>
 
     @yield('scripts')
 </body>

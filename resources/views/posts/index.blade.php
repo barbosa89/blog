@@ -43,7 +43,7 @@
                 </div>
             </div>
 
-            @include('templates.card', [
+            @include('partials.card', [
                 'link' => route('posts.show', ['slug' => $latest->slug]),
                 'post' => $latest
             ])
@@ -73,7 +73,7 @@
 
                     <div class="row blog-divider"></div>
 
-                    @include('templates.card', [
+                    @include('partials.card', [
                         'link' => route('posts.show', ['slug' => $post->slug]),
                         'post' => $post,
                         'main' => false
@@ -83,18 +83,18 @@
 
             @if($posts->isNotEmpty())
                 <div class="col-lg-3 col-xl-3 tags d-none d-lg-block d-xl-block">
-                    @include('templates.tags', ['border' => true])
+                    @include('partials.tags', ['border' => true])
                 </div>
             @endif
         </div>
     </div>
 @else
-    @include('templates.empty')
+    @include('partials.empty')
 @endif
 
 <div class="container mt-4 mb-4"></div>
 
-@include('templates.footer')
+@include('partials.footer')
 
-@include('templates.top-button')
+@include('partials.top-button')
 @endsection

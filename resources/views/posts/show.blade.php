@@ -30,7 +30,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    @include('templates.card', [
+                    @include('partials.card', [
                         'link' => route('posts.show', ['slug' => $post->slug]),
                         'main' => true
                     ])
@@ -94,11 +94,10 @@
 
                 <div class="row my-4">
                     <div class="col-12">
-                        @include('templates.tags', ['tags' => $post->tags, 'border' => false])
+                        @include('partials.tags', ['tags' => $post->tags, 'border' => false])
                     </div>
                 </div>
 
-                @include('templates.subscription')
 
                 @if ($related->isNotEmpty())
                     <div class="mb-4">
@@ -129,24 +128,16 @@
         </div>
     </div>
 
-    @include('templates.footer')
+    @include('partials.footer')
 
-    @include('templates.top-button')
+    @include('partials.top-button')
 
 @endsection
 
 @section('scripts')
-    <script async>
-        setTimeout(function() {
-            const subscription = new bootstrap.Modal('#subscription')
-
-            subscription.show()
-        }, 20000);
-    </script>
-
     <script type="application/ld+json" async>
         {
-            "@context": "http://schema.org/",
+            "@@context": "http://schema.org/",
             "@type": "WebSite",
             "name": "{{ $post->title }}",
             "alternateName": "{{ $post->title }}",
