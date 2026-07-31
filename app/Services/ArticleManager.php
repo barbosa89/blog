@@ -30,7 +30,7 @@ class ArticleManager
         }
     }
 
-    public function path(string|null $path = null): string
+    public function path(?string $path = null): string
     {
         return resource_path(self::DIRECTORY . DIRECTORY_SEPARATOR . $path);
     }
@@ -85,7 +85,7 @@ class ArticleManager
         });
     }
 
-    public function find(string $slug): stdClass|null
+    public function find(string $slug): ?stdClass
     {
         $lists = $this->list();
 
@@ -126,7 +126,7 @@ class ArticleManager
         });
     }
 
-    public function tag(string $tag): Collection|null
+    public function tag(string $tag): ?Collection
     {
         $tags = File::get(database_path('tags.json'));
 

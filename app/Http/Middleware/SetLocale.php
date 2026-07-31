@@ -17,7 +17,7 @@ class SetLocale
     public function handle(Request $request, Closure $next): Response
     {
         $acceptLanguage = $request->server('HTTP_ACCEPT_LANGUAGE', config('app.locale'));
-        $acceptLanguage = blank(trim($acceptLanguage)) ? config('app.locale') : $acceptLanguage;
+        $acceptLanguage = blank(mb_trim($acceptLanguage)) ? config('app.locale') : $acceptLanguage;
 
         $locale = mb_substr($acceptLanguage, 0, 2);
 

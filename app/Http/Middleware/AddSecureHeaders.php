@@ -62,13 +62,13 @@ class AddSecureHeaders
             'https://pagead2.googlesyndication.com',
         ];
 
-        return "default-src 'self'; " .
-            "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://pagead2.googlesyndication.com https://static.doubleclick.net; " .
-            "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " .
-            "font-src 'self' data: https://fonts.googleapis.com https://fonts.gstatic.com; " .
-            "img-src 'self' data: https: http: blob:; " .
-            'frame-src ' . implode(' ', $frameSources) . '; ' .
-            'connect-src ' . implode(' ', $connectSources) . '; ' .
-            "worker-src 'self' blob:;";
+        return "default-src 'self'; "
+            . "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://pagead2.googlesyndication.com https://static.doubleclick.net; "
+            . "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
+            . "font-src 'self' data: https://fonts.googleapis.com https://fonts.gstatic.com; "
+            . "img-src 'self' data: https: http: blob:; "
+            . 'frame-src ' . implode(' ', $frameSources) . '; '
+            . 'connect-src ' . implode(' ', $connectSources) . '; '
+            . "worker-src 'self' blob:;";
     }
 }
