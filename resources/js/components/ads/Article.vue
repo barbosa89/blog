@@ -1,6 +1,6 @@
 <template>
-    <div class="row blog-divider"></div>
-    <div class="row my-3">
+    <div class="blog-divider"></div>
+    <div class="my-3">
         <ins
             ref="ad"
             class="adsbygoogle"
@@ -11,7 +11,7 @@
             data-ad-slot="8446001777">
         </ins>
     </div>
-    <div class="row blog-divider"></div>
+    <div class="blog-divider"></div>
 </template>
 
 <script>

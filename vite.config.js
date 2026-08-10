@@ -1,14 +1,13 @@
 import { defineConfig } from 'vite'
 import laravel from 'laravel-vite-plugin'
 import vue from '@vitejs/plugin-vue'
-import i18n from 'laravel-vue-i18n/vite'
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
     plugins: [
         laravel({
             input: [
-                'resources/sass/app.scss',
-                'resources/css/freelancer.css',
+                'resources/css/app.css',
                 'resources/js/app.js',
                 'resources/js/freelancer.js',
                 'resources/js/highlight.js',
@@ -23,7 +22,7 @@ export default defineConfig({
                 },
             },
         }),
-        i18n(),
+        tailwindcss(),
     ],
     resolve: {
         alias: {

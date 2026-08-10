@@ -10,6 +10,11 @@ use Symfony\Component\HttpFoundation\Response;
 
 class AddSecureHeaders
 {
+    private const CSP_SELF = "'self'";
+    private const GOOGLE = 'https://www.google.com';
+    private const GOOGLE_ADS = 'https://googleads.g.doubleclick.net';
+    private const GOOGLE_ADS_PAGE = 'https://pagead2.googlesyndication.com';
+
     /**
      * @param  Closure(Request): (Response)  $next
      */
@@ -45,30 +50,62 @@ class AddSecureHeaders
 
     private function buildCsp(): string
     {
+        $scriptSources = [
+            self::CSP_SELF,
+            "'unsafe-inline'",
+            "'unsafe-eval'",
+            self::GOOGLE,
+            'https://www.gstatic.com',
+            'https://www.googletagmanager.com',
+            self::GOOGLE_ADS,
+            self::GOOGLE_ADS_PAGE,
+            'https://static.doubleclick.net',
+        ];
+
+        $styleSources = [
+            self::CSP_SELF,
+            "'unsafe-inline'",
+            'https://fonts.googleapis.com',
+        ];
+
         $frameSources = [
-            "'self'",
-            'https://www.google.com',
-            'https://googleads.g.doubleclick.net',
+            self::CSP_SELF,
+            self::GOOGLE,
+            self::GOOGLE_ADS,
             'https://tpc.googlesyndication.com',
-            'https://pagead2.googlesyndication.com',
+            self::GOOGLE_ADS_PAGE,
         ];
 
         $connectSources = [
-            "'self'",
-            'https://www.google.com',
+            self::CSP_SELF,
+            self::GOOGLE,
             'https://www.google-analytics.com',
             'https://www.googletagmanager.com',
-            'https://googleads.g.doubleclick.net',
-            'https://pagead2.googlesyndication.com',
+            self::GOOGLE_ADS,
+            self::GOOGLE_ADS_PAGE,
         ];
 
+        if (false === app()->isProduction()) {
+            $scriptSources[] = 'http:';
+            $scriptSources[] = 'https:';
+
+            $styleSources[] = 'http:';
+            $styleSources[] = 'https:';
+
+            $connectSources[] = 'http:';
+            $connectSources[] = 'https:';
+            $connectSources[] = 'ws:';
+            $connectSources[] = 'wss:';
+        }
+
         return "default-src 'self'; "
-            . "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://www.gstatic.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://pagead2.googlesyndication.com https://static.doubleclick.net; "
-            . "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
+            . 'script-src ' . implode(' ', array_unique($scriptSources)) . '; '
+            . 'style-src ' . implode(' ', array_unique($styleSources)) . '; '
             . "font-src 'self' data: https://fonts.googleapis.com https://fonts.gstatic.com; "
             . "img-src 'self' data: https: http: blob:; "
             . 'frame-src ' . implode(' ', $frameSources) . '; '
-            . 'connect-src ' . implode(' ', $connectSources) . '; '
+            . 'connect-src ' . implode(' ', array_unique($connectSources)) . '; '
             . "worker-src 'self' blob:;";
     }
+
 }

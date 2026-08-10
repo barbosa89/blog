@@ -1,71 +1,15 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>{{ config('app.name') }}</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-            .full-height {
-                height: 100vh;
-            }
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-            .position-ref {
-                position: relative;
-            }
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-            .content {
-                text-align: center;
-            }
-            .title {
-                font-size: 84px;
-            }
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            <div class="content">
-                <div class="title m-b-md">
-                    @lang('page.403')
-                </div>
-                <div class="links">
-                        <a href="{{ url()->previous() }}">@lang('page.back')</a>
-                    </div>
+@section('content')
+    <section class="error-signal flex min-h-screen items-center border-b border-rule-dark pb-16 pt-32 text-light">
+        <div class="site-container grid gap-10 md:grid-cols-[minmax(0,0.75fr)_minmax(18rem,1.25fr)] md:items-center">
+            <p class="font-display text-[clamp(9rem,28vw,22rem)] font-bold leading-[0.7] text-signal-coral" aria-hidden="true">403</p>
+            <div>
+                <p class="font-data text-xs uppercase tracking-[0.2em] text-track-yellow">@lang('page.technical.blocked')</p>
+                <h1 class="mt-4 text-5xl text-light sm:text-7xl">@lang('page.403')</h1>
+                <a class="signal-link signal-link--primary mt-8" href="{{ url()->previous() }}">@lang('page.back')</a>
             </div>
         </div>
-    </body>
-</html>
+    </section>
+    @include('partials.footer')
+@endsection

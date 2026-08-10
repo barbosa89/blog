@@ -1,13 +1,20 @@
 <template>
-    <img src="/images/me.webp" loading="lazy" :alt="author" class="rounded-circle border-2 border-light mb-2 profile-image img-fluid img-shadow">
-    <h1 class="text-uppercase mb-0 mt-2" :data-text="author">{{ author }}</h1>
-    <span ref="typing" class="font-weight-light mb-0"></span>
+    <div class="mx-auto flex max-w-3xl flex-col items-center text-center">
+        <img
+            src="/images/me.webp"
+            loading="lazy"
+            :alt="author"
+            class="h-36 w-36 rounded-full border-4 border-emerald-300/70 object-cover shadow-2xl sm:h-48 sm:w-48 lg:h-56 lg:w-56"
+        >
+        <h1 class="mt-5 text-4xl font-black uppercase tracking-[0.08em] text-white sm:text-6xl lg:text-7xl" :data-text="author">{{ author }}</h1>
+        <span ref="typing" class="mt-3 min-h-[42px] text-lg font-light text-emerald-200 sm:text-2xl lg:text-3xl"></span>
+    </div>
 </template>
 
 <script setup>
 import Typed from 'typed.js'
-import { ref, computed, onMounted } from 'vue'
-import { wTrans } from 'laravel-vue-i18n'
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
+import { useI18n } from 'vue-i18n';
 
 const props = defineProps({
     author: {
@@ -16,13 +23,17 @@ const props = defineProps({
     },
 })
 
+const { t } = useI18n();
+
 const typing = ref(null)
-const degree = computed(() => wTrans('page.degree').value)
-const dev = computed(() => wTrans('page.dev').value)
+let typingInstance = null
+
+const degree = computed(() => t('page.degree'));
+const dev = computed(() => t('page.dev'));
 
 onMounted(() => {
     setTimeout(() => {
-        new Typed(typing.value, {
+        typingInstance = new Typed(typing.value, {
             strings: [degree.value, dev.value, 'Blogger'],
             typeSpeed: 100,
             backSpeed: 60,
@@ -31,16 +42,11 @@ onMounted(() => {
         })
     }, 1000)
 })
+
+onBeforeUnmount(() => {
+    if (typingInstance) {
+        typingInstance.destroy()
+        typingInstance = null
+    }
+})
 </script>
-
-<style scoped>
-span {
-    font-size: 1.5rem;
-    min-height: 38px;
-}
-
-.profile-image {
-    max-width: 232px;
-    max-height: 232px;
-}
-</style>

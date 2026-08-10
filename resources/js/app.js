@@ -1,30 +1,40 @@
-import './bootstrap'
-import { createApp } from 'vue'
-import { i18nVue } from 'laravel-vue-i18n'
-import '@justinribeiro/lite-youtube'
+import { createApp } from 'vue';
+import '@justinribeiro/lite-youtube';
+import { createAppI18n } from '@/lang/i18n.js';
+import { createIcons, Menu, X, Search, CircleX, ChevronUp, ChevronDown, Code2, BriefcaseBusiness, Share2, Calendar, Send, ArrowUpRight, Mail } from 'lucide';
 
-import FeedAd from './components/ads/Feed.vue'
-import ArticleAd from './components/ads/Article.vue'
-import BlogHeader from './components/BlogHeader.vue'
-import PortfolioProjects from './components/PortfolioProjects.vue'
-import ProgrammersIcon from './components/icons/Programmers.vue'
+createIcons({
+    icons: {
+        Menu,
+        X,
+        Search,
+        CircleX,
+        ChevronUp,
+        ChevronDown,
+        Code2,
+        BriefcaseBusiness,
+        Share2,
+        Calendar,
+        Send,
+        ArrowUpRight,
+        Mail,
+    },
+});
 
-const app = createApp({})
+import FeedAd from '@/components/ads/Feed.vue';
+import ArticleAd from '@/components/ads/Article.vue';
+import LocaleSwitcher from '@/components/LocaleSwitcher.vue';
+import SiteNavbar from '@/components/SiteNavbar.vue';
+import ProgrammersIcon from '@/components/icons/Programmers.vue';
 
-app.use(i18nVue, {
-    resolve: async lang => {
-        const langs = import.meta.glob('../../lang/*.json');
+const app = createApp({});
 
-        if (lang.includes("php_")) {
-            return await langs[`../../lang/${lang}.json`]();
-        }
-    }
-})
+app.use(createAppI18n());
 
-app.component('feed-ad', FeedAd)
-app.component('article-ad', ArticleAd)
-app.component('blog-header', BlogHeader)
-app.component('portfolio-projects', PortfolioProjects)
-app.component('programmers-icon', ProgrammersIcon)
+app.component('feed-ad', FeedAd);
+app.component('article-ad', ArticleAd);
+app.component('locale-switcher', LocaleSwitcher);
+app.component('programmers-icon', ProgrammersIcon);
+app.component('site-navbar', SiteNavbar);
 
-app.mount('#app')
+app.mount('#app');

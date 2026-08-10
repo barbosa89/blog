@@ -1,6 +1,6 @@
 <template>
-    <div class="row blog-divider"></div>
-    <div class="row mb-3">
+    <div class="blog-divider"></div>
+    <div class="mb-3">
         <ins
             ref="ad"
             class="adsbygoogle"
