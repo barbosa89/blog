@@ -1,65 +1,29 @@
 {
-  "lang/php_en.json": {
-    "file": "assets/php_en-WzrMmDJI.js",
-    "name": "php_en",
-    "src": "lang/php_en.json",
-    "isDynamicEntry": true
-  },
-  "lang/php_es.json": {
-    "file": "assets/php_es-Deu7j3mq.js",
-    "name": "php_es",
-    "src": "lang/php_es.json",
-    "isDynamicEntry": true
-  },
-  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
-    "file": "assets/bootstrap-icons-BeopsB42.woff",
-    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
-  },
-  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": {
-    "file": "assets/bootstrap-icons-mSm7cUeB.woff2",
-    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
-  },
-  "public/images/about-hd.png": {
-    "file": "assets/about-hd-DV5p9vW8.png",
-    "src": "public/images/about-hd.png"
-  },
-  "public/images/main-hd.png": {
-    "file": "assets/main-hd-ZtAeFz_Q.png",
-    "src": "public/images/main-hd.png"
-  },
-  "resources/css/freelancer.css": {
-    "file": "assets/freelancer-Dooc-YF4.css",
-    "src": "resources/css/freelancer.css",
-    "isEntry": true
-  },
-  "resources/js/app.js": {
-    "file": "assets/app-DP-iBs71.js",
-    "name": "app",
-    "src": "resources/js/app.js",
+  "resources/css/app.css": {
+    "file": "assets/app-B-qYpH4p.css",
+    "src": "resources/css/app.css",
     "isEntry": true,
-    "dynamicImports": [
-      "lang/php_en.json",
-      "lang/php_es.json"
-    ],
-    "css": [
-      "assets/app-Dl0EByt1.css"
+    "name": "app",
+    "names": [
+      "app.css"
     ]
   },
+  "resources/js/app.js": {
+    "file": "assets/app-Cby-2zRy.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
   "resources/js/freelancer.js": {
-    "file": "assets/freelancer-Cq_DJGVv.js",
+    "file": "assets/freelancer-BFv0Dat_.js",
     "name": "freelancer",
     "src": "resources/js/freelancer.js",
     "isEntry": true
   },
   "resources/js/highlight.js": {
-    "file": "assets/highlight-D75Sl-Gw.js",
+    "file": "assets/highlight-DM1aSuaY.js",
     "name": "highlight",
     "src": "resources/js/highlight.js",
-    "isEntry": true
-  },
-  "resources/sass/app.scss": {
-    "file": "assets/app-BOh7OPLx.css",
-    "src": "resources/sass/app.scss",
     "isEntry": true
   }
 }
