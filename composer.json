@@ -12,6 +12,7 @@
         "josiasmontag/laravel-recaptchav3": "^1.0",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
+        "spatie/file-system-watcher": "^1.2",
         "spatie/laravel-sitemap": "^7.3.2",
         "symfony/yaml": "^7.2"
     },
