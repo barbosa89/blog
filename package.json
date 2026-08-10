@@ -2,8 +2,8 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "build": "vite build",
-        "dev": "vite"
+        "build": "concurrently \"php artisan vue:translations\" \"vite build\"",
+        "dev": "concurrently \"vite\" \"php artisan app:watch-lang\""
     },
     "devDependencies": {
         "@justinribeiro/lite-youtube": "^1.7.1",
