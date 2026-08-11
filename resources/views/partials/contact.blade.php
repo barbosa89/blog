@@ -5,11 +5,11 @@
             <p class="mt-6 max-w-2xl text-lg leading-relaxed text-light-muted">@lang('page.landing.contact_intro')</p>
         </div>
         <div class="flex flex-col items-start gap-3 lg:items-stretch">
-            <a class="signal-link signal-link--primary" href="mailto:{{ config('blog.mail') }}">
+            <a class="catalog-action catalog-action--primary" href="mailto:{{ config('blog.mail') }}">
                 @lang('page.landing.email_action')
                 <i data-lucide="mail" class="h-4 w-4" aria-hidden="true"></i>
             </a>
-            <a class="signal-link signal-link--quiet" href="{{ config('blog.links.linkedin') }}" target="_blank" rel="noopener noreferrer">
+            <a class="catalog-action catalog-action--quiet-dark" href="{{ config('blog.links.linkedin') }}" target="_blank" rel="noopener noreferrer">
                 @lang('page.landing.linkedin_action')
                 <i data-lucide="arrow-up-right" class="h-4 w-4" aria-hidden="true"></i>
             </a>

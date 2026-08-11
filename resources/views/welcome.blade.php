@@ -5,13 +5,11 @@
 
     @include('partials.portfolio')
 
-    @include('partials.customers')
+    @include('partials.writing')
 
     @include('partials.about')
 
-    @include('partials.writing')
-
-    @include('partials.contact')
+    @include('partials.customers')
 
     @include('partials.footer')
 

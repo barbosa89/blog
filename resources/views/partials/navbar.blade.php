@@ -1,19 +1,19 @@
 @php
     $navigationItems = [
         ['label' => trans('page.products'), 'url' => url('/').'#products'],
-        ['label' => trans('page.customers'), 'url' => url('/').'#customers'],
-        ['label' => trans('page.about'), 'url' => url('/').'#about'],
         ['label' => trans('page.navigation.writing'), 'url' => route('posts.index')],
-        ['label' => trans('page.contact'), 'url' => url('/').'#contact'],
+        ['label' => trans('page.navigation.code'), 'url' => config('blog.links.github'), 'external' => true],
+        ['label' => trans('page.navigation.about'), 'url' => url('/').'#about'],
     ];
     $localeItems = [
-        ['label' => 'ES', 'url' => route('locale', 'es')],
-        ['label' => 'EN', 'url' => route('locale', 'en')],
+        ['label' => 'ES', 'url' => route('locale', 'es'), 'active' => app()->getLocale() === 'es'],
+        ['label' => 'EN', 'url' => route('locale', 'en'), 'active' => app()->getLocale() === 'en'],
     ];
 @endphp
 
 <site-navbar
     :author='@json(config("blog.author"))'
+    :logo-url='@json(asset("images/captain-logo.webp"))'
     :home-url='@json(url("/"))'
     :menu-label='@json(trans("page.navigation.open"))'
     :close-label='@json(trans("page.navigation.close"))'

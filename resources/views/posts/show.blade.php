@@ -34,7 +34,7 @@
                 <div class="min-w-0">
                     <a class="font-data text-xs uppercase tracking-[0.18em] text-ink-muted underline-offset-4 hover:text-ink hover:underline" href="{{ route('posts.index') }}">@lang('page.technical.archive')</a>
                     <h1 class="mt-5 max-w-[18ch] whitespace-normal text-[clamp(2.75rem,7vw,6rem)] leading-[0.94] text-ink">{{ $post->title }}</h1>
-                    <p class="mt-6 max-w-3xl whitespace-normal text-lg leading-relaxed text-ink-muted sm:text-xl">{{ $post->excerpt }}</p>
+                    <p class="mt-6 max-w-3xl whitespace-normal text-base leading-relaxed text-ink-muted sm:text-xl">{{ $post->excerpt }}</p>
                 </div>
                 <dl class="border-l border-t border-rule-light font-data text-xs uppercase tracking-[0.12em] text-ink-muted">
                     <div class="border-b border-r border-rule-light p-4">
@@ -78,7 +78,7 @@
                             <p class="mt-2 max-w-xl whitespace-normal text-ink-muted">@lang('page.me_short')</p>
                         </div>
                     </div>
-                    <a class="signal-link signal-link--quiet" href="mailto:{{ config('blog.mail') }}">@lang('page.contact_me')</a>
+                    <a class="catalog-action catalog-action--quiet-light" href="mailto:{{ config('blog.mail') }}">@lang('page.contact_me')</a>
                 </section>
 
                 @if ($related->isNotEmpty())

@@ -19,7 +19,7 @@
     </div>
 
     <div class="mt-4 grid gap-3 sm:grid-cols-[auto_minmax(0,1fr)] sm:gap-5">
-        <span class="font-data text-xs text-ink-muted">SIG-{{ str_pad((string) $signalNumber, 2, '0', STR_PAD_LEFT) }}</span>
+        <span class="font-data text-xs text-ink-muted">PRD-{{ str_pad((string) $signalNumber, 2, '0', STR_PAD_LEFT) }}</span>
         <div class="min-w-0">
             <h3 @class(['text-ink', 'text-4xl sm:text-5xl' => $isFeatured, 'text-3xl' => !$isFeatured])>
                 {{ $product['title'] }}
@@ -33,7 +33,7 @@
                 <p class="mt-3 whitespace-normal text-base leading-relaxed text-ink-muted">{{ trans($translation.'.use_cases') }}</p>
             @endif
             <a
-                class="signal-link signal-link--quiet mt-5"
+                class="catalog-action catalog-action--quiet-light mt-5"
                 href="{{ $product['url'] }}"
                 target="_blank"
                 rel="noopener noreferrer"

@@ -1,22 +1,33 @@
-<header class="signal-surface border-b border-rule-dark pt-20" id="home">
-    <div class="site-container flex min-h-[clamp(32rem,68svh,42rem)] items-center py-16 sm:py-20 lg:py-24">
-        <div class="relative z-10 min-w-0 max-w-3xl">
-            <h1 class="max-w-[10ch] font-display text-[clamp(4rem,8vw,6rem)] leading-[0.86] tracking-[-0.03em] text-light">
+<header class="logbook-hero border-b border-rule-dark pt-18" id="home">
+    <div class="site-container grid items-center gap-8 py-8 sm:py-10 lg:min-h-104 lg:grid-cols-[minmax(0,1.2fr)_minmax(20rem,0.8fr)] lg:gap-12">
+        <div class="relative z-10 min-w-0">
+            <p class="font-display text-[clamp(3.4rem,6vw,4.75rem)] font-bold uppercase leading-[0.86] tracking-tight text-light">
+                {{ trans('page.degree') }}
+            </p>
+            <span class="mt-5 block h-1 w-24 bg-signal-cyan" aria-hidden="true"></span>
+            <h1 class="mt-5 max-w-[17ch] font-display text-[clamp(2.75rem,4.5vw,4rem)] leading-[0.92] tracking-[-0.03em] text-light">
                 @lang('page.landing.hero_title')
             </h1>
-            <p class="mt-6 max-w-[38rem] font-data text-xs uppercase tracking-[0.22em] text-signal-cyan">@lang('page.landing.hero_role')</p>
-            <p class="mt-5 max-w-[35rem] text-lg leading-relaxed text-light-muted">
+            <nav class="mt-5" aria-label="{{ trans('page.landing.hero_paths') }}">
+                <ul class="flex flex-wrap gap-x-7 gap-y-3 font-data text-xs uppercase tracking-[0.2em] [&>li]:mb-0">
+                    <li><a class="text-signal-cyan underline-offset-4 hover:underline" href="#products">@lang('page.products')</a></li>
+                    <li><a class="text-light-muted underline-offset-4 hover:text-light hover:underline" href="#writing">@lang('page.navigation.writing')</a></li>
+                    <li><a class="text-track-yellow underline-offset-4 hover:underline" href="{{ config('blog.links.github') }}" target="_blank" rel="noopener noreferrer">@lang('page.navigation.code')</a></li>
+                </ul>
+            </nav>
+            <p class="mt-4 max-w-2xl text-base leading-relaxed text-light-muted sm:text-lg">
                 @lang('page.landing.hero_body')
             </p>
-            <div class="mt-9 flex flex-wrap gap-3">
-                <a class="signal-link signal-link--primary" href="mailto:{{ config('blog.mail') }}">
-                    @lang('page.landing.contact_action')
-                    <i data-lucide="arrow-up-right" class="h-4 w-4" aria-hidden="true"></i>
-                </a>
-                <a class="signal-link signal-link--quiet js-scroll-trigger" href="#products">
-                    @lang('page.landing.work_action')
-                </a>
-            </div>
         </div>
+
+        <figure class="mx-auto w-full max-w-56 self-center lg:max-w-100 lg:justify-self-end">
+            <img
+                class="h-auto w-full mask-[linear-gradient(var(--palette-vacuum)_80%,transparent)] [-webkit-mask-image:linear-gradient(var(--palette-vacuum)_80%,transparent)]"
+                src="{{ asset('images/me.webp') }}"
+                alt=""
+                fetchpriority="high"
+                decoding="async"
+            >
+        </figure>
     </div>
 </header>

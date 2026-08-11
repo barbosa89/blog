@@ -44,13 +44,13 @@ return [
         [
             'id' => 'apces',
             'title' => 'APCES E.S.P.',
-            'image' => 'images/customers/apces.png',
+            'image' => 'images/customers/apces.webp',
             'url' => 'https://apces.com.co',
         ],
         [
             'id' => 'sueno-real',
             'title' => 'Hotel Posada Sueño Real',
-            'image' => 'images/customers/logo.png',
+            'image' => 'images/customers/logo.webp',
             'url' => 'https://posadasuenoreal.com',
         ],
         [

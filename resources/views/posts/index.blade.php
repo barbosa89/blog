@@ -23,7 +23,7 @@
                             placeholder="{{ trans('page.search_help') }}"
                             value="{{ request()->query('query') }}"
                         >
-                        <button type="submit" aria-label="{{ trans('page.search') }}" class="signal-button min-w-14 border-0 border-l border-rule-light bg-vacuum px-0 text-light hover:text-signal-cyan">
+                        <button type="submit" aria-label="{{ trans('page.search') }}" class="catalog-button min-w-14 border-0 border-l border-rule-light bg-vacuum px-0 text-light">
                             <i data-lucide="search" class="h-5 w-5" aria-hidden="true"></i>
                         </button>
                     </div>
@@ -75,7 +75,7 @@
                                 <a class="whitespace-normal underline-offset-4 hover:underline" href="{{ route('posts.show', ['slug' => $latest->slug]) }}">{{ $latest->title }}</a>
                             </h2>
                             <p class="mt-5 whitespace-normal text-lg leading-relaxed text-ink-muted">{{ $latest->excerpt }}</p>
-                            <a class="signal-link signal-link--quiet mt-6" href="{{ route('posts.show', ['slug' => $latest->slug]) }}">@lang('page.landing.read_article')</a>
+                            <a class="catalog-action catalog-action--quiet-light mt-6" href="{{ route('posts.show', ['slug' => $latest->slug]) }}">@lang('page.landing.read_article')</a>
                         </div>
                     </article>
                 @endisset
@@ -99,7 +99,7 @@
                             </h2>
                             <p class="mt-3 whitespace-normal leading-relaxed text-ink-muted">{{ $post->excerpt }}</p>
                         </div>
-                        <a class="signal-link signal-link--quiet self-center" href="{{ route('posts.show', ['slug' => $post->slug]) }}">@lang('page.landing.read_article')</a>
+                        <a class="catalog-action catalog-action--quiet-light self-center" href="{{ route('posts.show', ['slug' => $post->slug]) }}">@lang('page.landing.read_article')</a>
                     </article>
                 @empty
                     @unless(isset($latest))

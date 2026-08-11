@@ -1,38 +1,38 @@
-<section class="surface-light py-20 sm:py-28" id="products">
-    @php
-        $productCollection = collect($products);
-        $featuredProduct = $productCollection->firstWhere('featured', true) ?? $productCollection->first();
-        $secondaryProducts = $productCollection
-            ->reject(fn (array $product): bool => $product['id'] === ($featuredProduct['id'] ?? null))
-            ->values();
-    @endphp
-
+<section class="bg-vacuum text-light" id="products" aria-labelledby="products-title">
     <div class="site-container">
-        <div class="grid gap-6 border-b border-rule-light pb-10 md:grid-cols-[minmax(0,0.75fr)_minmax(18rem,1fr)] md:items-end">
+        <div class="flex flex-wrap items-end justify-between gap-4 border-b border-rule-dark py-5">
             <div>
-                <h2 class="section-heading text-ink">@lang('page.landing.products_title')</h2>
+                <h2 id="products-title" class="font-display text-3xl leading-none text-light sm:text-4xl">@lang('page.landing.products_title')</h2>
+                <p class="mt-2 max-w-2xl text-sm text-light-muted sm:text-base">@lang('page.landing.products_intro')</p>
             </div>
-            <p class="section-intro md:justify-self-end">@lang('page.landing.products_intro')</p>
+            <span class="font-data text-xs uppercase tracking-[0.16em] text-track-yellow">@lang('page.landing.catalog_status')</span>
         </div>
 
-        <div class="mt-12 grid gap-16 lg:grid-cols-[minmax(0,1.4fr)_minmax(20rem,0.9fr)] lg:items-start lg:gap-10">
-            @if ($featuredProduct)
-                @include('partials.product-evidence', [
-                    'product' => $featuredProduct,
-                    'signalNumber' => 1,
-                    'isFeatured' => true,
-                ])
-            @endif
-
-            <div class="grid min-w-0 gap-12">
-                @foreach ($secondaryProducts as $product)
-                    @include('partials.product-evidence', [
-                        'product' => $product,
-                        'signalNumber' => $loop->iteration + 1,
-                        'isFeatured' => false,
-                    ])
-                @endforeach
-            </div>
+        <div class="product-ledger">
+            @foreach ($products as $product)
+                @php
+                    $translation = trans($product['translation']);
+                @endphp
+                <article class="product-register {{ $product['featured'] ? 'product-register--featured' : '' }}">
+                    <a
+                        class="product-register__link group"
+                        href="{{ $product['url'] }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="{{ trans('page.landing.product_site', ['product' => $product['title']]) }}"
+                    >
+                        <span class="product-register__index font-data">{{ str_pad((string) $loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
+                        <span class="product-register__mark">
+                            <img src="{{ asset($product['image']) }}" alt="" width="160" height="160" loading="lazy" decoding="async">
+                        </span>
+                        <span class="min-w-0">
+                            <span class="block font-display text-3xl font-bold leading-none text-light sm:text-4xl">{{ $product['title'] }}</span>
+                            <span class="mt-3 block max-w-[34rem] text-sm leading-relaxed text-light-muted sm:text-base">{{ $translation['summary'] }}</span>
+                        </span>
+                        <i data-lucide="arrow-up-right" class="product-register__arrow h-5 w-5" aria-hidden="true"></i>
+                    </a>
+                </article>
+            @endforeach
         </div>
     </div>
 </section>

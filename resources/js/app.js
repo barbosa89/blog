@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
 import '@justinribeiro/lite-youtube';
 import { createAppI18n } from '@/lang/i18n.js';
-import { createIcons, Menu, X, Search, CircleX, ChevronUp, ChevronDown, Code2, BriefcaseBusiness, Share2, Calendar, Send, ArrowUpRight, Mail } from 'lucide';
+import { createIcons, Menu, X, Search, CircleX, ChevronUp, ChevronDown, Code2, BriefcaseBusiness, Share2, Calendar, Send, ArrowRight, ArrowUpRight, Mail } from 'lucide';
 
 createIcons({
     icons: {
@@ -16,6 +16,7 @@ createIcons({
         Share2,
         Calendar,
         Send,
+        ArrowRight,
         ArrowUpRight,
         Mail,
     },

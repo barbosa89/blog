@@ -2,7 +2,7 @@
     <div ref="dropdownRef" class="relative">
         <button
             type="button"
-            class="signal-button min-h-10 border-rule-light bg-paper px-3 text-sm text-ink"
+            class="catalog-button min-h-10 border-rule-light bg-paper px-3 text-sm text-ink"
             :aria-expanded="isOpen.toString()"
             aria-haspopup="menu"
             aria-controls="localeMenu"
@@ -12,7 +12,7 @@
             <i data-lucide="chevron-down" class="h-4 w-4 transition-transform" :class="{ 'rotate-180': isOpen }" aria-hidden="true"></i>
         </button>
 
-        <ul id="localeMenu" v-show="isOpen" v-cloak class="absolute right-0 z-[100] mt-2 w-44 border border-rule-light bg-paper p-1 text-sm shadow-xl [&>li]:mb-0">
+        <ul id="localeMenu" v-show="isOpen" v-cloak class="absolute right-0 z-[100] mt-2 w-44 border border-rule-light bg-paper p-1 text-sm [&>li]:mb-0">
             <li v-for="item in items" :key="item.url">
                 <a class="block px-3 py-2 text-ink transition-colors hover:bg-paper-raised focus-visible:bg-paper-raised" :href="item.url" @click="close">{{ item.label }}</a>
             </li>
