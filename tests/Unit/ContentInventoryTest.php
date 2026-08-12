@@ -21,13 +21,13 @@ class ContentInventoryTest extends TestCase
         $sourceArticles = collect(File::allFiles(resource_path('articles')))
             ->filter(fn($article): bool => 'md' === $article->getExtension());
 
-            $articleTags = $articles
+        $articleTags = $articles
             ->flatMap(fn(stdClass $article): array => $article->tags)
             ->unique()
             ->sort()
             ->values();
 
-            $indexedTags = collect(array_keys($tags))
+        $indexedTags = collect(array_keys($tags))
             ->sort()
             ->values();
 
