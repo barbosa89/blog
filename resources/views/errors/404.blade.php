@@ -7,7 +7,7 @@
             <div>
                 <p class="font-data text-xs uppercase tracking-[0.2em] text-track-yellow">{{ trans('page.technical.not_found') }}</p>
                 <h1 class="mt-4 text-5xl text-light sm:text-7xl">{{ trans('page.404') }}</h1>
-                <a class="catalog-action catalog-action--primary mt-8" href="{{ route('landing') }}">{{ trans('page.back_home') }}</a>
+                <a class="catalog-action catalog-action--primary mt-8" href="{{ route('welcome') }}">{{ trans('page.back_home') }}</a>
             </div>
         </div>
     </section>

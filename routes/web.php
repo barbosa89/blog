@@ -9,7 +9,7 @@ use App\Http\Controllers\WelcomeController;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', WelcomeController::class)->name('landing');
+Route::get('/', WelcomeController::class)->name('welcome');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
