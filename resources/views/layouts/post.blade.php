@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ $locale }}">
+<html lang="{{ $locale }}" data-csp-nonce="{{ app('csp-nonce') }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,15 +21,15 @@
     ], 'build')
 
     @production
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103614513-1"></script>
-        <script>
+        <script @cspNonce async src="https://www.googletagmanager.com/gtag/js?id=UA-103614513-1"></script>
+        <script @cspNonce>
             window.dataLayer = window.dataLayer || []
             function gtag(){dataLayer.push(arguments)}
             gtag('js', new Date())
 
             gtag('config', 'UA-103614513-1')
         </script>
-        <script async
+        <script @cspNonce async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2847498886705900"
             crossorigin="anonymous">
         </script>

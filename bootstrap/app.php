@@ -8,6 +8,7 @@ use App\Http\Middleware\SetLocale;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
+use Spatie\Csp\AddCspHeaders;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -18,6 +19,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->appendToGroup('web', SetLocale::class)
             ->append(InputSanitize::class)
-            ->append(AddSecureHeaders::class);
+            ->append(AddSecureHeaders::class)
+            ->append(AddCspHeaders::class);
     })
     ->withExceptions(function (Exceptions $exceptions): void {})->create();

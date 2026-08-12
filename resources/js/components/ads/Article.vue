@@ -3,8 +3,7 @@
     <div class="my-3">
         <ins
             ref="ad"
-            class="adsbygoogle"
-            style="display:block; text-align:center;"
+            class="adsbygoogle ad-slot ad-slot--article"
             data-ad-layout="in-article"
             data-ad-format="fluid"
             data-ad-client="ca-pub-2847498886705900"

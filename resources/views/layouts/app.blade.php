@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ $locale }}">
+<html lang="{{ $locale }}" data-csp-nonce="{{ app('csp-nonce') }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,8 +35,8 @@
     ], 'build')
 
     @production
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103614513-1"></script>
-        <script>
+        <script @cspNonce async src="https://www.googletagmanager.com/gtag/js?id=UA-103614513-1"></script>
+        <script @cspNonce>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -57,7 +57,7 @@
         </main>
     </div>
 
-    <script type="application/ld+json" async>
+    <script @cspNonce type="application/ld+json">
         {
             "@@context": "http://schema.org/",
             "@type": "WebSite",

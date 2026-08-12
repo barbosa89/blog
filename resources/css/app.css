@@ -124,6 +124,14 @@
 }
 
 @layer components {
+    .ad-slot {
+        display: block;
+    }
+
+    .ad-slot--article {
+        text-align: center;
+    }
+
     .site-container {
         width: min(100%, var(--content-max));
         margin-inline: auto;

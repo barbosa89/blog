@@ -117,7 +117,7 @@
 @endsection
 
 @section('scripts')
-    <script type="application/ld+json" async>
+    <script @cspNonce type="application/ld+json">
         {
             "@@context": "https://schema.org",
             "@type": "Article",
