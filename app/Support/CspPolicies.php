@@ -8,6 +8,7 @@ use Spatie\Csp\Directive;
 use Spatie\Csp\Keyword;
 use Spatie\Csp\Policy;
 use Spatie\Csp\Preset;
+use Spatie\Csp\Scheme;
 
 class CspPolicies implements Preset
 {
@@ -33,6 +34,13 @@ class CspPolicies implements Preset
 
     public function configure(Policy $policy): void
     {
+        $fontSources = [Keyword::SELF, Scheme::DATA];
+
+        if (false === app()->isProduction()) {
+            $fontSources[] = Scheme::HTTP;
+            $fontSources[] = Scheme::HTTPS;
+        }
+
         $policy
             ->add(Directive::BASE, Keyword::SELF)
             ->add(Directive::CONNECT, [
@@ -44,7 +52,7 @@ class CspPolicies implements Preset
                 self::GOOGLE_TAG_MANAGER,
             ])
             ->add(Directive::DEFAULT, Keyword::SELF)
-            ->add(Directive::FONT, [Keyword::SELF, 'data:'])
+            ->add(Directive::FONT, $fontSources)
             ->add(Directive::FORM_ACTION, Keyword::SELF)
             ->add(Directive::FRAME, [
                 Keyword::SELF,
