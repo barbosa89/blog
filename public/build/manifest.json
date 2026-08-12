@@ -1,12 +1,28 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-DqCfrGKf.css",
+    "file": "assets/app-DgaT4abB.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
     "names": [
       "app.css"
     ]
+  },
+  "resources/fonts/barlow-condensed-600-latin.woff2": {
+    "file": "assets/barlow-condensed-600-latin-DepVgxBB.woff2",
+    "src": "resources/fonts/barlow-condensed-600-latin.woff2"
+  },
+  "resources/fonts/barlow-condensed-700-latin.woff2": {
+    "file": "assets/barlow-condensed-700-latin-v1xN8_Wq.woff2",
+    "src": "resources/fonts/barlow-condensed-700-latin.woff2"
+  },
+  "resources/fonts/source-sans-3-italic-400-latin.woff2": {
+    "file": "assets/source-sans-3-italic-400-latin-bFKvakRX.woff2",
+    "src": "resources/fonts/source-sans-3-italic-400-latin.woff2"
+  },
+  "resources/fonts/source-sans-3-roman-latin.woff2": {
+    "file": "assets/source-sans-3-roman-latin-BqRLTx4X.woff2",
+    "src": "resources/fonts/source-sans-3-roman-latin.woff2"
   },
   "resources/js/app.js": {
     "file": "assets/app-BiQ2GVCL.js",
