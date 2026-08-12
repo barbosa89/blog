@@ -1,6 +1,12 @@
 {
+  "node_modules/@justinribeiro/lite-youtube/lite-youtube.js": {
+    "file": "assets/lite-youtube-COnnjzaR.js",
+    "name": "lite-youtube",
+    "src": "node_modules/@justinribeiro/lite-youtube/lite-youtube.js",
+    "isDynamicEntry": true
+  },
   "resources/css/app.css": {
-    "file": "assets/app-DgaT4abB.css",
+    "file": "assets/app-B19wO8vg.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
@@ -25,10 +31,13 @@
     "src": "resources/fonts/source-sans-3-roman-latin.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-BiQ2GVCL.js",
+    "file": "assets/app-BIvrf80W.js",
     "name": "app",
     "src": "resources/js/app.js",
-    "isEntry": true
+    "isEntry": true,
+    "dynamicImports": [
+      "node_modules/@justinribeiro/lite-youtube/lite-youtube.js"
+    ]
   },
   "resources/js/freelancer.js": {
     "file": "assets/freelancer-BFv0Dat_.js",
