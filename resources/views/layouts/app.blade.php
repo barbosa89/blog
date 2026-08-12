@@ -55,7 +55,6 @@
 
 </head>
 <body id="page-top" class="antialiased">
-    @include('partials.direction-contract')
     <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[9999] focus:bg-track-yellow focus:px-4 focus:py-2 focus:font-semibold focus:text-vacuum">{{ trans('page.accessibility.skip_content') }}</a>
 
     <div id="app">
