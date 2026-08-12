@@ -35,7 +35,7 @@
 
                 <p class="text-base leading-relaxed text-slate-700 sm:text-lg">
                     {{ Str::of($post->excerpt)->trim()->finish('.') }}
-                    <span class="mt-2 block text-sm text-slate-500">@lang('page.date.published'): {{ $post->publishedAt }}</span>
+                    <span class="mt-2 block text-sm text-slate-500">{{ trans('page.date.published') }}: {{ $post->publishedAt }}</span>
                 </p>
 
                 @if ($main ?? false)
@@ -44,7 +44,7 @@
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="@lang('page.accessibility.share_x')"
+                                aria-label="{{ trans('page.accessibility.share_x') }}"
                                 class="inline-flex items-center justify-center rounded-xl p-3 text-emerald-700 transition hover:bg-emerald-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
                                 href="https://twitter.com/intent/tweet?url={{ $link }}"
                             >
@@ -53,7 +53,7 @@
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="@lang('page.accessibility.share_facebook')"
+                                aria-label="{{ trans('page.accessibility.share_facebook') }}"
                                 class="inline-flex items-center justify-center rounded-xl p-3 text-emerald-700 transition hover:bg-emerald-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
                                 href="https://www.facebook.com/sharer/sharer.php?u={{ $link }}"
                             >
@@ -62,7 +62,7 @@
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                aria-label="@lang('page.accessibility.share_linkedin')"
+                                aria-label="{{ trans('page.accessibility.share_linkedin') }}"
                                 class="inline-flex items-center justify-center rounded-xl p-3 text-emerald-700 transition hover:bg-emerald-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
                                 href="https://www.linkedin.com/shareArticle?mini=true&url={{ $link }}&title={{ $post->title }}&summary={{ $post->excerpt }}&source="
                             >

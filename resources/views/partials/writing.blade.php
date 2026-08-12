@@ -1,11 +1,11 @@
 <section class="surface-light py-18 sm:py-24" id="writing">
     <div class="site-container">
         <div class="grid gap-6 border-b border-rule-light pb-8 md:grid-cols-[minmax(0,0.9fr)_minmax(18rem,1.1fr)] md:items-end">
-            <h2 class="section-heading text-ink">@lang('page.landing.writing_title')</h2>
+            <h2 class="section-heading text-ink">{{ trans('page.landing.writing_title') }}</h2>
             <div class="md:justify-self-end">
-                <p class="section-intro">@lang('page.landing.writing_intro')</p>
+                <p class="section-intro">{{ trans('page.landing.writing_intro') }}</p>
                 <a class="mt-4 inline-flex items-center gap-2 font-data text-xs uppercase tracking-[0.14em] text-ink underline-offset-4 hover:text-signal-cyan hover:underline" href="{{ route('posts.index') }}">
-                    @lang('page.landing.all_articles')
+                    {{ trans('page.landing.all_articles') }}
                     <i data-lucide="arrow-up-right" class="h-4 w-4" aria-hidden="true"></i>
                 </a>
             </div>

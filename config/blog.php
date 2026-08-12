@@ -42,10 +42,10 @@ return [
     ],
     'customers' => [
         [
-            'id' => 'apces',
-            'title' => 'APCES E.S.P.',
-            'image' => 'images/customers/apces.webp',
-            'url' => 'https://apces.com.co',
+            'id' => 'readcol',
+            'title' => 'Red Administrativa de Colombia Ltda.',
+            'image' => 'images/customers/readcol.webp',
+            'url' => 'https://readcol.com/',
         ],
         [
             'id' => 'sueno-real',
@@ -54,10 +54,10 @@ return [
             'url' => 'https://posadasuenoreal.com',
         ],
         [
-            'id' => 'readcol',
-            'title' => 'Red Administrativa de Colombia Ltda.',
-            'image' => 'images/customers/readcol.webp',
-            'url' => 'https://readcol.com/',
+            'id' => 'apces',
+            'title' => 'APCES E.S.P.',
+            'image' => 'images/customers/apces.webp',
+            'url' => 'https://apces.com.co',
         ],
         [
             'id' => 'teo',

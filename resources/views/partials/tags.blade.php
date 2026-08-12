@@ -1,5 +1,5 @@
 <aside @class(['lg:sticky lg:top-28', 'border-t border-rule-light pt-4' => $border ?? false]) aria-labelledby="tags-title">
-    <h2 id="tags-title" class="font-data text-xs uppercase tracking-[0.18em] text-ink-muted">@lang('page.technical.tags')</h2>
+    <h2 id="tags-title" class="font-data text-xs uppercase tracking-[0.18em] text-ink-muted">{{ trans('page.technical.tags') }}</h2>
     <ul class="mt-4 border-l border-t border-rule-light [&>li]:mb-0">
         @foreach($tags as $tag)
             <li class="border-b border-r border-rule-light">

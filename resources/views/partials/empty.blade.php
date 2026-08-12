@@ -4,6 +4,6 @@
         {{ request()->has('query') ? trans('page.no_results') : trans('page.without_content') }}
     </h2>
     @if (request()->has('query'))
-        <p class="mt-4 max-w-xl text-lg text-ink-muted">@lang('page.no_results_help')</p>
+        <p class="mt-4 max-w-xl text-lg text-ink-muted">{{ trans('page.no_results_help') }}</p>
     @endif
 </section>

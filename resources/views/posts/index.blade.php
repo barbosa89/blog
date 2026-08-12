@@ -7,13 +7,13 @@
         <div class="site-container">
             <div class="grid gap-8 lg:grid-cols-[minmax(0,0.8fr)_minmax(22rem,1.2fr)] lg:items-end">
                 <div>
-                    <h1 class="text-[clamp(4rem,9vw,6rem)] leading-[0.9] text-ink">@lang('page.navigation.writing')</h1>
-                    <p class="mt-4 font-data text-xs uppercase tracking-[0.2em] text-ink-muted">@lang('page.technical.archive')</p>
-                    <p class="mt-4 max-w-lg text-lg leading-relaxed text-ink-muted">@lang('page.blog_intro')</p>
+                    <h1 class="text-[clamp(4rem,9vw,6rem)] leading-[0.9] text-ink">{{ trans('page.navigation.writing') }}</h1>
+                    <p class="mt-4 font-data text-xs uppercase tracking-[0.2em] text-ink-muted">{{ trans('page.technical.archive') }}</p>
+                    <p class="mt-4 max-w-lg text-lg leading-relaxed text-ink-muted">{{ trans('page.blog_intro') }}</p>
                 </div>
 
                 <form action="{{ route('posts.index') }}" method="GET" role="search" class="border border-rule-light bg-paper-raised p-3 sm:p-4">
-                    <label class="font-data text-xs uppercase tracking-[0.18em] text-ink-muted" for="query">@lang('page.search')</label>
+                    <label class="font-data text-xs uppercase tracking-[0.18em] text-ink-muted" for="query">{{ trans('page.search') }}</label>
                     <div class="mt-3 flex items-stretch border border-rule-light bg-paper">
                         <input
                             class="min-h-14 min-w-0 flex-1 bg-transparent px-4 text-lg text-ink outline-none placeholder:text-ink-muted"
@@ -28,10 +28,10 @@
                         </button>
                     </div>
                     <div class="mt-3 flex flex-wrap items-center justify-between gap-3">
-                        <p class="text-sm text-ink-muted">@lang('page.search_help')</p>
+                        <p class="text-sm text-ink-muted">{{ trans('page.search_help') }}</p>
                         <div class="flex items-center gap-2">
                             @if (request()->filled('query'))
-                                <a class="text-sm font-semibold text-ink underline underline-offset-4" href="{{ route('posts.index') }}">@lang('page.clear_search')</a>
+                                <a class="text-sm font-semibold text-ink underline underline-offset-4" href="{{ route('posts.index') }}">{{ trans('page.clear_search') }}</a>
                             @endif
                             @php
                                 $localeItems = [
@@ -47,7 +47,7 @@
 
             @isset($tag)
                 <div class="mt-10 border border-rule-light bg-paper-raised px-5 py-4">
-                    <p class="font-data text-xs uppercase tracking-[0.18em] text-ink-muted">@lang('page.tag')</p>
+                    <p class="font-data text-xs uppercase tracking-[0.18em] text-ink-muted">{{ trans('page.tag') }}</p>
                     <p class="mt-1 text-3xl font-semibold text-ink">{{ $tag }}</p>
                 </div>
             @endisset
@@ -70,12 +70,12 @@
                             <img class="aspect-[4/3] h-full w-full object-cover" src="{{ $latestImage }}" alt="" fetchpriority="high">
                         </a>
                         <div class="min-w-0">
-                            <p class="font-data text-xs uppercase tracking-[0.18em] text-ink-muted">@lang('page.latest_article') / {{ $latest->publishedAt }}</p>
+                            <p class="font-data text-xs uppercase tracking-[0.18em] text-ink-muted">{{ trans('page.latest_article') }} / {{ $latest->publishedAt }}</p>
                             <h2 class="mt-3 text-4xl leading-none text-ink sm:text-5xl">
                                 <a class="whitespace-normal underline-offset-4 hover:underline" href="{{ route('posts.show', ['slug' => $latest->slug]) }}">{{ $latest->title }}</a>
                             </h2>
                             <p class="mt-5 whitespace-normal text-lg leading-relaxed text-ink-muted">{{ $latest->excerpt }}</p>
-                            <a class="catalog-action catalog-action--quiet-light mt-6" href="{{ route('posts.show', ['slug' => $latest->slug]) }}">@lang('page.landing.read_article')</a>
+                            <a class="catalog-action catalog-action--quiet-light mt-6" href="{{ route('posts.show', ['slug' => $latest->slug]) }}">{{ trans('page.landing.read_article') }}</a>
                         </div>
                     </article>
                 @endisset
@@ -99,7 +99,7 @@
                             </h2>
                             <p class="mt-3 whitespace-normal leading-relaxed text-ink-muted">{{ $post->excerpt }}</p>
                         </div>
-                        <a class="catalog-action catalog-action--quiet-light self-center" href="{{ route('posts.show', ['slug' => $post->slug]) }}">@lang('page.landing.read_article')</a>
+                        <a class="catalog-action catalog-action--quiet-light self-center" href="{{ route('posts.show', ['slug' => $post->slug]) }}">{{ trans('page.landing.read_article') }}</a>
                     </article>
                 @empty
                     @unless(isset($latest))

@@ -24,7 +24,7 @@
             <h3 @class(['text-ink', 'text-4xl sm:text-5xl' => $isFeatured, 'text-3xl' => !$isFeatured])>
                 {{ $product['title'] }}
             </h3>
-            <p class="mt-2 font-data text-xs uppercase tracking-[0.16em] text-ink-muted">@lang('page.landing.product_record')</p>
+            <p class="mt-2 font-data text-xs uppercase tracking-[0.16em] text-ink-muted">{{ trans('page.landing.product_record') }}</p>
             @if ($isFeatured)
                 <p class="mt-3 text-base font-semibold text-ink">{{ trans($translation.'.subtitle') }}</p>
             @endif

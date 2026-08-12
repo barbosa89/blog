@@ -2,10 +2,10 @@
     <div class="site-container">
         <div class="flex flex-wrap items-end justify-between gap-4 border-b border-rule-dark py-5">
             <div>
-                <h2 id="products-title" class="font-display text-3xl leading-none text-light sm:text-4xl">@lang('page.landing.products_title')</h2>
-                <p class="mt-2 max-w-2xl text-sm text-light-muted sm:text-base">@lang('page.landing.products_intro')</p>
+                <h2 id="products-title" class="font-display text-3xl leading-none text-light sm:text-4xl">{{ trans('page.landing.products_title') }}</h2>
+                <p class="mt-2 max-w-2xl text-sm text-light-muted sm:text-base">{{ trans('page.landing.products_intro') }}</p>
             </div>
-            <span class="font-data text-xs uppercase tracking-[0.16em] text-track-yellow">@lang('page.landing.catalog_status')</span>
+            <span class="font-data text-xs uppercase tracking-[0.16em] text-track-yellow">{{ trans('page.landing.web_technologies') }}</span>
         </div>
 
         <div class="product-ledger">
