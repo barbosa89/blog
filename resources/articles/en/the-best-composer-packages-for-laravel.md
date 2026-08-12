@@ -1,9 +1,9 @@
 ---
 title: 'The best Composer packages for Laravel'
 excerpt: 'The best Composer packages for web application development with PHP and Laravel, these packages that you will use in all your projects to reach a professional level.'
+keywords: 'composer, packages, web, application, development, php, laravel, projects, reach, professional, level'
 publishedAt: '2019-09-18'
 updatedAt: null
-locale: 'en'
 image: 'images/articles/best-packages-2019.png'
 tags:
 - laravel

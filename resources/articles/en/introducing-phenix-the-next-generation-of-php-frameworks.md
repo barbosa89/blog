@@ -1,9 +1,9 @@
 ---
 title: 'Introducing Phenix: The next generation of PHP frameworks'
 excerpt: 'Phenix is a web framework built on pure PHP, without external extensions, based on the Amphp ecosystem, which provides non-blocking operations, asynchronism and parallel code execution natively. '
+keywords: 'phenix, web, framework, built, pure, php, external, extensions, based, amphp, ecosystem, -blocking, operations, asynchronism, parallel, code, execution, natively'
 publishedAt: '2023-10-12'
 updatedAt: null
-locale: 'en'
 image: 'images/articles/phenix.webp'
 tags:
 - framework

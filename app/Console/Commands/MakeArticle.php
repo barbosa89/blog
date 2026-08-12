@@ -28,8 +28,9 @@ class MakeArticle extends Command
         $title = $this->ask(trans('articles.actions.questions.title'));
 
         $slug = Str::slug($title);
+        $locale = $this->choice(trans('articles.actions.questions.locale'), ['es', 'en']);
 
-        $filename = $articleManager->path("{$slug}.md");
+        $filename = $articleManager->path("{$locale}/{$slug}.md");
 
         if (File::exists($filename)) {
             $this->error(trans('articles.actions.existing'));
@@ -37,12 +38,11 @@ class MakeArticle extends Command
             return self::FAILURE;
         }
 
-        $locale = $this->choice(trans('articles.actions.questions.locale'), ['es', 'en']);
-
         $content = File::get(resource_path('stubs/article.stub'));
 
-        $content = str_replace(['{{ title }}', '{{ locale }}'], [$title, $locale], $content);
+        $content = str_replace('{{ title }}', $title, $content);
 
+        File::ensureDirectoryExists(dirname($filename));
         File::put($filename, $content);
 
         $this->info(trans('articles.actions.created'));

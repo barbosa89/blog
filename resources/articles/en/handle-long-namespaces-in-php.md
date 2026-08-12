@@ -1,9 +1,9 @@
 ---
 title: 'Handle long namespaces in PHP'
 excerpt: 'Learn how to import multiple classes from the same namespace, and how to handle very long namespaces in PHP. '
+keywords: 'learn, import, multiple, classes, namespace, handle, long, namespaces, php'
 publishedAt: '2021-06-22'
 updatedAt: null
-locale: 'en'
 image: 'images/articles/long-php-namespaces.webp'
 tags:
 - php

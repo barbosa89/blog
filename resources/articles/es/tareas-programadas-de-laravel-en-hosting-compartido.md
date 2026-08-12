@@ -1,9 +1,9 @@
 ---
 title: 'Tareas programadas de Laravel en hosting compartido'
 excerpt: 'Configura las tareas programadas o task scheduling de Laravel en hosting compartido usando cPanel, cronJobs con el poder de PHP.'
+keywords: 'configura, las, tareas, programadas, task, scheduling, de, laravel, en, hosting, compartido, usando, cpanel, cronjobs, con, el, poder, php'
 publishedAt: '2020-10-26'
 updatedAt: null
-locale: 'es'
 image: 'images/articles/task-scheduling.webp'
 tags:
 - php
@@ -15,10 +15,9 @@ Las tareas programadas (Task scheduling) son una importante característica de t
 
 ## Antes de empezar
 
-1.  La ruta **/usr/bin/php** representa la ubicación del binario de PHP y puede ser diferente en tu hosting. En algunos casos la ruta es **/usr/local/bin/php** .
-2.  La ruta **/home/my_user/domains/my_app/artisan** es la ubicación de la aplicación de consola que nos provee Laravel y debes evidentemente cambiarla de acuerdo a tu configuración.
-3.  Prepara un comando en el que puedas fácilmente verificar si funcionan las tareas programadas.
-
+1. La ruta **/usr/bin/php** representa la ubicación del binario de PHP y puede ser diferente en tu hosting. En algunos casos la ruta es **/usr/local/bin/php** .
+2. La ruta **/home/my_user/domains/my_app/artisan** es la ubicación de la aplicación de consola que nos provee Laravel y debes evidentemente cambiarla de acuerdo a tu configuración.
+3. Prepara un comando en el que puedas fácilmente verificar si funcionan las tareas programadas.
 
 **La directiva register_argc_argv de PHP**
 --------------------------------------------

@@ -1,9 +1,9 @@
 ---
 title: 'Modern PHP from version 7.x to 8.x'
 excerpt: 'PHP is a modern, fast and powerful language, learn its new features and write scalable applications in powerful frameworks such as Laravel and Symfony. '
+keywords: 'php, modern, fast, powerful, language, learn, features, write, scalable, applications, frameworks, laravel, symfony'
 publishedAt: '2023-10-12'
 updatedAt: null
-locale: 'en'
 image: 'images/articles/php-new-features.webp'
 tags:
 - php

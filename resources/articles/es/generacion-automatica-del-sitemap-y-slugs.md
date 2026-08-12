@@ -1,9 +1,9 @@
 ---
 title: 'Generación automática del Sitemap y slugs'
 excerpt: 'Aprende a generar el mapa del sitio, sitemap, y slugs usando Laravel, dos paquetes que ayudan con el SEO.'
+keywords: 'aprende, generar, el, mapa, del, sitio, sitemap, slugs, usando, laravel, dos, paquetes, ayudan, con, seo'
 publishedAt: '2020-05-12'
 updatedAt: null
-locale: 'es'
 image: 'images/articles/sitemaps.jpeg'
 tags:
 - laravel

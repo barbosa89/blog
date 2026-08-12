@@ -26,7 +26,7 @@ class GenerateSitemap extends Command
         SitemapGenerator::create((string) config('app.url'))
             ->getSitemap()
             ->add($articleManager->list()->map(
-                fn (object $article): Url => Url::create(route('posts.show', ['slug' => $article->slug])),
+                fn(object $article): Url => Url::create(route('posts.show', ['slug' => $article->slug])),
             ))
             ->writeToFile(public_path('sitemap.xml'));
 

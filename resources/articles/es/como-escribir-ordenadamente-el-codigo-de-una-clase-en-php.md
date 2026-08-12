@@ -1,9 +1,9 @@
 ---
 title: 'Cómo escribir ordenadamente el código de una clase en PHP'
 excerpt: 'Descubre las mejores prácticas y convenciones para organizar el código dentro de una clase PHP. Aprende a estructurar constantes, propiedades y métodos de manera coherente para mejorar la legibilidad y mantenibilidad de tu código.'
+keywords: 'descubre, las, mejores, prácticas, convenciones, para, organizar, el, código, dentro, de, una, clase, php, aprende, estructurar, constantes, propiedades, métodos, manera, coherente, mejorar, la, legibilidad, mantenibilidad, tu'
 publishedAt: '2025-02-25'
 updatedAt: null
-locale: 'es'
 image: 'images/articles/php-class-organization.webp'
 tags:
 - php

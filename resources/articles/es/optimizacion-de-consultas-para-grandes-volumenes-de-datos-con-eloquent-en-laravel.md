@@ -1,9 +1,9 @@
 ---
 title: 'Optimización de consultas para grandes volúmenes de datos con Eloquent en Laravel'
 excerpt: 'Ejecuta consultas de grandes volúmenes de datos con el máximo rendimiento y bajo consumo de memoria usando Laravel Eloquent ORM y el Query Builder.'
+keywords: 'ejecuta, consultas, de, grandes, volúmenes, datos, con, el, máximo, rendimiento, bajo, consumo, memoria, usando, laravel, eloquent, orm, query, builder'
 publishedAt: '2021-12-15'
 updatedAt: null
-locale: 'es'
 image: 'images/articles/optimize-eloquent-queries.webp'
 tags:
 - php

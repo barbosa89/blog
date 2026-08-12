@@ -1,9 +1,9 @@
 ---
 title: 'Optimization of the Eloquent queries to reduce memory usage in Laravel'
 excerpt: 'Optimize Eloquent queries to reduce memory usage in Laravel and maintain application performance.'
+keywords: 'optimize, eloquent, queries, reduce, memory, usage, laravel, maintain, application, performance'
 publishedAt: '2019-06-27'
 updatedAt: null
-locale: 'en'
 image: 'images/articles/optimize-eloquent-queries.webp'
 tags:
 - php

@@ -1,9 +1,9 @@
 ---
 title: 'How to easily generate PDF invoices with Laravel'
 excerpt: 'Learn how to export invoices to PDF easily using Laravel PHP, DOMPDF and the Laravel Invoices implementation. '
+keywords: 'learn, export, invoices, pdf, easily, laravel, php, dompdf, implementation'
 publishedAt: '2021-06-21'
 updatedAt: null
-locale: 'en'
 image: 'images/articles/create-invoices.png'
 tags:
 - laravel

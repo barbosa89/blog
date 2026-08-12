@@ -1,9 +1,9 @@
 ---
 title: 'Optimiza las consultas de Eloquent para reducir el uso de memoria en Laravel'
 excerpt: 'Optimiza las consultas de Eloquent, el poderoso ORM de Laravel para reducir el uso de memoria en las consultas a la base de datos.'
+keywords: 'optimiza, las, consultas, de, eloquent, el, poderoso, orm, laravel, para, reducir, uso, memoria, en, la, base, datos'
 publishedAt: '2019-06-27'
 updatedAt: null
-locale: 'es'
 image: 'images/articles/laravel-logo.png'
 tags:
 - laravel

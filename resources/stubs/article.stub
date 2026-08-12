@@ -1,9 +1,9 @@
 ---
 title: '{{ title }}'
 excerpt:
+keywords:
 publishedAt:
 updatedAt: null
-locale: '{{ locale }}'
 image: 'images/articles/'
 tags:
 -

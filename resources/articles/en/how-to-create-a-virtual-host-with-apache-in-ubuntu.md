@@ -1,9 +1,9 @@
 ---
 title: 'How to create a virtual host with Apache in Ubuntu'
 excerpt: 'Learn how to create a virtual host with the Apache2 web server in Ubuntu, and organize your application development projects. '
+keywords: 'learn, create, virtual, host, apache2, web, server, ubuntu, organize, application, development, projects'
 publishedAt: '2020-06-15'
 updatedAt: null
-locale: 'en'
 image: 'images/articles/virtual-hosts.jpeg'
 tags:
 - ubuntu

@@ -1,9 +1,9 @@
 ---
 title: 'Tips to become a professional developer'
 excerpt: 'Discover essential tips for software developers that will help you grow professionally, beyond just writing code. '
+keywords: 'discover, essential, tips, software, developers, grow, professionally, writing, code'
 publishedAt: '2024-09-12'
 updatedAt: null
-locale: 'en'
 image: 'images/articles/advices.webp'
 tags:
 - tips

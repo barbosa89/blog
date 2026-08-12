@@ -1,9 +1,9 @@
 ---
 title: 'Generators in PHP'
 excerpt: 'Learn about generators in PHP and Laravel, an easy way to implement iterators with optimized memory usage, high performance and native asynchronous code. '
+keywords: 'learn, generators, php, laravel, easy, implement, iterators, optimized, memory, usage, high, performance, native, asynchronous, code'
 publishedAt: '2021-08-02'
 updatedAt: null
-locale: 'en'
 image: 'images/articles/php-generators.webp'
 tags:
 - php
