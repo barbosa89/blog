@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 use function array_walk_recursive;
 use function htmlspecialchars;
 use function in_array;
+use function is_string;
 use function mb_strtolower;
 use function strip_tags;
 
