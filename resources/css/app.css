@@ -1,6 +1,7 @@
 @import "tokens.css";
 @import "tailwindcss";
 @import "highlight.js/styles/atom-one-dark.css";
+@import "fonts.css";
 
 @theme {
     --color-vacuum: var(--palette-vacuum);

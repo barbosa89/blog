@@ -68,6 +68,13 @@ class AddSecureHeaders
             'https://fonts.googleapis.com',
         ];
 
+        $fontSources = [
+            self::CSP_SELF,
+            'data:',
+            'https://fonts.googleapis.com',
+            'https://fonts.gstatic.com',
+        ];
+
         $frameSources = [
             self::CSP_SELF,
             self::GOOGLE,
@@ -92,6 +99,9 @@ class AddSecureHeaders
             $styleSources[] = 'http:';
             $styleSources[] = 'https:';
 
+            $fontSources[] = 'http:';
+            $fontSources[] = 'https:';
+
             $connectSources[] = 'http:';
             $connectSources[] = 'https:';
             $connectSources[] = 'ws:';
@@ -101,7 +111,7 @@ class AddSecureHeaders
         return "default-src 'self'; "
             . 'script-src ' . implode(' ', array_unique($scriptSources)) . '; '
             . 'style-src ' . implode(' ', array_unique($styleSources)) . '; '
-            . "font-src 'self' data: https://fonts.googleapis.com https://fonts.gstatic.com; "
+            . 'font-src ' . implode(' ', array_unique($fontSources)) . '; '
             . "img-src 'self' data: https: http: blob:; "
             . 'frame-src ' . implode(' ', $frameSources) . '; '
             . 'connect-src ' . implode(' ', array_unique($connectSources)) . '; '
