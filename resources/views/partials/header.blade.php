@@ -23,7 +23,7 @@
         <figure class="mx-auto w-full max-w-56 self-center lg:max-w-100 lg:justify-self-end">
             <img
                 class="h-auto w-full mask-[linear-gradient(var(--palette-vacuum)_80%,transparent)] [-webkit-mask-image:linear-gradient(var(--palette-vacuum)_80%,transparent)]"
-                src="{{ asset('images/me.webp') }}"
+                src="{{ asset('images/captain.webp') }}"
                 alt=""
                 fetchpriority="high"
                 decoding="async"

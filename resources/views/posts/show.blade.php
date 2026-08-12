@@ -71,7 +71,7 @@
 
                 <section class="mt-14 grid gap-7 border-y border-rule-light py-8 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center" aria-labelledby="author-title">
                     <div class="flex items-start gap-5">
-                        <img class="h-20 w-20 border border-rule-light object-cover" src="{{ asset('images/me.webp') }}" alt="{{ $post->author->name }}" loading="lazy">
+                        <img class="h-20 w-20 border border-rule-light object-cover" src="{{ asset('images/captain.webp') }}" alt="{{ $post->author->name }}" loading="lazy">
                         <div>
                             <p class="font-data text-xs uppercase tracking-[0.16em] text-ink-muted">{{ trans('page.author') }}</p>
                             <h2 id="author-title" class="mt-1 text-3xl text-ink">{{ $post->author->name }}</h2>
