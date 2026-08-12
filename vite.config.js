@@ -1,7 +1,8 @@
-import { defineConfig } from 'vite'
-import laravel from 'laravel-vite-plugin'
-import vue from '@vitejs/plugin-vue'
-import tailwindcss from '@tailwindcss/vite'
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import laravel from 'laravel-vite-plugin';
+import tailwindcss from '@tailwindcss/vite';
+import manifestSRI from 'vite-plugin-manifest-sri';
 
 export default defineConfig({
     plugins: [
@@ -23,6 +24,7 @@ export default defineConfig({
             },
         }),
         tailwindcss(),
+        manifestSRI(),
     ],
     resolve: {
         alias: {
