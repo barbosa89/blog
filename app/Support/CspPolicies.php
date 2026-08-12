@@ -70,6 +70,8 @@ class CspPolicies implements Preset
             ->add(Directive::OBJECT, Keyword::NONE)
             ->add(Directive::SCRIPT, [
                 Keyword::SELF,
+                Keyword::UNSAFE_EVAL,
+                Keyword::UNSAFE_INLINE,
                 self::GOOGLE,
                 self::GOOGLE_ADS,
                 self::GOOGLE_ADS_PAGE,
@@ -77,7 +79,7 @@ class CspPolicies implements Preset
                 self::GOOGLE_TAG_MANAGER,
                 self::STATIC_DOUBLE_CLICK,
             ])
-            ->add(Directive::STYLE, Keyword::SELF)
+            ->add(Directive::STYLE, [Keyword::SELF, Keyword::UNSAFE_INLINE])
             ->add(Directive::WORKER, [Keyword::SELF, 'blob:'])
             ->addNonce(Directive::SCRIPT)
             ->addNonce(Directive::STYLE);
