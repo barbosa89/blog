@@ -110,7 +110,7 @@ return [
         'customers_intro' => 'Organizations that form part of my professional history.',
         'customer_site' => 'Visit :customer’s website',
         'about_title' => 'About me',
-        'about_intro' => 'Christian, engineer, guitarist, and husband.',
+        'about_intro' => 'Faith in Christ, husband, lots of coffee and guitar notes.',
         'about_body' => 'I am Omar Barbosa, a computer engineer and web developer experienced with PHP, Laravel, JavaScript, Vue.js, and Python.',
         'about_detail' => 'Here I publish original products, technical articles, and lessons from working across backend, frontend, data, and open-source software.',
         'capability_backend' => 'PHP, Laravel, APIs, and asynchronous processing.',
