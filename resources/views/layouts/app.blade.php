@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ $locale }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
 
     <meta property="og:title" content="{{ trans('page.site_name', ['author' => config('blog.author')]) }}">
     <meta property="og:description" content="{{ trans('page.description', ['author' => config('blog.author')]) }}">
-    <meta property="og:image" content="{{ asset('images/site.webp') }}">
+    <meta property="og:image" content="{{ asset('images/site_' . $locale . '.webp') }}">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ config('app.url') }}">
     <meta name="twitter:card" content="summary_large_image">
