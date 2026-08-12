@@ -1,7 +1,7 @@
 ---
 title: 'Laravel scheduled tasks on shared hosting'
 excerpt: 'Configure Laravel scheduled tasks on shared hosting using cPanel, cronJobs with the power of PHP. '
-keywords: 'configure, laravel, scheduled, tasks, shared, hosting, cpanel, cronjobs, power, php'
+keywords: 'Laravel scheduler shared hosting, Laravel cron job, cPanel cron jobs, php artisan schedule:run, Laravel scheduled tasks, shared hosting Laravel'
 publishedAt: '2020-10-26'
 updatedAt: null
 image: 'images/articles/task-scheduling.webp'

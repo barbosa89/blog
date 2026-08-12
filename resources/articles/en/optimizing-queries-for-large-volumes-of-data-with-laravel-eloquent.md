@@ -1,7 +1,7 @@
 ---
 title: 'Optimizing queries for large volumes of data with Laravel Eloquent'
 excerpt: 'Run big data queries with maximum performance and low memory usage using the Laravel Eloquent ORM and the Query Builder.'
-keywords: 'run, big, data, queries, maximum, performance, low, memory, usage, laravel, eloquent, orm, query, builder'
+keywords: 'Laravel Eloquent large datasets, Laravel query optimization, Eloquent chunking, Laravel cursor, query builder performance, database indexes Laravel'
 publishedAt: '2022-02-21'
 updatedAt: null
 image: 'images/articles/optimize-eloquent-queries.webp'

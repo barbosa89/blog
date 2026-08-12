@@ -1,7 +1,7 @@
 ---
 title: 'Cómo generar facturas en PDF fácilmente con Laravel'
 excerpt: 'Aprende a exportar las facturas en PDF de manera fácil usando Laravel PHP, DOMPDF y la implementación Laravel Invoices.'
-keywords: 'aprende, exportar, las, facturas, en, pdf, de, manera, fácil, usando, laravel, php, dompdf, la, implementación, invoices'
+keywords: 'generar facturas PDF Laravel, Laravel DOMPDF, Laravel Invoices, exportar factura PDF, facturación PHP, PDF en hosting compartido'
 publishedAt: '2021-01-15'
 updatedAt: null
 image: 'images/articles/create-invoices.png'

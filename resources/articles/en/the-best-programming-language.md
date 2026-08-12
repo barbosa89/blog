@@ -1,7 +1,7 @@
 ---
 title: 'The best programming language'
 excerpt: 'All you need to know about the best programming language, there are compiled languages and interpreted languages, high, medium or low level, languages for the web, for desktop applications and for mobile devices.'
-keywords: 'programming, language, compiled, languages, interpreted, high, medium, low, level, web, desktop, applications, mobile, devices'
+keywords: 'best programming language, compiled vs interpreted languages, programming language comparison, web development languages, mobile development languages, software development'
 publishedAt: '2019-08-20'
 updatedAt: null
 image: 'images/articles/best-programming-language.png'

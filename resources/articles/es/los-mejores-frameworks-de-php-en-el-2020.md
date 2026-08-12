@@ -1,7 +1,7 @@
 ---
 title: 'Los mejores frameworks de PHP en el 2020'
 excerpt: 'Los mejores frameworks de PHP en el 2020, según la demanda laboral, popularidad, comunidad de desarrollo y ecosistema.'
-keywords: 'los, mejores, frameworks, de, php, en, el, según, la, demanda, laboral, popularidad, comunidad, desarrollo, ecosistema'
+keywords: 'frameworks PHP 2020, Laravel vs Symfony, mejores frameworks PHP, comparar frameworks PHP, frameworks PHP asíncronos, ecosistema PHP'
 publishedAt: '2020-02-11'
 updatedAt: null
 image: 'images/articles/best-frameworks-2020.png'

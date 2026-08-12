@@ -1,7 +1,7 @@
 ---
 title: 'Pie, el instalador de extensiones de PHP'
 excerpt: 'Aprende Pie, el nuevo instalador de extensiones de PHP, interoperable con Composer y Packagist, podrás instalar extensiones desde los requerimientos de tu proyecto con un comando.'
-keywords: 'aprende, pie, el, nuevo, instalador, de, extensiones, php, interoperable, con, composer, packagist, podrás, instalar, desde, los, requerimientos, tu, proyecto, comando'
+keywords: 'PIE instalador de extensiones PHP, instalar extensiones PHP, reemplazo de PECL, PHP Composer, Packagist, extensiones Zend'
 publishedAt: '2025-06-26'
 updatedAt: null
 image: 'images/articles/pie-instalador-extensiones.webp'

@@ -1,7 +1,7 @@
 ---
 title: 'Tareas programadas de Laravel en hosting compartido'
 excerpt: 'Configura las tareas programadas o task scheduling de Laravel en hosting compartido usando cPanel, cronJobs con el poder de PHP.'
-keywords: 'configura, las, tareas, programadas, task, scheduling, de, laravel, en, hosting, compartido, usando, cpanel, cronjobs, con, el, poder, php'
+keywords: 'tareas programadas Laravel hosting compartido, cron job Laravel, cron jobs cPanel, php artisan schedule:run, scheduler Laravel, Laravel en hosting compartido'
 publishedAt: '2020-10-26'
 updatedAt: null
 image: 'images/articles/task-scheduling.webp'

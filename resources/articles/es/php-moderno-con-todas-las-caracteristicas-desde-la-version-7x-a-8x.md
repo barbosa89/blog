@@ -1,7 +1,7 @@
 ---
 title: 'PHP moderno con todas las características desde la versión 7x a 8x'
 excerpt: 'PHP es un lenguaje moderno, rápido y poderoso, conoce sus nuevas características y escribe aplicaciones escalables en potentes frameworks como Laravel y Symfony.'
-keywords: 'php, es, lenguaje, moderno, rápido, poderoso, conoce, sus, nuevas, características, escribe, aplicaciones, escalables, en, potentes, frameworks, como, laravel, symfony'
+keywords: 'características de PHP moderno, PHP 7 a PHP 8, tipos en PHP, expresión match PHP, enumeraciones PHP, propiedades readonly, argumentos con nombre PHP'
 publishedAt: '2023-06-19'
 updatedAt: null
 image: 'images/articles/php-new-features.webp'

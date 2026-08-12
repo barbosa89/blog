@@ -1,7 +1,7 @@
 ---
 title: 'Consejos para convertirte en un desarrollador profesional'
 excerpt: 'Descubre consejos esenciales para desarrolladores de software que te ayudarán a crecer profesionalmente, más allá de solo escribir código.'
-keywords: 'descubre, consejos, esenciales, para, desarrolladores, de, software, te, ayudarán, crecer, profesionalmente, más, allá, solo, escribir, código'
+keywords: 'desarrollador profesional, carrera de programador, buenas prácticas de software, pruebas automatizadas, aprendizaje continuo, productividad para programadores'
 publishedAt: '2024-09-12'
 updatedAt: null
 image: 'images/articles/advices.webp'

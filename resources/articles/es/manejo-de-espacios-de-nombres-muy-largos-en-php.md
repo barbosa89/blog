@@ -1,7 +1,7 @@
 ---
 title: 'Manejo de espacios de nombres muy largos en PHP'
 excerpt: 'Aprende como importar multiples clases del mismo espacio de nombres o namespace, y a manejar espacios de nombres muy largos en PHP.'
-keywords: 'aprende, como, importar, multiples, clases, del, mismo, espacio, de, nombres, namespace, manejar, espacios, muy, largos, en, php'
+keywords: 'namespaces PHP, alias de namespaces, use en PHP, importar clases PHP, espacios de nombres largos, legibilidad de código PHP'
 publishedAt: '2021-06-22'
 updatedAt: null
 image: 'images/articles/long-php-namespaces.webp'

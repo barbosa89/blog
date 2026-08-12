@@ -1,7 +1,7 @@
 ---
 title: 'El mejor lenguaje de programación'
 excerpt: 'Todo lo que necesitas saber sobre el mejor lenguaje de programación, lenguajes compilados e interpretados, de alto, medio o bajo nivel, lenguajes para la web, para aplicaciones de escritorio y para dispositivos móviles.'
-keywords: 'todo, lo, necesitas, saber, sobre, el, mejor, lenguaje, de, programación, lenguajes, compilados, interpretados, alto, medio, bajo, nivel, para, la, web, aplicaciones, escritorio, dispositivos, móviles'
+keywords: 'mejor lenguaje de programación, lenguajes compilados e interpretados, comparar lenguajes de programación, lenguajes para desarrollo web, desarrollo móvil, desarrollo de software'
 publishedAt: '2019-09-03'
 updatedAt: null
 image: 'images/articles/best-programming-language.png'

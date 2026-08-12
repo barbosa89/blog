@@ -1,7 +1,7 @@
 ---
 title: 'Generadores en PHP'
 excerpt: 'Aprende sobre generadores en PHP, una forma fácil de implementar iteradores con manejo optimizado de memoria, alto rendimiento y código asíncrono nativo.'
-keywords: 'aprende, sobre, generadores, en, php, una, forma, fácil, de, implementar, iteradores, con, manejo, optimizado, memoria, alto, rendimiento, código, asíncrono, nativo'
+keywords: 'generadores PHP, yield PHP, iteradores PHP, optimizar memoria PHP, iteración perezosa, funciones generadoras, rendimiento PHP'
 publishedAt: '2021-07-13'
 updatedAt: null
 image: 'images/articles/php-generators.webp'

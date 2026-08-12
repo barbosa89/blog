@@ -1,7 +1,7 @@
 ---
 title: 'Phenix: la siguiente generación de frameworks PHP'
 excerpt: 'Phenix es un framework web construido en PHP puro, sin extensiones externas, basado en el ecosistema Amphp, que proporciona non-blocking IO, asincronismo y ejecución de código paralelo de forma nativa.'
-keywords: 'phenix, es, framework, web, construido, en, php, puro, sin, extensiones, externas, basado, el, ecosistema, amphp, proporciona, -blocking, io, asincronismo, ejecución, de, código, paralelo, forma, nativa'
+keywords: 'framework Phenix PHP, framework Amphp, PHP asíncrono, PHP no bloqueante, fibras PHP, PHP de alto rendimiento, framework web PHP'
 publishedAt: '2023-10-12'
 updatedAt: null
 image: 'images/articles/phenix.webp'

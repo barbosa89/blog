@@ -1,7 +1,7 @@
 ---
 title: 'Top PHP frameworks 2020'
 excerpt: 'Top PHP frameworks in 2020 according to job availability, popularity, development community and ecosystem, synchronous and asynchronous. '
-keywords: 'top, php, frameworks, job, availability, popularity, development, community, ecosystem, synchronous, asynchronous'
+keywords: 'PHP frameworks 2020, Laravel vs Symfony, best PHP frameworks, PHP framework comparison, asynchronous PHP frameworks, PHP development ecosystem'
 publishedAt: '2020-02-25'
 updatedAt: null
 image: 'images/articles/best-frameworks-2020.png'

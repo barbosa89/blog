@@ -1,7 +1,7 @@
 ---
 title: 'Los mejores paquetes de Composer para Laravel'
 excerpt: 'Los mejores paquetes de Composer para el desarrollo de aplicaciones web con PHP y Laravel, paquetes que usarás en todos tus proyectos para alcanzar un nivel profesional.'
-keywords: 'los, mejores, paquetes, de, composer, para, el, desarrollo, aplicaciones, web, con, php, laravel, usarás, en, todos, tus, proyectos, alcanzar, nivel, profesional'
+keywords: 'mejores paquetes Laravel, paquetes Composer para Laravel, Laravel Debugbar, Laravel Telescope, herramientas de desarrollo Laravel, paquetes PHP'
 publishedAt: '2019-09-17'
 updatedAt: null
 image: 'images/articles/best-packages-2019.png'
