@@ -9,9 +9,6 @@
 
     <title>{{ trans('page.site_name', ['author' => config('blog.author')]) }}</title>
     <link href="{{ asset('images/captain-logo-favicon.webp') }}" rel="shortcut icon" type="image/x-icon">
-    @if (request()->routeIs('landing'))
-        <link rel="preload" as="image" href="{{ asset('images/captain-logo-dark-circle.webp') }}" fetchpriority="high">
-    @endif
     <link rel="canonical" href="{{ config('app.url') }}">
 
     <meta name="description" content="{{ trans('page.description', ['author' => config('blog.author')]) }}">

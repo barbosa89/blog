@@ -6,7 +6,6 @@ return [
     'portfolio' => 'Portfolio',
     'about' => 'About',
     'contact' => 'Contact',
-    'dev' => 'Full Stack Developer',
     'about_me' => [
         'who' => 'I am a passionate web developer with specialized experience in PHP, JavaScript, and Python. My experience spans backend and frontend development, leveraging powerful frameworks like Laravel and Vue.js to build scalable, high-performance applications.',
         'more' => 'I am the creator of PhenixPHP and a contributor to open source software. Additionally, I have extensive experience working with databases like MySQL, SQLite, and PostgreSQL, optimizing queries and handling large-scale datasets efficiently.',
@@ -45,26 +44,6 @@ return [
             'summary' => 'An offline-first personal finance app with data stored locally.',
             'description' => 'An offline-first personal finance app for tracking income, expenses, accounts, and budgets, with data stored locally.',
             'button_action' => 'Explore Cash IO',
-        ],
-        'invoice_template' => [
-            'description' => 'Beautiful invoice template with support for Bootstrap 3, 4 and 5 and Tailwind CSS.',
-            'button_action' => 'Go to repository',
-        ],
-        'posada' => [
-            'description' => 'Website with reservation system for the Posada Sueño Real hotel.',
-            'button_action' => 'View site',
-        ],
-        'apces' => [
-            'description' => 'Corporate website with a system for requests, complaints and claims.',
-            'button_action' => 'View site',
-        ],
-        'teo' => [
-            'description' => 'Corporate website of a state entity with a system for requests, complaints and claims.',
-            'button_action' => 'View site',
-        ],
-        'tlsi' => [
-            'description' => 'Website for transport and logistics, and environmental and civil engineering services.',
-            'button_action' => 'View site',
         ],
     ],
     'close_project' => 'Close project',
@@ -126,12 +105,10 @@ return [
         'products_title' => 'Projects',
         'products_intro' => 'These products are born from real opportunities: ideas identified, designed and transformed into software solutions that seek to solve problems and create value.',
         'web_technologies' => 'Web technologies',
-        'product_record' => 'Original product',
         'product_site' => 'Explore :product',
         'customers_title' => 'Clients',
         'customers_intro' => 'Organizations that form part of my professional history.',
         'customer_site' => 'Visit :customer’s website',
-        'logo_alt' => ':name logo',
         'about_title' => 'About me',
         'about_intro' => 'Christian, engineer, guitarist, and husband.',
         'about_body' => 'I am Omar Barbosa, a computer engineer and web developer experienced with PHP, Laravel, JavaScript, Vue.js, and Python.',
@@ -144,8 +121,6 @@ return [
         'writing_intro' => 'Ideas, lessons learned, and experiences worth sharing. Reflections on technology, software, and everything that sparks my curiosity.',
         'read_article' => 'Read article',
         'all_articles' => 'Explore all articles',
-        'email_action' => 'Send an email',
-        'linkedin_action' => 'Open LinkedIn',
     ],
     'navigation' => [
         'open' => 'Menu',

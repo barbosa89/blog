@@ -1,5 +1,5 @@
 <template>
-    <nav ref="navRef" id="siteNav" :aria-label="primaryLabel" class="fixed inset-x-0 top-0 z-200 border-b border-rule-dark bg-vacuum text-light">
+    <nav ref="navRef" id="siteNav" :aria-label="t('page.navigation.primary')" class="fixed inset-x-0 top-0 z-200 border-b border-rule-dark bg-vacuum text-light">
         <div class="site-container flex min-h-18 items-stretch justify-between px-0">
             <a class="flex min-w-0 items-center gap-2 px-3 text-light sm:gap-3 sm:px-0" :href="homeUrl">
                 <img class="h-12 w-8 shrink-0 object-contain" :src="logoUrl" alt="" width="500" height="800">
@@ -14,10 +14,10 @@
                             :href="item.url"
                             :target="item.external ? '_blank' : undefined"
                             :rel="item.external ? 'noopener noreferrer' : undefined"
-                        >{{ item.label }}</a>
+                        >{{ t(item.labelKey) }}</a>
                     </li>
                 </ul>
-                <ul class="flex items-center gap-3 border-l border-rule-dark px-5 font-data text-xs [&>li]:mb-0" :aria-label="localeLabel">
+                <ul class="flex items-center gap-3 border-l border-rule-dark px-5 font-data text-xs [&>li]:mb-0" :aria-label="t('page.locale')">
                     <li v-for="locale in locales" :key="locale.url">
                         <a
                             class="border-b-2 py-1 transition-colors hover:text-light"
@@ -34,11 +34,11 @@
                 type="button"
                 class="group flex min-w-26 items-center justify-between gap-3 border-l border-rule-dark px-3 font-data text-xs uppercase leading-none tracking-[0.16em] text-light transition-colors hover:bg-steel sm:min-w-36 sm:px-4 lg:hidden"
                 :aria-expanded="isOpen.toString()"
-                :aria-label="isOpen ? closeLabel : menuLabel"
+                :aria-label="isOpen ? t('page.navigation.close') : t('page.navigation.open')"
                 aria-controls="siteNavigationPanel"
                 @click="toggleMenu"
             >
-                <span>{{ isOpen ? closeLabel : menuLabel }}</span>
+                <span>{{ isOpen ? t('page.navigation.close') : t('page.navigation.open') }}</span>
                 <i v-show="!isOpen" data-lucide="menu" class="h-5 w-5 text-signal-cyan" aria-hidden="true"></i>
                 <i v-show="isOpen" data-lucide="x" class="h-5 w-5 text-track-yellow" aria-hidden="true"></i>
             </button>
@@ -61,12 +61,12 @@
                             @click="closeMenu"
                         >
                             <span class="font-data text-xs text-signal-cyan">{{ String(index + 1).padStart(2, '0') }}</span>
-                            <span>{{ item.label }}</span>
+                            <span>{{ t(item.labelKey) }}</span>
                         </a>
                     </li>
                 </ul>
 
-                <ul class="flex gap-2 [&>li]:mb-0" :aria-label="localeLabel">
+                <ul class="flex gap-2 [&>li]:mb-0" :aria-label="t('page.locale')">
                     <li v-for="locale in locales" :key="locale.url">
                         <a class="catalog-action catalog-action--quiet-dark" :class="locale.active ? 'border-track-yellow text-track-yellow' : ''" :href="locale.url" :aria-current="locale.active ? 'page' : undefined">{{ locale.label }}</a>
                     </li>
@@ -78,19 +78,17 @@
 
 <script setup>
 import { nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 defineProps({
     author: { type: String, required: true },
     logoUrl: { type: String, required: true },
     homeUrl: { type: String, required: true },
-    menuLabel: { type: String, required: true },
-    closeLabel: { type: String, required: true },
-    primaryLabel: { type: String, required: true },
-    localeLabel: { type: String, required: true },
     items: { type: Array, required: true },
     locales: { type: Array, required: true },
 })
 
+const { t } = useI18n()
 const isOpen = ref(false)
 const navRef = ref(null)
 const toggleRef = ref(null)
