@@ -3,7 +3,8 @@
     "file": "assets/lite-youtube-COnnjzaR.js",
     "name": "lite-youtube",
     "src": "node_modules/@justinribeiro/lite-youtube/lite-youtube.js",
-    "isDynamicEntry": true
+    "isDynamicEntry": true,
+    "integrity": "sha384-Gp73sV0JgrvLv+ZZgL6tDqGykcfWixcNErMaU41LO/DR/xlIB6cH+L1H6TfsbJ/X"
   },
   "resources/css/app.css": {
     "file": "assets/app-B19wO8vg.css",
@@ -12,43 +13,51 @@
     "name": "app",
     "names": [
       "app.css"
-    ]
+    ],
+    "integrity": "sha384-GpobgufCCkqWFqN2s0lMQKX56lJAumknqZYsHVuiPzkR/OMWInBpuBtSOiogOxni"
   },
   "resources/fonts/barlow-condensed-600-latin.woff2": {
     "file": "assets/barlow-condensed-600-latin-DepVgxBB.woff2",
-    "src": "resources/fonts/barlow-condensed-600-latin.woff2"
+    "src": "resources/fonts/barlow-condensed-600-latin.woff2",
+    "integrity": "sha384-WxwMESDblQd661Uj1of4h0uARR5hfyFrJFa3F7sYHZTM3w7KSMdwJLflUoibIufU"
   },
   "resources/fonts/barlow-condensed-700-latin.woff2": {
     "file": "assets/barlow-condensed-700-latin-v1xN8_Wq.woff2",
-    "src": "resources/fonts/barlow-condensed-700-latin.woff2"
+    "src": "resources/fonts/barlow-condensed-700-latin.woff2",
+    "integrity": "sha384-RP6AYjYUI9x6VaysIKYNsUG25KtBsuaouxQwHrfNsKtQuRuIeI8t8O9YM1WIAtcH"
   },
   "resources/fonts/source-sans-3-italic-400-latin.woff2": {
     "file": "assets/source-sans-3-italic-400-latin-bFKvakRX.woff2",
-    "src": "resources/fonts/source-sans-3-italic-400-latin.woff2"
+    "src": "resources/fonts/source-sans-3-italic-400-latin.woff2",
+    "integrity": "sha384-fjHJFHxraJnJ34G9LGOAiGm6HKnObKl3PRsKwgSWmhjFrKAUQTpqpZTxEPwetRQ+"
   },
   "resources/fonts/source-sans-3-roman-latin.woff2": {
     "file": "assets/source-sans-3-roman-latin-BqRLTx4X.woff2",
-    "src": "resources/fonts/source-sans-3-roman-latin.woff2"
+    "src": "resources/fonts/source-sans-3-roman-latin.woff2",
+    "integrity": "sha384-px/1t3814AGauo+dYVwJeYIj6kxQGPA32dak807VyLhuCAikpw0djsfUEEC1Oom1"
   },
   "resources/js/app.js": {
-    "file": "assets/app-BIvrf80W.js",
+    "file": "assets/app-CTLS-r04.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "dynamicImports": [
       "node_modules/@justinribeiro/lite-youtube/lite-youtube.js"
-    ]
+    ],
+    "integrity": "sha384-W2lvhSCf9mAz3FI2r2DmewTl78fcCmdvtuc+P1+E8e6tC8HZq8NCoCZZeK+VPeL9"
   },
   "resources/js/freelancer.js": {
     "file": "assets/freelancer-BFv0Dat_.js",
     "name": "freelancer",
     "src": "resources/js/freelancer.js",
-    "isEntry": true
+    "isEntry": true,
+    "integrity": "sha384-3lflHRrfCG+0rfstKiFIGtzuppZs20rteW6GoWTVfdoBRbv7P7stVv3VMXS9kLrD"
   },
   "resources/js/highlight.js": {
     "file": "assets/highlight-DM1aSuaY.js",
     "name": "highlight",
     "src": "resources/js/highlight.js",
-    "isEntry": true
+    "isEntry": true,
+    "integrity": "sha384-MB/qI9AEZDwZGB+wHvWNnU6bxjKn2YF12rS0qHCURrUSklZGV3GwsRLlxm8ZI+xg"
   }
 }
