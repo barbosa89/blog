@@ -24,8 +24,8 @@ return [
     'projects' => 'Projects',
     'products' => 'Products',
     'customers' => 'Clients',
-    'me_short' => 'Computer engineer, web developer with PHP, Javacript and Python',
-    'description' => 'Blog and product catalog by :author: practical articles about PHP, Laravel, JavaScript, and Python, alongside original software.',
+    'me_short' => 'Computer engineer, web developer with PHP, JavaScript and Python',
+    'description' => 'Blog and projects by :author: articles about PHP, Laravel, JavaScript, and Python, alongside software.',
     'keywords' => ':author, web developer, tutorials, courses, php, python, javascript, linux, laravel, vuejs, vue, jquery, css, html, sass, webpack, ubuntu, nodejs, node, njango, swoole, framework, articles, technology, software, mobile, desktop, app, git, github, gitlab',
     'portfolio_projects' => [
         'phenix' => [

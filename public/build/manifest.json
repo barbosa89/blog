@@ -37,14 +37,14 @@
     "integrity": "sha384-px/1t3814AGauo+dYVwJeYIj6kxQGPA32dak807VyLhuCAikpw0djsfUEEC1Oom1"
   },
   "resources/js/app.js": {
-    "file": "assets/app-CTLS-r04.js",
+    "file": "assets/app-6jCGTs3A.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "dynamicImports": [
       "node_modules/@justinribeiro/lite-youtube/lite-youtube.js"
     ],
-    "integrity": "sha384-W2lvhSCf9mAz3FI2r2DmewTl78fcCmdvtuc+P1+E8e6tC8HZq8NCoCZZeK+VPeL9"
+    "integrity": "sha384-GYtk9qSX6LPSjTRTJaoAv0JQ5DzSyHS3L68sYR8Gju0Lu1qa874JfpVwCNaOwHz6"
   },
   "resources/js/freelancer.js": {
     "file": "assets/freelancer-BFv0Dat_.js",

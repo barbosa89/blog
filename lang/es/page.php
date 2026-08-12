@@ -24,8 +24,8 @@ return [
     'projects' => 'Proyectos',
     'products' => 'Productos',
     'customers' => 'Clientes',
-    'me_short' => 'Ingeniero Informático, desarrollador web con PHP, Javascript y Python',
-    'description' => 'Blog y catálogo de productos de :author: artículos prácticos sobre PHP, Laravel, JavaScript y Python, además de software propio.',
+    'me_short' => 'Ingeniero Informático, desarrollador web con PHP, JavaScript y Python',
+    'description' => 'Blog y proyectos de :author: artículos sobre PHP, Laravel, JavaScript y Python, además de software.',
     'keywords' => ':author, desarrollador web, tutoriales, cursos, php, python, javascript, linux, laravel, vuejs, vue, jquery, css, html, sass, webpack, ubuntu, nodejs, node, njango, swoole, framework, articulos, tecnologia, software, movil, escritorio, aplicaciones, git, github, gitlab',
     'portfolio_projects' => [
         'phenix' => [
