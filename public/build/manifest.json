@@ -1,20 +1,31 @@
 {
+  "_rolldown-runtime-hePW80VL.js": {
+    "file": "assets/rolldown-runtime-hePW80VL.js",
+    "name": "rolldown-runtime",
+    "integrity": "sha384-IByvdQ9C8ZQsuk2kGiIBN/JFticnExQLZS0hqbEY2/527AMsvHLb3FQFuVTiIpj4"
+  },
   "node_modules/@justinribeiro/lite-youtube/lite-youtube.js": {
-    "file": "assets/lite-youtube-COnnjzaR.js",
+    "file": "assets/lite-youtube-CtoEJUUl.js",
     "name": "lite-youtube",
     "src": "node_modules/@justinribeiro/lite-youtube/lite-youtube.js",
     "isDynamicEntry": true,
-    "integrity": "sha384-Gp73sV0JgrvLv+ZZgL6tDqGykcfWixcNErMaU41LO/DR/xlIB6cH+L1H6TfsbJ/X"
+    "integrity": "sha384-IyqXm08vDRmKZmBrNMasDnEpS4eSAmL/JLfTo4GsZxdU/ODfyreOQ/Td2ao1+dNl"
   },
   "resources/css/app.css": {
-    "file": "assets/app-B19wO8vg.css",
-    "src": "resources/css/app.css",
-    "isEntry": true,
+    "file": "assets/app-CiTgIK-u.css",
     "name": "app",
     "names": [
       "app.css"
     ],
-    "integrity": "sha384-GpobgufCCkqWFqN2s0lMQKX56lJAumknqZYsHVuiPzkR/OMWInBpuBtSOiogOxni"
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "assets": [
+      "assets/barlow-condensed-600-latin-DepVgxBB.woff2",
+      "assets/barlow-condensed-700-latin-v1xN8_Wq.woff2",
+      "assets/source-sans-3-roman-latin-BqRLTx4X.woff2",
+      "assets/source-sans-3-italic-400-latin-bFKvakRX.woff2"
+    ],
+    "integrity": "sha384-jIyyyr03Lzq9aaJ6OyN1dck1IVD7eY+OFmhKsLeZ0e/tBX1flH0Mh5KfXn769NaV"
   },
   "resources/fonts/barlow-condensed-600-latin.woff2": {
     "file": "assets/barlow-condensed-600-latin-DepVgxBB.woff2",
@@ -37,27 +48,33 @@
     "integrity": "sha384-px/1t3814AGauo+dYVwJeYIj6kxQGPA32dak807VyLhuCAikpw0djsfUEEC1Oom1"
   },
   "resources/js/app.js": {
-    "file": "assets/app-6jCGTs3A.js",
+    "file": "assets/app-CYi9iVWj.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
+    "imports": [
+      "_rolldown-runtime-hePW80VL.js"
+    ],
     "dynamicImports": [
       "node_modules/@justinribeiro/lite-youtube/lite-youtube.js"
     ],
-    "integrity": "sha384-GYtk9qSX6LPSjTRTJaoAv0JQ5DzSyHS3L68sYR8Gju0Lu1qa874JfpVwCNaOwHz6"
+    "integrity": "sha384-4ryLkuXMXZMe7inryzCpv9q4SxyzBius8hACVlNRAVYzhnXl0HM317h/vYNBArFw"
   },
   "resources/js/freelancer.js": {
-    "file": "assets/freelancer-BFv0Dat_.js",
+    "file": "assets/freelancer-CWaP_CE3.js",
     "name": "freelancer",
     "src": "resources/js/freelancer.js",
     "isEntry": true,
-    "integrity": "sha384-3lflHRrfCG+0rfstKiFIGtzuppZs20rteW6GoWTVfdoBRbv7P7stVv3VMXS9kLrD"
+    "integrity": "sha384-z4yQ4d3yRNG/ILFRh2iX0pzW5CXQjYTcipc603WBmnxaz23rWws5g3bPKEiwfj1h"
   },
   "resources/js/highlight.js": {
-    "file": "assets/highlight-DM1aSuaY.js",
+    "file": "assets/highlight-UZpmKE0-.js",
     "name": "highlight",
     "src": "resources/js/highlight.js",
     "isEntry": true,
-    "integrity": "sha384-MB/qI9AEZDwZGB+wHvWNnU6bxjKn2YF12rS0qHCURrUSklZGV3GwsRLlxm8ZI+xg"
+    "imports": [
+      "_rolldown-runtime-hePW80VL.js"
+    ],
+    "integrity": "sha384-bpcr0O5+mop6NYDv9DVQKvbGC6q2Rv6Pyd4PTszT7MzHHSdLH/Yi2uaFob5iXQRx"
   }
 }

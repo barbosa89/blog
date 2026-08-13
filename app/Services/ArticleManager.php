@@ -25,6 +25,10 @@ class ArticleManager
 
     private const string MANIFEST_FILE = 'articles.manifest.json';
 
+    private const string ARTICLES_CACHE_KEY = 'articles:v2';
+
+    private const string TOP_TAGS_CACHE_KEY = 'top_tags:v2';
+
     protected string $cachePath;
 
     protected string $articlesPath;
@@ -124,11 +128,12 @@ class ArticleManager
 
     public function list(): Collection
     {
-        return Cache::rememberForever(self::DIRECTORY, function (): Collection {
-            $articles = File::get($this->articlesIndexPath());
+        $articles = Cache::rememberForever(
+            self::ARTICLES_CACHE_KEY,
+            fn(): string => File::get($this->articlesIndexPath()),
+        );
 
-            return collect(json_decode($articles));
-        });
+        return collect(json_decode($articles));
     }
 
     public function find(string $slug): ?stdClass
@@ -163,14 +168,15 @@ class ArticleManager
 
     public function topTags(): Collection
     {
-        return Cache::rememberForever('top_tags', function (): Collection {
-            $tags = File::get($this->tagsIndexPath());
+        $tags = Cache::rememberForever(
+            self::TOP_TAGS_CACHE_KEY,
+            fn(): string => File::get($this->tagsIndexPath()),
+        );
 
-            return collect(json_decode($tags, true))
-                ->sortByDesc(fn(array $articles, string $tagName): int => count($articles))
-                ->take(15)
-                ->keys();
-        });
+        return collect(json_decode($tags, true))
+            ->sortByDesc(fn(array $articles, string $tagName): int => count($articles))
+            ->take(15)
+            ->keys();
     }
 
     public function tag(string $tag): ?Collection
@@ -197,6 +203,8 @@ class ArticleManager
     {
         Cache::forget(self::DIRECTORY);
         Cache::forget('top_tags');
+        Cache::forget(self::ARTICLES_CACHE_KEY);
+        Cache::forget(self::TOP_TAGS_CACHE_KEY);
 
         foreach (File::files($this->cachePath) as $file) {
             File::delete($file);

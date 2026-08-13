@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+### Changed
+- Upgrade the application to Laravel 13 with PHP 8.3 and PHPUnit 12 support.
 
 ## [v0.4.0 (2020-12-12)](https://github.com/barbosa89/blog/compare/0.3.0...0.4.0)
 
