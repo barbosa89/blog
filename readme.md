@@ -1,4 +1,10 @@
-<p><a href="https://omarbarbosa.com" target="_blank"><img src="https://omarbarbosa.com/images/captain-logo.webp"></a></p>
+<p align="center">
+    <a href="https://omarbarbosa.com" target="_blank">
+        <img src="https://omarbarbosa.com/images/captain-logo-favicon.webp" width="56" height="56" alt="The Captain's Blog logo">
+    </a>
+    <br>
+    <a href="https://omarbarbosa.com" target="_blank"><strong>The Captain's Blog</strong></a>
+</p>
 
 # Personal Blog
 
