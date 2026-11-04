@@ -26,6 +26,8 @@ class CspPolicies implements Preset
 
     private const string GOOGLE_AD_TRAFFIC_QUALITY = 'https://ep1.adtrafficquality.google';
 
+    private const string GOOGLE_AD_TRAFFIC_QUALITY_FRAME = 'https://ep2.adtrafficquality.google';
+
     private const string GOOGLE_STATIC = 'https://www.gstatic.com';
 
     private const string GOOGLE_TAG_MANAGER = 'https://www.googletagmanager.com';
@@ -68,6 +70,7 @@ class CspPolicies implements Preset
                 self::GOOGLE,
                 self::GOOGLE_ADS,
                 self::GOOGLE_ADS_PAGE,
+                self::GOOGLE_AD_TRAFFIC_QUALITY_FRAME,
                 self::TPC_GOOGLE_ADS,
                 self::YOUTUBE,
             ])
