@@ -107,6 +107,7 @@ class CspPolicies implements Preset
                 self::GOOGLE_ADS,
                 self::GOOGLE_ADS_PAGE,
                 self::GOOGLE_STATIC,
+                self::GOOGLE_AD_TRAFFIC_QUALITY_FRAME,
                 self::GOOGLE_TAG_MANAGER,
                 self::STATIC_DOUBLE_CLICK,
                 'https://*.googlesyndication.com',
