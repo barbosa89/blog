@@ -20,6 +20,12 @@ class CspPolicies implements Preset
 
     private const string GOOGLE_ANALYTICS = 'https://www.google-analytics.com';
 
+    private const string GOOGLE_ANALYTICS_COLLECTION = 'https://analytics.google.com';
+
+    private const string GOOGLE_FUNDING_CHOICES = 'https://fundingchoicesmessages.google.com';
+
+    private const string GOOGLE_AD_TRAFFIC_QUALITY = 'https://ep1.adtrafficquality.google';
+
     private const string GOOGLE_STATIC = 'https://www.gstatic.com';
 
     private const string GOOGLE_TAG_MANAGER = 'https://www.googletagmanager.com';
@@ -49,6 +55,9 @@ class CspPolicies implements Preset
                 self::GOOGLE_ADS,
                 self::GOOGLE_ADS_PAGE,
                 self::GOOGLE_ANALYTICS,
+                self::GOOGLE_ANALYTICS_COLLECTION,
+                self::GOOGLE_FUNDING_CHOICES,
+                self::GOOGLE_AD_TRAFFIC_QUALITY,
                 self::GOOGLE_TAG_MANAGER,
             ])
             ->add(Directive::DEFAULT, Keyword::SELF)
