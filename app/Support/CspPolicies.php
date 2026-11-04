@@ -61,6 +61,9 @@ class CspPolicies implements Preset
                 self::GOOGLE_FUNDING_CHOICES,
                 self::GOOGLE_AD_TRAFFIC_QUALITY,
                 self::GOOGLE_TAG_MANAGER,
+                'https://*.googlesyndication.com',
+                'https://*.google.com',
+                'https://*.doubleclick.net',
             ])
             ->add(Directive::DEFAULT, Keyword::SELF)
             ->add(Directive::FONT, $fontSources)
@@ -73,12 +76,19 @@ class CspPolicies implements Preset
                 self::GOOGLE_AD_TRAFFIC_QUALITY_FRAME,
                 self::TPC_GOOGLE_ADS,
                 self::YOUTUBE,
+                'https://*.googlesyndication.com',
+                'https://*.google.com',
+                'https://*.doubleclick.net',
             ])
             ->add(Directive::FRAME_ANCESTORS, Keyword::NONE)
             ->add(Directive::IMG, [
                 Keyword::SELF,
                 'data:',
                 'blob:',
+                Scheme::HTTPS,
+                'https://*.googlesyndication.com',
+                'https://*.google.com',
+                'https://*.doubleclick.net',
                 self::GOOGLE_ADS,
                 self::GOOGLE_ADS_PAGE,
                 self::GOOGLE_ANALYTICS,
@@ -99,10 +109,13 @@ class CspPolicies implements Preset
                 self::GOOGLE_STATIC,
                 self::GOOGLE_TAG_MANAGER,
                 self::STATIC_DOUBLE_CLICK,
+                'https://*.googlesyndication.com',
+                'https://*.google.com',
+                'https://*.googletagmanager.com',
+                'https://*.doubleclick.net',
+                'https://*.gstatic.com',
             ])
-            ->add(Directive::STYLE, [Keyword::SELF, Keyword::UNSAFE_INLINE])
-            ->add(Directive::WORKER, [Keyword::SELF, 'blob:'])
-            ->addNonce(Directive::SCRIPT)
-            ->addNonce(Directive::STYLE);
+            ->add(Directive::STYLE, [Keyword::SELF, Keyword::UNSAFE_INLINE, 'https://*.googleapis.com', 'https://*.googlesyndication.com'])
+            ->add(Directive::WORKER, [Keyword::SELF, 'blob:']);
     }
 }
