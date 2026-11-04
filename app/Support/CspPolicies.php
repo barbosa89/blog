@@ -82,6 +82,7 @@ class CspPolicies implements Preset
                 self::GOOGLE_ADS,
                 self::GOOGLE_ADS_PAGE,
                 self::GOOGLE_ANALYTICS,
+                self::GOOGLE_AD_TRAFFIC_QUALITY,
                 self::GOOGLE_TAG_MANAGER,
                 self::STATIC_DOUBLE_CLICK,
                 self::YOUTUBE_IMAGES,
