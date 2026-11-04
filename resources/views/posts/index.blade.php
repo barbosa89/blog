@@ -12,7 +12,7 @@
                     <p class="mt-4 max-w-lg text-lg leading-relaxed text-ink-muted">{{ trans('page.blog_intro') }}</p>
                 </div>
 
-                <form action="{{ route('posts.index') }}" method="GET" role="search" class="border border-rule-light bg-paper-raised p-3 sm:p-4">
+                <form action="{{ route('posts.index') }}" method="GET" role="search" class="min-w-0 border border-rule-light bg-paper-raised p-3 sm:p-4">
                     <label class="font-data text-xs uppercase tracking-[0.18em] text-ink-muted" for="query">{{ trans('page.search') }}</label>
                     <div class="mt-3 flex items-stretch border border-rule-light bg-paper">
                         <input
@@ -65,9 +65,9 @@
                     @php
                         $latestImage = empty($latest->image) ? asset('images/article.png') : asset($latest->image);
                     @endphp
-                    <article class="grid gap-6 border-b border-rule-light pb-10 md:grid-cols-[minmax(16rem,0.8fr)_minmax(0,1.2fr)] md:items-center">
+                    <article class="grid gap-6 border-b border-rule-light pb-10 md:grid-cols-2 md:items-center lg:grid-cols-1 xl:grid-cols-2">
                         <a class="block min-w-0 border border-rule-light" href="{{ route('posts.show', ['slug' => $latest->slug]) }}">
-                            <img class="aspect-[4/3] h-full w-full object-cover" src="{{ $latestImage }}" alt="" fetchpriority="high">
+                            <img class="aspect-[4/3] w-full object-cover lg:aspect-video xl:aspect-[4/3]" src="{{ $latestImage }}" alt="" fetchpriority="high">
                         </a>
                         <div class="min-w-0">
                             <p class="font-data text-xs uppercase tracking-[0.18em] text-ink-muted">{{ trans('page.latest_article') }} / {{ $latest->publishedAt }}</p>
@@ -91,15 +91,15 @@
                         $imageUrl = empty($post->image) ? asset('images/article.png') : asset($post->image);
                     @endphp
                     <article class="article-row">
-                        <img class="article-row__image" src="{{ $imageUrl }}" alt="" loading="lazy">
+                        <img class="article-row__image hidden sm:block" src="{{ $imageUrl }}" alt="" loading="lazy">
                         <div class="min-w-0">
                             <p class="font-data text-xs text-ink-muted">{{ $post->publishedAt }} / {{ strtoupper($post->locale) }}</p>
-                            <h2 class="mt-2 text-3xl leading-none text-ink sm:text-4xl">
+                            <h2 class="mt-2 text-2xl leading-tight text-ink sm:text-4xl sm:leading-none">
                                 <a class="whitespace-normal underline-offset-4 hover:underline" href="{{ route('posts.show', ['slug' => $post->slug]) }}">{{ $post->title }}</a>
                             </h2>
                             <p class="mt-3 whitespace-normal leading-relaxed text-ink-muted">{{ $post->excerpt }}</p>
                         </div>
-                        <a class="catalog-action catalog-action--quiet-light self-center" href="{{ route('posts.show', ['slug' => $post->slug]) }}">{{ trans('page.landing.read_article') }}</a>
+                        <a class="catalog-action catalog-action--quiet-light justify-self-start self-center sm:justify-self-auto" href="{{ route('posts.show', ['slug' => $post->slug]) }}">{{ trans('page.landing.read_article') }}</a>
                     </article>
                 @empty
                     @unless(isset($latest))
